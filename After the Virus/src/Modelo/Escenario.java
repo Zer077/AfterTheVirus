@@ -31,5 +31,5 @@ public abstract class Escenario {
     public Personaje1 personaje = null;
     public int Ronda;
     public int PersonasSalvadas;
-    public int n;
+ 
 }
