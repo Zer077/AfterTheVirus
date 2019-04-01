@@ -5,6 +5,7 @@
  */
 package Modelo;
 
+import Controlador.CompraCartas;
 import Modelo.Cartas.Carta;
 import Modelo.Personaje.*;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public abstract class Escenario {
 //contiene todo el escenario principal
 
+    CompraCartas compraCartas=new CompraCartas(this);
     public MazoEscenario mazoEscenario = new MazoEscenario(this);
     public MazoDescartes mazoDescartes = new MazoDescartes(this);
     public MazoEliminadas mazoEliminadas = new MazoEliminadas(this);
