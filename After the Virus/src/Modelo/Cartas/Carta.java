@@ -17,6 +17,8 @@ public abstract class Carta {
     int activacion = 0;
     String nombre = null;
     private boolean activa;
+    int tipo = 0;
+    //tipo 1-arma 2-trampa 3-otra
 
     public Carta(int precio, int activacion, String nombre, Escenario Escenario) {
         this.nombre = nombre;

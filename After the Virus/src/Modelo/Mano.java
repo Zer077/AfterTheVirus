@@ -26,14 +26,17 @@ public class Mano {
     public void usarCartas(int[] cartas, int opcion) {
 
     }
-    
+
     //busca una carta para sacarla, el action la usará para poderse activar, si no no hará nada y volverá al menú de eleccion
-    public Carta sacarCarta(){
-        
-        
-        
-        
+    public Carta sacarCarta(String nombreCarta) {
+
         return null;
+    }
+
+    public void EliminarCarta(int i) {
+    }
+
+    public void AniadirCarta(Carta carta) {
     }
 
 }

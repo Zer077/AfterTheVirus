@@ -20,7 +20,16 @@ public class MenuOpciones {
         this.mano = mano;
     }
 
+    public void Menu() {
+    }
+
+    //Elige una de las diversas opciones del juego
     public void ElegirOpcion() {
+    }
+
+    //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
+    public int[] ElegirCartas() {
+        return null;
     }
 
 }

@@ -15,11 +15,12 @@ import java.util.ArrayList;
 public class MazoJugador extends Mazo {
 
     ArrayList<Carta> MazoJugador = new ArrayList();
-public MazoJugador(Escenario escenario) {
+
+    public MazoJugador(Escenario escenario) {
         super(escenario);
     }
     //Cada turno sin cartas en la mano me sacará 5 cartas
     //metodo para ver si el mazo está vacio y devuelva true o false
     //mezclar cartas de descartes y sacar 5
-    
+
 }
