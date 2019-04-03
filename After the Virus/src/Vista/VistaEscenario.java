@@ -21,4 +21,24 @@ public class VistaEscenario extends Escenario {
 
     }
 
+    public void VerMano() {
+
+    }
+
+    public void VerZombie() {
+
+    }
+
+    public void VerAreaJuego() {
+
+    }
+
+    public void VerJugador() {
+
+    }
+
+    public void VerArrayEscenario() {
+
+    }
+
 }
