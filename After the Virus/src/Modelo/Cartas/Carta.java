@@ -17,7 +17,7 @@ public abstract class Carta {
     int activacion = 0;
     private String nombre = null;
     private boolean activa = false;
-    int tipo = 0;
+    private int tipo = 0;
     //TIPO: 1-lanzar 2-pegar 3-disparar 4-equipo 6-armadura 7-medicina 
     //8-lugar 9-train 10-trampa 11-animal 12-persona 13-zona 14-vehiculo
 
@@ -60,6 +60,20 @@ public abstract class Carta {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    /**
+     * @return the tipo
+     */
+    public int getTipo() {
+        return tipo;
+    }
+
+    /**
+     * @param tipo the tipo to set
+     */
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
 }
