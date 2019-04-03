@@ -6,6 +6,7 @@
 package Modelo.Personaje;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -15,9 +16,9 @@ public abstract class Personaje {
 
     Escenario escenario;
     String nombre = null;
-    private boolean pierna;
-    private boolean brazo;
-    private boolean cabeza;
+    private boolean pierna = false;
+    private boolean brazo = false;
+    private boolean cabeza = false;
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
@@ -25,6 +26,7 @@ public abstract class Personaje {
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
     public void parteCuerpoAtacar() {
+
     }
 
     /**

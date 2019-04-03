@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class AreaJugable {
 
-    ArrayList<Carta> ArrayJugables = new ArrayList();
+    private ArrayList<Carta> ArrayJugables = new ArrayList();
 
     public AreaJugable(Escenario escenario) {
     }
@@ -30,5 +30,28 @@ public class AreaJugable {
         return false;
 
     }
+    
+    
+    public void BuscarCartaNombre(String n){}
+    
+    public void BuscarCartaValor(int i){}
+    
+    public void EliminarCarta(int i){}
+
+    /**
+     * @return the ArrayJugables
+     */
+    public ArrayList<Carta> getArrayJugables() {
+        return ArrayJugables;
+    }
+
+    /**
+     * @param ArrayJugables the ArrayJugables to set
+     */
+    public void setArrayJugables(ArrayList<Carta> ArrayJugables) {
+        this.ArrayJugables = ArrayJugables;
+    }
+    
+   
 
 }
