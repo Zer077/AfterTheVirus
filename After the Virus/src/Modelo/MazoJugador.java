@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class MazoJugador extends Mazo {
 
-    ArrayList<Carta> MazoJugador = new ArrayList();
+    private ArrayList<Carta> MazoJugador = new ArrayList();
 
     public MazoJugador(Escenario escenario) {
         super(escenario);
@@ -22,5 +22,19 @@ public class MazoJugador extends Mazo {
     //Cada turno sin cartas en la mano me sacará 5 cartas
     //metodo para ver si el mazo está vacio y devuelva true o false
     //mezclar cartas de descartes y sacar 5
+
+    /**
+     * @return the MazoJugador
+     */
+    public ArrayList<Carta> getMazoJugador() {
+        return MazoJugador;
+    }
+
+    /**
+     * @param MazoJugador the MazoJugador to set
+     */
+    public void setMazoJugador(ArrayList<Carta> MazoJugador) {
+        this.MazoJugador = MazoJugador;
+    }
 
 }

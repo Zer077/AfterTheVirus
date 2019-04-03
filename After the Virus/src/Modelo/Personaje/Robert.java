@@ -3,21 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controlador;
+package Modelo.Personaje;
 
 import Modelo.Escenario;
-import Modelo.Personaje.Personaje;
-import Modelo.Personaje.Jennie;
 
 /**
  *
  * @author Zero
  */
-public class Controlador extends Escenario {
+public class Robert extends Personaje {
 
-    //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
-    public Controlador() {
-
+    public Robert(Escenario escenario) {
+        super(escenario);
+        super.nombre = "Robert";
     }
 
 }

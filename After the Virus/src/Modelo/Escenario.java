@@ -30,7 +30,7 @@ public abstract class Escenario {
     public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
-    public Personaje1 personaje = null;
+    public Jennie personaje = null;
     public int Ronda;
     public int PersonasSalvadas;
 

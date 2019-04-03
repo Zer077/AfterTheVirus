@@ -12,18 +12,13 @@ import java.util.ArrayList;
  *
  * @author usuario
  */
-public abstract class CartaArma extends Carta{
-    
+public abstract class CartaArma extends Carta {
+
     ArrayList<Carta> cartas;
-    
+
     public CartaArma(int precio, String nombre, Escenario Escenario, int tipo) {
         super(precio, nombre, Escenario, tipo);
-        cartas=new ArrayList<>();
+        cartas = new ArrayList<>();
     }
-    
-    
-    
-    
-    
-    
+
 }

@@ -5,19 +5,22 @@
  */
 package Modelo.Personaje;
 
+import Modelo.Escenario;
+
 /**
  *
  * @author Zero
  */
 public abstract class Personaje {
 
-    private String nombre = null;
+    Escenario escenario;
+    String nombre = null;
     private boolean pierna;
     private boolean brazo;
     private boolean cabeza;
 
-    public Personaje(String nombre) {
-        this.nombre = nombre;
+    public Personaje(Escenario escenario) {
+        this.escenario = escenario;
     }
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie

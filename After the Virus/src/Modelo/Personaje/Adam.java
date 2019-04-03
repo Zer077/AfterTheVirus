@@ -5,14 +5,18 @@
  */
 package Modelo.Personaje;
 
+import Modelo.Escenario;
+
 /**
  *
  * @author Zero
  */
-public class Personaje1 extends Personaje {
+public class Adam extends Personaje {
 
-    public Personaje1(String nombre) {
-        super(nombre);
+    public Adam(Escenario escenario) {
+        super(escenario);
+        super.nombre = "Adam";
+
     }
 
 }
