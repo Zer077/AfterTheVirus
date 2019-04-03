@@ -17,7 +17,7 @@ public class VistaEscenario extends Escenario {
     public VistaEscenario() {
     }
 
-    public void VerEscenario() {
+    public void VerEscenarioGeneral() {
 
     }
 
