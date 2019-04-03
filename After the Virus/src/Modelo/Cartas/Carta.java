@@ -15,7 +15,7 @@ public abstract class Carta {
 
     int precio = 0;
     int activacion = 0;
-    String nombre = null;
+    private String nombre = null;
     private boolean activa = false;
     int tipo = 0;
     //TIPO: 1-lanzar 2-pegar 3-disparar 4-equipo 6-armadura 7-medicina 
@@ -46,6 +46,20 @@ public abstract class Carta {
      */
     public void setActiva(boolean activa) {
         this.activa = activa;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 }
