@@ -16,14 +16,15 @@ public abstract class Carta {
     int precio = 0;
     int activacion = 0;
     String nombre = null;
-    private boolean activa;
+    private boolean activa=false;
     int tipo = 0;
-    //tipo 1-arma 2-trampa 3-otra
+    //TIPO: 1-lanzar 2-pegar 3-disparar 4-equipo 6-armadura 7-medicina 
+    //8-lugar 9-train 10-trampa 11-animal 12-persona 13-zona 14-vehiculo
 
-    public Carta(int precio, int activacion, String nombre, Escenario Escenario) {
+    public Carta(int precio, String nombre, Escenario Escenario, int tipo) {
         this.nombre = nombre;
         this.precio = precio;
-        this.activacion = activacion;
+        this.tipo=tipo;
 
     }
 //Lo que haga la carta
