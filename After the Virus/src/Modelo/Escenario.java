@@ -7,6 +7,7 @@ package Modelo;
 
 import Controlador.CompraCartas;
 import Modelo.Cartas.Carta;
+import Modelo.Cartas.Zombie;
 import Modelo.Personaje.*;
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public abstract class Escenario {
     public Mano mano = new Mano(this);
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
     public AreaJugable areaJugable = new AreaJugable(this);
-    public ArrayList<Carta> arrayZombies = new ArrayList<>();
+    public ArrayList<Zombie> arrayZombies = new ArrayList<>();
     public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
