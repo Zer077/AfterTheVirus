@@ -13,7 +13,7 @@ import Modelo.Escenario;
  */
 public class Car extends Carta {
 
-    public Car(int precio, String nombre, Escenario Escenario, int tipo,int activacion) {
+    public Car(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
     }
 

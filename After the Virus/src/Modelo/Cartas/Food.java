@@ -12,19 +12,30 @@ import Modelo.Escenario;
  * @author Zero
  */
 public class Food extends Carta {
-
+    
     public Food(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Comida", Escenario, 4, 0);
     }
-
+    
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (escenario.arrayZombies.size() == 0) {
+            if (escenario.personaje.isBrazo() == true) {
+                escenario.personaje.setBrazo(false);
+            }
+            if (escenario.personaje.isPierna() == true) {
+                escenario.personaje.setPierna(false);
+            }
+            escenario.areaJugable.EliminarCarta(this);
+            
+        }
+        
     }
-
+    
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
+        
     }
-
+    
 }

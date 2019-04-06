@@ -30,13 +30,15 @@ public class AreaJugable {
         return false;
 
     }
-    
-    
-    public void BuscarCartaNombre(String n){}
-    
-    public void BuscarCartaValor(int i){}
-    
-    public void EliminarCarta(int i){}
+
+    public void BuscarCartaNombre(String n) {
+    }
+
+    public void BuscarCartaValor(int i) {
+    }
+
+    public void EliminarCarta(Carta carta) {
+    }
 
     /**
      * @return the ArrayJugables
@@ -51,7 +53,5 @@ public class AreaJugable {
     public void setArrayJugables(ArrayList<Carta> ArrayJugables) {
         this.ArrayJugables = ArrayJugables;
     }
-    
-   
 
 }

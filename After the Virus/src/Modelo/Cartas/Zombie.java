@@ -12,15 +12,13 @@ import java.util.ArrayList;
  *
  * @author Zero
  */
-public abstract class Zombie extends Carta{
+public abstract class Zombie extends Carta {
 
     private ArrayList zombie;
 
     public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
     }
-
-    
 
     abstract public void atacaHumano();
 

@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class ConcussionGrenade extends Carta {
 
     public ConcussionGrenade(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-super(precio, nombre, Escenario,  tipo, activacion);   
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

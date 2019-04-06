@@ -18,6 +18,7 @@ public abstract class Carta {
     private String nombre = null;
     private boolean activa = false;
     private int tipo = 0;
+    Escenario escenario;
     //TIPO: 1-lanzar 2-pegar 3-disparar 4-equipo 6-armadura 7-medicina 
     //8-lugar 9-train 10-trampa 11-animal 12-persona 13-zona 14-vehiculo
 
@@ -25,7 +26,7 @@ public abstract class Carta {
         this.nombre = nombre;
         this.precio = precio;
         this.tipo = tipo;
-        this.activacion=activacion;
+        this.activacion = activacion;
 
     }
 //Lo que haga la carta

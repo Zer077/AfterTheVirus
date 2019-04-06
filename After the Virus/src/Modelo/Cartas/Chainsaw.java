@@ -13,7 +13,7 @@ import Modelo.Escenario;
  */
 public class Chainsaw extends Carta {
 
-    public Chainsaw(int precio, String nombre, Escenario Escenario, int tipo,int activacion) {
+    public Chainsaw(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
     }
 

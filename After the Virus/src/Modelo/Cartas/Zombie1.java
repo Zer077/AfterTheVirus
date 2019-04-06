@@ -17,8 +17,6 @@ public class Zombie1 extends Zombie {
         super(precio, nombre, Escenario, tipo, activacion);
     }
 
-  
-
     @Override
     public void atacaHumano() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -29,12 +27,7 @@ public class Zombie1 extends Zombie {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
-    
-    
-        //NO HACER
+    //NO HACER
     @Override
     public void action() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

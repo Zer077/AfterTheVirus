@@ -16,7 +16,7 @@ public abstract class CartaArma extends Carta {
 
     ArrayList<Carta> cartas;
 
-    public CartaArma(int precio, String nombre, Escenario Escenario, int tipo,int activacion) {
+    public CartaArma(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
         cartas = new ArrayList<>();
     }

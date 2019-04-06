@@ -27,10 +27,7 @@ public class Zombie2 extends Zombie {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
     //NO HACER
-    
-    
     @Override
     public void action() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

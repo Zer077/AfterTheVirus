@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Magazine extends Carta {
 
     public Magazine(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Magazine", Escenario, 0, 0);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Magazine extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Municion para tu arma");
     }
 
 }
