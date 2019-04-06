@@ -16,6 +16,11 @@ import Modelo.Personaje.Jennie;
 public class Controlador extends Escenario {
 
     //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
+    //NOTA IMPORTANTE, AL PRINCIPIO DEL JUEGO DEBEMOS DARLE ALEATORIAMENTE ENTRE 1 Y 3 CARTAS ZOMBIE AL MAZO JUGADOR
+    //CREAR 3 CONTROLADORES  PARA LOS 3 MODOS DE JUEGO
+    
+    
+    
     public Controlador() {
 
     }

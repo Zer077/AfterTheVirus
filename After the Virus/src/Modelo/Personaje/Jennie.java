@@ -25,10 +25,7 @@ public class Jennie extends Personaje {
             escenario.mazoJugador.getMazoJugador().add(new Survivor(0, nombre, escenario, 0));
             escenario.mazoJugador.getMazoJugador().add(new Run(0, nombre, escenario, 0));
         }
-        int numero = (int) (Math.random() * 2);
-        for (int i = 0; i < numero; i++) {
-            escenario.mazoJugador.getMazoJugador().add(new Zombie1(i, nombre, escenario, i));
-        }
+        
 
         super.nombre = "Jennie";
 
