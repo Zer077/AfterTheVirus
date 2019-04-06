@@ -20,10 +20,14 @@ public class Jennie extends Personaje {
 
     public Jennie(Escenario escenario) {
         super(escenario);
-        escenario.mazoJugador.getMazoJugador().add(new SafeHouse(0, nombre, escenario, 0));
+            escenario.mazoJugador.getMazoJugador().add(new SafeHouse(0, nombre, escenario, 0));
         for (int i = 0; i < 3; i++) {
             escenario.mazoJugador.getMazoJugador().add(new Survivor(0, nombre, escenario, 0));
             escenario.mazoJugador.getMazoJugador().add(new Run(0, nombre, escenario, 0));
+       
+        
+        
+        
         }
         
 
