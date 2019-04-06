@@ -16,8 +16,8 @@ public abstract class Zombie extends Carta{
 
     private ArrayList zombie;
 
-    public Zombie(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     

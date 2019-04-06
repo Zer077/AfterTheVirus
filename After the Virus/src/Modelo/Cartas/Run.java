@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Run extends Carta {
 
-    public Run(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Run(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

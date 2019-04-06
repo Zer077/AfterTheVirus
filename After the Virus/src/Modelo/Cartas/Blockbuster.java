@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Blockbuster extends Carta {
 
-    public Blockbuster(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Blockbuster(int precio, String nombre, Escenario Escenario,int activacion, int tipo){
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

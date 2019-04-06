@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Raid extends Carta {
 
-    public Raid(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Raid(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

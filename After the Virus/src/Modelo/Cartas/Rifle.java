@@ -11,10 +11,10 @@ import Modelo.Escenario;
  *
  * @author Zero
  */
-public class Rifle extends CartaArma {
+public class Rifle extends Carta {
 
-    public Rifle(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Rifle(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

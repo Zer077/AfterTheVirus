@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Zombie2 extends Zombie {
 
-    public Zombie2(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Zombie2(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

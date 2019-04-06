@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Food extends Carta {
 
-    public Food(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Food(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

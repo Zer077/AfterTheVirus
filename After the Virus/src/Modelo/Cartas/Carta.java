@@ -21,10 +21,11 @@ public abstract class Carta {
     //TIPO: 1-lanzar 2-pegar 3-disparar 4-equipo 6-armadura 7-medicina 
     //8-lugar 9-train 10-trampa 11-animal 12-persona 13-zona 14-vehiculo
 
-    public Carta(int precio, String nombre, Escenario Escenario, int tipo) {
+    public Carta(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         this.nombre = nombre;
         this.precio = precio;
         this.tipo = tipo;
+        this.activacion=activacion;
 
     }
 //Lo que haga la carta

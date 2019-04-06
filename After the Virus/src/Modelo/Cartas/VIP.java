@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class VIP extends Carta {
 
-    public VIP(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public VIP(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

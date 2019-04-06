@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Entrenchment extends Carta {
 
-    public Entrenchment(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Entrenchment(int precio, String nombre, Escenario Escenario, int tipo,int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override

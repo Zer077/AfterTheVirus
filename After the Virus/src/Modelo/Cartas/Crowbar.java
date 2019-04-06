@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public class Crowbar extends Carta {
 
-    public Crowbar(int precio, String nombre, Escenario Escenario, int tipo) {
-        super(precio, nombre, Escenario, tipo);
+    public Crowbar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override
