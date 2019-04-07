@@ -27,6 +27,42 @@ public abstract class Personaje {
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
     public void parteCuerpoAtacar() {
 
+        if (brazo == true && pierna == true) {
+            cabeza = true;
+            System.out.println("HAS MUERTO");
+
+        } else {
+
+            System.out.println("Que parte del cuerpo te golpea el Zombie?...");
+            System.out.println("1. Brazo 2.Pierna");
+            Scanner sc = new Scanner(System.in);
+            int parte = sc.nextInt();
+
+            switch (parte) {
+                case 1:
+                    if (brazo == false) {
+                        brazo = true;
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
+                      
+                    } else {
+                        pierna = true;
+
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
+                    }
+                case 2:
+                    if (pierna == false) {
+                        pierna = true;
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
+
+                    } else {
+                        brazo = true;
+
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
+                    }
+                default:
+
+            }
+        }
     }
 
     /**

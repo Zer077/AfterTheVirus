@@ -6,7 +6,12 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
+import Modelo.Cartas.SureAim;
+import Modelo.Cartas.WeaponSkill;
+import Vista.MenuOpciones;
+import Vista.VistaEscenario;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -15,29 +20,104 @@ import java.util.ArrayList;
 public class AreaJugable {
 
     private ArrayList<Carta> ArrayJugables = new ArrayList();
+    Escenario escenario;
 
     public AreaJugable(Escenario escenario) {
+        this.escenario = escenario;
     }
 
     //A traves del numero de una carta este metodo la jugará
-    public void jugarCarta(int numero) {
+    public void jugarCarta() {
+        VistaEscenario vista = new VistaEscenario();
+        for (int i = 0; i < ArrayJugables.size(); i++) {
+
+            System.out.println(ArrayJugables.get(i).getNombre());
+        }
+        Scanner sc = new Scanner(System.in);
+        int numero = sc.nextInt();
+
+        for (int i = 0; i < ArrayJugables.size(); i++) {
+
+            if (ArrayJugables.get(i) instanceof SureAim) {
+
+                vista.VerZombie();
+                System.out.println("A que Zombie quieres atacar?");
+
+                int numero2 = sc.nextInt();
+                escenario.arrayZombies.get(numero2).muereZombie();
+
+            }
+        }
+
+        ArrayJugables.get(numero).action();
 
     }
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
-    public boolean ActivarCarta(int[] carta) {
+    public void ActivarCarta() {
+        VistaEscenario vista = new VistaEscenario();
+        Carta WeaponSkillAuxiliar = null;
+        for (int i = 0; i < ArrayJugables.size(); i++) {
 
-        return false;
+            if (ArrayJugables.get(i) instanceof WeaponSkill) {
+                WeaponSkillAuxiliar = ArrayJugables.get(i);
 
+            }
+        }
+        if (WeaponSkillAuxiliar.isActiva()) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Seleccione carta que jugar");
+            int numeroActivar = sc.nextInt();
+            if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
+
+                vista.VerZombie();
+                System.out.println("A que Zombie quieres atacar?");
+
+                int numero2 = sc.nextInt();
+                escenario.arrayZombies.get(numero2).muereZombie();
+
+                ArrayJugables.get(numeroActivar).setActiva(true);
+            }
+        } else {
+            for (int j = 0; j < ArrayJugables.size(); j++) {
+
+                System.out.println(ArrayJugables.get(j).getNombre());
+            }
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Seleccione carta que jugar");
+            int numero = sc.nextInt();
+
+            ArrayJugables.get(numero).setActiva(true);
+        }
     }
 
-    public void BuscarCartaNombre(String n) {
+    public Carta BuscarCartaNombre(String n) {
+        for (int i = 0; i < ArrayJugables.size(); i++) {
+
+            if (ArrayJugables.get(i).getNombre().equals(n)) {
+
+                return ArrayJugables.get(i);
+            }
+        }
+        return null;
     }
 
-    public void BuscarCartaValor(int i) {
+    public Carta BuscarCartaTipo(int j) {
+        for (int i = 0; i < ArrayJugables.size(); i++) {
+            if (ArrayJugables.get(i).getTipo() == j) {
+
+                return ArrayJugables.get(i);
+            }
+
+        }
+        return null;
     }
 
-    public void EliminarCarta(Carta carta) {
+    public void EliminarCarta(Carta card) {
+
+        ArrayJugables.remove(card);
+
     }
 
     /**
