@@ -18,6 +18,7 @@ public class CompraCartas {
 
     public CompraCartas(Escenario escenario) {
         this.escenario = escenario;
+        
     }
 
 }
