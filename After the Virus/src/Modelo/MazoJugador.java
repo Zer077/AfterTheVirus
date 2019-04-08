@@ -31,6 +31,11 @@ public class MazoJugador extends Mazo {
     
      public ArrayList<Carta> sacarCincoCartas(){
         
+         /*
+         con un array auxiliar que luego vamos a devolver a otra clase,
+         lo rellenamos con las cartas del personaje que nos pasan desde la clase
+         */
+        
          ArrayList<Carta> aux = new  ArrayList<>();
          int cont=0;
          
@@ -46,6 +51,7 @@ public class MazoJugador extends Mazo {
     }//fin del metodo
     
     public void barajarCartasPersonaje(){
+        /*sencillamente se barajan las cartas del array*/
        shuffle(MazoJugador);
     }
     
