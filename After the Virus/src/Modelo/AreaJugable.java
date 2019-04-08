@@ -87,7 +87,7 @@ public class AreaJugable {
                 ArrayJugables.get(numeroActivar).setActiva(true);
             }
             
-            
+            //Si WeaponSkill no está activa solo te deja activar una carta
         } else {
             for (int j = 0; j < ArrayJugables.size(); j++) {
 
