@@ -11,9 +11,9 @@ import Modelo.Escenario;
  *
  * @author Zero
  */
-public class Pistol extends CartaArma {
+public class Escopeta extends CartaArma {
 
-    public Pistol(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+    public Escopeta(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
     }
 
