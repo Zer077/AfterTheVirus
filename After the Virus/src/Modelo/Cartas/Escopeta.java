@@ -14,7 +14,9 @@ import Modelo.Escenario;
 public class Escopeta extends CartaArma {
 
     public Escopeta(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(1, "Escopeta", Escenario, 3, activacion);
+
+        super(1, "Escopeta", Escenario, 3, activacion,0);
+
     }
 
     @Override

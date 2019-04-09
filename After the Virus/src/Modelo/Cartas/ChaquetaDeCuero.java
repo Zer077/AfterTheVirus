@@ -9,13 +9,12 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Maria
+ * @author Zero
  */
-public class Pistola extends CartaArma {
+public class ChaquetaDeCuero extends Carta {
 
-    public Pistola(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Pistola", Escenario, 3, activacion,0);
-
+    public ChaquetaDeCuero(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
+        super(precio, nombre, Escenario, tipo, activacion);
     }
 
     @Override
@@ -25,7 +24,7 @@ public class Pistola extends CartaArma {
 
     @Override
     public void descripcion() {
-        System.out.println("Una vez por turno:\nDescarta 1M o la pistola para matar 1 zombi.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -6,8 +6,8 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
-import Modelo.Cartas.SureAim;
-import Modelo.Cartas.WeaponSkill;
+import Modelo.Cartas.ObjetivoSeguro;
+import Modelo.Cartas.HabilidadConArmas;
 import Vista.MenuOpciones;
 import Vista.VistaEscenario;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class AreaJugable {
 
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
-            if (ArrayJugables.get(i) instanceof SureAim) {
+            if (ArrayJugables.get(i) instanceof ObjetivoSeguro) {
 
                 vista.VerZombie();
                 System.out.println("A que Zombie quieres atacar?");
@@ -61,7 +61,7 @@ public class AreaJugable {
         //Va a buscar la carta WeaponSkill
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
-            if (ArrayJugables.get(i) instanceof WeaponSkill) {
+            if (ArrayJugables.get(i) instanceof HabilidadConArmas) {
                 WeaponSkillAuxiliar = ArrayJugables.get(i);
 
             }
