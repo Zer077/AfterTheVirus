@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Escopeta extends CartaArma {
 
     public Escopeta(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Escopeta", Escenario, 3, activacion);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Escopeta extends CartaArma {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se descarta 1M o se destruye la escopeta para matar 1 zombi.");
     }
 
 }

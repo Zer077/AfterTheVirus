@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Lanzallamas extends Carta {
 
     public Lanzallamas(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(3, "Lanzallamas", Escenario, 3, 1);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Lanzallamas extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Descarta para matar a 3 zombis.");
     }
 
 }
