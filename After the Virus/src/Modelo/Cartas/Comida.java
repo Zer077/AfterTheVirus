@@ -19,7 +19,7 @@ public class Comida extends Carta {
     
     @Override
     public void action() {
-        if (escenario.arrayZombies.size() == 0) {
+        if (escenario.arrayZombies.isEmpty()) {
             if (escenario.personaje.isBrazo() == true) {
                 escenario.personaje.setBrazo(false);
             }
