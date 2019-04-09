@@ -13,8 +13,8 @@ import Modelo.Escenario;
  */
 public abstract class Carta {
 
-    int precio = 0;
-    int activacion = 0;
+    private int precio = 0;
+    private int activacion = 0;
     private String nombre = null;
     private boolean activa = false;
     private int tipo = 0;
@@ -76,6 +76,34 @@ public abstract class Carta {
      */
     public void setTipo(int tipo) {
         this.tipo = tipo;
+    }
+
+    /**
+     * @return the precio
+     */
+    public int getPrecio() {
+        return precio;
+    }
+
+    /**
+     * @param precio the precio to set
+     */
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    /**
+     * @return the activacion
+     */
+    public int getActivacion() {
+        return activacion;
+    }
+
+    /**
+     * @param activacion the activacion to set
+     */
+    public void setActivacion(int activacion) {
+        this.activacion = activacion;
     }
 
 }

@@ -16,14 +16,24 @@ import java.util.Scanner;
 /**
  *
  * @author Zero
- */
-public class AreaJugable {
+ */public class AreaJugable {
 
     private ArrayList<Carta> ArrayJugables = new ArrayList();
     Escenario escenario;
 
     public AreaJugable(Escenario escenario) {
         this.escenario = escenario;
+    }
+
+    public void AniadirCarta(Carta carta) {
+        ArrayJugables.add(carta);
+        if (carta.getActivacion() == 0) {
+            jugarCartaGratuita();
+
+        } else {
+            ArrayJugables.add(carta);
+        }
+
     }
 
     //A traves del numero de una carta este metodo la jugará
@@ -53,11 +63,15 @@ public class AreaJugable {
 
     }
 
+    public void jugarCartaGratuita() {
+        ArrayJugables.get(ArrayJugables.size() - 1).action();
+    }
+
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
-    public void ActivarCarta() {
+    public void ActivarCarta(Carta[] cartas) {
         VistaEscenario vista = new VistaEscenario();
         Carta WeaponSkillAuxiliar = null;
-        
+
         //Va a buscar la carta WeaponSkill
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
@@ -66,7 +80,7 @@ public class AreaJugable {
 
             }
         }
-        
+
         //Si WeaponSkill está activa y señecciona una carta que jugar tipo arma matas a un zombie y activa la carta
         if (WeaponSkillAuxiliar.isActiva()) {
             for (int j = 0; j < ArrayJugables.size(); j++) {
@@ -84,9 +98,15 @@ public class AreaJugable {
                 int numero2 = sc.nextInt();
                 escenario.arrayZombies.get(numero2).muereZombie();
 
-                ArrayJugables.get(numeroActivar).setActiva(true);
-            }
+                Carta aux=ArrayJugables.get(numero2);
+            if(aux.getActivacion()==cartas.length){
             
+            ArrayJugables.get(numero2).setActiva(true);
+            }else System.out.println("Vuelve a intentarlo");
+            
+            //ir al menú 
+            }
+
             //Si WeaponSkill no está activa solo te deja activar una carta
         } else {
             for (int j = 0; j < ArrayJugables.size(); j++) {
@@ -97,8 +117,16 @@ public class AreaJugable {
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
-
+            Carta aux=ArrayJugables.get(numero);
+            if(aux.getActivacion()==cartas.length){
+            
             ArrayJugables.get(numero).setActiva(true);
+            }else System.out.println("Vuelve a intentarlo");
+            
+            //ir al menú 
+            
+
+            
         }
     }
 
