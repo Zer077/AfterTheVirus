@@ -9,7 +9,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Maria
  */
 public class Pistola extends CartaArma {
 
