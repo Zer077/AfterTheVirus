@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 
 /**
@@ -18,7 +19,15 @@ public class CompraCartas {
 
     public CompraCartas(Escenario escenario) {
         this.escenario = escenario;
-        
+
     }
+
+    public void explora(Carta carta) {
+    
+    }
+    public void compra(Carta carta) {
+
+    }
+
 
 }
