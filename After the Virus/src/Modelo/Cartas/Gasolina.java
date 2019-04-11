@@ -14,17 +14,37 @@ import Modelo.Escenario;
 public class Gasolina extends Carta {
 
     public Gasolina(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Gasolina",Escenario, 4, 1);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
+            
+            if (escenario.areaJugable.getArrayJugables().get(i).getTipo() == 10) {
+                escenario.areaJugable.getArrayJugables().get(i).setActiva(true);
+
+            }
+            
+            if (escenario.areaJugable.getArrayJugables().get(i).getTipo() == 14) {
+                escenario.areaJugable.getArrayJugables().get(i).setActiva(true);
+
+            }
+            
+            
+            if (escenario.areaJugable.getArrayJugables().get(i).getTipo() == 1 || escenario.areaJugable.getArrayJugables().get(i).getTipo() ==  2 || escenario.areaJugable.getArrayJugables().get(i).getTipo() == 3) {
+                escenario.areaJugable.getArrayJugables().get(i).setActiva(true);
+
+            }
+            
+            escenario.areaJugable.EliminarCarta(this);
+        }
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(" Se destruye para preparar cualquier número de trampas, vehículos y armas");
     }
 
 }
