@@ -11,7 +11,7 @@ package Vista;
  */
 public class MenuPrincipal {
 
-//Debe dejarme comenzar la partida, mostrarme las reglas etc
+//Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {
     }
 
