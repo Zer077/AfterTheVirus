@@ -29,8 +29,5 @@ public class MazoEliminadas extends Mazo {
 
     }
 
-    public void EliminarCarta() {
-
-    }
 
 }
