@@ -31,7 +31,11 @@ public class CompraCartas {
     
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano
     //En este caso es este método el encargado de eliminar las cartas de la mano
-    public void compra(Carta[] carta) {
+    public boolean compra(Carta[] carta) {
+        
+        
+        
+        return false;
 
     }
 
