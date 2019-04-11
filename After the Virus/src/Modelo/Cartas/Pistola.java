@@ -13,8 +13,9 @@ import Modelo.Escenario;
  */
 public class Pistola extends CartaArma {
 
-    public Pistola(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Pistola", Escenario, 3, activacion,0);
+    public Pistola(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
+//La pistola se prepara añadiendo una carta de munición.        
+        super(2, "Pistola", Escenario, 3, 1, 1);
 
     }
 
