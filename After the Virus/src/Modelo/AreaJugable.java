@@ -68,7 +68,7 @@ import java.util.Scanner;
     }
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
-    public void ActivarCarta(Carta[] cartas) {
+    public boolean ActivarCarta(Carta[] cartas) {
         VistaEscenario vista = new VistaEscenario();
         Carta WeaponSkillAuxiliar = null;
 
@@ -101,10 +101,11 @@ import java.util.Scanner;
                 escenario.arrayZombies.get(numero2).muereZombie();
 
                 Carta aux=ArrayJugables.get(numeroActivar);
-            //REVISION
+            
                 if(aux.getActivacion()==cartas.length){
             
             ArrayJugables.get(numeroActivar).setActiva(true);
+            return true;
             }else System.out.println("Vuelve a intentarlo");
             
             escenario.menuOpciones.Menu();
@@ -126,6 +127,7 @@ import java.util.Scanner;
             if(aux.getActivacion()==cartas.length){
             
             ArrayJugables.get(numero).setActiva(true);
+            return true;
             }else System.out.println("Vuelve a intentarlo");
             
             escenario.menuOpciones.Menu(); 
@@ -133,6 +135,7 @@ import java.util.Scanner;
 
             
         }
+        return false;
     }
 
     public Carta BuscarCartaNombre(String n) {

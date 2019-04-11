@@ -18,7 +18,7 @@ public class Mano {
 
     ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;
-    VistaEscenario vista=new VistaEscenario();
+    VistaEscenario vista = new VistaEscenario();
 
     //Esta mano debe usar la carta segun la opcion elegida en el menú
     public Mano(Escenario escenario) {
@@ -59,21 +59,26 @@ public class Mano {
 
             //Usa estas cartas para activar otras
             case 3:
-                vista.verAreaJugador();
+                VistaEscenario.verAreaJugador();
                 Carta[] carta = null;
                 for (int i = 0; i < cartas.length; i++) {
 
                     carta[i] = Mano.get(cartas[i]);
 
-                    escenario.areaJugable.ActivarCarta(carta);
-
                 }
+                if (escenario.areaJugable.ActivarCarta(carta) == true) {
+                    for (int i = 0; i < cartas.length; i++) {
 
-                break;
+                        Mano.remove(cartas[i]);
+                    }
+                } else //lanzar error
+                {
+                    break;
+                }
 
             //Usa estas cartas para explorar
             case 4:
-                Carta carta1=null;
+                Carta carta1 = null;
                 for (int i = 0; i < cartas.length; i++) {
 
                     carta1 = Mano.get(cartas[i]);
@@ -91,17 +96,18 @@ public class Mano {
 
                     carta2[i] = Mano.get(cartas[i]);
                 }
+                if (escenario.compraCartas.compra(carta2) == true) {
+                    for (int i = 0; i < cartas.length; i++) {
 
-                escenario.compraCartas.compra(carta2);
-
-                break;
+                        Mano.remove(cartas[i]);
+                    }
+                } else //lanzar error
+                {
+                    break;
+                }
 
         }
 
-       
-        
-        
-        
     }
 
     //busca una carta para sacarla, el action la usará para poderse activar, si no no hará nada y volverá al menú de eleccion
