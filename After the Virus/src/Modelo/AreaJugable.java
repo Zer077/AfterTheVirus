@@ -90,6 +90,8 @@ import java.util.Scanner;
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numeroActivar = sc.nextInt();
+            
+            //si la carta elegida es un arma
             if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
 
                 vista.VerZombie();
@@ -98,13 +100,14 @@ import java.util.Scanner;
                 int numero2 = sc.nextInt();
                 escenario.arrayZombies.get(numero2).muereZombie();
 
-                Carta aux=ArrayJugables.get(numero2);
-            if(aux.getActivacion()==cartas.length){
+                Carta aux=ArrayJugables.get(numeroActivar);
+            //REVISION
+                if(aux.getActivacion()==cartas.length){
             
-            ArrayJugables.get(numero2).setActiva(true);
+            ArrayJugables.get(numeroActivar).setActiva(true);
             }else System.out.println("Vuelve a intentarlo");
             
-            //ir al menú 
+            escenario.menuOpciones.Menu();
             }
 
             //Si WeaponSkill no está activa solo te deja activar una carta
@@ -118,12 +121,14 @@ import java.util.Scanner;
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
             Carta aux=ArrayJugables.get(numero);
+            
+            //REVISION
             if(aux.getActivacion()==cartas.length){
             
             ArrayJugables.get(numero).setActiva(true);
             }else System.out.println("Vuelve a intentarlo");
             
-            //ir al menú 
+            escenario.menuOpciones.Menu(); 
             
 
             

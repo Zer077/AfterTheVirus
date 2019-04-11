@@ -12,19 +12,24 @@ import Modelo.Escenario;
  * @author Zero
  */
 public class Perro extends Carta {
-
+    
+//Precio --> recuperar 
+//Activacion --> preparar
     public Perro(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Perro", Escenario, 11, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        //Hacer acción para descartar la carta y matar 1 zombie.
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se descarta para matar 1 zombi.");
     }
 
 }

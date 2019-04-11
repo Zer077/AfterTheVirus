@@ -18,8 +18,10 @@ public class Controlador extends Escenario {
     //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
     //NOTA IMPORTANTE, AL PRINCIPIO DEL JUEGO DEBEMOS DARLE ALEATORIAMENTE ENTRE 1 Y 3 CARTAS ZOMBIE AL MAZO JUGADOR
     //CREAR 3 CONTROLADORES  PARA LOS 3 MODOS DE JUEGO
-    public Controlador() {
-
+    
+    //importante crear el personaje deseado antes de comenzar la partida, si no está creado el personaje dar error y comenzar juego de nuevo
+    public Controlador(Personaje personaje) {
+        this.personaje=personaje;
     }
 
     public void controlador1a() {
