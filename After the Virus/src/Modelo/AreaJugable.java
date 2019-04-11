@@ -46,6 +46,8 @@ import java.util.Scanner;
         Scanner sc = new Scanner(System.in);
         int numero = sc.nextInt();
 
+        if (ArrayJugables.get(numero).getTipo()==3){
+        
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
             if (ArrayJugables.get(i) instanceof ObjetivoSeguro) {
@@ -57,7 +59,7 @@ import java.util.Scanner;
                 escenario.arrayZombies.get(numero2).muereZombie();
 
             }
-        }
+        }}
 
         ArrayJugables.get(numero).action();
 
