@@ -102,7 +102,7 @@ public class Mano {
 
                         Mano.remove(cartas[i]);
                     }
-                } else //lanzar error
+                } else //lanzar error y volver al menu
                 {
                     break;
                 }
