@@ -42,7 +42,8 @@ public class Mano {
                     } else {
                         System.out.println("El costo de esta carta no es 0, no se puede usar, por favor coja una opcion adecuada");
                     }
-                    //ir al menu
+                    escenario.menuOpciones.Menu();
+                  
                 }
 
                 break;
