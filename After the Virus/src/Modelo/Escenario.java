@@ -9,6 +9,9 @@ import Controlador.CompraCartas;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Personaje.*;
+import Vista.MenuOpciones;
+import Vista.MenuPrincipal;
+import Vista.VistaEscenario;
 import java.util.ArrayList;
 
 /**
@@ -31,6 +34,9 @@ public abstract class Escenario {
     public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
+    public VistaEscenario vista=new VistaEscenario();
+    public MenuPrincipal menuPrincipal=new MenuPrincipal();
+    public MenuOpciones menuOpciones=new MenuOpciones(mano);
     public Personaje personaje;
     public int Ronda;
     public int PersonasSalvadas;

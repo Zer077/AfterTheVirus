@@ -90,6 +90,8 @@ import java.util.Scanner;
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numeroActivar = sc.nextInt();
+            
+            //si la carta elegida es un arma
             if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
 
                 vista.VerZombie();
