@@ -59,7 +59,7 @@ public class Mano {
 
             //Usa estas cartas para activar otras
             case 3:
-                vista.VerAreaJuego();
+                vista.verAreaJugador();
                 Carta[] carta = null;
                 for (int i = 0; i < cartas.length; i++) {
 

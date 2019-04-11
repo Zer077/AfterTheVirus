@@ -52,7 +52,7 @@ public class Jennie extends Personaje {
     public Jennie(Escenario escenario) {
         super(escenario);
         escenario.mazoJugador.getMazoJugador().add(new Refugio(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.getMazoJugador().add(new Pistola(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new Pistola(0, nombre, escenario, 0, 0,0));
         for (int i = 0; i < 3; i++) {
             escenario.mazoJugador.getMazoJugador().add(new Superviviente(0, nombre, escenario, 0, 0));
             escenario.mazoJugador.getMazoJugador().add(new Correr(0, nombre, escenario, 0, 0));
@@ -67,7 +67,7 @@ public class Jennie extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Palanca(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Trinchera(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0,0));
         escenario.mazoEscenario.getMazoEscenario().add(new Comida(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Guia(0, nombre, escenario, 0, 0));
@@ -83,7 +83,7 @@ public class Jennie extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Redada(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0,0));
         escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));

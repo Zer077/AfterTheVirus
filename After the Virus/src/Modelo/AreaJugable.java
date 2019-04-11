@@ -50,7 +50,7 @@ import java.util.Scanner;
 
             if (ArrayJugables.get(i) instanceof ObjetivoSeguro) {
 
-                vista.VerZombie();
+                vista.verAreaZombies();
                 System.out.println("A que Zombie quieres atacar?");
 
                 int numero2 = sc.nextInt();
@@ -94,7 +94,7 @@ import java.util.Scanner;
             //si la carta elegida es un arma
             if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
 
-                vista.VerZombie();
+                vista.verAreaZombies();
                 System.out.println("A que Zombie quieres atacar?");
 
                 int numero2 = sc.nextInt();
