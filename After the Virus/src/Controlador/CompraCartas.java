@@ -23,28 +23,23 @@ public class CompraCartas {
 
     }
 
-    
     //Este metodo le paso una carta que es el COSTO de explorar
     public void explora(Carta carta) {
         escenario.arrayEscenario.add(escenario.mazoEscenario.getMazoEscenario().remove(0));
     }
-    
-    
+
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano
     //En este caso es este método el encargado de eliminar las cartas de la mano
     public boolean compra(Carta[] carta) {
-                Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Elige la carta a comprar");
         escenario.vista.verAreaExploracion();
-        int numero=sc.nextInt();
-        if (carta.length==escenario.arrayEscenario.get(numero).getPrecio()){
+        int numero = sc.nextInt();
+        if (carta.length == escenario.arrayEscenario.get(numero).getPrecio()) {
             return true;
         }
         return false;
-        
-        
 
     }
-
 
 }
