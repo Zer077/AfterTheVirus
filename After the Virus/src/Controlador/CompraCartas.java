@@ -25,7 +25,7 @@ public class CompraCartas {
     
     //Este metodo le paso una carta que es el COSTO de explorar
     public void explora(Carta carta) {
-
+        escenario.arrayEscenario.add(escenario.mazoEscenario.getMazoEscenario().remove(0));
     }
     
     
