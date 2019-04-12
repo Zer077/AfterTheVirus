@@ -22,8 +22,13 @@ public abstract class Zombie extends Carta {
 
     abstract public void atacaHumano();
 
+    
+        //ESTE METODO LLEVA A LOS ZOMBIES AL MAZO DE DESCARTES DE LOS ZOMBIES
     abstract public void muereZombie();
     
+    
+    
+    //ESTE METODO LLEVA A LOS ZOMBIES AL MAZO DE DESCARTES DEL JUGADOR
     abstract public void descartaZombie();
 
     /**
