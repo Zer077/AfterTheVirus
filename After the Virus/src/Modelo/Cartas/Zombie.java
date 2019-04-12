@@ -23,6 +23,8 @@ public abstract class Zombie extends Carta {
     abstract public void atacaHumano();
 
     abstract public void muereZombie();
+    
+    abstract public void descartaZombie();
 
     /**
      * @return the zombie
