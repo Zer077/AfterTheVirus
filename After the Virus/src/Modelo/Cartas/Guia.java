@@ -27,8 +27,8 @@ public class Guia extends Carta {
         int a = sc.nextInt();
         System.out.println("Selecciona otro para remover de la pila de descartes: ");
         int b = sc2.nextInt();
-        escenario.arrayZombies.remove(a);
-        escenario.arrayZombies.remove(b);
+        escenario.arrayZombies.get(a).descartaZombie();
+        escenario.arrayZombies.get(b).descartaZombie();
         escenario.areaJugable.EliminarCarta(this);
     }
 
