@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +15,42 @@ import Modelo.Escenario;
 public class Palanca extends Carta {
 
     public Palanca(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Palanca", Escenario, 2, 0);
+
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner sc = new Scanner(System.in);
+        if (escenario.areaJugable.getArrayJugables().contains(this)) {
+            System.out.println("Selecciona un zombie a descartar:");
+            escenario.vista.verAreaZombies();
+            int elige = sc.nextInt();
+            escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
+            escenario.arrayZombies.remove(elige);
+        } else {
+            System.out.println("¿Deseas descartar esta carta para descartar 1 zombie? 1)si 2)no");
+            int sino = sc.nextInt();
+            switch (sino) {
+                case 1:
+                    System.out.println("Selecciona un zombie a descartar:");
+                    escenario.vista.verAreaZombies();
+                    int elige = sc.nextInt();
+                    escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
+                    escenario.arrayZombies.remove(elige);
+                    escenario.areaJugable.EliminarCarta(this);
+                    break;
+                case 2:
+                    System.out.println("Has decidido no descartar esta carta");
+                    break;
+            }
+        }
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
+
     }
 
 }

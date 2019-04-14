@@ -14,17 +14,22 @@ import Modelo.Escenario;
 public class Granada extends Carta {
 
     public Granada(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Granada", Escenario, 1, 1);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Usas la granada");
+        for (int i = 0; i < 5; i++) {
+            escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(0));
+            escenario.arrayZombies.remove(0);
+        }
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se descarta para descartar 5 zombies");
     }
 
 }

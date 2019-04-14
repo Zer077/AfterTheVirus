@@ -14,17 +14,22 @@ import Modelo.Escenario;
 public class Motosierra extends Carta {
 
     public Motosierra(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Motosierra", Escenario, 2, 2);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Usas la motosierra");
+        for (int i = 0; i < 5; i++) {
+            escenario.arrayZombies.get(0).muereZombie();
+            escenario.arrayZombies.remove(0);
+        }
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se descarta para matar 6 zombis");
     }
 
 }
