@@ -7,13 +7,16 @@ package Modelo;
 
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
+import java.util.Scanner;
+import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Abraham
  */
 public class MazoDescartes extends Mazo {
 
+    Escenario escenario;
     ArrayList<Carta> MazoDescarte = new ArrayList();
 
     public MazoDescartes(Escenario escenario) {
@@ -23,10 +26,21 @@ public class MazoDescartes extends Mazo {
     //Al usar una carta acaba aquí a no ser que se especifique lo contrario
     public void IntroducirCarta(Carta carta) {
 
+        MazoDescarte.add(carta);
+
     }
 
     //Todas las cartas de descartes las mete en el MazoJugador
     public void RestaurarMazo() {
+
+        int ncartasd = MazoDescarte.size();
+        for (int cont = 0; cont < ncartasd; cont++) {
+
+            escenario.mazoJugador.getMazoJugador().add(MazoDescarte.get(cont));
+
+        }
+
+        MazoDescarte.clear();
 
     }
 
