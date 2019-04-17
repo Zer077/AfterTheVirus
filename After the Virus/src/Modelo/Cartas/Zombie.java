@@ -22,7 +22,14 @@ public abstract class Zombie extends Carta {
 
     abstract public void atacaHumano();
 
+    
+    //lleva al zombie a la pila de descartes de los zombies
     abstract public void muereZombie();
+    
+    
+    //lleva al zombie a la pila de descartes del mazo del jugador
+    abstract public void descartaZombie();
+
 
     /**
      * @return the zombie
