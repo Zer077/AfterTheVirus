@@ -30,6 +30,14 @@ public class Controlador extends Escenario {
         //mazoJugador.getMazoJugador().add(mazoZombies.introducirAleatorio(coge));
 
         do {
+            mazoJugador.getMazoJugador();
+            //demas mazos
+            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.sacarCincoCartas();
+            //menu uso de cartas
+            //turno Zombies
+            mazoZombies.introducir();
+            mazoJugador.barajarCartasPersonaje();
             /*1- Se establece las cartas de Jugador
         2- Se establecen los demás mazos
         3-Se baraja las cartas del jugador
