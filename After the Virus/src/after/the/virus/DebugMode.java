@@ -6,6 +6,7 @@
 package after.the.virus;
 
 import Controlador.Controlador;
+import Modelo.Cartas.Zombie;
 import Modelo.Escenario;
 import Modelo.Personaje.Adam;
 import Modelo.Personaje.Jennie;
@@ -89,6 +90,13 @@ public class DebugMode extends Escenario {
             case 3:
                 controlador.controlador1c();
                 break;
+        }
+
+        int zext = 0;
+
+        for (int i = 0; i < zext; i++) {
+
+            arrayZombies.add((Zombie) mazoZombies.getMazoZombie().remove(0));
         }
 
     }
