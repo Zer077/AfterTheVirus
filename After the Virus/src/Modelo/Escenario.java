@@ -18,14 +18,14 @@ import java.util.ArrayList;
  *
  * @author Zero
  */
-public abstract class Escenario {
+public class Escenario {
 //contiene todo el escenario principal
-    private ArrayList<Carta> c;
+   
     CompraCartas compraCartas = new CompraCartas(this);
     public MazoEscenario mazoEscenario = new MazoEscenario(this);
     public MazoDescartes mazoDescartes = new MazoDescartes(this);
     public MazoEliminadas mazoEliminadas = new MazoEliminadas(this);
-    public MazoJugador mazoJugador = new MazoJugador(this,c);
+    public MazoJugador mazoJugador = new MazoJugador(this);
     public MazoZombies mazoZombies = new MazoZombies(this);
     public Mano mano = new Mano(this);
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
