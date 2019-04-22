@@ -80,8 +80,8 @@ public class MazoZombies extends Mazo {
             for (int j = 0; j < descarteZombies.size() - 1; j++) {
                 if (descarteZombies.get(j).getTipo() < descarteZombies.get(j + 1).getTipo()) {
                     Zombie tmp = (Zombie) descarteZombies.get(j + 1);
-                    descarteZombies.add(j + 1, descarteZombies.get(j));
-                    descarteZombies.add(j, tmp);
+                    MazoZombie.add(j + 1, descarteZombies.get(j));
+                    MazoZombie.add(j, tmp);
                 }
             }
         }
@@ -95,7 +95,13 @@ public class MazoZombies extends Mazo {
             MazoZombie.remove(0);
         }
     }
-
+    /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
+    public void introducirAleatorio(int n) {
+        for (int i = 0; i < n; i++) {
+            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            MazoZombie.remove(0);
+        }
+    }
     public ArrayList<Carta> getMazoZombie() {
         return MazoZombie;
     }
