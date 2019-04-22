@@ -17,9 +17,9 @@ public class MazoJugador extends Mazo {
 
     private ArrayList<Carta> MazoJugador = new ArrayList();
 
-    public MazoJugador(Escenario escenario, ArrayList<Carta> c) {
+    public MazoJugador(Escenario escenario) {
         super(escenario);
-         this.MazoJugador = c;
+        
     }
     //Cada turno sin cartas en la mano me sacará 5 cartas
     //metodo para ver si el mazo está vacio y devuelva true o false
