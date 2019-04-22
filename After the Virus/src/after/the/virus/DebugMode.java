@@ -48,25 +48,11 @@ public class DebugMode extends Escenario {
                 break;
         }
 
-        Controlador controlador = new Controlador(personaje);
-        int m = 0;
-        switch (m) {
-            case 1:
-                controlador.controlador1a();
-                break;
-            case 2:
-                controlador.controlador1b();
-                break;
-            case 3:
-                controlador.controlador1c();
-                break;
-        }
-
         int r = 0;
-        controlador.Ronda = r;
+        Ronda = r;
 
         int p = 0;
-        controlador.PersonasSalvadas = p;
+        PersonasSalvadas = p;
 
         int cartasEnJuego = 0;
         for (int i = 0; i < cartasEnJuego; i++) {
@@ -90,6 +76,19 @@ public class DebugMode extends Escenario {
                 }
 
             }
+        }
+        Controlador controlador = new Controlador(personaje);
+        int m = 0;
+        switch (m) {
+            case 1:
+                controlador.controlador1a();
+                break;
+            case 2:
+                controlador.controlador1b();
+                break;
+            case 3:
+                controlador.controlador1c();
+                break;
         }
 
     }
