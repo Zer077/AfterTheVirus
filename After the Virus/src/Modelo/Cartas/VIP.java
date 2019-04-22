@@ -14,17 +14,22 @@ import Modelo.Escenario;
 public class VIP extends Carta {
 
     public VIP(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(3, "VIP", Escenario, 12, 1);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+//        if (escenario.areaJugable.getArrayJugables().contains(CasaSegura)){
+//            escenario.PersonasSalvadas = 3;
+//            escenario.areaJugable.EliminarCarta(this);
+//        }
+        
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Equivale a 3 survivors si se juega safe house. Entonces se destruye.");
     }
 
 }

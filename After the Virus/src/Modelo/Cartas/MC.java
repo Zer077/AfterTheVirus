@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +15,26 @@ import Modelo.Escenario;
 public class MC extends Carta {
 
     public MC(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "MC", Escenario, 14, 1);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // Falta lo de preparar.
+        
+        // Añade a descartadas el zombie elegido.
+        Scanner sc = new Scanner(System.in);
+        escenario.vista.verAreaZombies();
+        System.out.println("Selecciona el zombie: ");
+        int a = sc.nextInt();
+        escenario.arrayDescartadas.add(escenario.arrayZombies.get(a));
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Al prepararse se descarta 1 carta de zombi. Se descarta para descartar 1 carta de zombi.");
     }
 
 }
