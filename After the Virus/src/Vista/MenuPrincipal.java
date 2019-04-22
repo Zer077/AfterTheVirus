@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import after.the.virus.DebugMode;
+
 /**
  *
  * @author Zero
@@ -16,6 +18,13 @@ public class MenuPrincipal {
     }
 
     public void Iniciar() {
+        DebugMode();
+    }
+
+    public void DebugMode() {
+        DebugMode DBM = new DebugMode();
+        DBM.iniciar();
+
     }
 
 }

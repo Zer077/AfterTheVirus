@@ -21,6 +21,10 @@ public class DebugMode extends Escenario {
 
     public DebugMode() {
 
+    }
+
+    public void iniciar() {
+
         System.out.println("personaje a elegir");
         int n = 0;
         Personaje personaje = null;
@@ -87,8 +91,7 @@ public class DebugMode extends Escenario {
 
             }
         }
-        
-      
+
     }
 
 }
