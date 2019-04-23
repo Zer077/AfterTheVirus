@@ -14,17 +14,25 @@ import Modelo.Escenario;
 public class Tunel extends Carta {
 
     public Tunel(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, nombre, Escenario, 8, 8);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        
+        for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
+
+            escenario.areaJugable.BuscarCartaTipo(12).setActiva(true);
+            
+
+            escenario.areaJugable.EliminarCarta(this);
+        }
+        
+        }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Preparar personas es gratis.");
     }
 
 }
