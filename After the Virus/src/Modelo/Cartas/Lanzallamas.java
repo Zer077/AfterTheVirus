@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -19,7 +20,13 @@ public class Lanzallamas extends CartaArma {
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner sc = new Scanner(System.in);
+        escenario.vista.verAreaZombies();
+        for(int i=0; i<3; i++){
+            System.out.println("Selecciona el zombie: ");
+            int a = sc.nextInt();
+            escenario.arrayZombies.get(a).muereZombie();
+        }
     }
 
     @Override

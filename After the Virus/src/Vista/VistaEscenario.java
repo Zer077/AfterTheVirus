@@ -14,8 +14,7 @@ import Modelo.Cartas.*;
  * @author Zero
  */
 public class VistaEscenario {
-
-    //Debe enseñarme de una forma bonita todo lo que hay en el escenario
+    
     Escenario escenario;
     public VistaEscenario(Escenario escenario) {
         this.escenario=escenario;
@@ -25,6 +24,7 @@ public class VistaEscenario {
         verJugador();
         verAreaJugador();
         verAreaExploracion();
+        verAreaZombies();
         verMano();       
     }
 
