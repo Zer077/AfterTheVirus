@@ -27,6 +27,7 @@ public class Lanzallamas extends CartaArma {
             int a = sc.nextInt();
             escenario.arrayZombies.get(a).muereZombie();
         }
+        escenario.mazoDescartes.IntroducirCarta(this);
     }
 
     @Override
