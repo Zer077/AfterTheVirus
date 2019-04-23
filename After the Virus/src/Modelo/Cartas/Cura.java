@@ -9,12 +9,12 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Carlos
  */
 public class Cura extends Carta {
 
     public Cura(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Habilidad Con Trampas", Escenario, 7, 1);
     }
 
     @Override
@@ -24,7 +24,8 @@ public class Cura extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se destruye para convertir una carta de 1 zombi en un sobreviviente preparado, cuando sea salvado, se regresa a la pila de zombis. ");
+             
     }
 
 }

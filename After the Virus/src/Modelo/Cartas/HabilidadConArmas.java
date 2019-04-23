@@ -9,12 +9,12 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Carlos
  */
 public class HabilidadConArmas extends Carta {
 
     public HabilidadConArmas(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Habilidad Con Armas", Escenario, 9, 2);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class HabilidadConArmas extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Cada vez que se prepare un arma, se mata 1 zombie. ");
     }
 
 }

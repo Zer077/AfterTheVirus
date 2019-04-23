@@ -9,12 +9,12 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Carlos
  */
 public class ObjetivoSeguro extends Carta {
 
     public ObjetivoSeguro(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Objetivo Seguro (Sure Aim)", Escenario, 9, 3);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class ObjetivoSeguro extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Cada vez que se usa un arma de disparar, se mata 1 zombie adicional.");
     }
 
 }
