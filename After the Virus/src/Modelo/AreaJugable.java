@@ -161,11 +161,21 @@ import java.util.Scanner;
         }
         return null;
     }
+ public void EliminarCarta(Carta card) {
 
-    public void EliminarCarta(Carta card) {
-
+        escenario.mazoEliminadas.IntroducirCarta(card);
+        
         ArrayJugables.remove(card);
+           
+    }
+    
+    
+    public void DescartarCarta(Carta card) {
 
+        escenario.mazoDescartes.IntroducirCarta(card);
+        
+        ArrayJugables.remove(card);
+           
     }
 
     /**
