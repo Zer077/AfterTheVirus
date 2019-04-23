@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Tunel extends Carta {
 
     public Tunel(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, nombre, Escenario, 8, 12);
+        super(2, nombre, Escenario, 8, 8);
     }
 
     @Override
