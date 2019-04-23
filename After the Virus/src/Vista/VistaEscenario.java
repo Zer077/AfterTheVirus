@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Zero
+ * @author Maria
  */
 public class VistaEscenario {
     

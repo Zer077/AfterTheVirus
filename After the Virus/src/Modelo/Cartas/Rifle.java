@@ -2,6 +2,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.ArrayList;
 
 public class Rifle extends CartaArma {
 
@@ -11,7 +12,11 @@ public class Rifle extends CartaArma {
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.municion==0){
+            System.out.println("¡Debes añadir munición para poder usarla!");
+        }else{
+            
+        }    
     }
 
     @Override
