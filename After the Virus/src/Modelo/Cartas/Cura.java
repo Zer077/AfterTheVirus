@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Cura extends Carta {
 
     public Cura(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Habilidad Con Trampas", Escenario, 7, 1);
+        super(2, "Cura", Escenario, 7, 1);
     }
 
     @Override
