@@ -35,7 +35,7 @@ public class Controlador extends Escenario {
         menuOpciones = new MenuOpciones(mano);
         vista = new VistaEscenario(this);
         areaJugable = new AreaJugable(this);
-        Ronda=0;
+        Ronda=1;
         PersonasSalvadas=0;
 
     }
@@ -89,6 +89,44 @@ public class Controlador extends Escenario {
     public void controlador1b() {
         //objetivo: acaba el turno con 4 supervivientes rescatados
         //Preparacion:Comienza con 1 oleada. comienza con 5 cartas de zombi a cada mazo
+
+        int coge = 5;
+        //mazoJugador.getMazoJugador().add(mazoZombies.introducirAleatorio(coge));
+
+        do {
+            mazoJugador.getMazoJugador();
+            //demas mazos
+            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.sacarCincoCartas();
+            //menu uso de cartas
+            //turno Zombies
+            mazoZombies.introducir();
+            mazoJugador.barajarCartasPersonaje();
+            /*1- Se establece las cartas de Jugador
+        2- Se establecen los demás mazos
+        3-Se baraja las cartas del jugador
+        4- La mano del jugador coje 5 cartas y la puede usar para varias cosas:
+            1-Usar de las cartas inactivas (activar y usar),
+            2-Usar para colocar (inactiva) (Si se coloca una carta de costo 0 de activacion activar automáticamente)
+            3-Usar para comprar
+            4-Usar para Explorar
+        Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
+        5-Se sacan cartas Zombie y meten en el mazo de jugador
+        6-Se baraja las cartas del jugador
+             */
+            
+            
+
+            if (personaje.isCabeza() == true) {
+                System.out.println("HAS MUERTO");
+            } else if (personaje.isCabeza() == false && PersonasSalvadas == 4) {
+                System.out.println("HAS GANADO");
+            }
+
+            Ronda++;
+            
+
+        } while (personaje.isCabeza() == false);
     }
 
     public void controlador1c() {
