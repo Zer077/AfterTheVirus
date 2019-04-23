@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +15,50 @@ import Modelo.Escenario;
 public class Bar extends Carta {
 
     public Bar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Bar", Escenario, 8, 12);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        if ((escenario.areaJugable.BuscarCartaNombre("Refugio").getNombre() == "Refugio") && (escenario.areaJugable.BuscarCartaNombre("Refugio").isActiva()) && (escenario.PersonasSalvadas > 0)) {
+            System.out.println("Elige la zona que quieres curarte");
+
+            if (escenario.personaje.isBrazo() == true) {
+                System.out.println("El brazo esta dañado");
+            }
+
+            if (escenario.personaje.isPierna() == true) {
+                System.out.println("La pierna esta dañada");
+            }
+
+            System.out.println("1. Brazo 2.Pierna");
+            Scanner sc = new Scanner(System.in);
+            int parte = sc.nextInt();
+
+            switch (parte) {
+                case 1:
+                    escenario.personaje.setBrazo(false);
+                    break;
+
+                case 2:
+                    escenario.personaje.setPierna(false);
+                    break;
+
+                default:
+                    System.out.println("No has elegido el numero correcto");
+                    break;
+
+            }
+        }
+        
+        escenario.areaJugable.EliminarCarta(this);
+
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("(Se prepara con 1 survivor) Cuando se juega safehouse, se cura 1 daño.");
     }
 
 }
