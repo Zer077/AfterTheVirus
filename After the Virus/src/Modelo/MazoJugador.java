@@ -19,7 +19,7 @@ public class MazoJugador extends Mazo {
 
     public MazoJugador(Escenario escenario) {
         super(escenario);
-        
+
     }
     //Cada turno sin cartas en la mano me sacará 5 cartas
     //metodo para ver si el mazo está vacio y devuelva true o false
@@ -28,34 +28,38 @@ public class MazoJugador extends Mazo {
     /**
      * @return the MazoJugador
      */
-    
-     public ArrayList<Carta> sacarCincoCartas(){
-        
-         /*
+    public void sacarCincoCartas() {
+
+        /*
          con un array auxiliar que luego vamos a devolver a otra clase,
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
-        
-         ArrayList<Carta> aux = new  ArrayList<>();
-         int cont=0;
-         
-        
-       while(cont< 5){
-            
-            aux.add( MazoJugador.remove(MazoJugador.size()-1));
-           cont++;
+     
+
+        for (int i = 4; i >= 0; i--) {
+            escenario.mano.AniadirCarta(MazoJugador.remove(0));
+          
         }
+
+           
         
-        
-        return aux;
+
     }//fin del metodo
     
-    public void barajarCartasPersonaje(){
-        /*sencillamente se barajan las cartas del array*/
-       shuffle(MazoJugador);
+    
+    public void aniadir(Carta card){
+    
+    
+    MazoJugador.add(card);
+    
     }
     
-    
+
+    public void barajarCartasPersonaje() {
+        /*sencillamente se barajan las cartas del array*/
+        shuffle(MazoJugador);
+    }
+
     public ArrayList<Carta> getMazoJugador() {
         return MazoJugador;
     }

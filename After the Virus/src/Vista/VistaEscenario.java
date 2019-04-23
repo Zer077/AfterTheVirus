@@ -13,21 +13,22 @@ import Modelo.Cartas.*;
  *
  * @author Zero
  */
-public class VistaEscenario extends Escenario {
+public class VistaEscenario {
 
     //Debe enseñarme de una forma bonita todo lo que hay en el escenario
-    public VistaEscenario() {
-        
+    Escenario escenario;
+    public VistaEscenario(Escenario escenario) {
+        this.escenario=escenario;
     }
 
-    public static void verEscenarioGeneral(){
+    public void verEscenarioGeneral(){
         verJugador();
         verAreaJugador();
         verAreaExploracion();
         verMano();       
     }
 
-    public static void verMano(){
+    public void verMano(){
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.
         System.out.println("Nombre de la carta: ");
@@ -36,7 +37,7 @@ public class VistaEscenario extends Escenario {
 
     }
     
-    public static void verAreaExploracion(){
+    public void verAreaExploracion(){
         System.out.println("----------Área de exploración----------");
         //bucle para ver todas las cartas que están exploradas.
         System.out.println("Nombre de la carta: ");
@@ -45,14 +46,14 @@ public class VistaEscenario extends Escenario {
         System.out.println("Coste preparar: ");
     }
 
-    public static void verAreaZombies(){
+    public void verAreaZombies(){
         System.out.println("----------Área de zombies----------");
         System.out.println("Hay x cartas en la mesa.");
         //bucle para mostrar todos los zombies.
         System.out.println("Número de zombies en la carta:");
     }
 
-    public static void verAreaJugador(){
+    public void verAreaJugador(){
         System.out.println("----------Tu área de juego----------");
         //bucle para ver todas las cartas.
         System.out.println("Nombre de la carta: ");
@@ -63,7 +64,7 @@ public class VistaEscenario extends Escenario {
         System.out.println("Coste preparar: ");
     }
 
-    public static void verJugador(){
+    public void verJugador(){
         System.out.println("----------Tu personaje----------");
         System.out.println("Nombre: ");
         System.out.println("Heridas: ");

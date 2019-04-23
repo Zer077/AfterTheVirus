@@ -18,11 +18,11 @@ public class Mano {
 
     ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;
-    VistaEscenario vista = new VistaEscenario();
-
+  
     //Esta mano debe usar la carta segun la opcion elegida en el menú
     public Mano(Escenario escenario) {
         this.escenario = escenario;
+    
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
@@ -60,7 +60,7 @@ public class Mano {
 
             //Usa estas cartas para activar otras
             case 3:
-                VistaEscenario.verAreaJugador();
+                escenario.vista.verAreaJugador();
                 Carta[] carta = null;
                 for (int i = 0; i < cartas.length; i++) {
 

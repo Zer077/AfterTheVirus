@@ -51,13 +51,13 @@ public class Adam extends Personaje {
 
     public Adam(Escenario escenario) {
         super(escenario);
-        escenario.mazoJugador.getMazoJugador().add(new Refugio(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.getMazoJugador().add(new Perro(0, nombre, escenario, 0, 0));
-        for (int i = 0; i < 3; i++) {
-            escenario.mazoJugador.getMazoJugador().add(new Superviviente(0, nombre, escenario, 0, 0));
-            escenario.mazoJugador.getMazoJugador().add(new Correr(0, nombre, escenario, 0, 0));
-        }
-        escenario.mazoJugador.getMazoJugador().add(new Saquear(0, nombre, escenario, 0, 0));
+//        escenario.mazoJugador.aniadir(new Refugio(0, nombre, escenario, 0, 0));
+//        escenario.mazoJugador.aniadir(new Perro(0, nombre, escenario, 0, 0));
+//        for (int i = 0; i < 3; i++) {
+//            escenario.mazoJugador.aniadir(new Superviviente(0, nombre, escenario, 0, 0));
+//            escenario.mazoJugador.aniadir(new Correr(0, nombre, escenario, 0, 0));
+//        }
+//        escenario.mazoJugador.getMazoJugador().add(new Saquear(0, nombre, escenario, 0, 0));
 
         escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));

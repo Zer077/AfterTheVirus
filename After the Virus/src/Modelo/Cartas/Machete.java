@@ -30,7 +30,7 @@ public class Machete extends Carta {
         } else {
             try {
                 System.out.println("Selecciona un a carta de tu mano a descartar:");
-                System.out.println(escenario.vista.arrayMano);
+             //   System.out.println(vista.arrayMano);
                 int eligecarta = sc.nextInt();
                 escenario.mazoDescartes.IntroducirCarta(escenario.arrayMano.get(eligecarta));
                 escenario.arrayMano.remove(eligecarta);

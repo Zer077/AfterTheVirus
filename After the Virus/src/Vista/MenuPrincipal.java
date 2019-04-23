@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Modelo.Escenario;
 import after.the.virus.DebugMode;
 
 /**
@@ -22,6 +23,7 @@ public class MenuPrincipal {
     }
 
     public void DebugMode() {
+        
         DebugMode DBM = new DebugMode();
         DBM.iniciar();
 

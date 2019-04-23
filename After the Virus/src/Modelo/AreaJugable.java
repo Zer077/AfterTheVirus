@@ -38,7 +38,7 @@ import java.util.Scanner;
 
     //A traves del numero de una carta este metodo la jugará
     public void jugarCarta() {
-        VistaEscenario vista = new VistaEscenario();
+        VistaEscenario vista = new VistaEscenario(escenario);
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
             System.out.println(ArrayJugables.get(i).getNombre());
@@ -71,7 +71,7 @@ import java.util.Scanner;
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
     public boolean ActivarCarta(Carta[] cartas) {
-        VistaEscenario vista = new VistaEscenario();
+        VistaEscenario vista = new VistaEscenario(escenario);
         Carta WeaponSkillAuxiliar = null;
 
         //Va a buscar la carta WeaponSkill
