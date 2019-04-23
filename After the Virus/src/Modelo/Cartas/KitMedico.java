@@ -14,17 +14,29 @@ import Modelo.Escenario;
 public class KitMedico extends Carta {
 
     public KitMedico(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "KitMedico", Escenario, 7, 0);
     }
 
-    @Override
+   
+     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       if(escenario.arrayZombies.isEmpty()){
+           
+           
+           escenario.personaje.setBrazo(false);
+           escenario.personaje.setPierna(false);
+       }
+       
+       else{
+            System.out.println("Lo sentimos, hay zombies cerca, no te puedes curar");
+       }
+       
+       escenario.areaJugable.EliminarCarta(this);
     }
+
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Si no hay zombis en juego, se destruye para curar 2 daños.");
     }
-
 }
