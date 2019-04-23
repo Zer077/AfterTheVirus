@@ -7,6 +7,9 @@ package Controlador;
 
 import Modelo.*;
 import Modelo.Personaje.Personaje;
+import Vista.MenuOpciones;
+import Vista.MenuPrincipal;
+import Vista.VistaEscenario;
 
 /**
  *
@@ -19,8 +22,22 @@ public class Controlador extends Escenario {
     //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
     //NOTA IMPORTANTE, AL PRINCIPIO DEL JUEGO DEBEMOS DARLE ALEATORIAMENTE ENTRE 1 Y 3 CARTAS ZOMBIE AL MAZO JUGADOR
     //CREAR 3 CONTROLADORES  PARA LOS 3 MODOS DE JUEGO
-    public Controlador(Personaje p) {
-        personaje = p;
+    public Controlador() {
+      
+        compraCartas = new CompraCartas(this);
+        mazoEscenario = new MazoEscenario(this);
+        mazoDescartes = new MazoDescartes(this);
+        mazoEliminadas = new MazoEliminadas(this);
+        mazoJugador = new MazoJugador(this);
+        mazoZombies = new MazoZombies(this);
+        mano = new Mano(this);
+        menuPrincipal = new MenuPrincipal();
+        menuOpciones = new MenuOpciones(mano);
+        vista = new VistaEscenario(this);
+        areaJugable = new AreaJugable(this);
+        Ronda=0;
+        PersonasSalvadas=0;
+
     }
 
     public void controlador1a() {
@@ -77,6 +94,13 @@ public class Controlador extends Escenario {
     public void controlador1c() {
         //objetivo: acaba el turno con 6 supervivientes rescatados y una instalacion preparada
         //preparacion: comienza con 1 oleada.
+    }
+    
+    
+    
+    public void AniadirPersonaje(Personaje p){
+    
+     personaje = p;
     }
 
 }

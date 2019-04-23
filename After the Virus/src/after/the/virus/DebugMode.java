@@ -20,7 +20,7 @@ import java.util.Scanner;
  * @author jose_
  */
 public class DebugMode {
-    Escenario esc=new Escenario();
+ Controlador controlador=new Controlador();
     public DebugMode() {
     
     }
@@ -34,54 +34,55 @@ public class DebugMode {
         switch (n) {
 
             case 1:
-                personaje = new Adam(esc);
+                personaje = new Adam(controlador);
 
                 break;
             case 2:
-                personaje = new Ruth(esc);
+                personaje = new Ruth(controlador);
 
                 break;
             case 3:
-                personaje = new Jennie(esc);
+                personaje = new Jennie(controlador);
 
                 break;
             case 4:
-                personaje = new Robert(esc);
+                personaje = new Robert(controlador);
 
                 break;
         }
+        controlador.AniadirPersonaje(personaje);
         System.out.println("ronda");
         int r = sr.nextInt();
-        esc.Ronda = r;
+        controlador.Ronda = r;
         System.out.println("rescatados");
         int p = sr.nextInt();
-        esc.PersonasSalvadas = p;
+        controlador.PersonasSalvadas = p;
         System.out.println("cartas en juego");
         int cartasEnJuego = sr.nextInt();
         for (int i = 0; i < cartasEnJuego; i++) {
             //Carta a elegir por nombre
         System.out.println("elegir nombre carta");
             String name = sr.next();
-            for (int j = 0; j < esc.mazoJugador.getMazoJugador().size(); j++) {
+            for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
 
-                if (esc.mazoJugador.getMazoJugador().get(i).getNombre() == name) {
-                    esc.areaJugable.AniadirCarta(esc.mazoJugador.getMazoJugador().remove(i));
+                if (controlador.mazoJugador.getMazoJugador().get(i).getNombre() == name) {
+                    controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazoJugador().remove(i));
                     System.out.println("activar carta? Si/-");
                     
                     String siNo = sr.next();
 
                     if (siNo.equals("Si")) {
-                        esc.areaJugable.BuscarCartaNombre(name).setActiva(true);
+                        controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
 
                     } else {
-                        esc.areaJugable.BuscarCartaNombre(name).setActiva(false);
+                        controlador.areaJugable.BuscarCartaNombre(name).setActiva(false);
                     }
 
                 }
 
             }
         }
-        Controlador controlador = new Controlador(personaje);
+   
         System.out.println("elegir controlador");
         int m = sr.nextInt();
         
@@ -90,7 +91,7 @@ public class DebugMode {
 
         for (int i = 0; i < zext; i++) {
 
-            esc.arrayZombies.add((Zombie) esc.mazoZombies.getMazoZombie().remove(0));
+            controlador.arrayZombies.add((Zombie) controlador.mazoZombies.getMazoZombie().remove(0));
         }
         switch (m) {
             case 1:

@@ -18,33 +18,32 @@ import java.util.ArrayList;
  *
  * @author Zero
  */
-public class Escenario {
+public abstract class Escenario {
 
 //contiene todo el escenario principal
    
     
-    CompraCartas compraCartas = new CompraCartas(this);
-    public MazoEscenario mazoEscenario = new MazoEscenario(this);
-    public MazoDescartes mazoDescartes = new MazoDescartes(this);
-    public MazoEliminadas mazoEliminadas = new MazoEliminadas(this);
-    public MazoJugador mazoJugador = new MazoJugador(this);
-    public MazoZombies mazoZombies = new MazoZombies(this);
-    public Mano mano = new Mano(this);
-    public ArrayList<Carta> arrayEscenario = new ArrayList<>();
-    public AreaJugable areaJugable = new AreaJugable(this);
+    public CompraCartas compraCartas;
+    public MazoEscenario mazoEscenario;
+    public MazoDescartes mazoDescartes;
+    public MazoEliminadas mazoEliminadas;
+    public MazoJugador mazoJugador;
+    public MazoZombies mazoZombies;
+    public Mano mano;
+    public MenuPrincipal menuPrincipal;
+    public MenuOpciones menuOpciones;
+    public VistaEscenario vista;
+    public AreaJugable areaJugable;
     public ArrayList<Zombie> arrayZombies = new ArrayList<>();
     public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
-    public MenuPrincipal menuPrincipal=new MenuPrincipal();
-    public MenuOpciones menuOpciones=new MenuOpciones(mano);
+    public ArrayList<Carta> arrayEscenario = new ArrayList<>();
+    
     public Personaje personaje;
     public int Ronda;
     public int PersonasSalvadas;
-    public VistaEscenario vista=new VistaEscenario(this);
     
-    public Escenario() {
-    }
    
     
    
