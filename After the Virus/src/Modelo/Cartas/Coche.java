@@ -29,6 +29,9 @@ public class Coche extends Carta {
         escenario.arrayZombies.get(a).muereZombie();
         
         //Falta descartar el resto
+        for (int i = 0;i < escenario.arrayZombies.size();i++){
+            
+        }
         
         escenario.areaJugable.DescartarCarta(this);
     }

@@ -10,6 +10,7 @@ import Modelo.Personaje.Personaje;
 import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
 import Vista.VistaEscenario;
+import java.util.Scanner;
 
 /**
  *
@@ -48,10 +49,34 @@ public class Controlador extends Escenario {
         mazoZombies.introducirAleatorio(coge);
 
         do {
+            
             //3-Se baraja las cartas del jugador
             mazoJugador.barajarCartasPersonaje();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
+            // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
+                
+                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                   areaJugable.getArrayJugables().get(i).isActiva() &&
+                   arrayZombies.size()>0){
+                    Scanner sc1 = new Scanner(System.in);
+                    Scanner sc2 = new Scanner(System.in);
+                    vista.verAreaJugador();
+                    System.out.println("Selecciona una carta para descartar:");
+                    int a = sc1.nextInt();
+                    areaJugable.DescartarCarta(areaJugable.getArrayJugables().get(a));
+                    vista.verAreaZombies();
+                    System.out.println("Selecciona el zombie que vas a matar:");
+                    int b = sc2.nextInt();
+                    arrayZombies.get(b).muereZombie();
+                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                        areaJugable.getArrayJugables().get(i).isActiva() &&
+                        arrayZombies.isEmpty()){
+                    System.out.println("No hay zombies.");
+                }
+                
+            }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
@@ -106,6 +131,29 @@ public class Controlador extends Escenario {
             mazoJugador.barajarCartasPersonaje();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
+            // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
+    
+                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                   areaJugable.getArrayJugables().get(i).isActiva() &&
+                   arrayZombies.size()>0){
+                    Scanner sc1 = new Scanner(System.in);
+                    Scanner sc2 = new Scanner(System.in);
+                    vista.verAreaJugador();
+                    System.out.println("Selecciona una carta para descartar:");
+                    int a = sc1.nextInt();
+                    areaJugable.DescartarCarta(areaJugable.getArrayJugables().get(a));
+                    vista.verAreaZombies();
+                    System.out.println("Selecciona el zombie que vas a matar:");
+                    int b = sc2.nextInt();
+                    arrayZombies.get(b).muereZombie();
+                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                        areaJugable.getArrayJugables().get(i).isActiva() &&
+                        arrayZombies.isEmpty()){
+                    System.out.println("No hay zombies.");
+                }
+                
+            }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
@@ -153,6 +201,29 @@ public class Controlador extends Escenario {
             mazoJugador.barajarCartasPersonaje();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
+            // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
+    
+                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                   areaJugable.getArrayJugables().get(i).isActiva() &&
+                   arrayZombies.size()>0){
+                    Scanner sc1 = new Scanner(System.in);
+                    Scanner sc2 = new Scanner(System.in);
+                    vista.verAreaJugador();
+                    System.out.println("Selecciona una carta para descartar:");
+                    int a = sc1.nextInt();
+                    areaJugable.DescartarCarta(areaJugable.getArrayJugables().get(a));
+                    vista.verAreaZombies();
+                    System.out.println("Selecciona el zombie que vas a matar:");
+                    int b = sc2.nextInt();
+                    arrayZombies.get(b).muereZombie();
+                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
+                        areaJugable.getArrayJugables().get(i).isActiva() &&
+                        arrayZombies.isEmpty()){
+                    System.out.println("No hay zombies.");
+                }
+                
+            }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
