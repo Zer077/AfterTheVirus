@@ -27,7 +27,7 @@ public class MC extends Carta {
         escenario.vista.verAreaZombies();
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
-        escenario.arrayDescartadas.add(escenario.arrayZombies.get(a));
+        escenario.arrayZombies.get(a).descartaZombie();
         
         escenario.areaJugable.EliminarCarta(this);
     }
