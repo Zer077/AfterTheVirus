@@ -20,6 +20,7 @@ public class ChaquetaDeCuero extends Carta {
     @Override
     public void action() {
         escenario.personaje.setDefensa(escenario.personaje.getDefensa()+2);
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override

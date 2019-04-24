@@ -20,6 +20,7 @@ public class Antidoto extends Carta {
     @Override
     public void action() {
         escenario.personaje.setDefensa(escenario.personaje.getDefensa()+1);
+        escenario.areaJugable.EliminarCarta(this);
     }
     @Override
     public void descripcion() {
