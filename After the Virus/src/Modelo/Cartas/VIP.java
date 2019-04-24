@@ -19,17 +19,12 @@ public class VIP extends Carta {
 
     @Override
     public void action() {
-        
-//        if (escenario.areaJugable.getArrayJugables().contains(CasaSegura)){
-//            escenario.PersonasSalvadas = 3;
-//            escenario.areaJugable.EliminarCarta(this);
-//        }
-        
+       
     }
 
     @Override
     public void descripcion() {
-        System.out.println("Equivale a 3 survivors si se juega safe house. Entonces se destruye.");
+        System.out.println("Equivale a 3 supervivientes si se juega Refugio. Entonces se destruye.");
     }
 
 }
