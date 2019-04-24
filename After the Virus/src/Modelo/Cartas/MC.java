@@ -36,5 +36,14 @@ public class MC extends Carta {
     public void descripcion() {
         System.out.println("Al prepararse se descarta 1 carta de zombi. Se descarta para descartar 1 carta de zombi.");
     }
+    
+    @Override
+    public void setActiva(boolean activa) {
+        Scanner sc = new Scanner(System.in);
+        escenario.vista.verAreaZombies();
+        System.out.println("Selecciona el zombie: ");
+        int a = sc.nextInt();
+        escenario.arrayZombies.get(a).descartaZombie();
+    }
 
 }
