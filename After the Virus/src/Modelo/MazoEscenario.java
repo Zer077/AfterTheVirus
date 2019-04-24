@@ -26,6 +26,7 @@ public class MazoEscenario extends Mazo {
      */
     public ArrayList<Carta> getMazoEscenario() {
         return MazoEscenario;
+      
     }
 
     /**
@@ -34,5 +35,8 @@ public class MazoEscenario extends Mazo {
     public void setMazoEscenario(ArrayList<Carta> MazoEscenario) {
         this.MazoEscenario = MazoEscenario;
     }
+    
+    
+    
 
 }

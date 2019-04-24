@@ -26,15 +26,15 @@ public class Mano {
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
-    public void usarCartas(int[] cartas, int opcion) {
+    public void usarCartas(int cartas, int opcion) {
 
         switch (opcion) {
 
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
             case 1:
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas; i++) {
 
-                    Carta carta = Mano.get(cartas[i]);
+                    Carta carta = Mano.get(cartas);
 
                     if (carta.getActivacion() == 0) {
                         escenario.areaJugable.AniadirCarta(carta);
@@ -50,9 +50,9 @@ public class Mano {
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas; i++) {
 
-                    Carta carta = Mano.get(cartas[i]);
+                    Carta carta = Mano.get(cartas);
                     escenario.areaJugable.AniadirCarta(carta);
                 }
 
@@ -62,15 +62,15 @@ public class Mano {
             case 3:
                 escenario.vista.verAreaJugador();
                 Carta[] carta = null;
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas; i++) {
 
-                    carta[i] = Mano.get(cartas[i]);
+                    carta[i] = Mano.get(cartas);
 
                 }
                 if (escenario.areaJugable.ActivarCarta(carta) == true) {
-                    for (int i = 0; i < cartas.length; i++) {
+                    for (int i = 0; i < cartas; i++) {
 
-                        Mano.remove(cartas[i]);
+                        Mano.remove(cartas);
                     }
                 } else //lanzar error
                 {
@@ -80,9 +80,9 @@ public class Mano {
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas; i++) {
 
-                    carta1 = Mano.get(cartas[i]);
+                    carta1 = Mano.get(cartas);
 
                     escenario.compraCartas.explora(carta1);
 
@@ -93,14 +93,14 @@ public class Mano {
             //Usa estas cartas para comprar
             case 5:
                 Carta[] carta2 = null;
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas; i++) {
 
-                    carta2[i] = Mano.get(cartas[i]);
+                    carta2[i] = Mano.get(cartas);
                 }
                 if (escenario.compraCartas.compra(carta2) == true) {
-                    for (int i = 0; i < cartas.length; i++) {
+                    for (int i = 0; i < cartas; i++) {
 
-                        Mano.remove(cartas[i]);
+                        Mano.remove(cartas);
                     }
                 } else //lanzar error y volver al menu
                 {
@@ -137,5 +137,17 @@ public class Mano {
         Mano.add(carta);
 
     }
-
+    
+    public void comprobarZombie(){
+        for(Carta carta: Mano){
+            if (carta instanceof Zombie) {
+                escenario.arrayZombies.add((Zombie) carta);
+                Mano.remove(carta);
+            }  
+        }
+    }
+    
+    public int numeroCartas(){
+        return Mano.size();
+    }
 }

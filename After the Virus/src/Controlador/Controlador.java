@@ -18,6 +18,7 @@ import Vista.VistaEscenario;
 public class Controlador extends Escenario {
 
     int contador;
+    
 
     //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
     //NOTA IMPORTANTE, AL PRINCIPIO DEL JUEGO DEBEMOS DARLE ALEATORIAMENTE ENTRE 1 Y 3 CARTAS ZOMBIE AL MAZO JUGADOR
@@ -44,29 +45,35 @@ public class Controlador extends Escenario {
         //preparacion: comienza con 1 oleada (añadir 1-3 cartas zombi random)
 
         int coge = (int) Math.random() * 3 + 1;
-        //mazoJugador.getMazoJugador().add(mazoZombies.introducirAleatorio(coge));
+        mazoZombies.introducirAleatorio(coge);
 
         do {
-            mazoJugador.getMazoJugador();
-            //demas mazos
+            //3-Se baraja las cartas del jugador
             mazoJugador.barajarCartasPersonaje();
+            //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
+            //y elimina las de Zombie de la mano y las pone en juego
+            mano.comprobarZombie();
+            //mostrar escenario y todos los datos
+            vista.verEscenarioGeneral();
+            //muestra menu opciones acciones carta
+            int opcion=0;
+            do{
+            menuOpciones.Menu();
+            opcion = menuOpciones.ElegirOpcion();
+            //usa la carta con la accion indicada en el menu
+            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+            vista.verMano();
             //menu uso de cartas
-            //turno Zombies
+            }while(opcion!=5);
+            
+            //zombies restantes atacan
+            //HACER!!!!!!!!!!!!!!
+            
+            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
+            //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            mazoJugador.barajarCartasPersonaje();
-            /*1- Se establece las cartas de Jugador
-        2- Se establecen los demás mazos
-        3-Se baraja las cartas del jugador
-        4- La mano del jugador coje 5 cartas y la puede usar para varias cosas:
-            1-Usar de las cartas inactivas (activar y usar),
-            2-Usar para colocar (inactiva) (Si se coloca una carta de costo 0 de activacion activar automáticamente)
-            3-Usar para comprar
-            4-Usar para Explorar
-        Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
-        5-Se sacan cartas Zombie y meten en el mazo de jugador
-        6-Se baraja las cartas del jugador
-             */
+            
 
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
@@ -78,12 +85,13 @@ public class Controlador extends Escenario {
                 System.out.println("HAS MUERTO");
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
+                personaje.setCabeza(true);
             }
 
             Ronda++;
             contador = 0;
 
-        } while (personaje.isCabeza() == false);
+        } while (personaje.isCabeza() == true);
     }
 
     public void controlador1b() {

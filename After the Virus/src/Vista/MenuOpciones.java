@@ -21,10 +21,15 @@ public class MenuOpciones {
     }
 
     public void Menu() {
+        //1-Usar de las cartas inactivas (activar y usar),
+            //2-Usar para colocar (inactiva) (Si se coloca una carta de costo 0 de activacion activar automáticamente)
+            //3-Usar para comprar
+            //4-Usar para Explorar
     }
 
     //Elige una de las diversas opciones del juego
-    public void ElegirOpcion() {
+    public int ElegirOpcion() {
+        return 0;
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
