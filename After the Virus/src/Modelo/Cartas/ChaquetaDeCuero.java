@@ -14,17 +14,17 @@ import Modelo.Escenario;
 public class ChaquetaDeCuero extends Carta {
 
     public ChaquetaDeCuero(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "ChaquetaDeCuero", Escenario, 7, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        escenario.personaje.setDefensa(escenario.personaje.getDefensa()+2);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se destruye para prevenir los siguientes 2 daños en ese turno.");    
     }
 
 }

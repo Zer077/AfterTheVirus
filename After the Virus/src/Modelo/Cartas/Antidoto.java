@@ -14,17 +14,16 @@ import Modelo.Escenario;
 public class Antidoto extends Carta {
 
     public Antidoto(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Antidoto", Escenario, 7, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        escenario.personaje.setDefensa(escenario.personaje.getDefensa()+1);
     }
-
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se destruye para prevenir el siguiente daño en ese turno.");    
     }
 
 }
