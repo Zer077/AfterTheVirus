@@ -20,8 +20,6 @@ public class MC extends Carta {
 
     @Override
     public void action() {
-        // Falta lo de preparar.
-        
         // Añade a descartadas el zombie elegido.
         Scanner sc = new Scanner(System.in);
         escenario.vista.verAreaZombies();
