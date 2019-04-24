@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Guia extends Carta {
 
     public Guia(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Guía", Escenario, 12, 0);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Guia extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Se descarta para remover 2 zombis de una pila de descarte.");
     }
 
 }
