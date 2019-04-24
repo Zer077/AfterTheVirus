@@ -30,7 +30,7 @@ public class Coche extends Carta {
         
         //Falta descartar el resto
         
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

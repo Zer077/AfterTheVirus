@@ -27,7 +27,7 @@ public class MC extends Carta {
         int a = sc.nextInt();
         escenario.arrayZombies.get(a).descartaZombie();
         
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

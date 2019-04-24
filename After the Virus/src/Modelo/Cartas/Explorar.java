@@ -32,7 +32,7 @@ public class Explorar extends Carta {
         
         // Donde añado esas cartas y de donde las cojo?
         
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

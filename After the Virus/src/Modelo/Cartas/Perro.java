@@ -23,11 +23,11 @@ public class Perro extends Carta {
     @Override
     public void action() {
         Scanner sc = new Scanner(System.in);
-      escenario.vista.verAreaZombies();
+        escenario.vista.verAreaZombies();
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
         escenario.arrayZombies.get(a).muereZombie();
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override
