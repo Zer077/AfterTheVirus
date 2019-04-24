@@ -25,7 +25,7 @@ public class Tunel extends Carta {
             escenario.areaJugable.BuscarCartaTipo(12).setActiva(true);
             
 
-            escenario.areaJugable.EliminarCarta(this);
+            escenario.areaJugable.DescartarCarta(this);
         }
         
         }

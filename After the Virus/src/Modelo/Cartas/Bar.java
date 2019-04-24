@@ -52,12 +52,13 @@ public class Bar extends Carta {
 
                 default:
                     System.out.println("No has elegido el numero correcto");
+                    action();
                     break;
 
             }
         }
         
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
 
     }
 

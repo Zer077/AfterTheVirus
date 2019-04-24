@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +15,68 @@ import Modelo.Escenario;
 public class Laboratorio extends Carta {
 
     public Laboratorio(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Laboratorio", Escenario, 8, 12);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        for (int i = 0; i < escenario.arrayEliminadas.size(); i++) {
+
+            if (escenario.arrayEliminadas.get(i).getTipo() == 7) {
+
+                escenario.arrayDescartadas.add(escenario.arrayEliminadas.get(i));
+                escenario.arrayEliminadas.remove(escenario.arrayEliminadas.get(i));
+            }
+        }
+
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("(Se prepara con safe house) Las medicinas destruidas pueden ponerse en el descarte en cualquier momento.");
+    }
+
+    @Override
+    public void setActiva(boolean activa) {
+
+        Scanner sc = new Scanner(System.in);
+        //activacion de la carta Laboratorio
+
+        int refugio = 0;
+
+        //comprobar cuantos laboratorios y refugios hay en tu mano
+        for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
+
+            if (escenario.areaJugable.getArrayJugables().get(i).getNombre() == "Refugio") {
+                refugio++;
+            }
+
+        }
+
+        //preguntar si quiere activar laboratorio
+        //usa refugio para activar laboratorio (activo laboratorio) refugio la descarto 
+        
+        if (refugio > 0) {
+
+            System.out.println("En tu mano hay al menos un refugio. ¿Quieres activar un laboratorio? S/N");
+            String respuesta = sc.next();
+
+            if (respuesta.toUpperCase() == "S") {
+                setActiva(true);
+                escenario.arrayDescartadas.add(escenario.areaJugable.BuscarCartaNombre("Refugio"));
+            }
+            else if (respuesta.toUpperCase() == "N") {
+                escenario.menuOpciones.Menu();
+            }
+            else{
+                System.out.println("Esta opcion no es valida.");
+                setActiva(true);
+            }
+
+        }
+
     }
 
 }
