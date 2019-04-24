@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class MC extends Carta {
 
     public MC(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(1, "MC", Escenario, 14, 1);
+        super(1, "Motocicleta", Escenario, 14, 1);
     }
 
     @Override
