@@ -19,6 +19,7 @@ public abstract class Personaje {
     private boolean pierna = false;
     private boolean brazo = false;
     private boolean cabeza = false;
+    private int defensa=0;
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
@@ -26,6 +27,8 @@ public abstract class Personaje {
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
     public void parteCuerpoAtacar() {
+        
+        if (getDefensa()==0){
 
         if (brazo == true && pierna == true) {
             cabeza = true;
@@ -63,7 +66,7 @@ public abstract class Personaje {
 
             }
         }
-    }
+    }else setDefensa(getDefensa() - 1);}
 
     /**
      * @return the nombre
@@ -119,6 +122,20 @@ public abstract class Personaje {
      */
     public void setCabeza(boolean cabeza) {
         this.cabeza = cabeza;
+    }
+
+    /**
+     * @return the defensa
+     */
+    public int getDefensa() {
+        return defensa;
+    }
+
+    /**
+     * @param defensa the defensa to set
+     */
+    public void setDefensa(int defensa) {
+        this.defensa = defensa;
     }
 
 }
