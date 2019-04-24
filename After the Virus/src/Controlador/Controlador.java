@@ -99,29 +99,34 @@ public class Controlador extends Escenario {
         //Preparacion:Comienza con 1 oleada. comienza con 5 cartas de zombi a cada mazo
 
         int coge = 5;
-        //mazoJugador.getMazoJugador().add(mazoZombies.introducirAleatorio(coge));
+        mazoZombies.introducirAleatorio(coge);
 
         do {
-            mazoJugador.getMazoJugador();
-            //demas mazos
+            //3-Se baraja las cartas del jugador
             mazoJugador.barajarCartasPersonaje();
+            //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
+            //y elimina las de Zombie de la mano y las pone en juego
+            mano.comprobarZombie();
+            //mostrar escenario y todos los datos
+            vista.verEscenarioGeneral();
+            //muestra menu opciones acciones carta
+            int opcion=0;
+            do{
+            menuOpciones.Menu();
+            opcion = menuOpciones.ElegirOpcion();
+            //usa la carta con la accion indicada en el menu
+            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+            vista.verMano();
             //menu uso de cartas
-            //turno Zombies
+            }while(opcion!=5);
+            
+            //zombies restantes atacan
+            //HACER!!!!!!!!!!!!!!
+            
+            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
+            //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            mazoJugador.barajarCartasPersonaje();
-            /*1- Se establece las cartas de Jugador
-        2- Se establecen los demás mazos
-        3-Se baraja las cartas del jugador
-        4- La mano del jugador coje 5 cartas y la puede usar para varias cosas:
-            1-Usar de las cartas inactivas (activar y usar),
-            2-Usar para colocar (inactiva) (Si se coloca una carta de costo 0 de activacion activar automáticamente)
-            3-Usar para comprar
-            4-Usar para Explorar
-        Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
-        5-Se sacan cartas Zombie y meten en el mazo de jugador
-        6-Se baraja las cartas del jugador
-             */
             
             
 
@@ -140,6 +145,53 @@ public class Controlador extends Escenario {
     public void controlador1c() {
         //objetivo: acaba el turno con 6 supervivientes rescatados y una instalacion preparada
         //preparacion: comienza con 1 oleada.
+        
+        boolean x = false;
+        
+        do {
+            //3-Se baraja las cartas del jugador
+            mazoJugador.barajarCartasPersonaje();
+            //4- La mano del jugador coje 5 cartas
+            mazoJugador.sacarCincoCartas();
+            //y elimina las de Zombie de la mano y las pone en juego
+            mano.comprobarZombie();
+            //mostrar escenario y todos los datos
+            vista.verEscenarioGeneral();
+            //muestra menu opciones acciones carta
+            int opcion=0;
+            do{
+            menuOpciones.Menu();
+            opcion = menuOpciones.ElegirOpcion();
+            //usa la carta con la accion indicada en el menu
+            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+            vista.verMano();
+            //menu uso de cartas
+            }while(opcion!=5);
+            
+            //zombies restantes atacan
+            //HACER!!!!!!!!!!!!!!
+            
+            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
+            //5-Se sacan cartas Zombie y meten en el mazo de jugador
+            mazoZombies.introducir();
+            
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
+                if (areaJugable.getArrayJugables().get(i).getTipo() == 8 &&
+                    areaJugable.getArrayJugables().get(i).isActiva()) {
+                    x = true;
+                }
+            }
+            
+            if (personaje.isCabeza() == true) {
+                System.out.println("HAS MUERTO");
+            } else if (personaje.isCabeza() && x == true) {
+                System.out.println("HAS GANADO");
+            }
+
+            Ronda++;
+            
+            
+            } while (personaje.isCabeza() == false);
     }
     
     
