@@ -149,5 +149,9 @@ public class Mano {
     
     public int numeroCartas(){
         return Mano.size();
+       
+    }
+    public void aniadirCartaMano(Carta e){
+         Mano.add(e);
     }
 }
