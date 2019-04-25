@@ -3,6 +3,7 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Rifle extends CartaArma {
 
@@ -15,7 +16,19 @@ public class Rifle extends CartaArma {
         if(this.municion==0){
             System.out.println("¡Debes añadir munición para poder usarla!");
         }else{
-            
+            System.out.println("Elige una opción:\n1. Matar un zombi de la mesa.\n2. Matar un zombi de la pila de descartes.");
+            Scanner numero = new Scanner(System.in);
+            int x = numero.nextInt();
+            switch(x){
+                case 1:
+                    System.out.println("Elige al zombi que quieres matar:");
+                    ArrayList<Zombie> zombies = escenario.arrayZombies;
+                    for(Zombie z : zombies){
+                        
+                    }
+                    
+                case 2:
+            }
         }    
     }
 

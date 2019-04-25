@@ -35,24 +35,37 @@ public class VistaEscenario {
     public void verMano(){
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.
-        System.out.println("Nombre de la carta: ");
-        System.out.println("Descripción: ");
-        System.out.println("Coste preparar: ");
+        ArrayList<Carta> mano = escenario.arrayMano;
+        for(Carta x : mano){
+            System.out.println("Nombre de la carta: "+x.getNombre());
+            System.out.println("Descripción: ");
+            x.descripcion();
+            System.out.println("Coste preparar: "+x.getActivacion());
+        }
     }
     
     public void verAreaExploracion(){
         System.out.println("----------Área de exploración----------");
         //bucle para ver todas las cartas que están exploradas.
-        System.out.println("Nombre de la carta: ");
-        System.out.println("Descripción: ");
-        System.out.println("Precio: ");
-        System.out.println("Coste preparar: ");
+        ArrayList <Carta> explorar = escenario.arrayEscenario;
+        for(Carta x: explorar){
+            System.out.println("Nombre de la carta: "+x.getNombre());
+            System.out.println("Descripción: ");
+            x.descripcion();
+            System.out.println("Precio: "+x.getPrecio());
+            System.out.println("Coste preparar: "+x.getActivacion());
+        }
+        
     }
 
     public void verAreaZombies(){
         System.out.println("----------Área de zombies----------");
-        System.out.println("Hay x cartas en la mesa.");
-        //bucle para mostrar todos los zombies.
+        ArrayList<Zombie> zombis = escenario.arrayZombies;
+        System.out.println("Hay "+zombis.size()+" cartas de zombies en la mesa.");
+        //bucle para mostra todos los zombies de la mesa.
+        for(Zombie z : zombis){
+            System.out.println("Carta con ");
+        }
         System.out.println("Número de zombies en la carta:");
         System.out.println("----------------------------------------");
     }
