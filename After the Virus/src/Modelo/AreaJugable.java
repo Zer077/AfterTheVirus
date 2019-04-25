@@ -16,7 +16,8 @@ import java.util.Scanner;
 /**
  *
  * @author Zero
- */public class AreaJugable {
+ */
+public class AreaJugable {
 
     private ArrayList<Carta> ArrayJugables = new ArrayList();
     Escenario escenario;
@@ -46,20 +47,21 @@ import java.util.Scanner;
         Scanner sc = new Scanner(System.in);
         int numero = sc.nextInt();
 
-        if (ArrayJugables.get(numero).getTipo()==3){
-        
-        for (int i = 0; i < ArrayJugables.size(); i++) {
+        if (ArrayJugables.get(numero).getTipo() == 3) {
 
-            if (ArrayJugables.get(i) instanceof ObjetivoSeguro) {
+            for (int i = 0; i < ArrayJugables.size(); i++) {
 
-                vista.verAreaZombies();
-                System.out.println("A que Zombie quieres atacar?");
+                if (ArrayJugables.get(i) instanceof ObjetivoSeguro) {
 
-                int numero2 = sc.nextInt();
-                escenario.arrayZombies.get(numero2).muereZombie();
+                    vista.verAreaZombies();
+                    System.out.println("A que Zombie quieres atacar?");
 
+                    int numero2 = sc.nextInt();
+                    escenario.arrayZombies.get(numero2).muereZombie();
+
+                }
             }
-        }}
+        }
 
         ArrayJugables.get(numero).action();
 
@@ -92,7 +94,7 @@ import java.util.Scanner;
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numeroActivar = sc.nextInt();
-            
+
             //si la carta elegida es un arma
             if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
 
@@ -102,15 +104,17 @@ import java.util.Scanner;
                 int numero2 = sc.nextInt();
                 escenario.arrayZombies.get(numero2).muereZombie();
 
-                Carta aux=ArrayJugables.get(numeroActivar);
-            
-                if(aux.getActivacion()==cartas.length){
-            
-            ArrayJugables.get(numeroActivar).setActiva(true);
-            return true;
-            }else System.out.println("Vuelve a intentarlo");
-            
-            escenario.menuOpciones.Menu();
+                Carta aux = ArrayJugables.get(numeroActivar);
+
+                if (aux.getActivacion() == cartas.length) {
+
+                    ArrayJugables.get(numeroActivar).setActiva(true);
+                    return true;
+                } else {
+                    System.out.println("Vuelve a intentarlo");
+                }
+
+                escenario.menuOpciones.Menu();
             }
 
             //Si WeaponSkill no está activa solo te deja activar una carta
@@ -123,19 +127,19 @@ import java.util.Scanner;
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
-            Carta aux=ArrayJugables.get(numero);
-            
-            //REVISION
-            if(aux.getActivacion()==cartas.length){
-            
-            ArrayJugables.get(numero).setActiva(true);
-            return true;
-            }else System.out.println("Vuelve a intentarlo");
-            
-            escenario.menuOpciones.Menu(); 
-            
+            Carta aux = ArrayJugables.get(numero);
 
-            
+            //REVISION
+            if (aux.getActivacion() == cartas.length) {
+
+                ArrayJugables.get(numero).setActiva(true);
+                return true;
+            } else {
+                System.out.println("Vuelve a intentarlo");
+            }
+
+            escenario.menuOpciones.Menu();
+
         }
         return false;
     }
@@ -161,21 +165,21 @@ import java.util.Scanner;
         }
         return null;
     }
- public void EliminarCarta(Carta card) {
+
+    public void EliminarCarta(Carta card) {
 
         escenario.mazoEliminadas.IntroducirCarta(card);
-        
+
         ArrayJugables.remove(card);
-           
+
     }
-    
-    
+
     public void DescartarCarta(Carta card) {
 
         escenario.mazoDescartes.IntroducirCarta(card);
-        
+
         ArrayJugables.remove(card);
-           
+
     }
 
     /**
@@ -190,6 +194,26 @@ import java.util.Scanner;
      */
     public void setArrayJugables(ArrayList<Carta> ArrayJugables) {
         this.ArrayJugables = ArrayJugables;
+    }
+
+    public boolean comprobarArma() {
+        int contador = 0;
+        for (int i = 0; i < ArrayJugables.size(); i++) {
+            if (ArrayJugables.get(i).getTipo() == 8) {
+                contador++;
+
+            }
+
+        }
+        if (contador >= 2) {
+
+            return false;
+        } else if (contador >= 1 && escenario.personaje.isBrazo() == false) {
+            return false;
+        } else {
+            return true;
+        }
+
     }
 
 }
