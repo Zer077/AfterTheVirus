@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Saquear extends Carta {
 
     public Saquear(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Saquear", Escenario, 5, 0);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Saquear extends Carta {
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Recupera 1 carta");
     }
 
 }
