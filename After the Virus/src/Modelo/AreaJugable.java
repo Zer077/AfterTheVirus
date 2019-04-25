@@ -40,10 +40,7 @@ public class AreaJugable {
     //A traves del numero de una carta este metodo la jugará
     public void jugarCarta() {
         VistaEscenario vista = new VistaEscenario(escenario);
-        for (int i = 0; i < ArrayJugables.size(); i++) {
-
-            System.out.println(ArrayJugables.get(i).getNombre());
-        }
+        escenario.vista.verAreaJugador();
         Scanner sc = new Scanner(System.in);
         int numero = sc.nextInt();
 
@@ -87,10 +84,7 @@ public class AreaJugable {
 
         //Si WeaponSkill está activa y señecciona una carta que jugar tipo arma matas a un zombie y activa la carta
         if (WeaponSkillAuxiliar.isActiva()) {
-            for (int j = 0; j < ArrayJugables.size(); j++) {
-
-                System.out.println(ArrayJugables.get(j).getNombre());
-            }
+            escenario.vista.verAreaJugador();
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numeroActivar = sc.nextInt();
@@ -119,10 +113,7 @@ public class AreaJugable {
 
             //Si WeaponSkill no está activa solo te deja activar una carta
         } else {
-            for (int j = 0; j < ArrayJugables.size(); j++) {
-
-                System.out.println(ArrayJugables.get(j).getNombre());
-            }
+            escenario.vista.verAreaJugador();
 
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
@@ -201,9 +192,7 @@ public class AreaJugable {
         for (int i = 0; i < ArrayJugables.size(); i++) {
             if (ArrayJugables.get(i).getTipo() == 8) {
                 contador++;
-
             }
-
         }
         if (contador >= 2) {
 
