@@ -20,7 +20,7 @@ public class VistaEscenario {
     public VistaEscenario(Escenario escenario) {
         
         this.escenario=escenario;
-        verEscenarioGeneral();
+       // verEscenarioGeneral();
     }
 
     public void verEscenarioGeneral(){

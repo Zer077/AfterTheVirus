@@ -19,13 +19,12 @@ import java.util.Scanner;
 public class Controlador extends Escenario {
 
     int contador;
-    
 
     //Debe encargarse de que funcione la aplicacion con las diversas mecánicas
     //NOTA IMPORTANTE, AL PRINCIPIO DEL JUEGO DEBEMOS DARLE ALEATORIAMENTE ENTRE 1 Y 3 CARTAS ZOMBIE AL MAZO JUGADOR
     //CREAR 3 CONTROLADORES  PARA LOS 3 MODOS DE JUEGO
     public Controlador() {
-      
+
         compraCartas = new CompraCartas(this);
         mazoEscenario = new MazoEscenario(this);
         mazoDescartes = new MazoDescartes(this);
@@ -37,8 +36,8 @@ public class Controlador extends Escenario {
         menuOpciones = new MenuOpciones(mano);
         vista = new VistaEscenario(this);
         areaJugable = new AreaJugable(this);
-        Ronda=1;
-        PersonasSalvadas=0;
+        Ronda = 1;
+        PersonasSalvadas = 0;
 
     }
 
@@ -49,17 +48,17 @@ public class Controlador extends Escenario {
         mazoZombies.introducirAleatorio(coge);
 
         do {
-            
+
             //3-Se baraja las cartas del jugador
             mazoJugador.barajarCartasPersonaje();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
-            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
-                
-                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                   areaJugable.getArrayJugables().get(i).isActiva() &&
-                   arrayZombies.size()>0){
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
+
+                if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.size() > 0) {
                     Scanner sc1 = new Scanner(System.in);
                     Scanner sc2 = new Scanner(System.in);
                     vista.verAreaJugador();
@@ -70,35 +69,33 @@ public class Controlador extends Escenario {
                     System.out.println("Selecciona el zombie que vas a matar:");
                     int b = sc2.nextInt();
                     arrayZombies.get(b).muereZombie();
-                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                        areaJugable.getArrayJugables().get(i).isActiva() &&
-                        arrayZombies.isEmpty()){
+                } else if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.isEmpty()) {
                     System.out.println("No hay zombies.");
                 }
-                
+
             }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
             vista.verEscenarioGeneral();
             //muestra menu opciones acciones carta
-            int opcion=0;
-            do{
-            menuOpciones.Menu();
-            opcion = menuOpciones.ElegirOpcion();
-            //usa la carta con la accion indicada en el menu
-            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
-            vista.verMano();
-            //menu uso de cartas
-            }while(opcion!=5);
-            
+            int opcion = 0;
+            do {
+                menuOpciones.Menu();
+                opcion = menuOpciones.ElegirOpcion();
+                //usa la carta con la accion indicada en el menu
+                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                vista.verMano();
+                //menu uso de cartas
+            } while (opcion != 5);
+
             //zombies restantes atacan
             //HACER!!!!!!!!!!!!!!
-            
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            
 
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
@@ -132,11 +129,11 @@ public class Controlador extends Escenario {
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
-            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
-    
-                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                   areaJugable.getArrayJugables().get(i).isActiva() &&
-                   arrayZombies.size()>0){
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
+
+                if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.size() > 0) {
                     Scanner sc1 = new Scanner(System.in);
                     Scanner sc2 = new Scanner(System.in);
                     vista.verAreaJugador();
@@ -147,36 +144,33 @@ public class Controlador extends Escenario {
                     System.out.println("Selecciona el zombie que vas a matar:");
                     int b = sc2.nextInt();
                     arrayZombies.get(b).muereZombie();
-                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                        areaJugable.getArrayJugables().get(i).isActiva() &&
-                        arrayZombies.isEmpty()){
+                } else if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.isEmpty()) {
                     System.out.println("No hay zombies.");
                 }
-                
+
             }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
             vista.verEscenarioGeneral();
             //muestra menu opciones acciones carta
-            int opcion=0;
-            do{
-            menuOpciones.Menu();
-            opcion = menuOpciones.ElegirOpcion();
-            //usa la carta con la accion indicada en el menu
-            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
-            vista.verMano();
-            //menu uso de cartas
-            }while(opcion!=5);
-            
+            int opcion = 0;
+            do {
+                menuOpciones.Menu();
+                opcion = menuOpciones.ElegirOpcion();
+                //usa la carta con la accion indicada en el menu
+                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                vista.verMano();
+                //menu uso de cartas
+            } while (opcion != 5);
+
             //zombies restantes atacan
             //HACER!!!!!!!!!!!!!!
-            
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            
-            
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
@@ -185,7 +179,6 @@ public class Controlador extends Escenario {
             }
 
             Ronda++;
-            
 
         } while (personaje.isCabeza() == false);
     }
@@ -193,20 +186,20 @@ public class Controlador extends Escenario {
     public void controlador1c() {
         //objetivo: acaba el turno con 6 supervivientes rescatados y una instalacion preparada
         //preparacion: comienza con 1 oleada.
-        
+
         boolean x = false;
-        
+
         do {
             //3-Se baraja las cartas del jugador
             mazoJugador.barajarCartasPersonaje();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
-            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++){
-    
-                if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                   areaJugable.getArrayJugables().get(i).isActiva() &&
-                   arrayZombies.size()>0){
+            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
+
+                if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.size() > 0) {
                     Scanner sc1 = new Scanner(System.in);
                     Scanner sc2 = new Scanner(System.in);
                     vista.verAreaJugador();
@@ -217,42 +210,41 @@ public class Controlador extends Escenario {
                     System.out.println("Selecciona el zombie que vas a matar:");
                     int b = sc2.nextInt();
                     arrayZombies.get(b).muereZombie();
-                }else if("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre()) &&
-                        areaJugable.getArrayJugables().get(i).isActiva() &&
-                        arrayZombies.isEmpty()){
+                } else if ("Machete".equals(areaJugable.getArrayJugables().get(i).getNombre())
+                        && areaJugable.getArrayJugables().get(i).isActiva()
+                        && arrayZombies.isEmpty()) {
                     System.out.println("No hay zombies.");
                 }
-                
+
             }
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
             vista.verEscenarioGeneral();
             //muestra menu opciones acciones carta
-            int opcion=0;
-            do{
-            menuOpciones.Menu();
-            opcion = menuOpciones.ElegirOpcion();
-            //usa la carta con la accion indicada en el menu
-            mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
-            vista.verMano();
-            //menu uso de cartas
-            }while(opcion!=5);
-            
+            int opcion = 0;
+            do {
+                menuOpciones.Menu();
+                opcion = menuOpciones.ElegirOpcion();
+                //usa la carta con la accion indicada en el menu
+                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                vista.verMano();
+                //menu uso de cartas
+            } while (opcion != 5);
+
             //zombies restantes atacan
             //HACER!!!!!!!!!!!!!!
-            
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            
+
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
-                if (areaJugable.getArrayJugables().get(i).getTipo() == 8 &&
-                    areaJugable.getArrayJugables().get(i).isActiva()) {
+                if (areaJugable.getArrayJugables().get(i).getTipo() == 8
+                        && areaJugable.getArrayJugables().get(i).isActiva()) {
                     x = true;
                 }
             }
-            
+
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
             } else if (personaje.isCabeza() && x == true) {
@@ -260,16 +252,13 @@ public class Controlador extends Escenario {
             }
 
             Ronda++;
-            
-            
-            } while (personaje.isCabeza() == false);
+
+        } while (personaje.isCabeza() == false);
     }
-    
-    
-    
-    public void AniadirPersonaje(Personaje p){
-    
-     personaje = p;
+
+    public void AniadirPersonaje(Personaje p) {
+
+        personaje = p;
     }
 
 }
