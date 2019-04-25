@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -102,6 +103,35 @@ public class MazoZombies extends Mazo {
             MazoZombie.remove(0);
         }
     }
+    
+    
+    public  void ZombieAMatar(){
+        
+        
+        escenario.vista.verAreaZombies();
+        System.out.println("que zombie descartar?");
+        Scanner sr=new Scanner(System.in);
+        int n=sr.nextInt();
+        escenario.arrayZombies.get(n).muereZombie();
+    
+        
+        
+    }
+    
+    
+    public void ZombieADescartar(){
+    
+    
+        escenario.vista.verAreaZombies();
+        System.out.println("que zombie descartar?");
+        Scanner sr=new Scanner(System.in);
+        int n=sr.nextInt();
+        escenario.arrayZombies.get(n).descartaZombie();
+    
+    }
+    
+    
+    
     public ArrayList<Carta> getMazoZombie() {
         return MazoZombie;
     }
