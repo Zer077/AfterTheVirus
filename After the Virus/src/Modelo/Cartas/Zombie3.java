@@ -20,6 +20,7 @@ public class Zombie3 extends Zombie {
         zombie.add(new Zombi());
         zombie.add(new Zombi());
         zombie.add(new Zombi());
+        setNumeroZombie(3);
     }
 
     @Override
