@@ -28,6 +28,17 @@ public class Rifle extends CartaArma {
                     }
                     
                 case 2:
+                    ArrayList<Carta> descartes = escenario.arrayDescartadas;
+                    int contador = 0;
+                    for(Carta c : descartes){
+                        if((c instanceof Zombie) && (contador==0)){
+                            escenario.arrayDescartadas.remove(c);
+                            escenario.mazoZombies.getDescarteZombies().add(c);
+                            contador++;
+                        }else{
+                            System.out.println("¡No hay zombies para matar!");
+                        }
+                    }
             }
         }    
     }
