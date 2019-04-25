@@ -30,6 +30,7 @@ public class Zombie2 extends Zombie {
             
             }
           escenario.mazoZombies.getDescarteZombies().add(this);
+          escenario.mazoZombies.eliminarZombieArray(this);
         }}
 
    

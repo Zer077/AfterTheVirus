@@ -31,7 +31,7 @@ public abstract class Zombie extends Carta {
             
         }
      escenario.mazoZombies.getDescarteZombies().add(this);
-     
+     escenario.mazoZombies.eliminarZombieArray(this);
     };
     
     
@@ -43,7 +43,7 @@ public abstract class Zombie extends Carta {
             
         }
     escenario.mazoDescartes.IntroducirCarta(this);
-     
+     escenario.mazoZombies.eliminarZombieArray(this);
      
      };
 
