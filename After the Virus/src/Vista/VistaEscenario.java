@@ -6,9 +6,7 @@
 package Vista;
 
 import Modelo.Escenario;
-import Modelo.Personaje.Personaje;
 import Modelo.Cartas.*;
-import Modelo.MazoEscenario;
 import java.util.ArrayList;
 
 /**
@@ -68,10 +66,21 @@ public class VistaEscenario {
         ArrayList<Zombie> zombis = escenario.arrayZombies;
         System.out.println("Hay "+zombis.size()+" cartas de zombies en la mesa.");
         //bucle para mostra todos los zombies de la mesa.
+        System.out.println("----------");
         for(Zombie z : zombis){
-            System.out.println("Carta con ");
+            System.out.println("Carta con "+z.zombie.size()+" zombies");
+            ArrayList<Zombi> numerozombis = z.zombie;
+            System.out.println("**********");
+            for(Zombi zi : numerozombis){
+                System.out.println("Zombi nº "+numerozombis.indexOf(zi)+1+"¿Vivo o muerto?");
+                if(zi.isVivo()){
+                    System.out.println("VIVO");
+                }else{
+                    System.out.println("MUERTO");
+                }
+            System.out.println("**********");
+            }
         }
-        System.out.println("Número de zombies en la carta:");
         System.out.println("----------------------------------------");
     }
 
