@@ -9,7 +9,6 @@ import Modelo.Escenario;
 import Modelo.Personaje.Personaje;
 import Modelo.Cartas.*;
 import Modelo.MazoEscenario;
-import Modelo.Personaje.Adam;
 import java.util.ArrayList;
 
 /**
@@ -19,12 +18,15 @@ import java.util.ArrayList;
 public class VistaEscenario {
     
     Escenario escenario;
+    
     public VistaEscenario(Escenario escenario) {
+        
         this.escenario=escenario;
         verEscenarioGeneral();
     }
 
     public void verEscenarioGeneral(){
+        
         verJugador();
         verAreaJugador();
         verAreaExploracion();
@@ -33,6 +35,7 @@ public class VistaEscenario {
     }
 
     public void verMano(){
+        
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.
         ArrayList<Carta> mano = escenario.arrayMano;
@@ -45,6 +48,7 @@ public class VistaEscenario {
     }
     
     public void verAreaExploracion(){
+        
         System.out.println("----------Área de exploración----------");
         //bucle para ver todas las cartas que están exploradas.
         ArrayList <Carta> explorar = escenario.arrayEscenario;
@@ -59,6 +63,7 @@ public class VistaEscenario {
     }
 
     public void verAreaZombies(){
+        
         System.out.println("----------Área de zombies----------");
         ArrayList<Zombie> zombis = escenario.arrayZombies;
         System.out.println("Hay "+zombis.size()+" cartas de zombies en la mesa.");
@@ -71,6 +76,7 @@ public class VistaEscenario {
     }
 
     public void verAreaJugador(){
+        
         System.out.println("----------Tu área de juego----------");
         //bucle para ver todas las cartas.
         ArrayList <Carta> areajugador = escenario.areaJugable.getArrayJugables();
@@ -91,6 +97,7 @@ public class VistaEscenario {
     }
 
     public void verJugador(){
+        
         System.out.println("----------Tu personaje----------");
         System.out.println("Nombre: "+escenario.personaje.getNombre());
         System.out.println("Heridas: ");
