@@ -19,6 +19,7 @@ public class Zombie2 extends Zombie {
         zombie = new ArrayList<>();
         zombie.add(new Zombi());
         zombie.add(new Zombi());
+        setNumeroZombie(2);
 
     }
 

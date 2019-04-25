@@ -21,6 +21,7 @@ public class Zombie4 extends Zombie {
         zombie.add(new Zombi());
         zombie.add(new Zombi());
         zombie.add(new Zombi());
+        setNumeroZombie(4);
 
     }
 

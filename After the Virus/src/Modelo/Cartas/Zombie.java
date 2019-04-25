@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public abstract class Zombie extends Carta {
     ArrayList<Zombi> zombie;
-  
+  private int numeroZombie;
 
     public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
@@ -46,6 +46,20 @@ public abstract class Zombie extends Carta {
      escenario.mazoZombies.eliminarZombieArray(this);
      
      };
+
+    /**
+     * @return the numeroZombie
+     */
+    public int getNumeroZombie() {
+        return numeroZombie;
+    }
+
+    /**
+     * @param numeroZombie the numeroZombie to set
+     */
+    public void setNumeroZombie(int numeroZombie) {
+        this.numeroZombie = numeroZombie;
+    }
 
 
     /**
