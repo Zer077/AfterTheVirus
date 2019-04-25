@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * @author Zero
  */
 public abstract class Zombie extends Carta {
-
-    private ArrayList zombie;
+    ArrayList<Zombi> zombie;
+  
 
     public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
@@ -24,25 +24,33 @@ public abstract class Zombie extends Carta {
 
     
     //lleva al zombie a la pila de descartes de los zombies
-    abstract public void muereZombie();
+    public void muereZombie(){
+    
+     for (int i = 0; i < zombie.size(); i++) {
+          zombie.get(i).setVivo(true);
+            
+        }
+     escenario.mazoZombies.getDescarteZombies().add(this);
+     
+    };
     
     
     //lleva al zombie a la pila de descartes del mazo del jugador
-    abstract public void descartaZombie();
+     public void descartaZombie(){
+     
+      for (int i = 0; i < zombie.size(); i++) {
+          zombie.get(i).setVivo(true);
+            
+        }
+    escenario.mazoDescartes.IntroducirCarta(this);
+     
+     
+     };
 
 
     /**
      * @return the zombie
      */
-    public ArrayList getZombie() {
-        return zombie;
-    }
-
-    /**
-     * @param zombie the zombie to set
-     */
-    public void setZombie(ArrayList zombie) {
-        this.zombie = zombie;
-    }
+   
 
 }

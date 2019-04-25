@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,17 +16,23 @@ public class Zombie3 extends Zombie {
 
     public Zombie3(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
+        zombie = new ArrayList<>();
+        zombie.add(new Zombi());
+        zombie.add(new Zombi());
+        zombie.add(new Zombi());
     }
 
     @Override
     public void atacaHumano() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+     for (int i = 0; i < zombie.size(); i++) {
+            if (zombie.get(i).isVivo()==true){
+            escenario.personaje.parteCuerpoAtacar();
+            
+            }
+          escenario.mazoZombies.getDescarteZombies().add(this);
+        }}
 
-    @Override
-    public void muereZombie() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     //NO HACER
     @Override
@@ -38,9 +45,6 @@ public class Zombie3 extends Zombie {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void descartaZombie() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
 }
