@@ -6,6 +6,8 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import Vista.*;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +16,25 @@ import Modelo.Escenario;
 public class Correr extends Carta {
 
     public Correr(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(1, "Corre", Escenario, 5, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (escenario.personaje.isPierna() == true){
+            escenario.vista.verAreaZombies();
+            System.out.println("Elige al zombie que quieres descartar: ");
+            Scanner sc = new Scanner(System.in);
+            int opcionZombie = sc.nextInt();
+            escenario.arrayZombies.get(opcionZombie-1).descartaZombie();
+        }else{
+            System.out.println("Tu pierna está rota, no puedes correr");
+        }
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Descarta 1 carta de Zombie");
     }
 
 }
