@@ -20,17 +20,9 @@ public class Explorar extends Carta {
 
     @Override
     public void action() {
-        //Accion de scoutear 2 cartas
-        Scanner sc1 = new Scanner(System.in);
-        Scanner sc2 = new Scanner(System.in);
-        System.out.println("Elige 2 cartas para explorarlas: ");
-        escenario.vista.verAreaExploracion();
-        System.out.println("Primera carta: ");
-        int a = sc1.nextInt();
-        System.out.println("Segunda carta: ");
-        int b = sc2.nextInt();
         
-        // Donde añado esas cartas y de donde las cojo?
+        escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
+        escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
         
         escenario.areaJugable.DescartarCarta(this);
     }
