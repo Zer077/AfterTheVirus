@@ -22,7 +22,6 @@ public class Ametralladora extends CartaArma {
         if(this.municion<=0){
             System.out.println("No tienes municion");
         }else{
-            this.cartas.get(0);
                 for(int i=0;i<2;i++){
                    escenario.arrayZombies.get(0).muereZombie();
                 }
