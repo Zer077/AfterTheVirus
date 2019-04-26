@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -13,19 +10,37 @@ import Modelo.Escenario;
  */
 public class Escopeta extends CartaArma {
 
-    public Escopeta(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
-//La escopeta se prepara añadiendo x cartas en la munición.
+    public Escopeta(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion){
+        
         super(1, "Escopeta", Escenario, 3, 0, 0);
-
     }
 
     @Override
-    public void action() {
+    public void action(){
+        
+        if(this.municion==0){
+            Scanner sc = new Scanner(System.in);
+            escenario.vista.verAreaZombies();
+            System.out.println("Selecciona el zombie: ");
+            int a = sc.nextInt();
+            escenario.arrayZombies.get(a).muereZombie();
+            escenario.mazoEliminadas.IntroducirCarta(this);
+        }else{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Hay que descartar una munición para atacar");
+            Carta bala = this.cartas.get(0);
+            escenario.vista.verAreaZombies();
+            System.out.println("Selecciona el zombie: ");
+            int a = sc.nextInt();
+            escenario.arrayZombies.get(a).muereZombie();
+            escenario.mazoDescartes.IntroducirCarta(bala);
+        }
             
     }
 
     @Override
-    public void descripcion() {
+    public void descripcion(){
+        
         System.out.println("Se descarta 1M o se destruye la escopeta para matar 1 zombi.");
     }
 
