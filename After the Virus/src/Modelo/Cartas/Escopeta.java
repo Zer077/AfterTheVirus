@@ -28,12 +28,11 @@ public class Escopeta extends CartaArma {
         }else{
             Scanner sc = new Scanner(System.in);
             System.out.println("Hay que descartar una munición para atacar");
-            Carta bala = this.cartas.get(0);
+            this.GastarMunicion();
             escenario.vista.verAreaZombies();
             System.out.println("Selecciona el zombie: ");
             int a = sc.nextInt();
             escenario.arrayZombies.get(a).muereZombie();
-            escenario.mazoDescartes.IntroducirCarta(bala);
         }
             
     }

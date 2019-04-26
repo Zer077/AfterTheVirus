@@ -21,12 +21,11 @@ public class Rifle extends CartaArma {
             int x = numero.nextInt();
             switch(x){
                 case 1:
+                    Scanner sc = new Scanner(System.in);
+                    escenario.vista.verAreaZombies();
                     System.out.println("Elige al zombi que quieres matar:");
-                    ArrayList<Zombie> zombies = escenario.arrayZombies;
-                    for(Zombie z : zombies){
-                        
-                    }
-                    
+                    int a = sc.nextInt();
+                    escenario.arrayZombies.get(a).muereZombie();
                 case 2:
                     ArrayList<Carta> descartes = escenario.arrayDescartadas;
                     int contador = 0;
