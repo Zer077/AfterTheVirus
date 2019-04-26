@@ -27,6 +27,7 @@ public class Correr extends Carta {
             Scanner sc = new Scanner(System.in);
             int opcionZombie = sc.nextInt();
             escenario.arrayZombies.get(opcionZombie-1).descartaZombie();
+            escenario.areaJugable.DescartarCarta(this);
         }else{
             System.out.println("Tu pierna está rota, no puedes correr");
         }
