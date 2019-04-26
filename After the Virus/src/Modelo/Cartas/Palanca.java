@@ -22,13 +22,7 @@ public class Palanca extends Carta {
     @Override
     public void action() {
         Scanner sc = new Scanner(System.in);
-        if (escenario.areaJugable.getArrayJugables().contains(this)) {
-            System.out.println("Selecciona un zombie a descartar:");
-            escenario.vista.verAreaZombies();
-            int elige = sc.nextInt();
-            escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
-            escenario.arrayZombies.remove(elige);
-        } else {
+        
             System.out.println("¿Deseas descartar esta carta para descartar 1 zombie? 1)si 2)no");
             int sino = sc.nextInt();
             switch (sino) {
@@ -43,7 +37,7 @@ public class Palanca extends Carta {
                 case 2:
                     System.out.println("Has decidido no descartar esta carta");
                     break;
-            }
+            
         }
     }
 
@@ -52,5 +46,14 @@ public class Palanca extends Carta {
         System.out.println("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
 
     }
-
+    @Override
+ public void setActiva(boolean activa) {
+             Scanner sc = new Scanner(System.in);
+             System.out.println("Selecciona un zombie a descartar:");
+            escenario.vista.verAreaZombies();
+            int elige = sc.nextInt();
+            escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
+            escenario.arrayZombies.remove(elige);
+            
+    }
 }

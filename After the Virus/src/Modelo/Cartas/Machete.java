@@ -24,7 +24,7 @@ public class Machete extends Carta {
 
     @Override
     public void action() {
-        Scanner sc = new Scanner(System.in);
+        /*Scanner sc = new Scanner(System.in);
         if (ronda.contains(escenario.Ronda)) {
             System.out.println("Ya has usado el machete esta ronda");
         } else {
@@ -44,7 +44,7 @@ public class Machete extends Carta {
                 System.out.println("Seleccion no valida");
             }
         }
-
+*/
     }
 
     @Override
