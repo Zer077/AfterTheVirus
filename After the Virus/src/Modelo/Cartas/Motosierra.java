@@ -22,9 +22,8 @@ public class Motosierra extends Carta {
         System.out.println("Usas la motosierra");
         for (int i = 0; i < 5; i++) {
             escenario.arrayZombies.get(0).muereZombie();
-            escenario.arrayZombies.remove(0);
         }
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class Granada extends Carta {
             escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(0));
             escenario.arrayZombies.remove(0);
         }
-        escenario.areaJugable.EliminarCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override
