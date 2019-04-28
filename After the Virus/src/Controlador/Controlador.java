@@ -89,7 +89,7 @@ public class Controlador extends Escenario {
                 mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 5);
+            } while (opcion != 5 && mano.numeroCartas()==0);
 
             //zombies restantes atacan
             //HACER!!!!!!!!!!!!!!
