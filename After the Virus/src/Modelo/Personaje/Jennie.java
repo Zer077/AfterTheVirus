@@ -24,7 +24,7 @@ import Modelo.Cartas.MC;
 import Modelo.Cartas.Machete;
 import Modelo.Cartas.Revista;
 import Modelo.Cartas.KitMedico;
-import Modelo.Cartas.Minigun;
+import Modelo.Cartas.Ametralladora;
 import Modelo.Cartas.TrampaPermetral;
 import Modelo.Cartas.Perro;
 import Modelo.Cartas.Pistola;
@@ -76,7 +76,7 @@ public class Jennie extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new MC(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Machete(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new KitMedico(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Minigun(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Ametralladora(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Perro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
