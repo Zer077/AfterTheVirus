@@ -20,13 +20,13 @@ public class Refugio extends Carta {
     @Override
     public void action() {
         for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-            Carta supervivient = escenario.areaJugable.BuscarCartaTipo(12);
-            if (supervivient instanceof Superviviente && supervivient.isActiva() == true) {
+            Carta carta = escenario.areaJugable.BuscarCartaTipo(12);
+            if (carta instanceof Superviviente && carta.isActiva() == true) {
                 escenario.PersonasSalvadas++;
-                escenario.areaJugable.DescartarCarta(supervivient);
-            } else if (supervivient instanceof VIP && supervivient.isActiva() == true) {
+                escenario.areaJugable.DescartarCarta(carta);
+            } else if (carta instanceof VIP && carta.isActiva() == true) {
                 escenario.PersonasSalvadas = escenario.PersonasSalvadas + 3;
-                escenario.areaJugable.DescartarCarta(supervivient);
+                escenario.areaJugable.DescartarCarta(carta);
             }
         }
         escenario.areaJugable.DescartarCarta(this);
