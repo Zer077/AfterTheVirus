@@ -42,8 +42,9 @@ public class AreaJugable {
         VistaEscenario vista = new VistaEscenario(escenario);
         escenario.vista.verAreaJugador();
         Scanner sc = new Scanner(System.in);
+        System.out.println("Elige la carta que jugar");
         int numero = sc.nextInt();
-
+        numero++;
         if (ArrayJugables.get(numero).getTipo() == 3) {
 
             for (int i = 0; i < ArrayJugables.size(); i++) {
@@ -88,7 +89,7 @@ public class AreaJugable {
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numeroActivar = sc.nextInt();
-
+            numeroActivar++;
             //si la carta elegida es un arma
             if (ArrayJugables.get(numeroActivar).getTipo() == 3) {
 
@@ -118,6 +119,7 @@ public class AreaJugable {
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
+            numero++;
             Carta aux = ArrayJugables.get(numero);
 
             //REVISION

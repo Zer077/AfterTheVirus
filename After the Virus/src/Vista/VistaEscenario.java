@@ -33,16 +33,19 @@ public class VistaEscenario {
     }
 
     public void verMano() {
-
+int n=0;
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.
         ArrayList<Carta> mano = escenario.mano.getMano();
         for (Carta x : mano) {
+            System.out.println("┏━━━━━━━━━━━━┓");
+            System.out.println("Carta número: "+n);
+            n++;
             System.out.println("Nombre de la carta: " + x.getNombre());
             System.out.println("Descripción: ");
             x.descripcion();
             System.out.println("Coste preparar: " + x.getActivacion());
-            System.out.println("---------------");
+            System.out.println("┗━━━━━━━━━━━━┛");
         }
     }
 
@@ -63,7 +66,7 @@ public class VistaEscenario {
 
     public void verAreaZombies() {
 
-        System.out.println("----------Área de zombies----------");
+        System.out.println("☠☠☠☠☠☠☠☠Área de zombies☠☠☠☠☠☠☠☠");
         ArrayList<Zombie> zombis = escenario.arrayZombies;
         System.out.println("Hay " + zombis.size() + " cartas de zombies en la mesa.");
         //bucle para mostra todos los zombies de la mesa.

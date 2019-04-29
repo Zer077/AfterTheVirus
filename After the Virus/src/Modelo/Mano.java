@@ -136,7 +136,7 @@ public class Mano {
     public void AniadirCarta(Carta carta) {
         if (carta instanceof Zombie1 || carta instanceof Zombie2 || carta instanceof Zombie3 || carta instanceof Zombie4) {
             escenario.arrayZombies.add((Zombie) carta);
-        }
+        } else
 
         getMano().add(carta);
 

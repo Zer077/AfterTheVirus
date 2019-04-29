@@ -86,7 +86,7 @@ public class Controlador extends Escenario {
                 menuOpciones.Menu();
                 opcion = menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
-                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                mano.usarCartas(mano.numeroCartas(), opcion);
                 vista.verMano();
                 //menu uso de cartas
             } while (opcion != 5 && mano.numeroCartas() == 0);
