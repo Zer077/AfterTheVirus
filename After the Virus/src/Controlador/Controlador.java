@@ -92,7 +92,10 @@ public class Controlador extends Escenario {
             } while (opcion != 5 && mano.numeroCartas()==0);
 
             //zombies restantes atacan
-            //HACER!!!!!!!!!!!!!!
+            for (int i=0; i < arrayZombies.size();i++){
+                arrayZombies.get(i).atacaHumano();
+            }
+            
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
@@ -164,10 +167,12 @@ public class Controlador extends Escenario {
                 mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 5);
+            } while (opcion != 5 && mano.numeroCartas()==0);
 
             //zombies restantes atacan
-            //HACER!!!!!!!!!!!!!!
+            for (int i=0; i < arrayZombies.size();i++){
+                arrayZombies.get(i).atacaHumano();
+            }
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
@@ -230,10 +235,12 @@ public class Controlador extends Escenario {
                 mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 5);
+            } while (opcion != 5 && mano.numeroCartas()==0);
 
             //zombies restantes atacan
-            //HACER!!!!!!!!!!!!!!
+            for (int i=0; i < arrayZombies.size();i++){
+                arrayZombies.get(i).atacaHumano();
+            }
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
