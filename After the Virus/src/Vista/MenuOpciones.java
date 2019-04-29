@@ -53,11 +53,16 @@ public class MenuOpciones {
             System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
             ElegirCartas();
         }else{
+            String conjuntoCartas=null;
         for(int i=0; i<numeroCartas ; i++){
             Scanner sc1 = new Scanner(System.in);
-            int[] conjuntoCartas = {sc1.nextInt()} ;
+            System.out.println("Introduce las cartas separadas por coma");
+            conjuntoCartas = sc1.nextLine();
         }
+        String[] array= conjuntoCartas.split(",");
         }
+        
+        
         return null;
     }
 
