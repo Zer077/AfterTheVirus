@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author Zero
  */
 public class Perro extends Carta {
-    
+
 //Precio --> recuperar 
 //Activacion --> preparar
     public Perro(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {

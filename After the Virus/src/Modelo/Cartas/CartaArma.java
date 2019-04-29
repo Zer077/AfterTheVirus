@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,20 +20,20 @@ public abstract class CartaArma extends Carta {
     public CartaArma(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
         super(precio, nombre, Escenario, tipo, activacion);
         cartas = new ArrayList<>();
-        this.municion=municion;
+        this.municion = municion;
     }
-    
-    public void AniadirMunicion(Carta carta){
-    
-    cartas.add(carta);
-    
-    };
-    
-    public void GastarMunicion(){
-    
-    escenario.mazoDescartes.IntroducirCarta(cartas.get(0));
+
+    public void AniadirMunicion(Carta carta) {
+
+        cartas.add(carta);
+
     }
+
+    ;
     
-    
+    public void GastarMunicion() {
+
+        escenario.mazoDescartes.IntroducirCarta(cartas.get(0));
+    }
 
 }

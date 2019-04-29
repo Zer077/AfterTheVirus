@@ -5,7 +5,10 @@
  */
 package Vista;
 
+import Controlador.Controlador;
 import Modelo.Escenario;
+import Modelo.Personaje.Adam;
+import Modelo.Personaje.Personaje;
 import after.the.virus.DebugMode;
 
 /**
@@ -19,11 +22,15 @@ public class MenuPrincipal {
     }
 
     public void Iniciar() {
-        DebugMode();
+        Controlador c = new Controlador();
+        Personaje p = new Adam(c);
+        c.AniadirPersonaje(p);
+        c.controlador1a();
+        //DebugMode();
     }
 
     public void DebugMode() {
-        
+
         DebugMode DBM = new DebugMode();
         DBM.iniciar();
 

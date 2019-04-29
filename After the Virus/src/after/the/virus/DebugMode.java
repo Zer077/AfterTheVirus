@@ -20,15 +20,17 @@ import java.util.Scanner;
  * @author jose_
  */
 public class DebugMode {
- Controlador controlador=new Controlador();
+
+    Controlador controlador = new Controlador();
+
     public DebugMode() {
-    
+
     }
 
     public void iniciar() {
 
         System.out.println("personaje a elegir");
-        Scanner sr=new Scanner(System.in);
+        Scanner sr = new Scanner(System.in);
         int n = sr.nextInt();
         Personaje personaje = null;
         switch (n) {
@@ -61,14 +63,14 @@ public class DebugMode {
         int cartasEnJuego = sr.nextInt();
         for (int i = 0; i < cartasEnJuego; i++) {
             //Carta a elegir por nombre
-        System.out.println("elegir nombre carta");
+            System.out.println("elegir nombre carta");
             String name = sr.next();
             for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
 
                 if (controlador.mazoJugador.getMazoJugador().get(i).getNombre() == name) {
                     controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazoJugador().remove(i));
                     System.out.println("activar carta? Si/-");
-                    
+
                     String siNo = sr.next();
 
                     if (siNo.equals("Si")) {
@@ -82,10 +84,10 @@ public class DebugMode {
 
             }
         }
-   
+
         System.out.println("elegir controlador");
         int m = sr.nextInt();
-        
+
         System.out.println("Zombie extra");
         int zext = sr.nextInt();
 
@@ -104,7 +106,6 @@ public class DebugMode {
                 controlador.controlador1c();
                 break;
         }
-        
 
     }
 

@@ -7,6 +7,10 @@ package Modelo;
 
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
+import Modelo.Cartas.Zombie1;
+import Modelo.Cartas.Zombie2;
+import Modelo.Cartas.Zombie3;
+import Modelo.Cartas.Zombie4;
 import Vista.VistaEscenario;
 import java.util.ArrayList;
 
@@ -16,13 +20,13 @@ import java.util.ArrayList;
  */
 public class Mano {
 
-    ArrayList<Carta> Mano = new ArrayList();
+    private ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;
-  
+
     //Esta mano debe usar la carta segun la opcion elegida en el menú
     public Mano(Escenario escenario) {
         this.escenario = escenario;
-    
+
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
@@ -34,7 +38,7 @@ public class Mano {
             case 1:
                 for (int i = 0; i < cartas; i++) {
 
-                    Carta carta = Mano.get(cartas);
+                    Carta carta = getMano().get(cartas);
 
                     if (carta.getActivacion() == 0) {
                         escenario.areaJugable.AniadirCarta(carta);
@@ -43,7 +47,7 @@ public class Mano {
                         System.out.println("El costo de esta carta no es 0, no se puede usar, por favor coja una opcion adecuada");
                     }
                     escenario.menuOpciones.Menu();
-                  
+
                 }
 
                 break;
@@ -52,7 +56,7 @@ public class Mano {
             case 2:
                 for (int i = 0; i < cartas; i++) {
 
-                    Carta carta = Mano.get(cartas);
+                    Carta carta = getMano().get(cartas);
                     escenario.areaJugable.AniadirCarta(carta);
                 }
 
@@ -64,13 +68,13 @@ public class Mano {
                 Carta[] carta = null;
                 for (int i = 0; i < cartas; i++) {
 
-                    carta[i] = Mano.get(cartas);
+                    carta[i] = getMano().get(cartas);
 
                 }
                 if (escenario.areaJugable.ActivarCarta(carta) == true) {
                     for (int i = 0; i < cartas; i++) {
 
-                        Mano.remove(cartas);
+                        getMano().remove(cartas);
                     }
                 } else //lanzar error
                 {
@@ -82,7 +86,7 @@ public class Mano {
                 Carta carta1 = null;
                 for (int i = 0; i < cartas; i++) {
 
-                    carta1 = Mano.get(cartas);
+                    carta1 = getMano().get(cartas);
 
                     escenario.compraCartas.explora(carta1);
 
@@ -95,12 +99,12 @@ public class Mano {
                 Carta[] carta2 = null;
                 for (int i = 0; i < cartas; i++) {
 
-                    carta2[i] = Mano.get(cartas);
+                    carta2[i] = getMano().get(cartas);
                 }
                 if (escenario.compraCartas.compra(carta2) == true) {
                     for (int i = 0; i < cartas; i++) {
 
-                        Mano.remove(cartas);
+                        getMano().remove(cartas);
                     }
                 } else //lanzar error y volver al menu
                 {
@@ -113,9 +117,9 @@ public class Mano {
 
     //busca una carta para sacarla, el action la usará para poderse activar, si no no hará nada y volverá al menú de eleccion
     public Carta sacarCarta(String nombreCarta) {
-        for (int i = 0; i < Mano.size(); i++) {
-            if (Mano.get(i).getNombre() == nombreCarta) {
-                return Mano.get(i);
+        for (int i = 0; i < getMano().size(); i++) {
+            if (getMano().get(i).getNombre() == nombreCarta) {
+                return getMano().get(i);
 
             }
 
@@ -125,33 +129,52 @@ public class Mano {
     }
 
     public void EliminarCarta(int i) {
-        Mano.remove(i);
+        getMano().remove(i);
 
     }
 
     public void AniadirCarta(Carta carta) {
-        if (carta instanceof Zombie) {
+        if (carta instanceof Zombie1 || carta instanceof Zombie2 || carta instanceof Zombie3 || carta instanceof Zombie4) {
             escenario.arrayZombies.add((Zombie) carta);
         }
 
-        Mano.add(carta);
+        getMano().add(carta);
 
     }
-    
-    public void comprobarZombie(){
-        for(Carta carta: Mano){
-            if (carta instanceof Zombie) {
-                escenario.arrayZombies.add((Zombie) carta);
-                Mano.remove(carta);
-            }  
+
+    public void comprobarZombie() {
+
+        //ERROR
+        for (int i = 0; i < Mano.size(); i++) {
+            if (Mano.get(i) instanceof Zombie) {
+                escenario.arrayZombies.add((Zombie) Mano.remove(i));
+
+            }
+
         }
+
     }
-    
-    public int numeroCartas(){
-        return Mano.size();
-       
+
+    public int numeroCartas() {
+        return getMano().size();
+
     }
-    public void aniadirCartaMano(Carta e){
-         Mano.add(e);
+
+    public void aniadirCartaMano(Carta e) {
+        getMano().add(e);
+    }
+
+    /**
+     * @return the Mano
+     */
+    public ArrayList<Carta> getMano() {
+        return Mano;
+    }
+
+    /**
+     * @param Mano the Mano to set
+     */
+    public void setMano(ArrayList<Carta> Mano) {
+        this.Mano = Mano;
     }
 }

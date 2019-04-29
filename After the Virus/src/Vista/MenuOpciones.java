@@ -40,7 +40,7 @@ public class MenuOpciones {
     public int ElegirOpcion() {
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();
-        return opcionElegida; 
+        return opcionElegida;
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
@@ -49,20 +49,19 @@ public class MenuOpciones {
         escenario.vista.verMano();
         System.out.println("Selecciona el numero de cartas que quieras usar: ");
         int numeroCartas = sc.nextInt();
-        if (mano.numeroCartas() < numeroCartas){
+        if (mano.numeroCartas() < numeroCartas) {
             System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
             ElegirCartas();
-        }else{
-            String conjuntoCartas=null;
-        for(int i=0; i<numeroCartas ; i++){
-            Scanner sc1 = new Scanner(System.in);
-            System.out.println("Introduce las cartas separadas por coma");
-            conjuntoCartas = sc1.nextLine();
+        } else {
+            String conjuntoCartas = null;
+            for (int i = 0; i < numeroCartas; i++) {
+                Scanner sc1 = new Scanner(System.in);
+                System.out.println("Introduce las cartas separadas por coma");
+                conjuntoCartas = sc1.nextLine();
+            }
+            String[] array = conjuntoCartas.split(",");
         }
-        String[] array= conjuntoCartas.split(",");
-        }
-        
-        
+
         return null;
     }
 

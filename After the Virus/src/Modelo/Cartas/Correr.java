@@ -21,14 +21,14 @@ public class Correr extends Carta {
 
     @Override
     public void action() {
-        if (escenario.personaje.isPierna() == true){
+        if (escenario.personaje.isPierna() == true) {
             escenario.vista.verAreaZombies();
             System.out.println("Elige al zombie que quieres descartar: ");
             Scanner sc = new Scanner(System.in);
             int opcionZombie = sc.nextInt();
-            escenario.arrayZombies.get(opcionZombie-1).descartaZombie();
+            escenario.arrayZombies.get(opcionZombie - 1).descartaZombie();
             escenario.areaJugable.DescartarCarta(this);
-        }else{
+        } else {
             System.out.println("Tu pierna está rota, no puedes correr");
         }
     }

@@ -13,8 +13,9 @@ import java.util.ArrayList;
  * @author Zero
  */
 public abstract class Zombie extends Carta {
+
     public ArrayList<Zombi> zombie;
-  private int numeroZombie;
+    private int numeroZombie;
 
     public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);
@@ -22,30 +23,33 @@ public abstract class Zombie extends Carta {
 
     abstract public void atacaHumano();
 
-    
     //lleva al zombie a la pila de descartes de los zombies
-    public void muereZombie(){
-    
-     for (int i = 0; i < zombie.size(); i++) {
-          zombie.get(i).setVivo(true);
-            
+    public void muereZombie() {
+
+        for (int i = 0; i < zombie.size(); i++) {
+            zombie.get(i).setVivo(true);
+
         }
-     escenario.mazoZombies.getDescarteZombies().add(this);
-     escenario.mazoZombies.eliminarZombieArray(this);
-    };
+        escenario.mazoZombies.getDescarteZombies().add(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+    }
+
+    ;
     
     
     //lleva al zombie a la pila de descartes del mazo del jugador
-     public void descartaZombie(){
-     
-      for (int i = 0; i < zombie.size(); i++) {
-          zombie.get(i).setVivo(true);
-            
+     public void descartaZombie() {
+
+        for (int i = 0; i < zombie.size(); i++) {
+            zombie.get(i).setVivo(true);
+
         }
-    escenario.mazoDescartes.IntroducirCarta(this);
-     escenario.mazoZombies.eliminarZombieArray(this);
-     
-     };
+        escenario.mazoDescartes.IntroducirCarta(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+
+    }
+
+    ;
 
     /**
      * @return the numeroZombie
@@ -61,10 +65,7 @@ public abstract class Zombie extends Carta {
         this.numeroZombie = numeroZombie;
     }
 
-
     /**
      * @return the zombie
      */
-   
-
 }

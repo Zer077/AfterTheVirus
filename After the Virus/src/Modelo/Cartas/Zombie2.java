@@ -25,16 +25,15 @@ public class Zombie2 extends Zombie {
 
     @Override
     public void atacaHumano() {
-       for (int i = 0; i < zombie.size(); i++) {
-            if (zombie.get(i).isVivo()==true){
-            escenario.personaje.parteCuerpoAtacar();
-            
-            }
-          escenario.mazoZombies.getDescarteZombies().add(this);
-          escenario.mazoZombies.eliminarZombieArray(this);
-        }}
+        for (int i = 0; i < zombie.size(); i++) {
+            if (zombie.get(i).isVivo() == true) {
+                escenario.personaje.parteCuerpoAtacar();
 
-   
+            }
+            escenario.mazoZombies.getDescarteZombies().add(this);
+            escenario.mazoZombies.eliminarZombieArray(this);
+        }
+    }
 
     //NO HACER
     @Override
@@ -46,6 +45,5 @@ public class Zombie2 extends Zombie {
     public void descripcion() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

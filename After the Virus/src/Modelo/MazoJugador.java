@@ -34,26 +34,18 @@ public class MazoJugador extends Mazo {
          con un array auxiliar que luego vamos a devolver a otra clase,
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
-     
-
         for (int i = 4; i >= 0; i--) {
             escenario.mano.AniadirCarta(MazoJugador.remove(0));
-          
+
         }
 
-           
-        
-
     }//fin del metodo
-    
-    
-    public void aniadir(Carta card){
-    
-    
-    MazoJugador.add(card);
-    
+
+    public void aniadir(Carta card) {
+
+        MazoJugador.add(card);
+
     }
-    
 
     public void barajarCartasPersonaje() {
         /*sencillamente se barajan las cartas del array*/

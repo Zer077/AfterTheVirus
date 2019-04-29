@@ -1,5 +1,3 @@
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,12 +25,12 @@ public class Coche extends Carta {
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
         escenario.arrayZombies.get(a).muereZombie();
-        
+
         //Falta descartar el resto
-        for (int i = 0;i < escenario.arrayZombies.size();i++){
+        for (int i = 0; i < escenario.arrayZombies.size(); i++) {
             escenario.arrayZombies.get(i).descartaZombie();
         }
-        
+
         escenario.areaJugable.DescartarCarta(this);
     }
 

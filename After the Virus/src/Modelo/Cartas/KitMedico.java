@@ -17,23 +17,18 @@ public class KitMedico extends Carta {
         super(1, "KitMedico", Escenario, 7, 0);
     }
 
-   
-     @Override
+    @Override
     public void action() {
-       if(escenario.arrayZombies.isEmpty()){
-           
-           
-           escenario.personaje.setBrazo(false);
-           escenario.personaje.setPierna(false);
-       }
-       
-       else{
-            System.out.println("Lo sentimos, hay zombies cerca, no te puedes curar");
-       }
-       
-       escenario.areaJugable.EliminarCarta(this);
-    }
+        if (escenario.arrayZombies.isEmpty()) {
 
+            escenario.personaje.setBrazo(false);
+            escenario.personaje.setPierna(false);
+        } else {
+            System.out.println("Lo sentimos, hay zombies cerca, no te puedes curar");
+        }
+
+        escenario.areaJugable.EliminarCarta(this);
+    }
 
     @Override
     public void descripcion() {

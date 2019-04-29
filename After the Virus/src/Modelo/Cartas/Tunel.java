@@ -19,16 +19,15 @@ public class Tunel extends Carta {
 
     @Override
     public void action() {
-        
+
         for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
 
             escenario.areaJugable.BuscarCartaTipo(12).setActiva(true);
-            
 
             escenario.areaJugable.DescartarCarta(this);
         }
-        
-        }
+
+    }
 
     @Override
     public void descripcion() {

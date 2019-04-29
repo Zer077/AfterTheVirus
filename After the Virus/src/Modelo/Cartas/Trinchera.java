@@ -20,15 +20,15 @@ public class Trinchera extends Carta {
 
     @Override
     public void action() {
-        Scanner sq=new Scanner(System.in);
-        
-        for  (int cont=0;cont<2;cont++){
-        escenario.vista.verAreaZombies();
-        System.out.println("¿Qué zombies quieres matar?");
-        int x=sq.nextInt();
-        escenario.arrayZombies.get(x).muereZombie();
+        Scanner sq = new Scanner(System.in);
+
+        for (int cont = 0; cont < 2; cont++) {
+            escenario.vista.verAreaZombies();
+            System.out.println("¿Qué zombies quieres matar?");
+            int x = sq.nextInt();
+            escenario.arrayZombies.get(x).muereZombie();
         }
-        
+
         escenario.areaJugable.EliminarCarta(this);
     }
 
