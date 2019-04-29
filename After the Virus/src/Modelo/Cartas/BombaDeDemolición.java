@@ -9,22 +9,55 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Abraham
  */
 public class BombaDeDemolición extends Carta {
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Bomba de demolición", Escenario, 10, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        for (int x=0;x<escenario.arrayZombies.size();x++) {
+            
+            Carta zom=escenario.arrayZombies.get(x);
+            
+            if (zom instanceof Zombie) {
+                
+                escenario.mazoZombies.getDescarteZombies().add(zom);
+                escenario.arrayZombies.remove(x);
+                
+            }
+            
+            
+            
+        }
+        
+        
+        for (int y=0;y<escenario.mazoDescartes.getMazoDescarte().size();y++){
+            
+            Carta zomb=escenario.mazoDescartes.getMazoDescarte().get(y);
+            
+            
+            if (zomb instanceof Zombie) {
+                
+                escenario.mazoZombies.getDescarteZombies().add(zomb);
+                escenario.mazoDescartes.getMazoDescarte().remove(y);
+                
+            }
+            
+        }
+        
+        escenario.areaJugable.EliminarCarta(this);
+        
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila\n" +
+            "\n" + "de descarte de algún jugador.");
     }
 
 }

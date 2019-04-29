@@ -17,7 +17,7 @@ import Modelo.Escenario;
 public class MazoDescartes extends Mazo {
 
     Escenario escenario;
-    ArrayList<Carta> MazoDescarte = new ArrayList();
+    private ArrayList<Carta> MazoDescarte = new ArrayList();
 
     public MazoDescartes(Escenario escenario) {
         super(escenario);
@@ -44,4 +44,16 @@ public class MazoDescartes extends Mazo {
 
     }
 
+    public ArrayList<Carta> getMazoDescarte() {
+        return MazoDescarte;
+    }
+
+    public void setMazoDescarte(ArrayList<Carta> MazoDescarte) {
+        this.MazoDescarte = MazoDescarte;
+    }
+
+    
+    
+    
+    
 }

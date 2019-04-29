@@ -6,25 +6,38 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Abraham
  */
 public class FuegoCruzado extends Carta {
 
     public FuegoCruzado(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Fuego cruzado", Escenario, 10, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Scanner sq=new Scanner(System.in);
+        for (int z=0;z<escenario.PersonasSalvadas;z++) {
+            
+        
+        escenario.vista.verAreaZombies();
+        System.out.println("¿Qué zombies quieres matar?");
+        int x=sq.nextInt();
+        escenario.arrayZombies.get(x).muereZombie();
+        
+        }       
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Fuego cruzado: Descarta esta carta para matar 1 zombi por cada persona preparada propia.");
     }
 
 }

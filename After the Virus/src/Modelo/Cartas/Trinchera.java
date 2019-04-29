@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.util.Scanner;
 
 /**
  *
@@ -14,17 +15,26 @@ import Modelo.Escenario;
 public class Trinchera extends Carta {
 
     public Trinchera(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Trinchera", Escenario, 10, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner sq=new Scanner(System.in);
+        
+        for  (int cont=0;cont<2;cont++){
+        escenario.vista.verAreaZombies();
+        System.out.println("¿Qué zombies quieres matar?");
+        int x=sq.nextInt();
+        escenario.arrayZombies.get(x).muereZombie();
+        }
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Trinchera : Descarta esta carta para matar 2 zombies.");
     }
 
 }
