@@ -89,7 +89,9 @@ public class Adam extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConArmas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0,0));
 
+        
         super.nombre = "Adam";
 
     }
