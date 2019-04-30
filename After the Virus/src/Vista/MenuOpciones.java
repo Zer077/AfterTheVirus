@@ -34,7 +34,7 @@ public class MenuOpciones {
         System.out.println("5- Usar cartas para comprar");
         System.out.println("6- Salir");
         System.out.println("Elige una opción: ");
-        ElegirOpcion();
+        
     }
 
     //Elige una de las diversas opciones del juego
