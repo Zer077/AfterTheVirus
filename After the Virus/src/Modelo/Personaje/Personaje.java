@@ -64,7 +64,11 @@ public abstract class Personaje {
                             System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
                         }
                         break;
-                    default:System.out.println("parte equivocada");
+                    case 202122:
+                        System.out.println("EasterEgg");
+                        break;
+                    default:
+                        System.out.println("parte equivocada");
                         parteCuerpoAtacar();
                         break;
 
