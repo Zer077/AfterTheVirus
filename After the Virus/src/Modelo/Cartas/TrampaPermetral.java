@@ -14,17 +14,33 @@ import Modelo.Escenario;
 public class TrampaPermetral extends Carta {
 
     public TrampaPermetral(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(2, "Trampa perimetral", Escenario, 10, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        for (int y=0;y<6;y++){
+            
+            Carta zomb=escenario.mazoDescartes.getMazoDescarte().get(y);
+            
+            
+            if (zomb instanceof Zombie) {
+                
+                escenario.mazoZombies.getDescarteZombies().add(zomb);
+                escenario.mazoDescartes.getMazoDescarte().remove(y);
+                
+            }
+            
+        }
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        System.out.println("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
     }
 
 }
