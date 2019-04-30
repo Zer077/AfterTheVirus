@@ -14,12 +14,12 @@ import Modelo.Escenario;
 public class Revista extends Carta {
 
     public Revista(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Magazine", Escenario, 0, 0);
+        super(2, "Revista", Escenario, 0, 0);
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override

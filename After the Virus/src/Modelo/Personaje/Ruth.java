@@ -29,7 +29,6 @@ import Modelo.Cartas.TrampaPermetral;
 import Modelo.Cartas.Perro;
 import Modelo.Cartas.Pistola;
 import Modelo.Cartas.Bar;
-import Modelo.Cartas.Redada;
 import Modelo.Cartas.Saquear;
 import Modelo.Cartas.Correr;
 import Modelo.Cartas.Refugio;
@@ -80,7 +79,6 @@ public class Ruth extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Perro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Redada(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));

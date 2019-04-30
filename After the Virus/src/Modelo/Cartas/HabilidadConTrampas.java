@@ -19,7 +19,7 @@ public class HabilidadConTrampas extends Carta {
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     @Override
