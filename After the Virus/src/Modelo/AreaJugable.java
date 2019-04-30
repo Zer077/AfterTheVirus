@@ -8,7 +8,6 @@ package Modelo;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.ObjetivoSeguro;
 import Modelo.Cartas.HabilidadConArmas;
-import Vista.MenuOpciones;
 import Vista.VistaEscenario;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -109,7 +108,7 @@ public class AreaJugable {
                 }
 
                 escenario.menuOpciones.Menu();
-            }
+            }else ArrayJugables.get(numeroActivar).setActiva(true);
 
             //Si WeaponSkill no está activa solo te deja activar una carta
         } else {
@@ -194,11 +193,10 @@ public class AreaJugable {
                 contador++;
             }
         }
-        if (contador >= 2) {
+        if (contador >= 2 || contador >= 1 && escenario.personaje.isBrazo() == false) {
 
             return false;
-        } else if (contador >= 1 && escenario.personaje.isBrazo() == false) {
-            return false;
+        
         } else {
             return true;
         }
