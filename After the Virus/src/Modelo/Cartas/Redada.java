@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class Redada extends Carta {
 
     public Redada(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(precio, "Redada", Escenario, tipo, activacion);
     }
 
     @Override

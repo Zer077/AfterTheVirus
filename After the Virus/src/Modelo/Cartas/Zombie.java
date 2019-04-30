@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public abstract class Zombie extends Carta {
     public ArrayList<Zombi> zombie;
-  private int numeroZombie;
+    private int numeroZombie;
 
     public Zombie(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(precio, nombre, Escenario, tipo, activacion);

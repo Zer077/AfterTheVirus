@@ -18,8 +18,7 @@ public class Zombie1 extends Zombie {
         super(precio, nombre, Escenario, tipo, activacion);
         zombie = new ArrayList<>();
         zombie.add(new Zombi());
-        setNumeroZombie(1);
-                
+        super.setNumeroZombie(1);
       
     }
 

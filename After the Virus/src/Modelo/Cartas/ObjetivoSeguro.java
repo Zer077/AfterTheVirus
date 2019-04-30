@@ -14,7 +14,7 @@ import Modelo.Escenario;
 public class ObjetivoSeguro extends Carta {
 
     public ObjetivoSeguro(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(1, "Objetivo Seguro (Sure Aim)", Escenario, 9, 3);
+        super(1, "Objetivo Seguro", Escenario, 9, 3);
     }
 
     @Override

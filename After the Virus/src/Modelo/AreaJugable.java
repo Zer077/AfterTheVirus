@@ -26,9 +26,10 @@ public class AreaJugable {
     }
 
     public void AniadirCarta(Carta carta) {
-        ArrayJugables.add(carta);
+       
         if (carta.getActivacion() == 0) {
-            jugarCartaGratuita();
+            
+            jugarCartaGratuita(carta);
 
         } else {
             ArrayJugables.add(carta);
@@ -63,8 +64,8 @@ public class AreaJugable {
 
     }
 
-    public void jugarCartaGratuita() {
-        ArrayJugables.get(ArrayJugables.size() - 1).action();
+    public void jugarCartaGratuita(Carta card) {
+        card.action();
     }
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    

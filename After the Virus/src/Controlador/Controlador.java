@@ -164,7 +164,7 @@ public class Controlador extends Escenario {
                 menuOpciones.Menu();
                 opcion = menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
-                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
             } while (opcion != 5 && mano.numeroCartas()==0);
@@ -232,7 +232,7 @@ public class Controlador extends Escenario {
                 menuOpciones.Menu();
                 opcion = menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
-                mano.usarCartas(mano.numeroCartas(), menuOpciones.ElegirOpcion());
+                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
             } while (opcion != 5 && mano.numeroCartas()==0);

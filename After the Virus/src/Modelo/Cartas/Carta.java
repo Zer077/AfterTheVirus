@@ -29,6 +29,7 @@ public abstract class Carta {
         this.precio = precio;
         this.tipo = tipo;
         this.activacion = activacion;
+        this.escenario=Escenario;
        
 
     }

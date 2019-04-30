@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import Vista.VistaEscenario;
 import java.util.Scanner;
 
 /**
@@ -21,12 +22,12 @@ public class Perro extends Carta {
     }
 
     @Override
-    public void action() {
+    public void action() {    
         Scanner sc = new Scanner(System.in);
         escenario.vista.verAreaZombies();
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
-        escenario.arrayZombies.get(a).muereZombie();
+        escenario.arrayZombies.get(a-1).muereZombie();
         escenario.areaJugable.DescartarCarta(this);
     }
 

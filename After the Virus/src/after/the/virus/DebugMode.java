@@ -20,15 +20,17 @@ import java.util.Scanner;
  * @author jose_
  */
 public class DebugMode {
- Controlador controlador=new Controlador();
+
+    Controlador controlador = new Controlador();
+
     public DebugMode() {
-    
+
     }
 
     public void iniciar() {
 
         System.out.println("personaje a elegir");
-        Scanner sr=new Scanner(System.in);
+        Scanner sr = new Scanner(System.in);
         int n = sr.nextInt();
         Personaje personaje = null;
         switch (n) {
@@ -57,35 +59,10 @@ public class DebugMode {
         System.out.println("rescatados");
         int p = sr.nextInt();
         controlador.PersonasSalvadas = p;
-        System.out.println("cartas en juego");
-        int cartasEnJuego = sr.nextInt();
-        for (int i = 0; i < cartasEnJuego; i++) {
-            //Carta a elegir por nombre
-        System.out.println("elegir nombre carta");
-            String name = sr.next();
-            for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
 
-                if (controlador.mazoJugador.getMazoJugador().get(i).getNombre() == name) {
-                    controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazoJugador().remove(i));
-                    System.out.println("activar carta? Si/-");
-                    
-                    String siNo = sr.next();
-
-                    if (siNo.equals("Si")) {
-                        controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
-
-                    } else {
-                        controlador.areaJugable.BuscarCartaNombre(name).setActiva(false);
-                    }
-
-                }
-
-            }
-        }
-   
         System.out.println("elegir controlador");
         int m = sr.nextInt();
-        
+
         System.out.println("Zombie extra");
         int zext = sr.nextInt();
 
@@ -93,6 +70,67 @@ public class DebugMode {
 
             controlador.arrayZombies.add((Zombie) controlador.mazoZombies.getMazoZombie().remove(0));
         }
+
+        System.out.println("cartas en juego");
+        int cartasEnJuego = sr.nextInt();
+        for (int i = 0; i < cartasEnJuego; i++) {
+            //Carta a elegir por nombre
+            System.out.println("elegir nombre carta");
+            String name = sr.next();
+            for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
+
+                if (controlador.mazoJugador.getMazoJugador().get(j).getNombre().equals(name)) {
+                    controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazoJugador().remove(j));
+                    System.out.println("activar carta? Si/-");
+
+                    String siNo = sr.next();
+
+                    if (siNo.equals("Si")) {
+
+                        for (int k = 0; k < controlador.mazoJugador.getMazoJugador().size(); k++) {
+                            if (controlador.mazoJugador.getMazoJugador().get(j).getNombre().equals(name)) {
+
+                                controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
+
+                            }
+
+                        }
+
+                    } else {
+                       
+                    }
+
+                }
+
+            }
+
+            for (int j = 0; j < controlador.mazoEscenario.getMazoEscenario().size(); j++) {
+
+                if (controlador.mazoEscenario.getMazoEscenario().get(j).getNombre().equals(name)) {
+                    controlador.areaJugable.AniadirCarta(controlador.mazoEscenario.getMazoEscenario().remove(j));
+                    System.out.println("activar carta? Si/-");
+
+                    String siNo = sr.next();
+
+                    if (siNo.equals("Si")) {
+
+                        for (int k = 0; k < controlador.mazoEscenario.getMazoEscenario().size(); k++) {
+
+                            if (controlador.mazoEscenario.getMazoEscenario().get(j).getNombre().equals(name)) {
+                                controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
+
+                            }
+                        }
+
+                    } else {
+                        
+                    }
+
+                }
+
+            }
+        }
+
         switch (m) {
             case 1:
                 controlador.controlador1a();
@@ -104,7 +142,6 @@ public class DebugMode {
                 controlador.controlador1c();
                 break;
         }
-        
 
     }
 

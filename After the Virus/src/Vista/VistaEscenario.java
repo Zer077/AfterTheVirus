@@ -62,27 +62,61 @@ public class VistaEscenario {
     }
 
     public void verAreaZombies(){
-        
+        int contador= 1;
         System.out.println("----------Área de zombies----------");
         ArrayList<Zombie> zombis = escenario.arrayZombies;
         System.out.println("Hay "+zombis.size()+" cartas de zombies en la mesa.");
         //bucle para mostra todos los zombies de la mesa.
         System.out.println("----------");
-        for(Zombie z : zombis){
-            System.out.println("Carta con "+z.zombie.size()+" zombies");
-            ArrayList<Zombi> numerozombis = z.zombie;
-            System.out.println("**********");
-            for(Zombi zi : numerozombis){
-                System.out.println("Zombi nº "+numerozombis.indexOf(zi)+1+"¿Vivo o muerto?");
-                if(zi.isVivo()){
+        
+      /*  
+        
+        
+        //Hecho por josé, da fallo
+        for (int i = 0; i < escenario.arrayZombies.size(); i++) {
+            
+            
+            //El fallo surge de aquí, no se la razón
+            System.out.println(escenario.arrayZombies.get(i).getNumeroZombie());
+            
+            
+            for (int j = 0; j < escenario.arrayZombies.get(i).zombie.size(); j++) {
+                
+           System.out.println("Zombi nº "+j+1+"¿Vivo o muerto?");
+             if(escenario.arrayZombies.get(i).zombie.get(j).isVivo()){
                     System.out.println("VIVO");
                 }else{
                     System.out.println("MUERTO");
                 }
-            System.out.println("**********");
+            
+            
+            
+            
+            
+            
             }
+            
         }
-        System.out.println("----------------------------------------");
+        
+        
+        
+//        for(Zombie z : zombis){
+//            System.out.println("Carta numero: "+contador);
+//          //  System.out.println("Carta con "+z.zombie.size()+" zombies");
+//            ArrayList<Zombi> numerozombis = z.zombie;
+//            System.out.println("**********");
+//            for(Zombi zi : numerozombis){
+//                System.out.println("Zombi nº "+numerozombis.indexOf(zi)+1+"¿Vivo o muerto?");
+//                if(zi.isVivo()){
+//                    System.out.println("VIVO");
+//                }else{
+//                    System.out.println("MUERTO");
+//                }
+//            System.out.println("**********");
+//            }
+//            contador++;
+//        }
+//        System.out.println("----------------------------------------");*/
     }
 
     public void verAreaJugador(){
