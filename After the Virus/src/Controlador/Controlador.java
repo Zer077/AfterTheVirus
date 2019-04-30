@@ -33,7 +33,7 @@ public class Controlador extends Escenario {
         mazoZombies = new MazoZombies(this);
         mano = new Mano(this);
         menuPrincipal = new MenuPrincipal();
-        menuOpciones = new MenuOpciones(mano);
+        menuOpciones = new MenuOpciones(mano, this);
         vista = new VistaEscenario(this);
         areaJugable = new AreaJugable(this);
         Ronda = 1;

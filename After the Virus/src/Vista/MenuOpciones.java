@@ -21,8 +21,9 @@ public class MenuOpciones {
     Mano mano;
     Escenario escenario;
 
-    public MenuOpciones(Mano mano) {
+    public MenuOpciones(Mano mano, Escenario Escenario) {
         this.mano = mano;
+        this.escenario=Escenario;
     }
 
     public void Menu() {

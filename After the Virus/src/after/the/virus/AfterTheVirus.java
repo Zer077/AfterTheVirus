@@ -20,10 +20,10 @@ public class AfterTheVirus {
         // TODO code application logic here
         
         DebugMode d=new DebugMode();
-        d.iniciar();
+//        d.iniciar();
 
-//        MenuPrincipal menu = new MenuPrincipal();
-//        menu.Iniciar();
+        MenuPrincipal menu = new MenuPrincipal();
+        menu.Iniciar();
 
     }
 
