@@ -24,7 +24,7 @@ public class MenuOpciones {
 
     public MenuOpciones(Mano mano, Escenario Escenario) {
         this.mano = mano;
-        this.escenario=Escenario;
+        this.escenario = Escenario;
     }
 
     public void Menu() {
@@ -36,45 +36,43 @@ public class MenuOpciones {
         System.out.println("5- Usar cartas para comprar");
         System.out.println("6- Salir");
         System.out.println("Elige una opción: ");
-        
+
     }
 
     //Elige una de las diversas opciones del juego
     public int ElegirOpcion() {
+        System.out.println("Elige una opcion: ");
+        System.out.println("1)Usar la carta");
+        System.out.println("2)Colocar la carta");
+        System.out.println("3)Usarlas para activar otras cartas");
+        System.out.println("4)Usarlas para explorar");
+        System.out.println("5)Usarlas para comprar");
+
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();
-        return opcionElegida; 
+        return opcionElegida;
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
     public ArrayList<Carta> ElegirCartas() {
-        ArrayList<Carta> conjuntoCartas=new ArrayList<>();
+        ArrayList<Carta> conjuntoCartas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         escenario.vista.verMano();
         System.out.println("Selecciona el numero de cartas que quieras usar: ");
         int numeroCartas = sc.nextInt();
-        if (mano.numeroCartas() < numeroCartas){
+        if (mano.numeroCartas() < numeroCartas) {
             System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
             ElegirCartas();
-        }else{
-            for(int i=1; i<=numeroCartas ; i++){
+        } else {
+            for (int i = 0; i < numeroCartas; i++) {
                 System.out.println("Introduce la carta");
-                int carta=sc.nextInt();
+                int carta = sc.nextInt();
                 conjuntoCartas.add(mano.getMano().get(carta));
-                sc.nextLine();
             }
-            
-      
-        //hacer un split que recoga todas las cartas y las pase a la mano
-      
-    }
+
+            //hacer un split que recoga todas las cartas y las pase a la mano
+        }
         return conjuntoCartas;
     }
 
-
-
-
-
 }
-
-

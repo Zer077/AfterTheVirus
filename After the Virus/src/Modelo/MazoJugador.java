@@ -7,6 +7,7 @@ package Modelo;
 
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
+import java.util.Collections;
 import static java.util.Collections.shuffle;
 
 /**
@@ -34,26 +35,33 @@ public class MazoJugador extends Mazo {
          con un array auxiliar que luego vamos a devolver a otra clase,
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
-     
+        try {
+            if (MazoJugador.size() >= 5) {
+                for (int i = 0; i < 5; i++) {
+                    escenario.mano.AniadirCarta(MazoJugador.remove(0));
+                }
+            } else {
+                System.out.println("No quedan suficientes cartas, restaurando mazo del jugador");
 
-        for (int i = 4; i >= 0; i--) {
-            escenario.mano.AniadirCarta(MazoJugador.remove(0));
-          
+                Collections.shuffle(escenario.mazoDescartes.getMazoDescarte());
+
+                System.out.println("Mazo de descartes barajado correctamente");
+
+                for (int d = 0; d < escenario.mazoDescartes.getMazoDescarte().size(); d++) {
+                    MazoJugador.add(escenario.mazoDescartes.getMazoDescarte().remove(0));
+                }
+                System.out.println("Mazo de jugador restaurado correctamente");
+            }
+        } catch (Exception e) {
+            System.err.println("error en sacar 5 cartas");
         }
-
-           
-        
-
     }//fin del metodo
-    
-    
-    public void aniadir(Carta card){
-    
-    
-    MazoJugador.add(card);
-    
+
+    public void aniadir(Carta card) {
+
+        MazoJugador.add(card);
+
     }
-    
 
     public void barajarCartasPersonaje() {
         /*sencillamente se barajan las cartas del array*/

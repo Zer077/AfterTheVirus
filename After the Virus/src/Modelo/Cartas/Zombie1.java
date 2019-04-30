@@ -19,42 +19,32 @@ public class Zombie1 extends Zombie {
         zombie = new ArrayList<>();
         zombie.add(new Zombi());
         super.setNumeroZombie(1);
-      
+
     }
 
     @Override
     public void atacaHumano() {
-        
+
         for (int i = 0; i < zombie.size(); i++) {
-            if (zombie.get(i).isVivo()==true){
-            escenario.personaje.parteCuerpoAtacar();
-            
+            if (zombie.get(i).isVivo() == true) {
+                escenario.personaje.parteCuerpoAtacar();
+
             }
-          escenario.mazoZombies.getDescarteZombies().add(this);
-          escenario.mazoZombies.eliminarZombieArray(this);
+            escenario.mazoZombies.getDescarteZombies().add(this);
+            escenario.mazoZombies.eliminarZombieArray(this);
         }
-        
-        
-      
+
     }
 
-  
-    
-
     //NO HACER
-   
-
     @Override
     public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("zombi");
     }
 
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("action zombi");
     }
-
-
-    
 
 }
