@@ -9,6 +9,7 @@ import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
 import Vista.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -46,7 +47,8 @@ public class MenuOpciones {
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
-    public Carta[] ElegirCartas() {
+    public ArrayList<Carta> ElegirCartas() {
+        ArrayList<Carta> conjuntoCartas=new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         escenario.vista.verMano();
         System.out.println("Selecciona el numero de cartas que quieras usar: ");
@@ -55,19 +57,24 @@ public class MenuOpciones {
             System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
             ElegirCartas();
         }else{
-            String conjuntoCartas=null;
-        for(int i=0; i<numeroCartas ; i++){
-            Scanner sc1 = new Scanner(System.in);
-            System.out.println("Introduce las cartas separadas por coma");
-            conjuntoCartas = sc1.nextLine();
-        }
+            for(int i=1; i<=numeroCartas ; i++){
+                System.out.println("Introduce la carta");
+                int carta=sc.nextInt();
+                conjuntoCartas.add(mano.getMano().get(carta));
+                sc.nextLine();
+            }
+            
       
         //hacer un split que recoga todas las cartas y las pase a la mano
-        
-        
-        
-        return null;
+      
     }
-        return null;
+        return conjuntoCartas;
+    }
 
-}}
+
+
+
+
+}
+
+

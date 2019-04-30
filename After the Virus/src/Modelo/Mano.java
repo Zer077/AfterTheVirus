@@ -30,15 +30,18 @@ public class Mano {
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
-    public void usarCartas(Carta[] cartas, int opcion) {
+    public void usarCartas(ArrayList<Carta> cartas, int opcion) {
 
         switch (opcion) {
 
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
+            
             case 1:
-                for (int i = 0; i < cartas.length; i++) {
 
-                    Carta carta = cartas[i];
+                for (int i = 0; i < cartas.size(); i++) {
+                                                        System.out.println("-----------------------------------------------");
+
+                    Carta carta = cartas.get(i);
 
                     if (carta.getActivacion() == 0) {
                         escenario.areaJugable.AniadirCarta(carta);
@@ -54,9 +57,10 @@ public class Mano {
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas.size(); i++) {
+                                                        System.out.println("-----------------------------------------------");
 
-                    Carta carta =cartas[i];
+                    Carta carta = cartas.get(i);
                     escenario.areaJugable.AniadirCarta(carta);
                 }
 
@@ -65,14 +69,14 @@ public class Mano {
             //Usa estas cartas para activar otras
             case 3:
                 escenario.vista.verAreaJugador();
-                Carta[] carta = null;
-                for (int i = 0; i < cartas.length; i++) {
+                ArrayList<Carta> carta = new ArrayList<>();
+                for (int i = 0; i < cartas.size(); i++) {
 
-                    carta[i] = cartas[i];
+                    carta.set(i, cartas.get(i));
 
                 }
                 if (escenario.areaJugable.ActivarCarta(carta) == true) {
-                    for (int i = 0; i < cartas.length; i++) {
+                    for (int i = 0; i < cartas.size(); i++) {
 
                         getMano().remove(cartas);
                     }
@@ -84,9 +88,9 @@ public class Mano {
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;
-                for (int i = 0; i < cartas.length; i++) {
+                for (int i = 0; i < cartas.size(); i++) {
 
-                    carta1 = cartas[i];
+                    carta1 = cartas.get(i);
 
                     escenario.compraCartas.explora(carta1);
 
@@ -96,13 +100,13 @@ public class Mano {
 
             //Usa estas cartas para comprar
             case 5:
-                Carta[] carta2 = null;
-                for (int i = 0; i < cartas.length; i++) {
+                ArrayList<Carta> carta2 = new ArrayList<>();
+                for (int i = 0; i < cartas.size(); i++) {
 
-                    carta2[i] = cartas[i];
+                    carta2.add(cartas.get(i));
                 }
                 if (escenario.compraCartas.compra(carta2) == true) {
-                    for (int i = 0; i < cartas.length; i++) {
+                    for (int i = 0; i < cartas.size(); i++) {
 
                         getMano().remove(cartas);
                     }

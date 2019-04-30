@@ -69,7 +69,7 @@ public class AreaJugable {
     }
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
-    public boolean ActivarCarta(Carta[] cartas) {
+    public boolean ActivarCarta(ArrayList<Carta> cartas) {
         VistaEscenario vista = new VistaEscenario(escenario);
         Carta WeaponSkillAuxiliar = null;
 
@@ -100,7 +100,7 @@ public class AreaJugable {
 
                 Carta aux = ArrayJugables.get(numeroActivar);
 
-                if (aux.getActivacion() == cartas.length) {
+                if (aux.getActivacion() == cartas.size()) {
 
                     ArrayJugables.get(numeroActivar).setActiva(true);
                     return true;
@@ -121,7 +121,7 @@ public class AreaJugable {
             Carta aux = ArrayJugables.get(numero);
 
             //REVISION
-            if (aux.getActivacion() == cartas.length) {
+            if (aux.getActivacion() == cartas.size()) {
 
                 ArrayJugables.get(numero).setActiva(true);
                 return true;

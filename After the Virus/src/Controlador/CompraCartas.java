@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Vista.VistaEscenario;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -31,12 +32,12 @@ public class CompraCartas {
 
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano
     //En este caso es este método el encargado de eliminar las cartas de la mano
-    public boolean compra(Carta[] carta) {
+    public boolean compra(ArrayList<Carta> carta) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Elige la carta a comprar");
        escenario.vista.verAreaExploracion();
         int numero = sc.nextInt();
-        if (carta.length == escenario.arrayEscenario.get(numero).getPrecio()) {
+        if (carta.size() == escenario.arrayEscenario.get(numero).getPrecio()) {
             return true;
         }
         return false;
