@@ -14,17 +14,17 @@ import Modelo.Escenario;
 public class Ametralladora extends CartaArma {
 
     public Ametralladora(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Ametralladora", Escenario, 3, 0, 0);
+        super(2, "Ametralladora", Escenario, 3, 0,0);
     }
 
     @Override
     public void action() {
-        if (this.municion <= 0) {
+        if(this.municion<=0){
             System.out.println("No tienes municion");
-        } else {
-            for (int i = 0; i < 2; i++) {
-                escenario.arrayZombies.get(0).muereZombie();
-            }
+        }else{
+                for(int i=0;i<2;i++){
+                   escenario.arrayZombies.get(0).muereZombie();
+                }
             this.GastarMunicion();
         }
     }

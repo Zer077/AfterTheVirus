@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
 import Vista.*;
@@ -26,43 +27,46 @@ public class MenuOpciones {
 
     public void Menu() {
         System.out.println("MENU OPCIONES");
-        System.out.println("1- Usar carta de  coste 0");
+        System.out.println("1- Usar cart coste 0");
         System.out.println("2- Colocar carta");
         System.out.println("3- Usar cartas seleccionadas para activar");
         System.out.println("4- Usar cartas para explorar");
         System.out.println("5- Usar cartas para comprar");
         System.out.println("6- Salir");
         System.out.println("Elige una opción: ");
-        
+        ElegirOpcion();
     }
 
     //Elige una de las diversas opciones del juego
     public int ElegirOpcion() {
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();
-        return opcionElegida;
+        return opcionElegida; 
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
-    public int[] ElegirCartas() {
+    public Carta[] ElegirCartas() {
         Scanner sc = new Scanner(System.in);
         escenario.vista.verMano();
         System.out.println("Selecciona el numero de cartas que quieras usar: ");
         int numeroCartas = sc.nextInt();
-        if (mano.numeroCartas() < numeroCartas) {
+        if (mano.numeroCartas() < numeroCartas){
             System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
             ElegirCartas();
-        } else {
-            String conjuntoCartas = null;
-            for (int i = 0; i < numeroCartas; i++) {
-                Scanner sc1 = new Scanner(System.in);
-                System.out.println("Introduce las cartas separadas por coma");
-                conjuntoCartas = sc1.nextLine();
-            }
-            String[] array = conjuntoCartas.split(",");
+        }else{
+            String conjuntoCartas=null;
+        for(int i=0; i<numeroCartas ; i++){
+            Scanner sc1 = new Scanner(System.in);
+            System.out.println("Introduce las cartas separadas por coma");
+            conjuntoCartas = sc1.nextLine();
         }
-
+      
+        //hacer un split que recoga todas las cartas y las pase a la mano
+        
+        
+        
         return null;
     }
+        return null;
 
-}
+}}

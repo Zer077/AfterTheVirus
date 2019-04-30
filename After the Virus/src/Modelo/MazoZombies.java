@@ -96,7 +96,6 @@ public class MazoZombies extends Mazo {
             MazoZombie.remove(0);
         }
     }
-
     /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
     public void introducirAleatorio(int n) {
         for (int i = 0; i < n; i++) {
@@ -104,39 +103,50 @@ public class MazoZombies extends Mazo {
             MazoZombie.remove(0);
         }
     }
-
-    public void ZombieAMatar() {
-
+    
+    
+    public  void ZombieAMatar(){
+        
+        
         escenario.vista.verAreaZombies();
         System.out.println("que zombie descartar?");
-        Scanner sr = new Scanner(System.in);
-        int n = sr.nextInt();
+        Scanner sr=new Scanner(System.in);
+        int n=sr.nextInt();
         escenario.arrayZombies.get(n).muereZombie();
-
+    
+        
+        
     }
-
-    public void ZombieADescartar() {
-
+    
+    
+    public void ZombieADescartar(){
+    
+    
         escenario.vista.verAreaZombies();
         System.out.println("que zombie descartar?");
-        Scanner sr = new Scanner(System.in);
-        int n = sr.nextInt();
+        Scanner sr=new Scanner(System.in);
+        int n=sr.nextInt();
         escenario.arrayZombies.get(n).descartaZombie();
-
+    
     }
-
-    public void eliminarZombieArray(Carta card) {
-
+    
+    public void eliminarZombieArray(Carta card){
+    
         for (int i = 0; i < escenario.arrayZombies.size(); i++) {
-            if (escenario.arrayZombies.get(i) == card) {
-                escenario.arrayZombies.remove(i);
-
-            }
-
+           if(escenario.arrayZombies.get(i)==card){
+           escenario.arrayZombies.remove(i);
+           
+           }
+               
+            
         }
-
+    
+    
+    
     }
-
+    
+    
+    
     public ArrayList<Carta> getMazoZombie() {
         return MazoZombie;
     }

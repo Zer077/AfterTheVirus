@@ -25,7 +25,7 @@ public class Cura extends Carta {
     @Override
     public void descripcion() {
         System.out.println("Se destruye para convertir una carta de 1 zombi en un sobreviviente preparado, cuando sea salvado, se regresa a la pila de zombis. ");
-
+             
     }
 
 }

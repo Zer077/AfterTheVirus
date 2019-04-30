@@ -22,15 +22,15 @@ public class MenuPrincipal {
     }
 
     public void Iniciar() {
-        Controlador c = new Controlador();
-        Personaje p = new Adam(c);
+        Controlador c=new Controlador();
+        Personaje p=new Adam(c);
         c.AniadirPersonaje(p);
         c.controlador1a();
         //DebugMode();
     }
 
     public void DebugMode() {
-
+        
         DebugMode DBM = new DebugMode();
         DBM.iniciar();
 

@@ -12,11 +12,11 @@ import Modelo.Escenario;
  * @author Zero
  */
 public class Comida extends Carta {
-
+    
     public Comida(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Comida", Escenario, 4, 0);
     }
-
+    
     @Override
     public void action() {
         if (escenario.arrayZombies.isEmpty()) {
@@ -27,15 +27,15 @@ public class Comida extends Carta {
                 escenario.personaje.setPierna(false);
             }
             escenario.areaJugable.EliminarCarta(this);
-
+            
         }
-
+        
     }
-
+    
     @Override
     public void descripcion() {
         System.out.println("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
-
+        
     }
-
+    
 }

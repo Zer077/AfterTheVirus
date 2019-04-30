@@ -57,6 +57,7 @@ public class Laboratorio extends Carta {
 
         //preguntar si quiere activar laboratorio
         //usa refugio para activar laboratorio (activo laboratorio) refugio la descarto 
+        
         if (refugio > 0) {
 
             System.out.println("En tu mano hay al menos un refugio. ¿Quieres activar un laboratorio? S/N");
@@ -65,9 +66,11 @@ public class Laboratorio extends Carta {
             if (respuesta.toUpperCase() == "S") {
                 setActiva(true);
                 escenario.arrayDescartadas.add(escenario.areaJugable.BuscarCartaNombre("Refugio"));
-            } else if (respuesta.toUpperCase() == "N") {
+            }
+            else if (respuesta.toUpperCase() == "N") {
                 escenario.menuOpciones.Menu();
-            } else {
+            }
+            else{
                 System.out.println("Esta opcion no es valida.");
                 setActiva(true);
             }

@@ -24,7 +24,7 @@ public class Saquear extends Carta {
         System.out.println("Elige la carta que quieres recuperar: ");
         Scanner sc = new Scanner(System.in);
         int opcionZombie = sc.nextInt();
-        escenario.mano.aniadirCartaMano(escenario.arrayEscenario.get(opcionZombie - 1));
+        escenario.mano.aniadirCartaMano(escenario.arrayEscenario.get(opcionZombie-1));
         escenario.areaJugable.DescartarCarta(this);
     }
 

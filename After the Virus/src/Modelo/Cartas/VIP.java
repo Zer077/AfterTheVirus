@@ -19,7 +19,7 @@ public class VIP extends Carta {
 
     @Override
     public void action() {
-
+       
     }
 
     @Override

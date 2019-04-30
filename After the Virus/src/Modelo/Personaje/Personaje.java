@@ -19,7 +19,7 @@ public abstract class Personaje {
     private boolean pierna = false;
     private boolean brazo = false;
     private boolean cabeza = false;
-    private int defensa = 0;
+    private int defensa=0;
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
@@ -27,49 +27,46 @@ public abstract class Personaje {
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
     public void parteCuerpoAtacar() {
+        
+        if (getDefensa()==0){
 
-        if (getDefensa() == 0) {
+        if (brazo == true && pierna == true) {
+            cabeza = true;
+            System.out.println("HAS MUERTO");
 
-            if (brazo == true && pierna == true) {
-                cabeza = true;
-                System.out.println("HAS MUERTO");
-
-            } else {
-
-                System.out.println("Que parte del cuerpo te golpea el Zombie?...");
-                System.out.println("1. Brazo 2.Pierna");
-                Scanner sc = new Scanner(System.in);
-                int parte = sc.nextInt();
-
-                switch (parte) {
-                    case 1:
-                        if (brazo == false) {
-                            brazo = true;
-                            System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
-
-                        } else {
-                            pierna = true;
-
-                            System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
-                        }
-                    case 2:
-                        if (pierna == false) {
-                            pierna = true;
-                            System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
-
-                        } else {
-                            brazo = true;
-
-                            System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
-                        }
-                    default:
-
-                }
-            }
         } else {
-            setDefensa(getDefensa() - 1);
+
+            System.out.println("Que parte del cuerpo te golpea el Zombie?...");
+            System.out.println("1. Brazo 2.Pierna");
+            Scanner sc = new Scanner(System.in);
+            int parte = sc.nextInt();
+
+            switch (parte) {
+                case 1:
+                    if (brazo == false) {
+                        brazo = true;
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
+                      
+                    } else {
+                        pierna = true;
+
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
+                    }
+                case 2:
+                    if (pierna == false) {
+                        pierna = true;
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ LA PIERNA");
+
+                    } else {
+                        brazo = true;
+
+                        System.out.println("AHHH. EL ZOMBIE ME ROMPIÓ UN BRAZO");
+                    }
+                default:
+
+            }
         }
-    }
+    }else setDefensa(getDefensa() - 1);}
 
     /**
      * @return the nombre

@@ -20,7 +20,7 @@ public class Superviviente extends Carta {
 
     @Override
     public void action() {
-
+        
     }
 
     @Override

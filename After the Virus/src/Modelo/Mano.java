@@ -22,23 +22,23 @@ public class Mano {
 
     private ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;
-
+  
     //Esta mano debe usar la carta segun la opcion elegida en el menú
     public Mano(Escenario escenario) {
         this.escenario = escenario;
-
+    
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
-    public void usarCartas(int cartas, int opcion) {
+    public void usarCartas(Carta[] cartas, int opcion) {
 
         switch (opcion) {
 
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
             case 1:
-                for (int i = 0; i < cartas; i++) {
+                for (int i = 0; i < cartas.length; i++) {
 
-                    Carta carta = getMano().get(cartas);
+                    Carta carta = cartas[i];
 
                     if (carta.getActivacion() == 0) {
                         escenario.areaJugable.AniadirCarta(carta);
@@ -47,16 +47,16 @@ public class Mano {
                         System.out.println("El costo de esta carta no es 0, no se puede usar, por favor coja una opcion adecuada");
                     }
                     escenario.menuOpciones.Menu();
-
+                  
                 }
 
                 break;
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = 0; i < cartas; i++) {
+                for (int i = 0; i < cartas.length; i++) {
 
-                    Carta carta = getMano().get(cartas);
+                    Carta carta =cartas[i];
                     escenario.areaJugable.AniadirCarta(carta);
                 }
 
@@ -66,13 +66,13 @@ public class Mano {
             case 3:
                 escenario.vista.verAreaJugador();
                 Carta[] carta = null;
-                for (int i = 0; i < cartas; i++) {
+                for (int i = 0; i < cartas.length; i++) {
 
-                    carta[i] = getMano().get(cartas);
+                    carta[i] = cartas[i];
 
                 }
                 if (escenario.areaJugable.ActivarCarta(carta) == true) {
-                    for (int i = 0; i < cartas; i++) {
+                    for (int i = 0; i < cartas.length; i++) {
 
                         getMano().remove(cartas);
                     }
@@ -84,9 +84,9 @@ public class Mano {
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;
-                for (int i = 0; i < cartas; i++) {
+                for (int i = 0; i < cartas.length; i++) {
 
-                    carta1 = getMano().get(cartas);
+                    carta1 = cartas[i];
 
                     escenario.compraCartas.explora(carta1);
 
@@ -97,12 +97,12 @@ public class Mano {
             //Usa estas cartas para comprar
             case 5:
                 Carta[] carta2 = null;
-                for (int i = 0; i < cartas; i++) {
+                for (int i = 0; i < cartas.length; i++) {
 
-                    carta2[i] = getMano().get(cartas);
+                    carta2[i] = cartas[i];
                 }
                 if (escenario.compraCartas.compra(carta2) == true) {
-                    for (int i = 0; i < cartas; i++) {
+                    for (int i = 0; i < cartas.length; i++) {
 
                         getMano().remove(cartas);
                     }
@@ -134,34 +134,44 @@ public class Mano {
     }
 
     public void AniadirCarta(Carta carta) {
-        if (carta instanceof Zombie1 || carta instanceof Zombie2 || carta instanceof Zombie3 || carta instanceof Zombie4) {
+        if (carta instanceof Zombie1 || carta instanceof Zombie2 || carta instanceof Zombie3 ||carta instanceof Zombie4  ) {
             escenario.arrayZombies.add((Zombie) carta);
-        } else
+        }
 
         getMano().add(carta);
 
     }
-
-    public void comprobarZombie() {
-
+    
+    public void comprobarZombie(){
+        
         //ERROR
+        
         for (int i = 0; i < Mano.size(); i++) {
             if (Mano.get(i) instanceof Zombie) {
-                escenario.arrayZombies.add((Zombie) Mano.remove(i));
-
+               escenario.arrayZombies.add((Zombie) Mano.remove(i));
+                
             }
-
+            
         }
-
+        
+        
+        
+        
+//        
+//        for(Carta carta: Mano){
+//            if (carta instanceof Zombie1 || carta instanceof Zombie2 || carta instanceof Zombie3 ||carta instanceof Zombie4 ) {
+//                escenario.arrayZombies.add((Zombie) carta);
+//                getMano().remove(carta);
+//            }  
+//        }
     }
-
-    public int numeroCartas() {
+    
+    public int numeroCartas(){
         return getMano().size();
-
+       
     }
-
-    public void aniadirCartaMano(Carta e) {
-        getMano().add(e);
+    public void aniadirCartaMano(Carta e){
+         getMano().add(e);
     }
 
     /**

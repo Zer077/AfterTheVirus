@@ -20,16 +20,16 @@ public class Guia extends Carta {
 
     @Override
     public void action() {
-
-        if (escenario.mazoZombies.getDescarteZombies().size() == 1) {
+        
+        if(escenario.mazoZombies.getDescarteZombies().size() == 1){
             escenario.mazoZombies.getDescarteZombies().remove(0);
-        } else if (escenario.mazoZombies.getDescarteZombies().size() >= 2) {
-            escenario.mazoZombies.getDescarteZombies().remove(0);
-            escenario.mazoZombies.getDescarteZombies().remove(0);
+        } else if (escenario.mazoZombies.getDescarteZombies().size() >= 2){
+        escenario.mazoZombies.getDescarteZombies().remove(0);
+        escenario.mazoZombies.getDescarteZombies().remove(0);
         } else {
             System.out.println("No hay zombies para descartar.");
         }
-
+        
         escenario.areaJugable.DescartarCarta(this);
     }
 

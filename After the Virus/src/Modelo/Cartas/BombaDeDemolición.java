@@ -19,41 +19,45 @@ public class BombaDeDemolición extends Carta {
 
     @Override
     public void action() {
-
-        for (int x = 0; x < escenario.arrayZombies.size(); x++) {
-
-            Carta zom = escenario.arrayZombies.get(x);
-
+        
+        for (int x=0;x<escenario.arrayZombies.size();x++) {
+            
+            Carta zom=escenario.arrayZombies.get(x);
+            
             if (zom instanceof Zombie) {
-
+                
                 escenario.mazoZombies.getDescarteZombies().add(zom);
                 escenario.arrayZombies.remove(x);
-
+                
             }
-
+            
+            
+            
         }
-
-        for (int y = 0; y < escenario.mazoDescartes.getMazoDescarte().size(); y++) {
-
-            Carta zomb = escenario.mazoDescartes.getMazoDescarte().get(y);
-
+        
+        
+        for (int y=0;y<escenario.mazoDescartes.getMazoDescarte().size();y++){
+            
+            Carta zomb=escenario.mazoDescartes.getMazoDescarte().get(y);
+            
+            
             if (zomb instanceof Zombie) {
-
+                
                 escenario.mazoZombies.getDescarteZombies().add(zomb);
                 escenario.mazoDescartes.getMazoDescarte().remove(y);
-
+                
             }
-
+            
         }
-
+        
         escenario.areaJugable.EliminarCarta(this);
-
+        
     }
 
     @Override
     public void descripcion() {
-        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila\n"
-                + "\n" + "de descarte de algún jugador.");
+        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila\n" +
+            "\n" + "de descarte de algún jugador.");
     }
 
 }

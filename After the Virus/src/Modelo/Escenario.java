@@ -21,6 +21,8 @@ import java.util.ArrayList;
 public abstract class Escenario {
 
 //contiene todo el escenario principal
+   
+    
     public CompraCartas compraCartas;
     public MazoEscenario mazoEscenario;
     public MazoDescartes mazoDescartes;
@@ -33,13 +35,16 @@ public abstract class Escenario {
     public VistaEscenario vista;
     public AreaJugable areaJugable;
     public ArrayList<Zombie> arrayZombies = new ArrayList<>();
-    // public ArrayList<Carta> arrayMano = new ArrayList<>();
+   // public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
-
+    
     public Personaje personaje;
     public int Ronda;
     public int PersonasSalvadas;
-
+    
+   
+    
+   
 }

@@ -20,17 +20,18 @@ public class FuegoCruzado extends Carta {
 
     @Override
     public void action() {
-
-        Scanner sq = new Scanner(System.in);
-        for (int z = 0; z < escenario.PersonasSalvadas; z++) {
-
-            escenario.vista.verAreaZombies();
-            System.out.println("¿Qué zombies quieres matar?");
-            int x = sq.nextInt();
-            escenario.arrayZombies.get(x).muereZombie();
-
-        }
-
+        
+        Scanner sq=new Scanner(System.in);
+        for (int z=0;z<escenario.PersonasSalvadas;z++) {
+            
+        
+        escenario.vista.verAreaZombies();
+        System.out.println("¿Qué zombies quieres matar?");
+        int x=sq.nextInt();
+        escenario.arrayZombies.get(x).muereZombie();
+        
+        }       
+        
         escenario.areaJugable.EliminarCarta(this);
     }
 

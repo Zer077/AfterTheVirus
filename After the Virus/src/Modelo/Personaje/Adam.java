@@ -68,7 +68,7 @@ public class Adam extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Palanca(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Trinchera(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0,0));
         escenario.mazoEscenario.getMazoEscenario().add(new Comida(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Guia(0, nombre, escenario, 0, 0));
@@ -82,7 +82,7 @@ public class Adam extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Redada(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0,0));
         escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));

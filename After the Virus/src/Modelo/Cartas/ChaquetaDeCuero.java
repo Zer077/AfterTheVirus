@@ -19,13 +19,13 @@ public class ChaquetaDeCuero extends Carta {
 
     @Override
     public void action() {
-        escenario.personaje.setDefensa(escenario.personaje.getDefensa() + 2);
+        escenario.personaje.setDefensa(escenario.personaje.getDefensa()+2);
         escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        System.out.println("Se destruye para prevenir los siguientes 2 daños en ese turno.");
+        System.out.println("Se destruye para prevenir los siguientes 2 daños en ese turno.");    
     }
 
 }
