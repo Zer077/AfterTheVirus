@@ -8,6 +8,7 @@ package Modelo;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.ObjetivoSeguro;
 import Modelo.Cartas.HabilidadConArmas;
+import Modelo.Cartas.HabilidadConTrampas;
 import Vista.VistaEscenario;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -72,7 +73,19 @@ public class AreaJugable {
     public boolean ActivarCarta(ArrayList<Carta> cartas) {
         VistaEscenario vista = new VistaEscenario(escenario);
         Carta WeaponSkillAuxiliar = null;
+        Carta HabilidadConTrampa=null;
+        
+        
+        //Va a buscar la carta habilidad con trampa
+            for (int l = 0; l < ArrayJugables.size(); l++) {
 
+            if (ArrayJugables.get(l) instanceof HabilidadConTrampas) {
+                HabilidadConTrampa = ArrayJugables.get(l);
+
+            }        
+        
+        
+        
         //Va a buscar la carta WeaponSkill
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
@@ -80,6 +93,38 @@ public class AreaJugable {
                 WeaponSkillAuxiliar = ArrayJugables.get(i);
 
             }
+            
+        }if (HabilidadConTrampa.isActiva()) {
+            escenario.vista.verAreaJugador();
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Seleccione carta que jugar");
+            int numeroActivar = sc.nextInt();
+
+            //si la carta elegida es un arma
+            if (ArrayJugables.get(numeroActivar).getTipo() == 10) {
+
+                vista.verAreaZombies();
+                System.out.println("A que Zombie quieres atacar?");
+
+                int numero2 = sc.nextInt();
+                escenario.arrayZombies.get(numero2).muereZombie();
+
+                Carta aux = ArrayJugables.get(numeroActivar);
+
+                if (aux.getActivacion() == cartas.size()) {
+
+                    ArrayJugables.get(numeroActivar).setActiva(true);
+                    return true;
+                } else {
+                    System.out.println("Vuelve a intentarlo");
+                }
+
+                escenario.menuOpciones.Menu();
+            } else {
+                ArrayJugables.get(numeroActivar).setActiva(true);
+            }
+
+            //Si WeaponSkill no está activa solo te deja activar una carta
         }
 
         //Si WeaponSkill está activa y señecciona una carta que jugar tipo arma matas a un zombie y activa la carta
@@ -114,7 +159,7 @@ public class AreaJugable {
             }
 
             //Si WeaponSkill no está activa solo te deja activar una carta
-        } else {
+        }
             escenario.vista.verAreaJugador();
 
             Scanner sc = new Scanner(System.in);
@@ -133,9 +178,10 @@ public class AreaJugable {
 
             escenario.menuOpciones.Menu();
 
-        }
+        
         return false;
-    }
+    }   return false;
+}
 
     public Carta BuscarCartaNombre(String n) {
         for (int i = 0; i < ArrayJugables.size(); i++) {
