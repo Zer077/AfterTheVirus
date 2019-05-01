@@ -35,6 +35,9 @@ public class MazoJugador extends Mazo {
          con un array auxiliar que luego vamos a devolver a otra clase,
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
+        
+        
+        //Te mete mas de 5 cartas, arreglar
         try {
             if (MazoJugador.size() >= 5) {
                 for (int i = 0; i < 5; i++) {
