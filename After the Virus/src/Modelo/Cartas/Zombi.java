@@ -10,7 +10,9 @@ package Modelo.Cartas;
  * @author Usuario
  */
 public class Zombi {
-private boolean vivo=true;
+
+    private boolean vivo = true;
+
     public Zombi() {
     }
 
@@ -27,5 +29,5 @@ private boolean vivo=true;
     public void setVivo(boolean vivo) {
         this.vivo = vivo;
     }
-    
+
 }

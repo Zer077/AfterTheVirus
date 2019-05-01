@@ -19,7 +19,7 @@ public class Revista extends Carta {
 
     @Override
     public void action() {
-        
+
     }
 
     @Override

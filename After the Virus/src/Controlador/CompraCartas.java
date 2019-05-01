@@ -35,7 +35,7 @@ public class CompraCartas {
     public boolean compra(ArrayList<Carta> carta) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Elige la carta a comprar");
-       escenario.vista.verAreaExploracion();
+        escenario.vista.verAreaExploracion();
         int numero = sc.nextInt();
         if (carta.size() == escenario.arrayEscenario.get(numero).getPrecio()) {
             return true;

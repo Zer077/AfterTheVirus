@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Zero
  */
 public class Perro extends Carta {
-    
+
 //Precio --> recuperar 
 //Activacion --> preparar
     public Perro(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
@@ -22,12 +22,12 @@ public class Perro extends Carta {
     }
 
     @Override
-    public void action() {    
+    public void action() {
         Scanner sc = new Scanner(System.in);
         escenario.vista.verAreaZombies();
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
-        escenario.arrayZombies.get(a-1).muereZombie();
+        escenario.arrayZombies.get(a - 1).muereZombie();
         escenario.areaJugable.DescartarCarta(this);
     }
 

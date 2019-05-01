@@ -26,9 +26,9 @@ public class AreaJugable {
     }
 
     public void AniadirCarta(Carta carta) {
-       
+
         if (carta.getActivacion() == 0) {
-            
+
             jugarCartaGratuita(carta);
         } else {
             ArrayJugables.add(carta);
@@ -109,7 +109,9 @@ public class AreaJugable {
                 }
 
                 escenario.menuOpciones.Menu();
-            }else ArrayJugables.get(numeroActivar).setActiva(true);
+            } else {
+                ArrayJugables.get(numeroActivar).setActiva(true);
+            }
 
             //Si WeaponSkill no está activa solo te deja activar una carta
         } else {
@@ -197,7 +199,7 @@ public class AreaJugable {
         if (contador >= 2 || contador >= 1 && escenario.personaje.isBrazo() == false) {
 
             return false;
-        
+
         } else {
             return true;
         }

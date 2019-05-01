@@ -20,10 +20,10 @@ public class Explorar extends Carta {
 
     @Override
     public void action() {
-        
+
         escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
         escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
-        
+
         escenario.areaJugable.DescartarCarta(this);
     }
 

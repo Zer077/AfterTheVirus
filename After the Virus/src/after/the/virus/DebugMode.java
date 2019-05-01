@@ -97,7 +97,7 @@ public class DebugMode {
                         }
 
                     } else {
-                       
+
                     }
 
                 }
@@ -123,7 +123,7 @@ public class DebugMode {
                         }
 
                     } else {
-                        
+
                     }
 
                 }

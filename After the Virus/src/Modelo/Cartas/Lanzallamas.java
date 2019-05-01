@@ -1,4 +1,3 @@
-
 package Modelo.Cartas;
 
 import Modelo.Escenario;
@@ -10,17 +9,17 @@ import java.util.Scanner;
  */
 public class Lanzallamas extends CartaArma {
 
-    public Lanzallamas(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion){
-        
+    public Lanzallamas(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
+
         super(3, "Lanzallamas", Escenario, 3, 1, 0);
     }
 
     @Override
-    public void action(){
-        
+    public void action() {
+
         Scanner sc = new Scanner(System.in);
         escenario.vista.verAreaZombies();
-        for(int i=0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             System.out.println("Selecciona el zombie: ");
             int a = sc.nextInt();
             escenario.arrayZombies.get(a).muereZombie();
@@ -29,8 +28,8 @@ public class Lanzallamas extends CartaArma {
     }
 
     @Override
-    public void descripcion(){
-        
+    public void descripcion() {
+
         System.out.println("Descarta para matar a 3 zombis.");
     }
 

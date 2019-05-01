@@ -19,27 +19,26 @@ public class TrampaPermetral extends Carta {
 
     @Override
     public void action() {
-        
-        for (int y=0;y<6;y++){
-            
-            Carta zomb=escenario.mazoDescartes.getMazoDescarte().get(y);
-            
-            
+
+        for (int y = 0; y < 6; y++) {
+
+            Carta zomb = escenario.mazoDescartes.getMazoDescarte().get(y);
+
             if (zomb instanceof Zombie) {
-                
+
                 escenario.mazoZombies.getDescarteZombies().add(zomb);
                 escenario.mazoDescartes.getMazoDescarte().remove(y);
-                
+
             }
-            
+
         }
-        
+
         escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override
     public void descripcion() {
-        
+
         System.out.println("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
     }
 

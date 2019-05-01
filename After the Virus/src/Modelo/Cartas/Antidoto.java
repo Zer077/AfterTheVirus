@@ -19,12 +19,13 @@ public class Antidoto extends Carta {
 
     @Override
     public void action() {
-        escenario.personaje.setDefensa(escenario.personaje.getDefensa()+1);
+        escenario.personaje.setDefensa(escenario.personaje.getDefensa() + 1);
         escenario.areaJugable.EliminarCarta(this);
     }
+
     @Override
     public void descripcion() {
-        System.out.println("Se destruye para prevenir el siguiente daño en ese turno.");    
+        System.out.println("Se destruye para prevenir el siguiente daño en ese turno.");
     }
 
 }

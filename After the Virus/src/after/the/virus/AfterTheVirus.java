@@ -18,8 +18,8 @@ public class AfterTheVirus {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        DebugMode d=new DebugMode();
+
+        DebugMode d = new DebugMode();
 //        d.iniciar();
 
         MenuPrincipal menu = new MenuPrincipal();

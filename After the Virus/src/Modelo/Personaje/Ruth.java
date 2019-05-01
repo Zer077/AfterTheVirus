@@ -54,7 +54,7 @@ public class Ruth extends Personaje {
         for (int i = 0; i < 3; i++) {
             escenario.mazoJugador.getMazoJugador().add(new Superviviente(0, nombre, escenario, 0, 0));
         }
-        escenario.mazoJugador.getMazoJugador().add(new Escopeta(0, nombre, escenario, 0, 0,0));
+        escenario.mazoJugador.getMazoJugador().add(new Escopeta(0, nombre, escenario, 0, 0, 0));
         escenario.mazoJugador.getMazoJugador().add(new Granada(0, nombre, escenario, 0, 0));
         escenario.mazoJugador.getMazoJugador().add(new Trinchera(0, nombre, escenario, 0, 0));
         escenario.mazoJugador.getMazoJugador().add(new HabilidadConArmas(0, nombre, escenario, 0, 0));
@@ -66,7 +66,7 @@ public class Ruth extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Motosierra(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new FuegoCruzado(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0,0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Comida(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Guia(0, nombre, escenario, 0, 0));
@@ -87,7 +87,7 @@ public class Ruth extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0,0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0, 0));
 
         super.nombre = "Ruth";
 

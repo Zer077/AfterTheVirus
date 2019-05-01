@@ -41,6 +41,7 @@ import Modelo.Cartas.Tunel;
 import Modelo.Cartas.VIP;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Escenario;
+
 /**
  *
  * @author Zero
@@ -68,7 +69,7 @@ public class Robert extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Granada(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Trinchera(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0,0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Laboratorio(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
@@ -81,16 +82,15 @@ public class Robert extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0,0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConArmas(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0,0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0, 0));
 
-        
         super.nombre = "Robert";
     }
 
