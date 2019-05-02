@@ -118,6 +118,11 @@ public class Mano {
                 }
 
                 break;
+                
+            case 6:
+                System.out.println("Salimos de la mano");
+                break;
+                
             default:
                 System.out.println("Errorcito en menu de mano");
                 break;
