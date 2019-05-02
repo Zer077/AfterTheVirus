@@ -65,7 +65,7 @@ public abstract class Personaje {
                         }
                         break;
                     case 202122:
-                        System.out.println("EasterEgg");
+                        System.out.println("Has esquivado magicamente el ataque,los dioses te han concedido una segunda oportunidad, gracias CCC");
                         break;
                     default:
                         System.out.println("parte equivocada");

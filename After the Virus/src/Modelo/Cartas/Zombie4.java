@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Zombie4 extends Zombie {
 
     public Zombie4(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(0, "Z4", Escenario, 0, 0);
         zombie = new ArrayList<>();
         zombie.add(new Zombi());
         zombie.add(new Zombi());

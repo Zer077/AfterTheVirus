@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class Zombie1 extends Zombie {
 
     public Zombie1(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(precio, nombre, Escenario, tipo, activacion);
+        super(0, "Z1", Escenario, 0, 0);
         zombie = new ArrayList<>();
         zombie.add(new Zombi());
         super.setNumeroZombie(1);
