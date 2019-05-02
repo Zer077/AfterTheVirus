@@ -21,8 +21,8 @@ public class Correr extends Carta {
 
     @Override
     public void action() {
-        if (escenario.personaje.isPierna() == false && escenario.arrayZombies.size() > 0) {
-            if (escenario.arrayZombies.size() > 0) {
+        if (escenario.personaje.isPierna() == false) {
+            if (escenario.arrayZombies.size() == 0) {
                 escenario.mano.getMano().add(this);
                 escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
             } else {
