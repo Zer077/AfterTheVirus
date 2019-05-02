@@ -43,6 +43,7 @@ public class AreaJugable {
         VistaEscenario vista = new VistaEscenario(escenario);
         escenario.vista.verAreaJugador();
         Scanner sc = new Scanner(System.in);
+        System.out.println("Que carta quieres jugar?");
         int numero = sc.nextInt();
 
         if (ArrayJugables.get(numero).getTipo() == 3) {
@@ -59,9 +60,9 @@ public class AreaJugable {
 
                 }
             }
-        }
+        }else if(ArrayJugables.get(numero).isActiva()==true){
 
-        ArrayJugables.get(numero).action();
+        ArrayJugables.get(numero).action();}
 
     }
 
