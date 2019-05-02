@@ -34,7 +34,9 @@ public class MenuOpciones {
         System.out.println("3- Usar cartas seleccionadas para activar");
         System.out.println("4- Usar cartas para explorar");
         System.out.println("5- Usar cartas para comprar");
-        System.out.println("6- Salir");
+        System.out.println("6- Usar cartas del area");
+        System.out.println("7- Ver Escenario");
+        System.out.println("8- Salir");
         System.out.println("Elige una opción: ");
 
     }
