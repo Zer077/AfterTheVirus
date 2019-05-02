@@ -63,20 +63,24 @@ public class MenuOpciones {
         ArrayList<Carta> conjuntoCartas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         escenario.vista.verMano();
-        System.out.println("Selecciona el numero de cartas que quieras usar: ");
-        int numeroCartas = sc.nextInt();
-        if (mano.numeroCartas() < numeroCartas) {
-            System.out.println("El numero de cartas en tu mano es menor que el numero de cartas que quieres seleccionar.");
-            ElegirCartas();
-        } else {
-            for (int i = 0; i < numeroCartas; i++) {
-                System.out.println("Introduce la carta");
-                int carta = sc.nextInt();
-                conjuntoCartas.add(mano.getMano().remove(carta - 1));
+            try {
+              System.out.println("Introduce las cartas a usar separadas por espacios");
+                String carta = sc.next();
+                String[] cards=carta.split(" ");
+                for (int j = cards.length-1; j >=0; j--) {
+                conjuntoCartas.add(mano.getMano().remove(Integer.parseInt(cards[j])-1));
 
-            }
-
+                }
+        } catch (Exception e) {
+                System.out.println("No has introducido bien la carta que deseabas seleccionar, intentelo de nuevo por favor");
+             mano.usarCartas(ElegirCartas(), ElegirOpcion());
+            
         }
+              
+
+            
+
+        
         return conjuntoCartas;
     }
 

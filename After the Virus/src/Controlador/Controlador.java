@@ -79,7 +79,14 @@ public class Controlador extends Escenario {
             //y elimina las de Zombie de la mano y las pone en juego
             mano.comprobarZombie();
             //mostrar escenario y todos los datos
-            vista.verEscenarioGeneral();
+            vista.verJugador();
+            Enter();
+            vista.verAreaZombies();
+            Enter();
+            vista.verAreaExploracion();
+            Enter();
+            vista.verAreaJugador();
+            Enter();
             //muestra menu opciones acciones carta
             do {
                 menuOpciones.Menu();
@@ -94,7 +101,7 @@ public class Controlador extends Escenario {
             for (int i = 0; i < arrayZombies.size(); i++) {
                 arrayZombies.get(i).atacaHumano();
             }
-            System.out.println("-------------termina ataque zombie----------------------");
+            System.out.println("-------------termina ataque de los zombies----------------------");
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
@@ -114,7 +121,7 @@ public class Controlador extends Escenario {
 
             Ronda++;
             contador = 0;
-            System.out.println("------------finalronda-------------");
+            System.out.println("------------final de la ronda "+Ronda +"-------------");
         } while (personaje.isCabeza() == false);
     }
 
@@ -266,5 +273,14 @@ public class Controlador extends Escenario {
 
         personaje = p;
     }
-
+  public void Enter(){
+   System.out.println("Press \"ENTER\" to continue...");
+   Scanner scanner = new Scanner(System.in);
+   scanner.nextLine();
 }
+}
+
+
+
+
+  
