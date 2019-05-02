@@ -19,7 +19,8 @@ public class Revista extends Carta {
 
     @Override
     public void action() {
-
+    System.out.println("No puedes hacer esto, pero esta Revista te llena de determinación");
+    escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
     }
 
     @Override

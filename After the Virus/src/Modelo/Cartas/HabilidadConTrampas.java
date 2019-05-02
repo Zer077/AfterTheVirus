@@ -19,7 +19,8 @@ public class HabilidadConTrampas extends Carta {
 
     @Override
     public void action() {
-
+         escenario.areaJugable.AniadirCarta(this);
+         escenario.mano.getMano().remove(this);
     }
 
     @Override
