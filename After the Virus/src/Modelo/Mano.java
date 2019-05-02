@@ -43,7 +43,7 @@ public class Mano {
                     Carta carta = cartas.get(i);
 
                     escenario.areaJugable.AniadirCarta(carta);
-
+                    
                     escenario.menuOpciones.Menu();
 
                 }

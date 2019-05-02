@@ -67,10 +67,11 @@ public class MenuOpciones {
             for (int i = 0; i < numeroCartas; i++) {
                 System.out.println("Introduce la carta");
                 int carta = sc.nextInt();
-                conjuntoCartas.add(mano.getMano().get(carta));
+                conjuntoCartas.add(mano.getMano().remove(carta-1));
+                
             }
 
-            //hacer un split que recoga todas las cartas y las pase a la mano
+           
         }
         return conjuntoCartas;
     }
