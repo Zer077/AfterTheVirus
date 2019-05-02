@@ -71,6 +71,9 @@ public class MenuPrincipal {
             case 4:
                 DebugMode();
                 break;
+            case 5:
+                control.controladorBeta();
+                break;
             default:
                 System.out.println("error");
                 Iniciar();

@@ -271,6 +271,21 @@ public class Controlador extends Escenario {
 
         } while (personaje.isCabeza() == false);
     }
+    
+    public void controladorBeta(){
+        for (int i = 0; i < 20; i++) {
+            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.sacarCincoCartas();
+            
+            do {
+                menuOpciones.ElegirOpcion();
+                //usa la carta con la accion indicada en el menu
+                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
+                vista.verMano();
+                //menu uso de cartas
+            } while (opcion != 8 && mano.numeroCartas() > 0);
+        }
+    }
 
     public void AniadirPersonaje(Personaje p) {
 
