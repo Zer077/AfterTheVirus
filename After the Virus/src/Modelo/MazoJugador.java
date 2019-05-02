@@ -36,17 +36,15 @@ public class MazoJugador extends Mazo {
          con un array auxiliar que luego vamos a devolver a otra clase,
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
-        
-        
-
         try {
             if (MazoJugador.size() >= 5) {
                 for (int i = 0; i < 5; i++) {
-                    if (MazoJugador.get(i) instanceof Zombie) 
-                    {escenario.arrayZombies.add((Zombie)MazoJugador.get(i));
-                        
-                    }else
-                    escenario.mano.AniadirCarta(MazoJugador.remove(0));
+                    if (MazoJugador.get(i) instanceof Zombie) {
+                        escenario.arrayZombies.add((Zombie) MazoJugador.get(i));
+
+                    } else {
+                        escenario.mano.AniadirCarta(MazoJugador.remove(0));
+                    }
                 }
             } else {
                 System.out.println("No quedan suficientes cartas, restaurando mazo del jugador");

@@ -19,8 +19,8 @@ public class VIP extends Carta {
 
     @Override
     public void action() {
-    escenario.areaJugable.AniadirCarta(this);
-    escenario.mano.getMano().remove(this);
+        escenario.areaJugable.AniadirCarta(this);
+        escenario.mano.getMano().remove(this);
     }
 
     @Override

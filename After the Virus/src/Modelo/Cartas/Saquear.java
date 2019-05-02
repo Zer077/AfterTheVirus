@@ -24,18 +24,19 @@ public class Saquear extends Carta {
         System.out.println("Elige la carta que quieres recuperar: ");
         Scanner sc = new Scanner(System.in);
         int opcionZombie = sc.nextInt();
-        if (escenario.arrayEscenario.size()>0){
-        try {
-            escenario.mano.aniadirCartaMano(escenario.arrayEscenario.get(opcionZombie - 1));        
-            escenario.areaJugable.DescartarCarta(this);
+        if (escenario.arrayEscenario.size() > 0) {
+            try {
+                escenario.mano.aniadirCartaMano(escenario.arrayEscenario.get(opcionZombie - 1));
+                escenario.areaJugable.DescartarCarta(this);
 
-        } catch (Exception e) {
-            System.out.println("No existen elementos");
-                         escenario.mano.getMano().add(this);
+            } catch (Exception e) {
+                System.out.println("No existen elementos");
+                escenario.mano.getMano().add(this);
 
-           escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
-        }}
-        
+                escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
+            }
+        }
+
     }
 
     @Override

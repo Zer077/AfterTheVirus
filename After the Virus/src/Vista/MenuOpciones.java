@@ -50,11 +50,11 @@ public class MenuOpciones {
 
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();
-        if (opcionElegida==5){
-        escenario.opcion=5;
-                
+        if (opcionElegida == 5) {
+            escenario.opcion = 5;
+
         }
-             
+
         return opcionElegida;
     }
 
@@ -72,11 +72,10 @@ public class MenuOpciones {
             for (int i = 0; i < numeroCartas; i++) {
                 System.out.println("Introduce la carta");
                 int carta = sc.nextInt();
-                conjuntoCartas.add(mano.getMano().remove(carta-1));
-                
+                conjuntoCartas.add(mano.getMano().remove(carta - 1));
+
             }
 
-           
         }
         return conjuntoCartas;
     }

@@ -30,8 +30,6 @@ public class Refugio extends Carta {
             }
         }
         escenario.areaJugable.DescartarCarta(this);
-        
-                     
 
     }
 

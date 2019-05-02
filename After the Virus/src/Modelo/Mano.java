@@ -43,7 +43,7 @@ public class Mano {
                     Carta carta = cartas.get(i);
 
                     escenario.areaJugable.AniadirCarta(carta);
-                    
+
                     escenario.menuOpciones.Menu();
 
                 }
@@ -63,31 +63,32 @@ public class Mano {
 
             //Usa estas cartas para activar otras
             case 3:
-                int conteo=0;
+                int conteo = 0;
                 for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
                     if (escenario.areaJugable.getArrayJugables().get(i).isActiva()) {
                         conteo++;
                     }
- 
-                }
-                if(escenario.areaJugable.getArrayJugables().size()>0 &&  conteo>0){
-                
-                escenario.vista.verAreaJugador();
-                ArrayList<Carta> carta = new ArrayList<>();
-                for (int i = 0; i < cartas.size(); i++) {
-
-                    carta.set(i, cartas.get(i));
 
                 }
-                if (escenario.areaJugable.ActivarCarta(carta) == true) {
+                if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
+
+                    escenario.vista.verAreaJugador();
+                    ArrayList<Carta> carta = new ArrayList<>();
                     for (int i = 0; i < cartas.size(); i++) {
 
-                        getMano().remove(cartas);
+                        carta.set(i, cartas.get(i));
+
                     }
-                } else //lanzar error
-                {
-                    break;
-                }}
+                    if (escenario.areaJugable.ActivarCarta(carta) == true) {
+                        for (int i = 0; i < cartas.size(); i++) {
+
+                            getMano().remove(cartas);
+                        }
+                    } else //lanzar error
+                    {
+                        break;
+                    }
+                }
 
             //Usa estas cartas para explorar
             case 4:

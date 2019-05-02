@@ -88,7 +88,7 @@ public class Controlador extends Escenario {
                 vista.verMano();
                 //menu uso de cartas
             } while (opcion != 5 && mano.numeroCartas() > 0);
-            opcion=0;
+            opcion = 0;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {

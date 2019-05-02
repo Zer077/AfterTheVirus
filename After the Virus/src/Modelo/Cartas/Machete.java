@@ -24,8 +24,8 @@ public class Machete extends Carta {
 
     @Override
     public void action() {
-            escenario.areaJugable.AniadirCarta(this);
-    escenario.mano.getMano().remove(this);
+        escenario.areaJugable.AniadirCarta(this);
+        escenario.mano.getMano().remove(this);
         /*Scanner sc = new Scanner(System.in);
         if (ronda.contains(escenario.Ronda)) {
             System.out.println("Ya has usado el machete esta ronda");
