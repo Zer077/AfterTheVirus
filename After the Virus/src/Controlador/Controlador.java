@@ -81,7 +81,6 @@ public class Controlador extends Escenario {
             //mostrar escenario y todos los datos
             vista.verEscenarioGeneral();
             //muestra menu opciones acciones carta
-            int opcion = 0;
             do {
                 menuOpciones.Menu();
                 //usa la carta con la accion indicada en el menu
@@ -89,6 +88,7 @@ public class Controlador extends Escenario {
                 vista.verMano();
                 //menu uso de cartas
             } while (opcion != 5 && mano.numeroCartas() > 0);
+            opcion=0;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {
