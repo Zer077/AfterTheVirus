@@ -90,12 +90,12 @@ public class Controlador extends Escenario {
             Enter();
             //muestra menu opciones acciones carta
             do {
-                menuOpciones.Menu();
+                menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 6 && mano.numeroCartas() > 0);
+            } while (opcion != 8 && mano.numeroCartas() > 0);
             opcion = 0;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
@@ -170,7 +170,7 @@ public class Controlador extends Escenario {
             //muestra menu opciones acciones carta
             int opcion = 0;
             do {
-                menuOpciones.Menu();
+                menuOpciones.ElegirOpcion();
                 opcion = menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
@@ -238,7 +238,7 @@ public class Controlador extends Escenario {
             //muestra menu opciones acciones carta
             int opcion = 0;
             do {
-                menuOpciones.Menu();
+                menuOpciones.ElegirOpcion();
                 opcion = menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());

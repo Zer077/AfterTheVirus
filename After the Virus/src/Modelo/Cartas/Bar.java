@@ -48,7 +48,7 @@ public class Bar extends Carta {
 
                 default:
                     System.out.println("No has elegido el numero correcto");
-                    escenario.menuOpciones.Menu();
+                    escenario.menuOpciones.ElegirOpcion();
                     break;
 
             }

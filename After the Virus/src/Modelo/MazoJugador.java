@@ -58,7 +58,7 @@ public class MazoJugador extends Mazo {
                 System.out.println("Mazo de jugador restaurado correctamente");
             }
         } catch (Exception e) {
-            System.err.println("error en sacar 5 cartas");
+            System.err.println(e);
         }
     }//fin del metodo
 

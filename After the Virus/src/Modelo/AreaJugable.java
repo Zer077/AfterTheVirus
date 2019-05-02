@@ -118,7 +118,7 @@ public class AreaJugable {
                         System.out.println("Vuelve a intentarlo");
                     }
 
-                    escenario.menuOpciones.Menu();
+                    escenario.menuOpciones.ElegirOpcion();
                 } else {
                     ArrayJugables.get(numeroActivar).setActiva(true);
                 }
@@ -152,7 +152,7 @@ public class AreaJugable {
                         System.out.println("Vuelve a intentarlo");
                     }
 
-                    escenario.menuOpciones.Menu();
+                    escenario.menuOpciones.ElegirOpcion();
                 } else {
                     ArrayJugables.get(numeroActivar).setActiva(true);
                 }
@@ -175,7 +175,7 @@ public class AreaJugable {
                 System.out.println("Vuelve a intentarlo");
             }
 
-            escenario.menuOpciones.Menu();
+            escenario.menuOpciones.ElegirOpcion();
 
             return false;
         }

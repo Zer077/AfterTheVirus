@@ -44,7 +44,7 @@ public class Mano {
 
                     escenario.areaJugable.AniadirCarta(carta);
 
-                    escenario.menuOpciones.Menu();
+                    escenario.menuOpciones.ElegirOpcion();
 
                 }
 
@@ -125,10 +125,12 @@ public class Mano {
                 break;
                 
             case 7:
+                escenario.vista.verAreaExploracion();
                 escenario.vista.verJugador();
                 escenario.vista.verAreaJugador();
                 escenario.vista.verAreaExploracion();
                 escenario.vista.verAreaZombies();
+                escenario.vista.verMano();
                 break;
                 
             case 8:

@@ -66,7 +66,7 @@ public class Laboratorio extends Carta {
                 setActiva(true);
                 escenario.arrayDescartadas.add(escenario.areaJugable.BuscarCartaNombre("Refugio"));
             } else if (respuesta.toUpperCase() == "N") {
-                escenario.menuOpciones.Menu();
+                escenario.menuOpciones.ElegirOpcion();
             } else {
                 System.out.println("Esta opcion no es valida.");
                 setActiva(true);
