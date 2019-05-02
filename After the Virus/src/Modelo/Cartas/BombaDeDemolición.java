@@ -52,8 +52,7 @@ public class BombaDeDemolición extends Carta {
 
     @Override
     public void descripcion() {
-        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila\n"
-                + "\n" + "de descarte de algún jugador.");
+        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila de descarte de algún jugador.");
     }
 
 }

@@ -21,7 +21,8 @@ public class Correr extends Carta {
 
     @Override
     public void action() {
-        if (escenario.personaje.isPierna() == true) {
+        if (escenario.personaje.isPierna() == false && escenario.arrayZombies.size()>0) {
+            
             escenario.vista.verAreaZombies();
             System.out.println("Elige al zombie que quieres descartar: ");
             Scanner sc = new Scanner(System.in);

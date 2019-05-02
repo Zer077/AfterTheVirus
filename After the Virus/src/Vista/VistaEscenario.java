@@ -62,6 +62,7 @@ public class VistaEscenario {
             System.out.println("Precio: " + x.getPrecio());
             System.out.println("Coste preparar: " + x.getActivacion());
             posicion++;
+            System.out.println("------------------------------");
         }
 
     }
