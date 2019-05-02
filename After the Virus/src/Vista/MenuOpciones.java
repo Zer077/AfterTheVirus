@@ -29,7 +29,7 @@ public class MenuOpciones {
 
     public void Menu() {
         System.out.println("MENU OPCIONES");
-        System.out.println("1- Usar cart coste 0");
+        System.out.println("1- Usar carta coste 0");
         System.out.println("2- Colocar carta");
         System.out.println("3- Usar cartas seleccionadas para activar");
         System.out.println("4- Usar cartas para explorar");
