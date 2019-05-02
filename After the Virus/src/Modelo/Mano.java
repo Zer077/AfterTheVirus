@@ -63,6 +63,15 @@ public class Mano {
 
             //Usa estas cartas para activar otras
             case 3:
+                int conteo=0;
+                for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
+                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva()) {
+                        conteo++;
+                    }
+ 
+                }
+                if(escenario.areaJugable.getArrayJugables().size()>0 &&  conteo>0){
+                
                 escenario.vista.verAreaJugador();
                 ArrayList<Carta> carta = new ArrayList<>();
                 for (int i = 0; i < cartas.size(); i++) {
@@ -78,7 +87,7 @@ public class Mano {
                 } else //lanzar error
                 {
                     break;
-                }
+                }}
 
             //Usa estas cartas para explorar
             case 4:

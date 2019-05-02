@@ -6,6 +6,7 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
+import Modelo.Cartas.Zombie;
 import java.util.ArrayList;
 import java.util.Collections;
 import static java.util.Collections.shuffle;
@@ -37,10 +38,14 @@ public class MazoJugador extends Mazo {
          */
         
         
-        //Te mete mas de 5 cartas, arreglar
+
         try {
             if (MazoJugador.size() >= 5) {
                 for (int i = 0; i < 5; i++) {
+                    if (MazoJugador.get(i) instanceof Zombie) 
+                    {escenario.arrayZombies.add((Zombie)MazoJugador.get(i));
+                        
+                    }else
                     escenario.mano.AniadirCarta(MazoJugador.remove(0));
                 }
             } else {

@@ -31,6 +31,7 @@ public class Correr extends Carta {
             escenario.areaJugable.DescartarCarta(this);
         } else {
             System.out.println("Tu pierna está rota, no puedes correr");
+            escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
         }
     }
 
