@@ -11,6 +11,7 @@ import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
 import Vista.VistaEscenario;
 import java.util.Scanner;
+import static javafx.application.Platform.exit;
 
 /**
  *
@@ -114,9 +115,11 @@ public class Controlador extends Escenario {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+                exit();
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
                 personaje.setCabeza(true);
+                exit();
             }
 
             Ronda++;
