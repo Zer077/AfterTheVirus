@@ -52,8 +52,8 @@ public class MenuOpciones {
 
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();
-        if (opcionElegida == 5) {
-            escenario.opcion = 5;
+        if (opcionElegida == 8) {
+            escenario.opcion = 8;
 
         }
 
