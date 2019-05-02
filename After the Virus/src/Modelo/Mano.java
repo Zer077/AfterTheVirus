@@ -120,8 +120,21 @@ public class Mano {
                 break;
                 
             case 6:
+                escenario.vista.verAreaZombies();
+                System.out.println("Que carta quieres usar.");
+                break;
+                
+            case 7:
+                escenario.vista.verJugador();
+                escenario.vista.verAreaJugador();
+                escenario.vista.verAreaExploracion();
+                escenario.vista.verAreaZombies();
+                break;
+                
+            case 8:
                 System.out.println("Salimos de la mano");
                 break;
+                
                 
             default:
                 System.out.println("Errorcito en menu de mano");
