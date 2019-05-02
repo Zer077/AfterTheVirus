@@ -40,8 +40,7 @@ public class MazoJugador extends Mazo {
             if (MazoJugador.size() >= 5) {
                 for (int i = 0; i < 5; i++) {
                     if (MazoJugador.get(i) instanceof Zombie) {
-                        escenario.arrayZombies.add((Zombie) MazoJugador.get(i));
-
+                        escenario.arrayZombies.add((Zombie) MazoJugador.remove(i));
                     } else {
                         escenario.mano.AniadirCarta(MazoJugador.remove(0));
                     }
