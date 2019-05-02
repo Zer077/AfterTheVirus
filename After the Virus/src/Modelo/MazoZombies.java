@@ -127,13 +127,9 @@ public class MazoZombies extends Mazo {
 
     public void eliminarZombieArray(Carta card) {
 
-        for (int i = 0; i < escenario.arrayZombies.size(); i++) {
-            if (escenario.arrayZombies.get(i) == card) {
-                escenario.arrayZombies.remove(i);
+        escenario.arrayZombies.remove(card);
 
-            }
-
-        }
+        
 
     }
 
