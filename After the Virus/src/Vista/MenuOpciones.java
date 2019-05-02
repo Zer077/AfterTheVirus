@@ -27,16 +27,16 @@ public class MenuOpciones {
         this.escenario = Escenario;
     }
 
-//    public void Menu() {
-//        System.out.println("MENU OPCIONES");
-//        System.out.println("1- Usar carta coste 0");
-//        System.out.println("2- Colocar carta");
-//        System.out.println("3- Usar cartas seleccionadas para activar");
-//        System.out.println("4- Usar cartas para explorar");
-//        
-//        System.out.println("Elige una opción: ");
-//
-//    }
+    public void Menu() {
+        System.out.println("MENU OPCIONES");
+        System.out.println("1- Usar carta coste 0");
+        System.out.println("2- Colocar carta");
+        System.out.println("3- Usar cartas seleccionadas para activar");
+        System.out.println("4- Usar cartas para explorar");
+        
+        System.out.println("Elige una opción: ");
+
+    }
 
     //Elige una de las diversas opciones del juego
     public int ElegirOpcion() {

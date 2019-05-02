@@ -283,7 +283,7 @@ public class Controlador extends Escenario {
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 8 && mano.numeroCartas() > 0);
+            } while (opcion == 8 && mano.numeroCartas() > 0);
         }
     }
 
