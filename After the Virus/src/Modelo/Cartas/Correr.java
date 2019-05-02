@@ -30,7 +30,7 @@ public class Correr extends Carta {
                 System.out.println("Elige al zombie que quieres descartar: ");
                 Scanner sc = new Scanner(System.in);
                 int opcionZombie = sc.nextInt();
-                escenario.arrayZombies.get(opcionZombie - 1).descartaZombie();
+                escenario.arrayZombies.remove(opcionZombie - 1).descartaZombie();
                 escenario.areaJugable.DescartarCarta(this);
             }
         } else {
