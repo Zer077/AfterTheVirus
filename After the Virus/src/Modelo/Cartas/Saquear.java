@@ -31,6 +31,8 @@ public class Saquear extends Carta {
 
         } catch (Exception e) {
             System.out.println("No existen elementos");
+                         escenario.mano.getMano().add(this);
+
            escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
         }}
         

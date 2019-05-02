@@ -76,7 +76,7 @@ public class DebugMode {
         for (int i = 0; i < cartasEnJuego; i++) {
             //Carta a elegir por nombre
             System.out.println("elegir nombre carta");
-            String name = sr.next();
+            String name = sr.nextLine();
             for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
 
                 if (controlador.mazoJugador.getMazoJugador().get(j).getNombre().equals(name)) {

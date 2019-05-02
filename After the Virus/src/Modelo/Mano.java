@@ -128,7 +128,7 @@ public class Mano {
     //busca una carta para sacarla, el action la usará para poderse activar, si no no hará nada y volverá al menú de eleccion
     public Carta sacarCarta(String nombreCarta) {
         for (int i = 0; i < getMano().size(); i++) {
-            if (getMano().get(i).getNombre() == nombreCarta) {
+            if (getMano().get(i).getNombre().equals(nombreCarta)) {
                 return getMano().get(i);
 
             }
