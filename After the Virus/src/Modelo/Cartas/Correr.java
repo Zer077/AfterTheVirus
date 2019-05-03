@@ -24,7 +24,7 @@ public class Correr extends Carta {
         if (escenario.personaje.isPierna() == false) {
             if (escenario.arrayZombies.size() == 0) {
                 escenario.mano.getMano().add(this);
-                escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
+                escenario.menuOpciones.Menu();
             } else {
                 escenario.vista.verAreaZombies();
                 System.out.println("Elige al zombie que quieres descartar: ");
@@ -36,7 +36,7 @@ public class Correr extends Carta {
         } else {
             System.out.println("Tu pierna está rota, no puedes correr");
             escenario.mano.getMano().add(this);
-            escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
+            escenario.menuOpciones.Menu();
         }
     }
 

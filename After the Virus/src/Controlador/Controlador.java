@@ -124,7 +124,7 @@ public class Controlador extends Escenario {
 
             Ronda++;
             contador = 0;
-            System.out.println("------------final de la ronda "+Ronda +"-------------");
+            System.out.println("------------final de la ronda " + Ronda + "-------------");
         } while (personaje.isCabeza() == false);
     }
 
@@ -271,12 +271,12 @@ public class Controlador extends Escenario {
 
         } while (personaje.isCabeza() == false);
     }
-    
-    public void controladorBeta(){
+
+    public void controladorBeta() {
         for (int i = 0; i < 20; i++) {
             mazoJugador.barajarCartasPersonaje();
             mazoJugador.sacarCincoCartas();
-            
+
             do {
                 menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
@@ -291,14 +291,10 @@ public class Controlador extends Escenario {
 
         personaje = p;
     }
-  public void Enter(){
-   System.out.println("Press \"ENTER\" to continue...");
-   Scanner scanner = new Scanner(System.in);
-   scanner.nextLine();
+
+    public void Enter() {
+        System.out.println("Press \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 }
-}
-
-
-
-
-  
