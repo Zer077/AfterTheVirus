@@ -95,8 +95,8 @@ public class Controlador extends Escenario {
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 8 && mano.numeroCartas() > 0);
-            opcion = 0;
+            } while (salir != false && mano.numeroCartas() > 0);
+            salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {
@@ -283,7 +283,7 @@ public class Controlador extends Escenario {
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion == 8 && mano.numeroCartas() > 0);
+            } while (salir == true && mano.numeroCartas() > 0);
         }
     }
 

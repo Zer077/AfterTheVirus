@@ -120,7 +120,7 @@ public class Mano {
                 break;
                 
             case 6:
-                escenario.vista.verAreaZombies();
+                escenario.vista.verAreaJugador();
                 System.out.println("Que carta quieres usar.");
                 break;
                 
