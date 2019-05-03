@@ -90,7 +90,7 @@ public class Controlador extends Escenario {
             Enter();
             //muestra menu opciones acciones carta
             do {
-                menuOpciones.ElegirOpcion();
+                menuOpciones.Menu();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
