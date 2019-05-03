@@ -37,7 +37,7 @@ public class CompraCartas {
         System.out.println("Elige la carta a comprar");
         escenario.vista.verAreaExploracion();
         int numero = sc.nextInt();
-        if (carta.size() == escenario.arrayEscenario.get(numero-1).getPrecio()) {
+        if (carta.size() == escenario.arrayEscenario.get(numero - 1).getPrecio()) {
             return true;
         }
         return false;

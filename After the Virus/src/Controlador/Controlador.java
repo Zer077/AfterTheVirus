@@ -90,13 +90,13 @@ public class Controlador extends Escenario {
             Enter();
             //muestra menu opciones acciones carta
             do {
-                menuOpciones.ElegirOpcion();
+                menuOpciones.Menu();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion != 8 && mano.numeroCartas() > 0);
-            opcion = 0;
+            } while (salir != false && mano.numeroCartas() > 0);
+            salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {
@@ -124,7 +124,7 @@ public class Controlador extends Escenario {
 
             Ronda++;
             contador = 0;
-            System.out.println("------------final de la ronda "+Ronda +"-------------");
+            System.out.println("------------final de la ronda " + Ronda + "-------------");
         } while (personaje.isCabeza() == false);
     }
 
@@ -271,19 +271,19 @@ public class Controlador extends Escenario {
 
         } while (personaje.isCabeza() == false);
     }
-    
-    public void controladorBeta(){
+
+    public void controladorBeta() {
         for (int i = 0; i < 20; i++) {
             mazoJugador.barajarCartasPersonaje();
             mazoJugador.sacarCincoCartas();
-            
+
             do {
                 menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (opcion == 8 && mano.numeroCartas() > 0);
+            } while (salir == true && mano.numeroCartas() > 0);
         }
     }
 
@@ -291,14 +291,10 @@ public class Controlador extends Escenario {
 
         personaje = p;
     }
-  public void Enter(){
-   System.out.println("Press \"ENTER\" to continue...");
-   Scanner scanner = new Scanner(System.in);
-   scanner.nextLine();
+
+    public void Enter() {
+        System.out.println("Press \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 }
-}
-
-
-
-
-  

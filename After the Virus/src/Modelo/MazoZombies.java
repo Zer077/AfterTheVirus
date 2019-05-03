@@ -129,8 +129,6 @@ public class MazoZombies extends Mazo {
 
         escenario.arrayZombies.remove(card);
 
-        
-
     }
 
     public ArrayList<Carta> getMazoZombie() {
