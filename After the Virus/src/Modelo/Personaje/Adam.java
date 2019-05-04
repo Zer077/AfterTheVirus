@@ -40,6 +40,7 @@ import Modelo.Cartas.HabilidadConTrampas;
 import Modelo.Cartas.Tunel;
 import Modelo.Cartas.VIP;
 import Modelo.Cartas.HabilidadConArmas;
+import Modelo.Cartas.Zombie3;
 import Modelo.Escenario;
 
 /**
