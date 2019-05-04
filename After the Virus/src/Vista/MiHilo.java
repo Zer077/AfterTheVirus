@@ -29,9 +29,16 @@ public class MiHilo extends Thread {
             apl = new Player(new FileInputStream(
                     "Batalla.mp3"));
             apl.play();
+            
+           if (apl.isComplete()){
+           MiHilo m= new MiHilo();
+           m.start();
+           }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MiHilo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JavaLayerException ex) {
+            Logger.getLogger(MiHilo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Throwable ex) {
             Logger.getLogger(MiHilo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
