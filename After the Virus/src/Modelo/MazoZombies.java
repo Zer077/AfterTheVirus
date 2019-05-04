@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class MazoZombies extends Mazo {
 
     ArrayList<Carta> MazoZombie;
-    ArrayList<Carta> descarteZombies;
+    ArrayList<Zombie> descarteZombies;
     Zombie zombie;
     //Se encarga de administrar los monstruos, debe poner Zombies en su array de escenario y en cada turno restaurar el mazo en el orden correcto
 
@@ -47,19 +47,19 @@ public class MazoZombies extends Mazo {
                 case 2:
                     for (int z1 = 0; z1 < 4; z1++) {
                         Zombie zombie2 = new Zombie2(0, "Z2", escenario, 2, 0);
-                        MazoZombie.add(zombie);
+                        MazoZombie.add(zombie2);
                     }
                     break;
                 case 3:
                     for (int z1 = 0; z1 < 3; z1++) {
                         Zombie zombie3 = new Zombie3(0, "Z3", escenario, 3, 0);
-                        MazoZombie.add(zombie);
+                        MazoZombie.add(zombie3);
                     }
                     break;
                 case 4:
                     for (int z1 = 0; z1 < 2; z1++) {
                         Zombie zombie4 = new Zombie4(0, "Z4", escenario, 4, 0);
-                        MazoZombie.add(zombie);
+                        MazoZombie.add(zombie4);
                     }
                     break;
             }
@@ -77,17 +77,22 @@ public class MazoZombies extends Mazo {
 
     /*Restaura el mazo de descartes de forma ordenada*/
     public void Restaurar() {
+        
+        if(MazoZombie.isEmpty()){
+            
+            //ERROR, ESTO NO FUNCIONA ASÍ
         for (int i = 0; i < descarteZombies.size() - 1; i++) {
             for (int j = 0; j < descarteZombies.size() - 1; j++) {
-                if (descarteZombies.get(j).getTipo() < descarteZombies.get(j + 1).getTipo()) {
-                    Zombie tmp = (Zombie) descarteZombies.get(j + 1);
+                if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
+                    Zombie tmp =  descarteZombies.get(j + 1);
                     MazoZombie.add(j + 1, descarteZombies.get(j));
                     MazoZombie.add(j, tmp);
                 }
             }
-        }
+        }}
 
     }
+
 
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducir() {
@@ -139,11 +144,11 @@ public class MazoZombies extends Mazo {
         this.MazoZombie = MazoZombie;
     }
 
-    public ArrayList<Carta> getDescarteZombies() {
+    public ArrayList<Zombie> getDescarteZombies() {
         return descarteZombies;
     }
 
-    public void setDescarteZombies(ArrayList<Carta> descarteZombies) {
+    public void setDescarteZombies(ArrayList<Zombie> descarteZombies) {
         this.descarteZombies = descarteZombies;
     }
 

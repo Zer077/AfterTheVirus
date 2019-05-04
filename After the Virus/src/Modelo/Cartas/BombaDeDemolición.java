@@ -26,7 +26,7 @@ public class BombaDeDemolición extends Carta {
 
             if (zom instanceof Zombie) {
 
-                escenario.mazoZombies.getDescarteZombies().add(zom);
+                escenario.mazoZombies.getDescarteZombies().add((Zombie) zom);
                 escenario.arrayZombies.remove(x);
 
             }
@@ -39,7 +39,7 @@ public class BombaDeDemolición extends Carta {
 
             if (zomb instanceof Zombie) {
 
-                escenario.mazoZombies.getDescarteZombies().add(zomb);
+                escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
                 escenario.mazoDescartes.getMazoDescarte().remove(y);
 
             }

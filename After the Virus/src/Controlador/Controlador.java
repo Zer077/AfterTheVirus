@@ -106,6 +106,7 @@ public class Controlador extends Escenario {
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
+            mazoZombies.Restaurar();
 
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
