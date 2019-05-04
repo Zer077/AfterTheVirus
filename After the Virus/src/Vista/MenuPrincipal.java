@@ -31,6 +31,9 @@ public class MenuPrincipal {
     public void Iniciar() { 
         MiHilo m =new MiHilo();
         m.start();
+        
+        
+        
         Controlador control = new Controlador();
         Personaje p = null;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");

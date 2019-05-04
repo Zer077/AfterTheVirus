@@ -21,6 +21,12 @@ import javazoom.jl.player.Player;
  * @author jose_
  */
 public class MiHilo extends Thread {
+    
+    
+    public void matar(MiHilo m) throws Throwable{
+    m.finalize();
+    
+    }
 
     public void run() {
 
@@ -33,6 +39,7 @@ public class MiHilo extends Thread {
            if (apl.isComplete()){
            MiHilo m= new MiHilo();
            m.start();
+           m.matar(this);
            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MiHilo.class.getName()).log(Level.SEVERE, null, ex);
