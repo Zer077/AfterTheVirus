@@ -6,14 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Bar extends Carta implements Serializable {
+public class Bar extends Carta {
 
     public Bar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Bar", Escenario, 8, 12);
@@ -22,7 +21,7 @@ public class Bar extends Carta implements Serializable {
     @Override
     public void action() {
 
-        if (("Refugio".equals(escenario.areaJugable.BuscarCartaNombre("Refugio").getNombre())) && (escenario.areaJugable.BuscarCartaNombre("Refugio").isActiva()) && (escenario.PersonasSalvadas > 0)) {
+        if ((escenario.areaJugable.BuscarCartaNombre("Refugio").getNombre() == "Refugio") && (escenario.areaJugable.BuscarCartaNombre("Refugio").isActiva()) && (escenario.PersonasSalvadas > 0)) {
             System.out.println("Elige la zona que quieres curarte");
 
             if ((escenario.personaje.isBrazo() == true) && (escenario.personaje.isPierna() == true)) {

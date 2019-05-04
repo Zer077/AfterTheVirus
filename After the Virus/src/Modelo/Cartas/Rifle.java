@@ -3,9 +3,8 @@ package Modelo.Cartas;
 import Modelo.Escenario;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.Serializable;
 
-public class Rifle extends CartaArma implements Serializable {
+public class Rifle extends CartaArma {
 
     public Rifle(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
         super(2, "Rifle", Escenario, 3, 1, 0);

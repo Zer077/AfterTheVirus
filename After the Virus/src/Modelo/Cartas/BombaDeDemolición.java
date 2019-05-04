@@ -6,13 +6,12 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 
 /**
  *
  * @author Abraham
  */
-public class BombaDeDemolición extends Carta implements Serializable {
+public class BombaDeDemolición extends Carta {
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
         super(2, "Bomba de demolición", Escenario, 10, 0);
@@ -34,14 +33,14 @@ public class BombaDeDemolición extends Carta implements Serializable {
 
         }
 
-        for (int y = 0; y < escenario.mazoDescartes.getMazo().size(); y++) {
+        for (int y = 0; y < escenario.mazoDescartes.getMazoDescarte().size(); y++) {
 
-            Carta zomb = escenario.mazoDescartes.getMazo().get(y);
+            Carta zomb = escenario.mazoDescartes.getMazoDescarte().get(y);
 
             if (zomb instanceof Zombie) {
 
                 escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
-                escenario.mazoDescartes.getMazo().remove(y);
+                escenario.mazoDescartes.getMazoDescarte().remove(y);
 
             }
 

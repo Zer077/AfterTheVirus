@@ -6,14 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Zero
  */
-public class Zombie4 extends Zombie implements Serializable {
+public class Zombie4 extends Zombie {
 
     public Zombie4(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(0, "Z4", Escenario, 0, 0);
@@ -32,11 +31,10 @@ public class Zombie4 extends Zombie implements Serializable {
             if (zombie.get(i).isVivo() == true) {
                 escenario.personaje.parteCuerpoAtacar();
 
-            }
-        }
-        escenario.mazoZombies.getDescarteZombies().add(this);
-        escenario.mazoZombies.eliminarZombieArray(this);
-
+            }}
+            escenario.mazoZombies.getDescarteZombies().add(this);
+            escenario.mazoZombies.eliminarZombieArray(this);
+        
     }
 
     //NO HACER

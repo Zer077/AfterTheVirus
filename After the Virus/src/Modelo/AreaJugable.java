@@ -10,7 +10,6 @@ import Modelo.Cartas.ObjetivoSeguro;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Cartas.HabilidadConTrampas;
 import Vista.VistaEscenario;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class AreaJugable implements Serializable {
+public class AreaJugable {
 
     private ArrayList<Carta> ArrayJugables = new ArrayList();
     Escenario escenario;
@@ -32,7 +31,7 @@ public class AreaJugable implements Serializable {
         if (carta.getActivacion() == 0) {
 
             jugarCartaGratuita(carta);
-        } else {
+        } else { 
             ArrayJugables.add(carta);
 
         }

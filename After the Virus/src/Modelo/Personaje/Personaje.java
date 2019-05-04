@@ -6,14 +6,13 @@
 package Modelo.Personaje;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public abstract class Personaje implements Serializable {
+public abstract class Personaje {
 
     Escenario escenario;
     String nombre = null;

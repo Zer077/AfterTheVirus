@@ -41,56 +41,55 @@ import Modelo.Cartas.Tunel;
 import Modelo.Cartas.VIP;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Escenario;
-import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class Robert extends Personaje implements Serializable {
+public class Robert extends Personaje {
 
     public Robert(Escenario escenario) {
         super(escenario);
-        escenario.mazoJugador.getMazo().add(new Refugio(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new Refugio(0, nombre, escenario, 0, 0));
         for (int i = 0; i < 2; i++) {
-            escenario.mazoJugador.getMazo().add(new Superviviente(0, nombre, escenario, 0, 0));
-            escenario.mazoJugador.getMazo().add(new Correr(0, nombre, escenario, 0, 0));
+            escenario.mazoJugador.getMazoJugador().add(new Superviviente(0, nombre, escenario, 0, 0));
+            escenario.mazoJugador.getMazoJugador().add(new Correr(0, nombre, escenario, 0, 0));
         }
-        escenario.mazoJugador.getMazo().add(new Palanca(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.getMazo().add(new Comida(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.getMazo().add(new Guia(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.getMazo().add(new FuegoCruzado(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new Palanca(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new Comida(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new Guia(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.getMazoJugador().add(new FuegoCruzado(0, nombre, escenario, 0, 0));
 
-        escenario.mazoEscenario.getMazo().add(new Superviviente(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Antidoto(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Coche(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Motosierra(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Granada(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Cura(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Trinchera(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Gasolina(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Laboratorio(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new MC(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Machete(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new KitMedico(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Ametralladora(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Perro(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Bar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Saquear(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Explorar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Escopeta(0, nombre, escenario, 0, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Tunel(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new VIP(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Revista(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new HabilidadConArmas(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazo().add(new Pistola(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Superviviente(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Coche(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Motosierra(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Granada(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Trinchera(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Laboratorio(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new MC(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Machete(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new KitMedico(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Ametralladora(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Perro(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Escopeta(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConArmas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0, 0));
 
         super.nombre = "Robert";
     }

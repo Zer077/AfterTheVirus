@@ -7,17 +7,19 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 import java.util.ArrayList;
-import java.io.Serializable;
+import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Machete extends Carta implements Serializable {
+public class Machete extends Carta {
+
+    ArrayList<Integer> ronda;
 
     public Machete(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Machete", Escenario, 2, 0);
-
+        ronda = new ArrayList();
     }
 
     @Override

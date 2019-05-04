@@ -6,13 +6,12 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class TrampaPermetral extends Carta implements Serializable {
+public class TrampaPermetral extends Carta {
 
     public TrampaPermetral(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Trampa perimetral", Escenario, 10, 0);
@@ -23,12 +22,12 @@ public class TrampaPermetral extends Carta implements Serializable {
 
         for (int y = 0; y < 6; y++) {
 
-            Carta zomb = escenario.mazoDescartes.getMazo().get(y);
+            Carta zomb = escenario.mazoDescartes.getMazoDescarte().get(y);
 
             if (zomb instanceof Zombie) {
 
                 escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
-                escenario.mazoDescartes.getMazo().remove(y);
+                escenario.mazoDescartes.getMazoDescarte().remove(y);
 
             }
 

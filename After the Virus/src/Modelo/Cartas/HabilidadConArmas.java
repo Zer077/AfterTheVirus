@@ -6,13 +6,12 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public class HabilidadConArmas extends Carta implements Serializable {
+public class HabilidadConArmas extends Carta {
 
     public HabilidadConArmas(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Habilidad Con Armas", Escenario, 9, 2);

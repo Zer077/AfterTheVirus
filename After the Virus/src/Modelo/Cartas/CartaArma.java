@@ -7,13 +7,12 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 import java.util.ArrayList;
-import java.io.Serializable;
 
 /**
  *
  * @author usuario
  */
-public abstract class CartaArma extends Carta implements Serializable {
+public abstract class CartaArma extends Carta {
 
     ArrayList<Carta> cartas;
     int municion;

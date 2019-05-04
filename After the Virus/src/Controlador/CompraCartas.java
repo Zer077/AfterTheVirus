@@ -7,7 +7,7 @@ package Controlador;
 
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
-import java.io.Serializable;
+import Vista.VistaEscenario;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class CompraCartas implements Serializable {
+public class CompraCartas {
 
     //Es una clase que va a necesitar mazoEscenario y el array de escenario ademas de arrayJugador, va a encargarse de explorar las cartas ademas de poder comprarlas, al comprar las lleva a juego
     Escenario escenario;
@@ -27,7 +27,7 @@ public class CompraCartas implements Serializable {
 
     //Este metodo le paso una carta que es el COSTO de explorar
     public void explora(Carta carta) {
-        escenario.arrayEscenario.add(escenario.mazoEscenario.getMazo().remove(0));
+        escenario.arrayEscenario.add(escenario.mazoEscenario.getMazoEscenario().remove(0));
     }
 
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano

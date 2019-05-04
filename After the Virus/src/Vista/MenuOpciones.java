@@ -8,7 +8,7 @@ package Vista;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
-import java.io.Serializable;
+import Vista.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class MenuOpciones implements Serializable {
+public class MenuOpciones {
 
 //me permite elegir las cartas que quiero usar y la opcion para estas
     Mano mano;
@@ -99,7 +99,7 @@ public class MenuOpciones implements Serializable {
                 conjuntoCartas.add(mano.getMano().remove(Integer.parseInt(cards[j]) - 1));
 
             }
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("No has introducido bien la carta que deseabas seleccionar, intentelo de nuevo por favor");
             mano.usarCartas(ElegirCartas(), ElegirOpcion());
 

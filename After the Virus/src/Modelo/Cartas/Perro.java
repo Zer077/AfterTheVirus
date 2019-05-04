@@ -6,14 +6,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
+import Vista.VistaEscenario;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Perro extends Carta implements Serializable {
+public class Perro extends Carta {
 
 //Precio --> recuperar 
 //Activacion --> preparar

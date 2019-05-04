@@ -6,14 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Zero
  */
-public abstract class Zombie extends Carta implements Serializable {
+public abstract class Zombie extends Carta {
 
     public ArrayList<Zombi> zombie;
     private int numeroZombie;

@@ -6,14 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-
-import java.io.Serializable;
+import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Explorar extends Carta implements Serializable {
+public class Explorar extends Carta {
 
     public Explorar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Explorar", Escenario, 12, 0);
@@ -22,8 +21,8 @@ public class Explorar extends Carta implements Serializable {
     @Override
     public void action() {
 
-        escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
-        escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
+        escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
+        escenario.compraCartas.explora(escenario.mazoEscenario.getMazoEscenario().get(0));
 
         escenario.areaJugable.DescartarCarta(this);
     }

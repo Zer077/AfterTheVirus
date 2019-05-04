@@ -6,29 +6,38 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
-import java.io.Serializable;
 import java.util.ArrayList;
+import Modelo.Escenario;
 
 /**
  *
  * @author Abraham
  */
-public class MazoEliminadas extends Mazo implements Serializable {
+public class MazoEliminadas extends Mazo {
+
+    Escenario escenario;
+    ArrayList<Carta> MazoEliminadas = new ArrayList();
 
     //Al eliminar cartas pasarán a este array, simplemente quiero sacar alguna carta al mazoJugador de nuevo
     public MazoEliminadas(Escenario escenario) {
         super(escenario);
     }
 
+    public void IntroducirCarta(Carta carta) {
+
+        MazoEliminadas.add(carta);
+
+    }
+
     public void SacarCarta(Carta carta) {
 
         String nomcarta = carta.getNombre();
-        int cont = getMazo().size();
+        int cont = MazoEliminadas.size();
         for (int x = 0; x < cont; x++) {
 
-            if (getMazo().get(x).getNombre().equals(nomcarta)) {
+            if (nomcarta == MazoEliminadas.get(x).getNombre()) {
 
-                escenario.mazoJugador.getMazo().add(getMazo().get(x));
+                escenario.mazoJugador.getMazoJugador().add(MazoEliminadas.get(x));
 
             }
 
