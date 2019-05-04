@@ -95,11 +95,11 @@ public class Controlador extends Escenario {
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (salir != false && mano.numeroCartas() > 0);
+            } while (salir == false && mano.numeroCartas() > 0);
             salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size(); i++) {
+            for (int i = 0; i < arrayZombies.size()-1; i++) {
                 arrayZombies.get(i).atacaHumano();
             }
             System.out.println("-------------termina ataque de los zombies----------------------");

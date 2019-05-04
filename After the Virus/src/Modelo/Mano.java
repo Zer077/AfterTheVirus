@@ -37,27 +37,21 @@ public class Mano {
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
             case 1:
 
-                for (int i = 0; i < cartas.size(); i++) {
+                for (int i = cartas.size()-1; i >=0; i--) {
                     System.out.println("-----------------------------------------------");
-
-                    Carta carta = cartas.get(i);
-
-                    escenario.areaJugable.AniadirCarta(carta);
-
-                    escenario.menuOpciones.ElegirOpcion();
-
-                }
+                   
+                    escenario.areaJugable.AniadirCarta(cartas.remove(0));
+                  }
 
                 break;
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = 0; i < cartas.size(); i++) {
+                for (int i = cartas.size()-1; i >=0; i--) {
                     System.out.println("-----------------------------------------------");
-
-                    Carta carta = cartas.get(i);
-                    escenario.areaJugable.AniadirCarta(carta);
-                }
+                   
+                    escenario.areaJugable.AniadirCarta(cartas.remove(0));
+                  }
 
                 break;
 
@@ -65,7 +59,7 @@ public class Mano {
             case 3:
                 int conteo = 0;
                 for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva()) {
+                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva()==false) {
                         conteo++;
                     }
 
@@ -85,11 +79,12 @@ public class Mano {
                             getMano().remove(cartas);
                         }
                     } else //lanzar error
-                    {
-                        break;
-                    }
-                }
-
+                    {System.out.println("error");}
+                    
+                }else {
+                    System.out.println("No hay cartas para activar");}
+                    
+break;
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;

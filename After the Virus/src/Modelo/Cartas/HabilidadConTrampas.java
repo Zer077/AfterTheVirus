@@ -9,7 +9,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Carlos
+ * @author Jose
  */
 public class HabilidadConTrampas extends Carta {
 
