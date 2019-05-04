@@ -5,11 +5,13 @@
  */
 package Modelo.Cartas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Zombi {
+public class Zombi implements Serializable {
 
     private boolean vivo = true;
 

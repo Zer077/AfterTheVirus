@@ -77,18 +77,18 @@ public class DebugMode {
             //Carta a elegir por nombre
             System.out.println("elegir nombre carta");
             String name = sr.nextLine();
-            for (int j = 0; j < controlador.mazoJugador.getMazoJugador().size(); j++) {
+            for (int j = 0; j < controlador.mazoJugador.getMazo().size(); j++) {
 
-                if (controlador.mazoJugador.getMazoJugador().get(j).getNombre().equals(name)) {
-                    controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazoJugador().remove(j));
+                if (controlador.mazoJugador.getMazo().get(j).getNombre().equals(name)) {
+                    controlador.areaJugable.AniadirCarta(controlador.mazoJugador.getMazo().remove(j));
                     System.out.println("activar carta? Si/-");
 
                     String siNo = sr.next();
 
                     if (siNo.equals("Si")) {
 
-                        for (int k = 0; k < controlador.mazoJugador.getMazoJugador().size(); k++) {
-                            if (controlador.mazoJugador.getMazoJugador().get(j).getNombre().equals(name)) {
+                        for (int k = 0; k < controlador.mazoJugador.getMazo().size(); k++) {
+                            if (controlador.mazoJugador.getMazo().get(j).getNombre().equals(name)) {
 
                                 controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
 
@@ -104,19 +104,19 @@ public class DebugMode {
 
             }
 
-            for (int j = 0; j < controlador.mazoEscenario.getMazoEscenario().size(); j++) {
+            for (int j = 0; j < controlador.mazoEscenario.getMazo().size(); j++) {
 
-                if (controlador.mazoEscenario.getMazoEscenario().get(j).getNombre().equals(name)) {
-                    controlador.areaJugable.AniadirCarta(controlador.mazoEscenario.getMazoEscenario().remove(j));
+                if (controlador.mazoEscenario.getMazo().get(j).getNombre().equals(name)) {
+                    controlador.areaJugable.AniadirCarta(controlador.mazoEscenario.getMazo().remove(j));
                     System.out.println("activar carta? Si/-");
 
                     String siNo = sr.next();
 
                     if (siNo.equals("Si")) {
 
-                        for (int k = 0; k < controlador.mazoEscenario.getMazoEscenario().size(); k++) {
+                        for (int k = 0; k < controlador.mazoEscenario.getMazo().size(); k++) {
 
-                            if (controlador.mazoEscenario.getMazoEscenario().get(j).getNombre().equals(name)) {
+                            if (controlador.mazoEscenario.getMazo().get(j).getNombre().equals(name)) {
                                 controlador.areaJugable.BuscarCartaNombre(name).setActiva(true);
 
                             }

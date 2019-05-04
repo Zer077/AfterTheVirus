@@ -11,17 +11,15 @@ import Modelo.Cartas.Zombie1;
 import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class MazoZombies extends Mazo {
+public class MazoZombies extends Mazo implements Serializable {
 
     ArrayList<Carta> MazoZombie;
     ArrayList<Zombie> descarteZombies;
@@ -35,7 +33,7 @@ public class MazoZombies extends Mazo {
         crearMazo();
     }
 
-    public void crearMazo() {
+    private void crearMazo() {
         for (int i = 1; i <= 4; i++) {
             switch (i) {
                 case 1:
@@ -71,25 +69,25 @@ public class MazoZombies extends Mazo {
 
         int coge = (int) (Math.random() * 3 + 1);
         for (int i = 0; i < coge; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
         }
     }
 
     /*Restaura el mazo de descartes de forma ordenada*/
     public void Restaurar() {
-        
-        if(MazoZombie.isEmpty()){
-            
-          
-        for (int i = 0; i < descarteZombies.size() - 1; i++) {
-            for (int j = 0; j < descarteZombies.size() - 1; j++) {
-                if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
-                    Zombie tmp =  descarteZombies.get(j + 1);
-                    MazoZombie.add(j + 1, descarteZombies.get(j));
-                    MazoZombie.add(j, tmp);
+
+        if (MazoZombie.isEmpty()) {
+
+            for (int i = 0; i < descarteZombies.size() - 1; i++) {
+                for (int j = 0; j < descarteZombies.size() - 1; j++) {
+                    if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
+                        Zombie tmp = descarteZombies.get(j + 1);
+                        MazoZombie.add(j + 1, descarteZombies.get(j));
+                        MazoZombie.add(j, tmp);
+                    }
                 }
             }
-        }}
+        }
 
     }
 
@@ -97,7 +95,7 @@ public class MazoZombies extends Mazo {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducir() {
         for (int i = 0; i < escenario.Ronda; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
             MazoZombie.remove(0);
         }
     }
@@ -105,8 +103,8 @@ public class MazoZombies extends Mazo {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
     public void introducirAleatorio(int n) {
         for (int i = 0; i < n; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.remove(0));
-           
+            escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
+
         }
     }
 

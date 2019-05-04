@@ -7,6 +7,7 @@ package Modelo;
 
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import static java.util.Collections.shuffle;
@@ -15,9 +16,7 @@ import static java.util.Collections.shuffle;
  *
  * @author Zero
  */
-public class MazoJugador extends Mazo {
-
-    private ArrayList<Carta> MazoJugador = new ArrayList();
+public class MazoJugador extends Mazo implements Serializable {
 
     public MazoJugador(Escenario escenario) {
         super(escenario);
@@ -27,9 +26,6 @@ public class MazoJugador extends Mazo {
     //metodo para ver si el mazo está vacio y devuelva true o false
     //mezclar cartas de descartes y sacar 5
 
-    /**
-     * @return the MazoJugador
-     */
     public void sacarCincoCartas() {
 
         /*
@@ -37,23 +33,23 @@ public class MazoJugador extends Mazo {
          lo rellenamos con las cartas del personaje que nos pasan desde la clase
          */
         try {
-            if (MazoJugador.size() >= 5) {
+            if (getMazo().size() >= 5) {
                 for (int i = 0; i < 5; i++) {
-                    if (MazoJugador.get(0) instanceof Zombie) {
-                        escenario.arrayZombies.add((Zombie) MazoJugador.remove(0));
+                    if (getMazo().get(0) instanceof Zombie) {
+                        escenario.arrayZombies.add((Zombie) getMazo().remove(0));
                     } else {
-                        escenario.mano.AniadirCarta(MazoJugador.remove(0));
+                        escenario.mano.AniadirCarta(getMazo().remove(0));
                     }
                 }
             } else {
                 System.out.println("No quedan suficientes cartas, restaurando mazo del jugador");
 
-                Collections.shuffle(escenario.mazoDescartes.getMazoDescarte());
+                Collections.shuffle(escenario.mazoDescartes.getMazo());
 
                 System.out.println("Mazo de descartes barajado correctamente");
 
-                for (int d = 0; d < escenario.mazoDescartes.getMazoDescarte().size(); d++) {
-                    MazoJugador.add(escenario.mazoDescartes.getMazoDescarte().remove(0));
+                for (int d = 0; d < escenario.mazoDescartes.getMazo().size(); d++) {
+                    getMazo().add(escenario.mazoDescartes.getMazo().remove(0));
                 }
                 System.out.println("Mazo de jugador restaurado correctamente");
             }
@@ -62,26 +58,9 @@ public class MazoJugador extends Mazo {
         }
     }//fin del metodo
 
-    public void aniadir(Carta card) {
-
-        MazoJugador.add(card);
-
-    }
-
     public void barajarCartasPersonaje() {
         /*sencillamente se barajan las cartas del array*/
-        shuffle(MazoJugador);
-    }
-
-    public ArrayList<Carta> getMazoJugador() {
-        return MazoJugador;
-    }
-
-    /**
-     * @param MazoJugador the MazoJugador to set
-     */
-    public void setMazoJugador(ArrayList<Carta> MazoJugador) {
-        this.MazoJugador = MazoJugador;
+        shuffle(getMazo());
     }
 
 }

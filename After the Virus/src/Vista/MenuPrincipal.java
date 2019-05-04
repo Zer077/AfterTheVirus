@@ -6,36 +6,33 @@
 package Vista;
 
 import Controlador.Controlador;
-import Modelo.Escenario;
 import Modelo.Personaje.Adam;
 import Modelo.Personaje.Jennie;
 import Modelo.Personaje.Personaje;
 import Modelo.Personaje.Robert;
 import Modelo.Personaje.Ruth;
 import after.the.virus.DebugMode;
+import java.io.Serializable;
 
 import java.util.Scanner;
-
 
 /**
  *
  * @author Zero
  */
-public class MenuPrincipal {
+public class MenuPrincipal implements Serializable {
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {
-    
+
     }
 
-    public void Iniciar() { 
-        MiHilo m =new MiHilo();
-        m.start();
-        
-        
-        
+    public void Iniciar() {
+//        MiHilo m =new MiHilo();
+//        m.start();
+
         Controlador control = new Controlador();
-        Personaje p = null;
+        Personaje p;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
         Scanner sc = new Scanner(System.in);
         int c = sc.nextInt();

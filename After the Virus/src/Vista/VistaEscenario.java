@@ -7,13 +7,14 @@ package Vista;
 
 import Modelo.Escenario;
 import Modelo.Cartas.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Maria
  */
-public class VistaEscenario {
+public class VistaEscenario implements Serializable {
 
     Escenario escenario;
 
@@ -81,7 +82,7 @@ public class VistaEscenario {
             System.out.println("**********");
             int i = 1;
             for (Zombi zi : z.zombie) {
-               
+
                 System.out.println("Zombi nº " + i + "¿Vivo o muerto?");
                 if (zi.isVivo()) {
                     System.out.println("VIVO");
@@ -102,16 +103,16 @@ public class VistaEscenario {
         System.out.println("----------Tu área de juego----------");
         //bucle para ver todas las cartas.
         ArrayList<Carta> areajugador = escenario.areaJugable.getArrayJugables();
-        for (Carta x : areajugador) {
+        for (Carta c : areajugador) {
             System.out.println("**********");
-            System.out.println("Nombre de la carta: " + x.getNombre());
+            System.out.println("Nombre de la carta: " + c.getNombre());
             System.out.println("Descripción: ");
-            x.descripcion();
-            if (x.isActiva()) {
+            c.descripcion();
+            if (c.isActiva()) {
                 System.out.println("¿Preparada? --> SI");
             } else {
                 System.out.println("¿Preparada? --> NO");
-                System.out.println("Coste preparar: " + x.getActivacion());
+                System.out.println("Coste preparar: " + c.getActivacion());
             }
             System.out.println("**********");
         }

@@ -6,14 +6,15 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import Vista.*;
+
 import java.util.Scanner;
+import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class Correr extends Carta {
+public class Correr extends Carta implements Serializable {
 
     public Correr(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Corre", Escenario, 5, 0);
@@ -22,7 +23,7 @@ public class Correr extends Carta {
     @Override
     public void action() {
         if (escenario.personaje.isPierna() == false) {
-            if (escenario.arrayZombies.size() == 0) {
+            if (escenario.arrayZombies.isEmpty()) {
                 escenario.mano.getMano().add(this);
                 escenario.menuOpciones.Menu();
             } else {

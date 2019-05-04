@@ -6,12 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class Tunel extends Carta {
+public class Tunel extends Carta implements Serializable {
 
     public Tunel(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Tunel", Escenario, 8, 8);

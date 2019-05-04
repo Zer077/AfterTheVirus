@@ -5,14 +5,11 @@
  */
 package Vista;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -20,14 +17,14 @@ import javazoom.jl.player.Player;
  *
  * @author jose_
  */
-public class MiHilo extends Thread {
-    
-    
-    public void matar(MiHilo m) throws Throwable{
-    m.finalize();
-    
+public class MiHilo extends Thread implements Serializable {
+
+    public void matar(MiHilo m) throws Throwable {
+        m.finalize();
+
     }
 
+    @Override
     public void run() {
 
         Player apl;
@@ -35,12 +32,12 @@ public class MiHilo extends Thread {
             apl = new Player(new FileInputStream(
                     "Batalla.mp3"));
             apl.play();
-            
-           if (apl.isComplete()){
-           MiHilo m= new MiHilo();
-           m.start();
-           m.matar(this);
-           }
+
+            if (apl.isComplete()) {
+                MiHilo m = new MiHilo();
+                m.start();
+                m.matar(this);
+            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MiHilo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JavaLayerException ex) {
