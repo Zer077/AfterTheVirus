@@ -7,7 +7,7 @@ package Controlador;
 
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
-import Vista.VistaEscenario;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

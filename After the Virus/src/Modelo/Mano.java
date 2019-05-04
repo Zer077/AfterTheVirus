@@ -11,7 +11,6 @@ import Modelo.Cartas.Zombie1;
 import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
-import Vista.VistaEscenario;
 import java.util.ArrayList;
 
 /**

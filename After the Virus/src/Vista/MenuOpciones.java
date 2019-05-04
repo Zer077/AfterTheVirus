@@ -8,7 +8,7 @@ package Vista;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
-import Vista.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

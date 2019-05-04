@@ -6,7 +6,6 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import com.sun.xml.internal.stream.Entity;
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -6,7 +6,7 @@
 package Vista;
 
 import Controlador.Controlador;
-import Modelo.Escenario;
+
 import Modelo.Personaje.Adam;
 import Modelo.Personaje.Jennie;
 import Modelo.Personaje.Personaje;
