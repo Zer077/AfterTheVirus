@@ -13,7 +13,9 @@ import Modelo.Personaje.Personaje;
 import Modelo.Personaje.Robert;
 import Modelo.Personaje.Ruth;
 import after.the.virus.DebugMode;
+
 import java.util.Scanner;
+
 
 /**
  *
@@ -23,9 +25,12 @@ public class MenuPrincipal {
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {
+    
     }
 
-    public void Iniciar() {
+    public void Iniciar() { 
+        MiHilo m =new MiHilo();
+        m.start();
         Controlador control = new Controlador();
         Personaje p = null;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
