@@ -5,6 +5,27 @@
  */
 package Modelo.Personaje;
 
+import Modelo.Cartas.Ametralladora;
+import Modelo.Cartas.Antidoto;
+import Modelo.Cartas.BombaDeDemolición;
+import Modelo.Cartas.ChaquetaDeCuero;
+import Modelo.Cartas.Coche;
+import Modelo.Cartas.Cura;
+import Modelo.Cartas.Explorar;
+import Modelo.Cartas.Gasolina;
+import Modelo.Cartas.HabilidadConTrampas;
+import Modelo.Cartas.KitMedico;
+import Modelo.Cartas.Laboratorio;
+import Modelo.Cartas.Lanzallamas;
+import Modelo.Cartas.MC;
+import Modelo.Cartas.Machete;
+import Modelo.Cartas.Motosierra;
+import Modelo.Cartas.ObjetivoSeguro;
+import Modelo.Cartas.Refugio;
+import Modelo.Cartas.Revista;
+import Modelo.Cartas.TrampaPermetral;
+import Modelo.Cartas.Tunel;
+import Modelo.Cartas.VIP;
 import Modelo.Escenario;
 import java.util.Scanner;
 
@@ -23,6 +44,31 @@ public abstract class Personaje {
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
+        
+        escenario.mazoJugador.getMazoJugador().add(new Refugio(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Coche(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Motosierra(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Laboratorio(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new MC(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Machete(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new KitMedico(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Ametralladora(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
+        
+        
+        
     }
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
