@@ -41,20 +41,12 @@ public class MiHilo extends Thread {
 
         try {
             if (muerto == true) {
-            apl = new Player(new FileInputStream(
-                                "the night king.mp3"));
-                        apl.play();
-            
-            
-            
-            }else{
-                
-                
-                
-                
-                
-                
-                
+                apl = new Player(new FileInputStream(
+                        "the night king.mp3"));
+                apl.play();
+
+            } else {
+
                 int num = (int) (Math.random() * 4 + 1);
                 switch (num) {
 
@@ -78,7 +70,7 @@ public class MiHilo extends Thread {
                         break;
                     case 4:
                         apl = new Player(new FileInputStream(
-                                "no one walks away from me .mp3"));
+                                "the night king.mp3"));
                         apl.play();
 
                         break;
