@@ -101,7 +101,7 @@ public class MenuOpciones {
             }
         } catch (Exception e) {
             System.out.println("No has introducido bien la carta que deseabas seleccionar, intentelo de nuevo por favor");
-            mano.usarCartas(ElegirCartas(), ElegirOpcion());
+            Menu();
 
         }
 

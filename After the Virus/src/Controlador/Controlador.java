@@ -42,7 +42,7 @@ public class Controlador extends Escenario {
 
     }
 
-    public void controlador1a() {
+    public void controlador1a() throws Throwable {
         //preparacion: comienza con 1 oleada (añadir 1-3 cartas zombi random)
 
         int coge = (int) Math.random() * 3 + 1;
@@ -116,6 +116,9 @@ public class Controlador extends Escenario {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+                
+                
+                Enter();
                 exit();
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");

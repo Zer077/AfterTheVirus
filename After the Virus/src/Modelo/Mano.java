@@ -65,23 +65,34 @@ public class Mano {
                 }
                 if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
 
-                    escenario.vista.verAreaJugador();
-                    ArrayList<Carta> carta = new ArrayList<>();
-                    for (int i = 0; i < cartas.size(); i++) {
-
-                        carta.set(i, cartas.get(i));
-
-                    }
-                    if (escenario.areaJugable.ActivarCarta(carta) == true) {
+                    escenario.vista.verAreaJugador();  
+                    if (escenario.areaJugable.ActivarCarta(cartas) == true) {
                         for (int i = 0; i < cartas.size(); i++) {
 
-                            getMano().remove(cartas);
+                            escenario.mazoDescartes.IntroducirCarta(cartas.remove(0));
                         }
-                    } else //lanzar error
-                    {System.out.println("error");}
+                    } else 
+                    {System.out.println("error");
+                    for (int i = 0; i <= cartas.size()-1; i++) {
+                        aniadirCartaMano(cartas.get(0));
+                        
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    }
                     
                 }else {
-                    System.out.println("No hay cartas para activar");}
+                    System.out.println("No hay cartas para activar");
+                    for (int i = 0; i <= cartas.size()-1; i++) {
+                        aniadirCartaMano(cartas.get(0));
+                        
+                    }
+                
+                }
                     
 break;
             //Usa estas cartas para explorar

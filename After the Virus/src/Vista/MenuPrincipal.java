@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Controlador.MiHilo;
 import Controlador.Controlador;
 
 import Modelo.Personaje.Adam;
@@ -28,13 +29,16 @@ public class MenuPrincipal {
     
     }
 
-    public void Iniciar() { 
-        MiHilo m =new MiHilo();
-        m.start();
+    public void Iniciar() throws Throwable { 
+        
         
         
         
         Controlador control = new Controlador();
+        MiHilo m =new MiHilo(control);
+        
+        
+        m.start();
         Personaje p = null;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
         Scanner sc = new Scanner(System.in);

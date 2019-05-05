@@ -45,7 +45,7 @@ public abstract class Personaje {
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
         
-        escenario.mazoJugador.getMazoJugador().add(new Refugio(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.aniadir(new Refugio(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Coche(0, nombre, escenario, 0, 0));
@@ -77,8 +77,7 @@ public abstract class Personaje {
         if (getDefensa() == 0) {
 
             if (brazo == true && pierna == true) {
-                cabeza = true;
-                System.out.println("HAS MUERTO");
+                cabeza = true;   
 
             } else {
 
