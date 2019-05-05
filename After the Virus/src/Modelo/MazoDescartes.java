@@ -7,6 +7,8 @@ package Modelo;
 
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
+import java.util.Scanner;
+import Modelo.Escenario;
 
 /**
  *
@@ -14,6 +16,7 @@ import java.util.ArrayList;
  */
 public class MazoDescartes extends Mazo {
 
+    Escenario escenario;
     private ArrayList<Carta> MazoDescarte = new ArrayList();
 
     public MazoDescartes(Escenario escenario) {

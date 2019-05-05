@@ -21,7 +21,7 @@ public class Bar extends Carta {
     @Override
     public void action() {
 
-        if (("Refugio".equals(escenario.areaJugable.BuscarCartaNombre("Refugio").getNombre())) && (escenario.areaJugable.BuscarCartaNombre("Refugio").isActiva()) && (escenario.PersonasSalvadas > 0)) {
+        if ((escenario.areaJugable.BuscarCartaNombre("Refugio").getNombre() == "Refugio") && (escenario.areaJugable.BuscarCartaNombre("Refugio").isActiva()) && (escenario.PersonasSalvadas > 0)) {
             System.out.println("Elige la zona que quieres curarte");
 
             if ((escenario.personaje.isBrazo() == true) && (escenario.personaje.isPierna() == true)) {

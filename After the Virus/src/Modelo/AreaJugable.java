@@ -60,10 +60,9 @@ public class AreaJugable {
 
                 }
             }
-        } else if (ArrayJugables.get(numero).isActiva() == true) {
+        }else if(ArrayJugables.get(numero).isActiva()==true){
 
-            ArrayJugables.get(numero).action();
-        }
+        ArrayJugables.get(numero).action();}
 
     }
 

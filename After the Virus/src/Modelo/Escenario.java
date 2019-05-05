@@ -6,7 +6,6 @@
 package Modelo;
 
 import Controlador.CompraCartas;
-import Controlador.MiHilo;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Personaje.*;
@@ -38,11 +37,10 @@ public abstract class Escenario {
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
-    public ArrayList<MiHilo> musicas = new ArrayList<>();
     public Escenario escenario = this;
     public Personaje personaje;
     public int Ronda;
     public int PersonasSalvadas;
-    public boolean salir = false;
+    public int opcion = 0;
 
 }

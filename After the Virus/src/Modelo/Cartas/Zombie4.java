@@ -32,10 +32,9 @@ public class Zombie4 extends Zombie {
                 escenario.personaje.parteCuerpoAtacar();
 
             }
+            escenario.mazoZombies.getDescarteZombies().add(this);
+            escenario.mazoZombies.eliminarZombieArray(this);
         }
-        escenario.mazoZombies.getDescarteZombies().add(this);
-        escenario.mazoZombies.eliminarZombieArray(this);
-
     }
 
     //NO HACER

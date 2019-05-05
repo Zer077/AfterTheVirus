@@ -11,6 +11,7 @@ import Modelo.Cartas.Zombie1;
 import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
+import Vista.VistaEscenario;
 import java.util.ArrayList;
 
 /**
@@ -36,20 +37,26 @@ public class Mano {
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
             case 1:
 
-                for (int i = cartas.size() - 1; i >= 0; i--) {
+                for (int i = 0; i < cartas.size(); i++) {
                     System.out.println("-----------------------------------------------");
 
-                    escenario.areaJugable.AniadirCarta(cartas.remove(0));
+                    Carta carta = cartas.get(i);
+
+                    escenario.areaJugable.AniadirCarta(carta);
+
+                    escenario.menuOpciones.ElegirOpcion();
+
                 }
 
                 break;
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = cartas.size() - 1; i >= 0; i--) {
+                for (int i = 0; i < cartas.size(); i++) {
                     System.out.println("-----------------------------------------------");
 
-                    escenario.areaJugable.AniadirCarta(cartas.remove(0));
+                    Carta carta = cartas.get(i);
+                    escenario.areaJugable.AniadirCarta(carta);
                 }
 
                 break;
@@ -58,7 +65,7 @@ public class Mano {
             case 3:
                 int conteo = 0;
                 for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva() == false) {
+                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva()) {
                         conteo++;
                     }
 
@@ -66,30 +73,23 @@ public class Mano {
                 if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
 
                     escenario.vista.verAreaJugador();
-                    if (escenario.areaJugable.ActivarCarta(cartas) == true) {
+                    ArrayList<Carta> carta = new ArrayList<>();
+                    for (int i = 0; i < cartas.size(); i++) {
+
+                        carta.set(i, cartas.get(i));
+
+                    }
+                    if (escenario.areaJugable.ActivarCarta(carta) == true) {
                         for (int i = 0; i < cartas.size(); i++) {
 
-                            escenario.mazoDescartes.IntroducirCarta(cartas.remove(0));
+                            getMano().remove(cartas);
                         }
-                    } else {
-                        System.out.println("error");
-                        for (int i = 0; i <= cartas.size() - 1; i++) {
-                            aniadirCartaMano(cartas.get(0));
-
-                        }
-
+                    } else //lanzar error
+                    {
+                        break;
                     }
-
-                } else {
-                    System.out.println("No hay cartas para activar");
-                    for (int i = 0; i <= cartas.size() - 1; i++) {
-                        aniadirCartaMano(cartas.get(0));
-
-                    }
-
                 }
 
-                break;
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;
@@ -118,12 +118,12 @@ public class Mano {
                 }
 
                 break;
-
+                
             case 6:
-                escenario.vista.verAreaJugador();
+                escenario.vista.verAreaZombies();
                 System.out.println("Que carta quieres usar.");
                 break;
-
+                
             case 7:
                 escenario.vista.verAreaExploracion();
                 escenario.vista.verJugador();
@@ -132,11 +132,12 @@ public class Mano {
                 escenario.vista.verAreaZombies();
                 escenario.vista.verMano();
                 break;
-
+                
             case 8:
                 System.out.println("Salimos de la mano");
                 break;
-
+                
+                
             default:
                 System.out.println("Errorcito en menu de mano");
                 break;

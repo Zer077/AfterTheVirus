@@ -6,6 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import Vista.VistaEscenario;
 import java.util.Scanner;
 
 /**

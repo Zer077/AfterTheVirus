@@ -42,7 +42,7 @@ public class Controlador extends Escenario {
 
     }
 
-    public void controlador1a() throws Throwable {
+    public void controlador1a() {
         //preparacion: comienza con 1 oleada (añadir 1-3 cartas zombi random)
 
         int coge = (int) Math.random() * 3 + 1;
@@ -90,23 +90,22 @@ public class Controlador extends Escenario {
             Enter();
             //muestra menu opciones acciones carta
             do {
-                menuOpciones.Menu();
+                menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (salir == false && mano.numeroCartas() > 0);
-            salir = false;
+            } while (opcion != 8 && mano.numeroCartas() > 0);
+            opcion = 0;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size() - 1; i++) {
+            for (int i = 0; i < arrayZombies.size(); i++) {
                 arrayZombies.get(i).atacaHumano();
             }
             System.out.println("-------------termina ataque de los zombies----------------------");
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
-            mazoZombies.Restaurar();
 
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
@@ -116,8 +115,6 @@ public class Controlador extends Escenario {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
-
-                Enter();
                 exit();
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
@@ -127,7 +124,7 @@ public class Controlador extends Escenario {
 
             Ronda++;
             contador = 0;
-            System.out.println("------------final de la ronda " + Ronda + "-------------");
+            System.out.println("------------final de la ronda "+Ronda +"-------------");
         } while (personaje.isCabeza() == false);
     }
 
@@ -274,19 +271,19 @@ public class Controlador extends Escenario {
 
         } while (personaje.isCabeza() == false);
     }
-
-    public void controladorBeta() {
+    
+    public void controladorBeta(){
         for (int i = 0; i < 20; i++) {
             mazoJugador.barajarCartasPersonaje();
             mazoJugador.sacarCincoCartas();
-
+            
             do {
                 menuOpciones.ElegirOpcion();
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
                 //menu uso de cartas
-            } while (salir == true && mano.numeroCartas() > 0);
+            } while (opcion == 8 && mano.numeroCartas() > 0);
         }
     }
 
@@ -294,10 +291,14 @@ public class Controlador extends Escenario {
 
         personaje = p;
     }
-
-    public void Enter() {
-        System.out.println("Press \"ENTER\" to continue...");
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-    }
+  public void Enter(){
+   System.out.println("Press \"ENTER\" to continue...");
+   Scanner scanner = new Scanner(System.in);
+   scanner.nextLine();
 }
+}
+
+
+
+
+  

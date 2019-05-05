@@ -12,7 +12,9 @@ import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
 import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,7 @@ import java.util.Scanner;
 public class MazoZombies extends Mazo {
 
     ArrayList<Carta> MazoZombie;
-    ArrayList<Zombie> descarteZombies;
+    ArrayList<Carta> descarteZombies;
     Zombie zombie;
     //Se encarga de administrar los monstruos, debe poner Zombies en su array de escenario y en cada turno restaurar el mazo en el orden correcto
 
@@ -45,19 +47,19 @@ public class MazoZombies extends Mazo {
                 case 2:
                     for (int z1 = 0; z1 < 4; z1++) {
                         Zombie zombie2 = new Zombie2(0, "Z2", escenario, 2, 0);
-                        MazoZombie.add(zombie2);
+                        MazoZombie.add(zombie);
                     }
                     break;
                 case 3:
                     for (int z1 = 0; z1 < 3; z1++) {
                         Zombie zombie3 = new Zombie3(0, "Z3", escenario, 3, 0);
-                        MazoZombie.add(zombie3);
+                        MazoZombie.add(zombie);
                     }
                     break;
                 case 4:
                     for (int z1 = 0; z1 < 2; z1++) {
                         Zombie zombie4 = new Zombie4(0, "Z4", escenario, 4, 0);
-                        MazoZombie.add(zombie4);
+                        MazoZombie.add(zombie);
                     }
                     break;
             }
@@ -67,7 +69,7 @@ public class MazoZombies extends Mazo {
     /*Metodo que se encargará de sacar 1,2 o 3 cartas del mazo de zombies*/
     public void cogerRandom() {
 
-        int coge = (int) (Math.random() * 3 + 1);
+        int coge = (int) Math.random() * 3 + 1;
         for (int i = 0; i < coge; i++) {
             escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
         }
@@ -75,22 +77,17 @@ public class MazoZombies extends Mazo {
 
     /*Restaura el mazo de descartes de forma ordenada*/
     public void Restaurar() {
-
-        if (MazoZombie.isEmpty()) {
-
-            for (int i = 0; i < descarteZombies.size() - 1; i++) {
-                for (int j = 0; j < descarteZombies.size() - 1; j++) {
-                    if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
-                        Zombie tmp = descarteZombies.get(j + 1);
-                        MazoZombie.add(j + 1, descarteZombies.get(j));
-                        MazoZombie.add(j, tmp);
-                    }
+        for (int i = 0; i < descarteZombies.size() - 1; i++) {
+            for (int j = 0; j < descarteZombies.size() - 1; j++) {
+                if (descarteZombies.get(j).getTipo() < descarteZombies.get(j + 1).getTipo()) {
+                    Zombie tmp = (Zombie) descarteZombies.get(j + 1);
+                    MazoZombie.add(j + 1, descarteZombies.get(j));
+                    MazoZombie.add(j, tmp);
                 }
             }
         }
 
     }
-
 
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducir() {
@@ -103,8 +100,8 @@ public class MazoZombies extends Mazo {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
     public void introducirAleatorio(int n) {
         for (int i = 0; i < n; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.remove(0));
-
+            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            MazoZombie.remove(0);
         }
     }
 
@@ -132,6 +129,8 @@ public class MazoZombies extends Mazo {
 
         escenario.arrayZombies.remove(card);
 
+        
+
     }
 
     public ArrayList<Carta> getMazoZombie() {
@@ -142,11 +141,11 @@ public class MazoZombies extends Mazo {
         this.MazoZombie = MazoZombie;
     }
 
-    public ArrayList<Zombie> getDescarteZombies() {
+    public ArrayList<Carta> getDescarteZombies() {
         return descarteZombies;
     }
 
-    public void setDescarteZombies(ArrayList<Zombie> descarteZombies) {
+    public void setDescarteZombies(ArrayList<Carta> descarteZombies) {
         this.descarteZombies = descarteZombies;
     }
 
