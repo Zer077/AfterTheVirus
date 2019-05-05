@@ -38,14 +38,11 @@ public abstract class Escenario {
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
-   public ArrayList<MiHilo> musicas=new ArrayList<>(); 
+    public ArrayList<MiHilo> musicas = new ArrayList<>();
     public Escenario escenario = this;
     public Personaje personaje;
     public int Ronda;
     public int PersonasSalvadas;
     public boolean salir = false;
-    
-    
-    
 
 }

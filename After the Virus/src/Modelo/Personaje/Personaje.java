@@ -44,7 +44,7 @@ public abstract class Personaje {
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
-        
+
         escenario.mazoJugador.aniadir(new Refugio(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
@@ -66,9 +66,7 @@ public abstract class Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
-        
-        
-        
+
     }
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
@@ -77,7 +75,7 @@ public abstract class Personaje {
         if (getDefensa() == 0) {
 
             if (brazo == true && pierna == true) {
-                cabeza = true;   
+                cabeza = true;
 
             } else {
 

@@ -5,8 +5,6 @@
  */
 package Modelo.Personaje;
 
-
-
 import Modelo.Cartas.Perro;
 import Modelo.Cartas.Pistola;
 import Modelo.Cartas.Bar;

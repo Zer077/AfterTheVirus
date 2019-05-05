@@ -8,7 +8,6 @@ package Modelo;
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author Abraham

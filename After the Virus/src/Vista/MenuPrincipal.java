@@ -17,7 +17,6 @@ import after.the.virus.DebugMode;
 
 import java.util.Scanner;
 
-
 /**
  *
  * @author Zero
@@ -26,18 +25,14 @@ public class MenuPrincipal {
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {
-    
+
     }
 
-    public void Iniciar() throws Throwable { 
-        
-        
-        
-        
+    public void Iniciar() throws Throwable {
+
         Controlador control = new Controlador();
-        MiHilo m =new MiHilo(control);
-        
-        
+        MiHilo m = new MiHilo(control);
+
         m.start();
         Personaje p = null;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");

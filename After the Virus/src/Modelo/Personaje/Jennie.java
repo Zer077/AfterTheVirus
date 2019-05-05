@@ -28,13 +28,13 @@ public class Jennie extends Personaje {
 
     public Jennie(Escenario escenario) {
         super(escenario);
-        
+
         escenario.mazoJugador.aniadir(new Pistola(0, nombre, escenario, 0, 0, 0));
         for (int i = 0; i < 3; i++) {
             escenario.mazoJugador.aniadir(new Superviviente(0, nombre, escenario, 0, 0));
             escenario.mazoJugador.aniadir(new Correr(0, nombre, escenario, 0, 0));
         }
-        
+
         escenario.mazoEscenario.getMazoEscenario().add(new Superviviente(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Granada(0, nombre, escenario, 0, 0));
@@ -44,7 +44,6 @@ public class Jennie extends Personaje {
         escenario.mazoEscenario.getMazoEscenario().add(new Perro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Bar(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
-        
 
         super.nombre = "Jennie";
 

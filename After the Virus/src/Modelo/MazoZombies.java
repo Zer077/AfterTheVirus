@@ -75,19 +75,19 @@ public class MazoZombies extends Mazo {
 
     /*Restaura el mazo de descartes de forma ordenada*/
     public void Restaurar() {
-        
-        if(MazoZombie.isEmpty()){
-            
-          
-        for (int i = 0; i < descarteZombies.size() - 1; i++) {
-            for (int j = 0; j < descarteZombies.size() - 1; j++) {
-                if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
-                    Zombie tmp =  descarteZombies.get(j + 1);
-                    MazoZombie.add(j + 1, descarteZombies.get(j));
-                    MazoZombie.add(j, tmp);
+
+        if (MazoZombie.isEmpty()) {
+
+            for (int i = 0; i < descarteZombies.size() - 1; i++) {
+                for (int j = 0; j < descarteZombies.size() - 1; j++) {
+                    if (descarteZombies.get(j).getNumeroZombie() < descarteZombies.get(j + 1).getNumeroZombie()) {
+                        Zombie tmp = descarteZombies.get(j + 1);
+                        MazoZombie.add(j + 1, descarteZombies.get(j));
+                        MazoZombie.add(j, tmp);
+                    }
                 }
             }
-        }}
+        }
 
     }
 
@@ -104,7 +104,7 @@ public class MazoZombies extends Mazo {
     public void introducirAleatorio(int n) {
         for (int i = 0; i < n; i++) {
             escenario.mazoJugador.getMazoJugador().add(MazoZombie.remove(0));
-           
+
         }
     }
 

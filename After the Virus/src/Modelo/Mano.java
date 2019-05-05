@@ -36,21 +36,21 @@ public class Mano {
             //Usa la carta, es decir la pone en el AREA JUGABLE y si su costo es 0 la usa al instante
             case 1:
 
-                for (int i = cartas.size()-1; i >=0; i--) {
+                for (int i = cartas.size() - 1; i >= 0; i--) {
                     System.out.println("-----------------------------------------------");
-                   
+
                     escenario.areaJugable.AniadirCarta(cartas.remove(0));
-                  }
+                }
 
                 break;
 
             //Igual que la anterior pero solo la coloca
             case 2:
-                for (int i = cartas.size()-1; i >=0; i--) {
+                for (int i = cartas.size() - 1; i >= 0; i--) {
                     System.out.println("-----------------------------------------------");
-                   
+
                     escenario.areaJugable.AniadirCarta(cartas.remove(0));
-                  }
+                }
 
                 break;
 
@@ -58,43 +58,38 @@ public class Mano {
             case 3:
                 int conteo = 0;
                 for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva()==false) {
+                    if (escenario.areaJugable.getArrayJugables().get(i).isActiva() == false) {
                         conteo++;
                     }
 
                 }
                 if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
 
-                    escenario.vista.verAreaJugador();  
+                    escenario.vista.verAreaJugador();
                     if (escenario.areaJugable.ActivarCarta(cartas) == true) {
                         for (int i = 0; i < cartas.size(); i++) {
 
                             escenario.mazoDescartes.IntroducirCarta(cartas.remove(0));
                         }
-                    } else 
-                    {System.out.println("error");
-                    for (int i = 0; i <= cartas.size()-1; i++) {
-                        aniadirCartaMano(cartas.get(0));
-                        
+                    } else {
+                        System.out.println("error");
+                        for (int i = 0; i <= cartas.size() - 1; i++) {
+                            aniadirCartaMano(cartas.get(0));
+
+                        }
+
                     }
-                    
-                    
-                    
-                    
-                    
-                    
-                    }
-                    
-                }else {
+
+                } else {
                     System.out.println("No hay cartas para activar");
-                    for (int i = 0; i <= cartas.size()-1; i++) {
+                    for (int i = 0; i <= cartas.size() - 1; i++) {
                         aniadirCartaMano(cartas.get(0));
-                        
+
                     }
-                
+
                 }
-                    
-break;
+
+                break;
             //Usa estas cartas para explorar
             case 4:
                 Carta carta1 = null;

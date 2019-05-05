@@ -8,13 +8,11 @@ package Modelo;
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author Abraham
  */
 public class MazoDescartes extends Mazo {
-
 
     private ArrayList<Carta> MazoDescarte = new ArrayList();
 

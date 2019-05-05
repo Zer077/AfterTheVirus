@@ -99,7 +99,7 @@ public class Controlador extends Escenario {
             salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size()-1; i++) {
+            for (int i = 0; i < arrayZombies.size() - 1; i++) {
                 arrayZombies.get(i).atacaHumano();
             }
             System.out.println("-------------termina ataque de los zombies----------------------");
@@ -116,8 +116,7 @@ public class Controlador extends Escenario {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
-                
-                
+
                 Enter();
                 exit();
             } else if (personaje.isCabeza() == false && contador >= 6) {
