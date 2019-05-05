@@ -6,7 +6,6 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import com.sun.xml.internal.stream.Entity;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -31,10 +30,10 @@ public class Zombie1 extends Zombie {
             if (zombie.get(i).isVivo() == true) {
                 escenario.personaje.parteCuerpoAtacar();
 
-            }
+            }}
             escenario.mazoZombies.getDescarteZombies().add(this);
             escenario.mazoZombies.eliminarZombieArray(this);
-        }
+        
 
     }
 
@@ -62,25 +61,22 @@ public class Zombie1 extends Zombie {
                 Enter();
                 escenario.arrayZombies.add(this);
                 escenario.mano.getMano().remove(this);
-            }else{
-            
+            } else {
+
                 System.out.println("Si no quiere colaborar no podemos ayudarle, se ha equivocado de número, por ello su partida ha finalizado");
                 Enter();
                 escenario.personaje.setCabeza(true);
             }
-                
 
         } catch (Exception e) {
             action();
         }
-        
-        
-
 
     }
-         public void Enter(){
-   System.out.println("Press \"ENTER\" to continue...");
-   Scanner scanner = new Scanner(System.in);
-   scanner.nextLine();
-}
+
+    public void Enter() {
+        System.out.println("Press \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 }

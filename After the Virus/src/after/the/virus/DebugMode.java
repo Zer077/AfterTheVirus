@@ -27,7 +27,7 @@ public class DebugMode {
 
     }
 
-    public void iniciar() {
+    public void iniciar() throws Throwable {
 
         System.out.println("personaje a elegir");
         Scanner sr = new Scanner(System.in);

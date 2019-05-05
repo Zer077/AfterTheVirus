@@ -31,7 +31,7 @@ public class AreaJugable {
         if (carta.getActivacion() == 0) {
 
             jugarCartaGratuita(carta);
-        } else {
+        } else { 
             ArrayJugables.add(carta);
 
         }
@@ -60,9 +60,10 @@ public class AreaJugable {
 
                 }
             }
-        }else if(ArrayJugables.get(numero).isActiva()==true){
+        } else if (ArrayJugables.get(numero).isActiva() == true) {
 
-        ArrayJugables.get(numero).action();}
+            ArrayJugables.get(numero).action();
+        }
 
     }
 

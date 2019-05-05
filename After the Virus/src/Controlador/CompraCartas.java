@@ -7,7 +7,7 @@ package Controlador;
 
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
-import Vista.VistaEscenario;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,6 +28,8 @@ public class CompraCartas {
     //Este metodo le paso una carta que es el COSTO de explorar
     public void explora(Carta carta) {
         escenario.arrayEscenario.add(escenario.mazoEscenario.getMazoEscenario().remove(0));
+        escenario.mazoDescartes.IntroducirCarta(carta);
+        
     }
 
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano
@@ -37,7 +39,7 @@ public class CompraCartas {
         System.out.println("Elige la carta a comprar");
         escenario.vista.verAreaExploracion();
         int numero = sc.nextInt();
-        if (carta.size() == escenario.arrayEscenario.get(numero-1).getPrecio()) {
+        if (carta.size() == escenario.arrayEscenario.get(numero - 1).getPrecio()) {
             return true;
         }
         return false;

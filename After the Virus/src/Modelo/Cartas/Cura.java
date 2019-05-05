@@ -19,7 +19,17 @@ public class Cura extends Carta {
 
     @Override
     public void action() {
-
+        Superviviente superviviente = new Superviviente(1, "Superviviente", escenario, 12, 1);
+        Zombie z = escenario.arrayZombies.remove(0);
+        escenario.arrayEscenario.add(superviviente);
+        
+        if(superviviente.isActiva()){
+            escenario.PersonasSalvadas++;
+            escenario.arrayEscenario.remove(superviviente);
+            escenario.arrayZombies.add(z);
+        }
+        
+        escenario.areaJugable.EliminarCarta(this);
     }
 
     @Override

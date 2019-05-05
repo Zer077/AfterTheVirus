@@ -6,7 +6,7 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
-import java.util.Scanner;
+
 
 /**
  *
