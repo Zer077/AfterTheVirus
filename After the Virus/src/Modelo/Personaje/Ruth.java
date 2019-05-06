@@ -19,7 +19,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Ruth extends Personaje {
 

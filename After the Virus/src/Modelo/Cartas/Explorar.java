@@ -7,7 +7,6 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 
-
 /**
  *
  * @author Zero

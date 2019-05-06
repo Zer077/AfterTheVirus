@@ -7,10 +7,9 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 
-
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public abstract class Carta {
 

@@ -10,31 +10,28 @@ import Modelo.Cartas.Pistola;
 import Modelo.Cartas.Bar;
 import Modelo.Cartas.Saquear;
 import Modelo.Cartas.Correr;
-
 import Modelo.Cartas.Escopeta;
 import Modelo.Cartas.Granada;
-
 import Modelo.Cartas.Superviviente;
-
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Cartas.Trinchera;
 import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Jennie extends Personaje {
 
     public Jennie(Escenario escenario) {
         super(escenario);
-        
+
         escenario.mazoJugador.IntroducirCarta(new Pistola(0, nombre, escenario, 0, 0, 0));
         for (int i = 0; i < 3; i++) {
             escenario.mazoJugador.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0));
             escenario.mazoJugador.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
         }
-        
+
         escenario.mazoEscenario.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Granada(0, nombre, escenario, 0, 0));
@@ -44,7 +41,6 @@ public class Jennie extends Personaje {
         escenario.mazoEscenario.IntroducirCarta(new Perro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Bar(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Saquear(0, nombre, escenario, 0, 0));
-        
 
         super.nombre = "Jennie";
 

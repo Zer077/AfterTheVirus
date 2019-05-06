@@ -7,11 +7,10 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Miguel
  */
 public class Machete extends Carta {
 

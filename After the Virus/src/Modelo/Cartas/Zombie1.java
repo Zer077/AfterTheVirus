@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Zombie1 extends Zombie {
 
@@ -30,10 +30,10 @@ public class Zombie1 extends Zombie {
             if (zombie.get(i).isVivo() == true) {
                 escenario.personaje.parteCuerpoAtacar();
 
-            }}
-            escenario.mazoZombies.getDescarteZombies().add(this);
-            escenario.mazoZombies.eliminarZombieArray(this);
-        
+            }
+        }
+        escenario.mazoZombies.getDescarteZombies().add(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
 
     }
 

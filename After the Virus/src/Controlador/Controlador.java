@@ -15,7 +15,7 @@ import static javafx.application.Platform.exit;
 
 /**
  *
- * @author Zero
+ * @author Juan y Cristian
  */
 public class Controlador extends Escenario {
 
@@ -51,8 +51,7 @@ public class Controlador extends Escenario {
         do {
 
             Principal();
-                
-            
+
             salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
@@ -95,8 +94,8 @@ public class Controlador extends Escenario {
         int coge = 5;
         mazoZombies.introducirAleatorio(coge);
 
-        do{
-         Principal();
+        do {
+            Principal();
 
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {
@@ -122,8 +121,8 @@ public class Controlador extends Escenario {
         //preparacion: comienza con 1 oleada.
 
         boolean x = false;
-do{
-        Principal();
+        do {
+            Principal();
 
             //zombies restantes atacan
             for (int i = 0; i < arrayZombies.size(); i++) {
@@ -149,7 +148,7 @@ do{
             Ronda++;
 
         } while (personaje.isCabeza() == false);
-}
+    }
 
     public void controladorBeta() {
         for (int i = 0; i < 20; i++) {
@@ -203,48 +202,44 @@ do{
         }
 
     }
-    
-    
-    public  void Menu(){
-    do{
-     salir = false;
-                menuOpciones.Menu();
-                if (salir == false || mano.numeroCartas() > 0) {
-                    //usa la carta con la accion indicada en el menu
-                    mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
-                    vista.verMano();
-                    //menu uso de cartas
-    
-    
-    }else{}
-    } while (salir == false || mano.numeroCartas() > 0);
-    
-    
+
+    public void Menu() {
+        do {
+            salir = false;
+            menuOpciones.Menu();
+            if (salir == false || mano.numeroCartas() > 0) {
+                //usa la carta con la accion indicada en el menu
+                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
+                vista.verMano();
+                //menu uso de cartas
+
+            } else {
+            }
+        } while (salir == false || mano.numeroCartas() > 0);
+
     }
-    
-    public void Principal(){
-            //3-Se baraja las cartas del jugador
-            mazoJugador.barajar();
-            //4- La mano del jugador coje 5 cartas
-            mazoJugador.sacarCincoCartas();
-            // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
-            Machete();
-            //y elimina las de Zombie de la mano y las pone en juego
-            mano.comprobarZombie();
-            //mostrar escenario y todos los datos
-            vista.verJugador();
-            Enter();
-            vista.verAreaZombies();
-            Enter();
-            vista.verAreaExploracion();
-            Enter();
-            vista.verAreaJugador();
-            Enter();
-            //muestra menu opciones acciones carta
-            
-             Menu();
-    
-    
-    
+
+    public void Principal() {
+        //3-Se baraja las cartas del jugador
+        mazoJugador.barajar();
+        //4- La mano del jugador coje 5 cartas
+        mazoJugador.sacarCincoCartas();
+        // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
+        Machete();
+        //y elimina las de Zombie de la mano y las pone en juego
+        mano.comprobarZombie();
+        //mostrar escenario y todos los datos
+        vista.verJugador();
+        Enter();
+        vista.verAreaZombies();
+        Enter();
+        vista.verAreaExploracion();
+        Enter();
+        vista.verAreaJugador();
+        Enter();
+        //muestra menu opciones acciones carta
+
+        Menu();
+
     }
 }

@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class AreaJugable {
 
@@ -45,7 +45,7 @@ public class AreaJugable {
         System.out.println("Que carta quieres jugar?");
         int numero = sc.nextInt();
 
-        if (ArrayJugables.get(numero-1).getTipo() == 3) {
+        if (ArrayJugables.get(numero - 1).getTipo() == 3) {
 
             for (int i = 0; i < ArrayJugables.size(); i++) {
 
@@ -55,13 +55,13 @@ public class AreaJugable {
                     System.out.println("A que Zombie quieres atacar?");
 
                     int numero2 = sc.nextInt();
-                    escenario.arrayZombies.get(numero2-1).muereZombie();
+                    escenario.arrayZombies.get(numero2 - 1).muereZombie();
 
                 }
             }
-        } else if (ArrayJugables.get(numero-1).isActiva() == true) {
+        } else if (ArrayJugables.get(numero - 1).isActiva() == true) {
 
-            ArrayJugables.get(numero-1).action();
+            ArrayJugables.get(numero - 1).action();
         }
 
     }
@@ -72,7 +72,7 @@ public class AreaJugable {
 
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
     public boolean ActivarCarta(ArrayList<Carta> cartas) {
-       
+
         Carta WeaponSkillAuxiliar = null;
         Carta HabilidadConTrampa = null;
 
@@ -120,18 +120,15 @@ public class AreaJugable {
             //REVISION
             if (aux.getActivacion() == cartas.size()) {
 
-                ArrayJugables.get(numero-1).setActiva(true);
+                ArrayJugables.get(numero - 1).setActiva(true);
                 return true;
             } else {
                 System.out.println("Vuelve a intentarlo");
-            
-            escenario.menuOpciones.Menu();
-            return false;
+
+                escenario.menuOpciones.Menu();
+                return false;
             }
 
-            
-
-            
         }
         return false;
     }
@@ -189,7 +186,7 @@ public class AreaJugable {
     }
 
     public boolean comprobarArma() {
-        
+
         //si tienes 2 o mas armas activas o 1 arma y te falta un brazo devuelve false
         int contador = 0;
         for (int i = 0; i < ArrayJugables.size(); i++) {
@@ -214,31 +211,30 @@ public class AreaJugable {
         int numeroActivar = sc.nextInt();
 
         //si la carta elegida es un arma
-        if (ArrayJugables.get(numeroActivar-1).getTipo() == 10) {
+        if (ArrayJugables.get(numeroActivar - 1).getTipo() == 10) {
 
-             escenario.vista.verAreaZombies();
+            escenario.vista.verAreaZombies();
             System.out.println("A que Zombie quieres atacar?");
 
             int numero2 = sc.nextInt();
-            escenario.arrayZombies.get(numero2-1).muereZombie();
+            escenario.arrayZombies.get(numero2 - 1).muereZombie();
 
-            Carta aux = ArrayJugables.get(numeroActivar-1);
+            Carta aux = ArrayJugables.get(numeroActivar - 1);
 
             if (aux.getActivacion() == cartas.size()) {
 
-                ArrayJugables.get(numeroActivar-1).setActiva(true);
+                ArrayJugables.get(numeroActivar - 1).setActiva(true);
                 return true;
-            
-            
-        } else {
-            ArrayJugables.get(numeroActivar-1).setActiva(true);
-                    return false;
+
+            } else {
+                ArrayJugables.get(numeroActivar - 1).setActiva(true);
+                return false;
+
+            }
 
         }
-     
-
-    }   return false;
-}
+        return false;
+    }
 
     public boolean TrampSkillCard(ArrayList cartas) {
         escenario.vista.verAreaJugador();
@@ -247,19 +243,19 @@ public class AreaJugable {
         int numeroActivar = sc.nextInt();
 
         //si la carta elegida es un arma
-        if (ArrayJugables.get(numeroActivar-1).getTipo() == 10) {
+        if (ArrayJugables.get(numeroActivar - 1).getTipo() == 10) {
 
             escenario.vista.verAreaZombies();
             System.out.println("A que Zombie quieres atacar?");
 
             int numero2 = sc.nextInt();
-            escenario.arrayZombies.get(numero2-1).muereZombie();
+            escenario.arrayZombies.get(numero2 - 1).muereZombie();
 
             Carta aux = ArrayJugables.get(numeroActivar);
 
             if (aux.getActivacion() == cartas.size()) {
 
-                ArrayJugables.get(numeroActivar-1).setActiva(true);
+                ArrayJugables.get(numeroActivar - 1).setActiva(true);
                 return true;
             } else {
                 System.out.println("Vuelve a intentarlo");
@@ -267,14 +263,12 @@ public class AreaJugable {
 
             escenario.menuOpciones.ElegirOpcion();
         } else {
-            ArrayJugables.get(numeroActivar-1).setActiva(true);
-                    return false;
+            ArrayJugables.get(numeroActivar - 1).setActiva(true);
+            return false;
 
         }
         return false;
 
     }
-    
-
 
 }

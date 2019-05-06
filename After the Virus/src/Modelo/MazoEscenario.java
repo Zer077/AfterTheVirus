@@ -5,20 +5,15 @@
  */
 package Modelo;
 
-import Modelo.Cartas.Carta;
-import java.util.ArrayList;
-
 /**
  *
- * @author Zero
+ * @author Maria
  */
 public class MazoEscenario extends Mazo {
 
 //Esta clase permitirá tener las cartas que podremos comprar para tenerlas en nuestro Array de juego
-
     public MazoEscenario(Escenario escenario) {
         super(escenario);
     }
-
 
 }

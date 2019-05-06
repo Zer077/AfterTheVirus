@@ -7,7 +7,7 @@ package Modelo.Cartas;
 
 /**
  *
- * @author Usuario
+ * @author Jose
  */
 public class Zombi {
 

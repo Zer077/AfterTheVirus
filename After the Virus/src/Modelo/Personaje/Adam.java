@@ -5,8 +5,6 @@
  */
 package Modelo.Personaje;
 
-
-
 import Modelo.Cartas.Perro;
 import Modelo.Cartas.Pistola;
 import Modelo.Cartas.Bar;
@@ -21,7 +19,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Adam extends Personaje {
 

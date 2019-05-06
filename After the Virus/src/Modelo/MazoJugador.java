@@ -5,18 +5,14 @@
  */
 package Modelo;
 
-import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
-import java.util.ArrayList;
 import java.util.Collections;
-import static java.util.Collections.shuffle;
 
 /**
  *
- * @author Zero
+ * @author Maria Perez
  */
 public class MazoJugador extends Mazo {
-
 
     public MazoJugador(Escenario escenario) {
         super(escenario);
@@ -26,9 +22,6 @@ public class MazoJugador extends Mazo {
     //metodo para ver si el mazo está vacio y devuelva true o false
     //mezclar cartas de descartes y sacar 5
 
-    /**
-     * @return the MazoJugador
-     */
     public void sacarCincoCartas() {
 
         /*
@@ -60,9 +53,5 @@ public class MazoJugador extends Mazo {
             System.err.println(e);
         }
     }//fin del metodo
-
-
-
-
 
 }

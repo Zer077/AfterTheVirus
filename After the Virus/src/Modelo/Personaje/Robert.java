@@ -23,7 +23,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Robert extends Personaje {
 

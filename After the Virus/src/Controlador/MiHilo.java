@@ -15,7 +15,7 @@ import javazoom.jl.player.Player;
 
 /**
  *
- * @author jose_
+ * @author Jose y Juan
  */
 public class MiHilo extends Thread {
 
@@ -34,6 +34,7 @@ public class MiHilo extends Thread {
 
     }
 
+    @Override
     public void run() {
 
         Player apl = null;
@@ -41,20 +42,12 @@ public class MiHilo extends Thread {
 
         try {
             if (muerto == true) {
-            apl = new Player(new FileInputStream(
-                                "the night king.mp3"));
-                        apl.play();
-            
-            
-            
-            }else{
-                
-                
-                
-                
-                
-                
-                
+                apl = new Player(new FileInputStream(
+                        "the night king.mp3"));
+                apl.play();
+
+            } else {
+
                 int num = (int) (Math.random() * 4 + 1);
                 switch (num) {
 

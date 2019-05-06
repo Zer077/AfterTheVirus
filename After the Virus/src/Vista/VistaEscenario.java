@@ -81,7 +81,7 @@ public class VistaEscenario {
             System.out.println("**********");
             int i = 1;
             for (Zombi zi : z.zombie) {
-               
+
                 System.out.println("Zombi nº " + i + "¿Vivo o muerto?");
                 if (zi.isVivo()) {
                     System.out.println("VIVO");

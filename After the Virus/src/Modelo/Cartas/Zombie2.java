@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Zombie2 extends Zombie {
 
@@ -28,10 +28,11 @@ public class Zombie2 extends Zombie {
             if (zombie.get(i).isVivo() == true) {
                 escenario.personaje.parteCuerpoAtacar();
 
-            }}
-            escenario.mazoZombies.getDescarteZombies().add(this);
-            escenario.mazoZombies.eliminarZombieArray(this);
-        
+            }
+        }
+        escenario.mazoZombies.getDescarteZombies().add(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+
     }
 
     //NO HACER

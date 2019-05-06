@@ -9,7 +9,7 @@ import Modelo.Escenario;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public class Revista extends Carta {
 

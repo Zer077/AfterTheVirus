@@ -8,13 +8,12 @@ package Vista;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Juan
  */
 public class MenuOpciones {
 

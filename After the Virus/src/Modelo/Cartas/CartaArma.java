@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author usuario
+ * @author Jose
  */
 public abstract class CartaArma extends Carta {
 

@@ -16,23 +16,19 @@ import static java.util.Collections.shuffle;
 public abstract class Mazo {
 
     Escenario escenario;
-        private ArrayList<Carta> mazo = new ArrayList();
-
+    private ArrayList<Carta> mazo = new ArrayList();
 
     public Mazo(Escenario escenario) {
         this.escenario = escenario;
 
     }
-    
-        public void barajar() {
+
+    public void barajar() {
         /*sencillamente se barajan las cartas del array*/
         shuffle(mazo);
     }
-    
-    
-    
-    
-        //Al usar una carta acaba aquí a no ser que se especifique lo contrario
+
+    //Al usar una carta acaba aquí a no ser que se especifique lo contrario
     public void IntroducirCarta(Carta carta) {
 
         mazo.add(carta);

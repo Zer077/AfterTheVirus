@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public abstract class Zombie extends Carta {
 

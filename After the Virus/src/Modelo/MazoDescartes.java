@@ -8,20 +8,15 @@ package Modelo;
 import Modelo.Cartas.Carta;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author Abraham
  */
 public class MazoDescartes extends Mazo {
 
-
-
     public MazoDescartes(Escenario escenario) {
         super(escenario);
     }
-
-
 
     //Todas las cartas de descartes las mete en el MazoJugador
     public void RestaurarMazo() {
@@ -36,6 +31,5 @@ public class MazoDescartes extends Mazo {
         super.getMazo().clear();
 
     }
-
 
 }

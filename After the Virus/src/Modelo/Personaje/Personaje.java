@@ -31,7 +31,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 public abstract class Personaje {
 
@@ -44,7 +44,7 @@ public abstract class Personaje {
 
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
-        
+
         escenario.mazoJugador.IntroducirCarta(new Refugio(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Antidoto(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new BombaDeDemolición(0, nombre, escenario, 0, 0));
@@ -66,9 +66,7 @@ public abstract class Personaje {
         escenario.mazoEscenario.IntroducirCarta(new Tunel(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new VIP(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Revista(0, nombre, escenario, 0, 0));
-        
-        
-        
+
     }
 
     //Este metodo me debe dejar elegir a que parte del cuerpo deseo que me golpee primero el Zombie
@@ -77,7 +75,7 @@ public abstract class Personaje {
         if (getDefensa() == 0) {
 
             if (brazo == true && pierna == true) {
-                cabeza = true;   
+                cabeza = true;
 
             } else {
 
