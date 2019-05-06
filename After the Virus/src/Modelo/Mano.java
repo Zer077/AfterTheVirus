@@ -113,7 +113,8 @@ public class Mano {
                 if (escenario.compraCartas.compra(carta2) == true) {
                     for (int i = 0; i < cartas.size(); i++) {
 
-                        getMano().remove(cartas);
+                        getMano().remove(cartas.get(i));
+                        
                     }
                 }
 
