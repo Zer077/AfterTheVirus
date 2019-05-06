@@ -114,7 +114,7 @@ public class Mano {
                     for (int i = 0; i < cartas.size(); i++) {
 
                         getMano().remove(cartas.get(i));
-                        
+
                     }
                 }
 

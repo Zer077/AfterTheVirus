@@ -55,8 +55,8 @@ public class Controlador extends Escenario {
             salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size() - 1; i++) {
-                arrayZombies.get(i).atacaHumano();
+            for (int i = 0; i < arrayZombies.size(); i++) {
+                arrayZombies.get(0).atacaHumano();
             }
             System.out.println("-------------termina ataque de los zombies----------------------");
             //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
@@ -207,7 +207,7 @@ public class Controlador extends Escenario {
         do {
             salir = false;
             menuOpciones.Menu();
-            if (salir == false || mano.numeroCartas() > 0) {
+            if (salir == true && mano.numeroCartas() > 0) {
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
