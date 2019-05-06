@@ -45,7 +45,7 @@ public class Controlador extends Escenario {
     public void controlador1a() throws Throwable {
         //preparacion: comienza con 1 oleada (añadir 1-3 cartas zombi random)
 
-        int coge = (int) Math.random() * 3 + 1;
+        int coge = (int) (Math.random() * 3 + 1);
         mazoZombies.introducirAleatorio(coge);
 
         do {
