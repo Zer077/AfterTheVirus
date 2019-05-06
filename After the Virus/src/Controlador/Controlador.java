@@ -63,8 +63,8 @@ public class Controlador extends Escenario {
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
             mazoZombies.Restaurar();
-
-            for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
+int tamanioZombies=areaJugable.getArrayJugables().size();
+            for (int i = 0; i < tamanioZombies; i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
                     contador++;
                 }
