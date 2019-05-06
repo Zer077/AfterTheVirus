@@ -51,7 +51,7 @@ public class Controlador extends Escenario {
         do {
 
             //3-Se baraja las cartas del jugador
-            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.barajar();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
@@ -144,7 +144,7 @@ public class Controlador extends Escenario {
 
         do {
             //3-Se baraja las cartas del jugador
-            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.barajar();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
@@ -212,7 +212,7 @@ public class Controlador extends Escenario {
 
         do {
             //3-Se baraja las cartas del jugador
-            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.barajar();
             //4- La mano del jugador coje 5 cartas
             mazoJugador.sacarCincoCartas();
             // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
@@ -281,7 +281,7 @@ public class Controlador extends Escenario {
 
     public void controladorBeta() {
         for (int i = 0; i < 20; i++) {
-            mazoJugador.barajarCartasPersonaje();
+            mazoJugador.barajar();
             mazoJugador.sacarCincoCartas();
 
             do {

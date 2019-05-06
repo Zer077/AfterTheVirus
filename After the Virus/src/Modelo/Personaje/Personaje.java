@@ -45,27 +45,27 @@ public abstract class Personaje {
     public Personaje(Escenario escenario) {
         this.escenario = escenario;
         
-        escenario.mazoJugador.aniadir(new Refugio(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Antidoto(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new BombaDeDemolición(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Coche(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Motosierra(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Cura(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Gasolina(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Laboratorio(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new MC(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Machete(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new KitMedico(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Ametralladora(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new TrampaPermetral(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Explorar(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Tunel(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new VIP(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Revista(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new Refugio(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Antidoto(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new BombaDeDemolición(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Coche(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Motosierra(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Cura(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Gasolina(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Laboratorio(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new MC(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Machete(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new KitMedico(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Ametralladora(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new TrampaPermetral(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Explorar(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new ObjetivoSeguro(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new HabilidadConTrampas(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Tunel(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new VIP(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Revista(0, nombre, escenario, 0, 0));
         
         
         

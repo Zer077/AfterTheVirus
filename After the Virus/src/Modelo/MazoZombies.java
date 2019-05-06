@@ -69,7 +69,7 @@ public class MazoZombies extends Mazo {
 
         int coge = (int) (Math.random() * 3 + 1);
         for (int i = 0; i < coge; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
         }
     }
 
@@ -95,7 +95,7 @@ public class MazoZombies extends Mazo {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducir() {
         for (int i = 0; i < escenario.Ronda; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.get(0));
+            escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
             MazoZombie.remove(0);
         }
     }
@@ -103,7 +103,7 @@ public class MazoZombies extends Mazo {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
     public void introducirAleatorio(int n) {
         for (int i = 0; i < n; i++) {
-            escenario.mazoJugador.getMazoJugador().add(MazoZombie.remove(0));
+            escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
            
         }
     }

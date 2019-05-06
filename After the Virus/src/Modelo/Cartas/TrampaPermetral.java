@@ -22,12 +22,12 @@ public class TrampaPermetral extends Carta {
 
         for (int y = 0; y < 6; y++) {
 
-            Carta zomb = escenario.mazoDescartes.getMazoDescarte().get(y);
+            Carta zomb = escenario.mazoDescartes.getMazo().get(y);
 
             if (zomb instanceof Zombie) {
 
                 escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
-                escenario.mazoDescartes.getMazoDescarte().remove(y);
+                escenario.mazoDescartes.getMazo().remove(y);
 
             }
 

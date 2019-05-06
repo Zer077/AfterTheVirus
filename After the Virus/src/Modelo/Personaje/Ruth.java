@@ -26,20 +26,20 @@ public class Ruth extends Personaje {
     public Ruth(Escenario escenario) {
         super(escenario);
         for (int i = 0; i < 3; i++) {
-            escenario.mazoJugador.aniadir(new Superviviente(0, nombre, escenario, 0, 0));
+            escenario.mazoJugador.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0));
         }
-        escenario.mazoJugador.aniadir(new Escopeta(0, nombre, escenario, 0, 0, 0));
-        escenario.mazoJugador.aniadir(new Granada(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.aniadir(new Trinchera(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.aniadir(new HabilidadConArmas(0, nombre, escenario, 0, 0));
-        escenario.mazoJugador.aniadir(new Bar(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new Escopeta(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new Granada(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new Trinchera(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new HabilidadConArmas(0, nombre, escenario, 0, 0));
+        escenario.mazoJugador.IntroducirCarta(new Bar(0, nombre, escenario, 0, 0));
 
-        escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Pistola(0, nombre, escenario, 0, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Perro(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.getMazoEscenario().add(new Saquear(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Pistola(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Perro(0, nombre, escenario, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Saquear(0, nombre, escenario, 0, 0));
 
         super.nombre = "Ruth";
 

@@ -14,26 +14,11 @@ import java.util.ArrayList;
  */
 public class MazoEscenario extends Mazo {
 
-    private ArrayList<Carta> MazoEscenario = new ArrayList();
 //Esta clase permitirá tener las cartas que podremos comprar para tenerlas en nuestro Array de juego
 
     public MazoEscenario(Escenario escenario) {
         super(escenario);
     }
 
-    /**
-     * @return the MazoEscenario
-     */
-    public ArrayList<Carta> getMazoEscenario() {
-        return MazoEscenario;
-
-    }
-
-    /**
-     * @param MazoEscenario the MazoEscenario to set
-     */
-    public void setMazoEscenario(ArrayList<Carta> MazoEscenario) {
-        this.MazoEscenario = MazoEscenario;
-    }
 
 }

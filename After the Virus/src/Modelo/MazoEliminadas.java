@@ -15,28 +15,23 @@ import java.util.ArrayList;
  */
 public class MazoEliminadas extends Mazo {
 
-    ArrayList<Carta> MazoEliminadas = new ArrayList();
 
     //Al eliminar cartas pasarán a este array, simplemente quiero sacar alguna carta al mazoJugador de nuevo
     public MazoEliminadas(Escenario escenario) {
         super(escenario);
     }
 
-    public void IntroducirCarta(Carta carta) {
-
-        MazoEliminadas.add(carta);
-
-    }
+ 
 
     public void SacarCarta(Carta carta) {
 
         String nomcarta = carta.getNombre();
-        int cont = MazoEliminadas.size();
+        int cont = super.getMazo().size();
         for (int x = 0; x < cont; x++) {
 
-            if (nomcarta == MazoEliminadas.get(x).getNombre()) {
+            if (nomcarta == super.getMazo().get(x).getNombre()) {
 
-                escenario.mazoJugador.getMazoJugador().add(MazoEliminadas.get(x));
+                escenario.mazoJugador.getMazo().add(super.getMazo().get(x));
 
             }
 

@@ -16,39 +16,26 @@ import java.util.ArrayList;
 public class MazoDescartes extends Mazo {
 
 
-    private ArrayList<Carta> MazoDescarte = new ArrayList();
 
     public MazoDescartes(Escenario escenario) {
         super(escenario);
     }
 
-    //Al usar una carta acaba aquí a no ser que se especifique lo contrario
-    public void IntroducirCarta(Carta carta) {
 
-        MazoDescarte.add(carta);
-
-    }
 
     //Todas las cartas de descartes las mete en el MazoJugador
     public void RestaurarMazo() {
 
-        int ncartasd = MazoDescarte.size();
+        int ncartasd = super.getMazo().size();
         for (int cont = 0; cont < ncartasd; cont++) {
 
-            escenario.mazoJugador.getMazoJugador().add(MazoDescarte.get(cont));
+            escenario.mazoJugador.getMazo().add(super.getMazo().get(cont));
 
         }
 
-        MazoDescarte.clear();
+        super.getMazo().clear();
 
     }
 
-    public ArrayList<Carta> getMazoDescarte() {
-        return MazoDescarte;
-    }
-
-    public void setMazoDescarte(ArrayList<Carta> MazoDescarte) {
-        this.MazoDescarte = MazoDescarte;
-    }
 
 }
