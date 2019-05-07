@@ -13,13 +13,14 @@ import Modelo.Personaje.*;
 import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
 import Vista.VistaEscenario;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Jose
  */
-public abstract class Escenario {
+public abstract class Escenario implements Serializable{
 
 //contiene todo el escenario principal
     public CompraCartas compraCartas;

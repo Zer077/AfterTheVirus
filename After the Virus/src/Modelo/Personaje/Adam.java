@@ -16,12 +16,13 @@ import Modelo.Cartas.Superviviente;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Cartas.Trinchera;
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public class Adam extends Personaje {
+public class Adam extends Personaje implements Serializable{
 
     public Adam(Escenario escenario) {
         super(escenario);

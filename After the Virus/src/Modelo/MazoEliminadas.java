@@ -6,13 +6,13 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
-import java.util.ArrayList;
+import java.io.Serializable;
 
 /**
  *
  * @author Abraham
  */
-public class MazoEliminadas extends Mazo {
+public class MazoEliminadas extends Mazo implements Serializable{
 
     //Al eliminar cartas pasarán a este array, simplemente quiero sacar alguna carta al mazoJugador de nuevo
     public MazoEliminadas(Escenario escenario) {

@@ -6,13 +6,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Trinchera extends Carta {
+public class Trinchera extends Carta implements Serializable{
 
     public Trinchera(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Trinchera", Escenario, 10, 0);

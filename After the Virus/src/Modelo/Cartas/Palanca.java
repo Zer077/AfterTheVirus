@@ -6,13 +6,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Zero
  */
-public class Palanca extends Carta {
+public class Palanca extends Carta implements Serializable{
 
     public Palanca(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Palanca", Escenario, 2, 0);

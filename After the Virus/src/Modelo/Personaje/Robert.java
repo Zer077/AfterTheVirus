@@ -20,12 +20,13 @@ import Modelo.Cartas.Escopeta;
 import Modelo.Cartas.Superviviente;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public class Robert extends Personaje {
+public class Robert extends Personaje implements Serializable{
 
     public Robert(Escenario escenario) {
         super(escenario);

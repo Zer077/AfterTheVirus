@@ -6,12 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Cristian
  */
-public class Cura extends Carta {
+public class Cura extends Carta implements Serializable{
 
     public Cura(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Cura", Escenario, 7, 1);

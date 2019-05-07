@@ -7,19 +7,19 @@ package after.the.virus;
 
 import Controlador.Controlador;
 import Modelo.Cartas.Zombie;
-import Modelo.Escenario;
 import Modelo.Personaje.Adam;
 import Modelo.Personaje.Jennie;
 import Modelo.Personaje.Personaje;
 import Modelo.Personaje.Robert;
 import Modelo.Personaje.Ruth;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
- * @author jose_
+ * @author jose
  */
-public class DebugMode {
+public class DebugMode implements Serializable{
 
     Controlador controlador = new Controlador();
 

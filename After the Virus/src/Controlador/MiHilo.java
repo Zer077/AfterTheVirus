@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -17,7 +18,7 @@ import javazoom.jl.player.Player;
  *
  * @author Jose y Juan
  */
-public class MiHilo extends Thread {
+public class MiHilo extends Thread implements Serializable{
 
     Controlador c;
     boolean muerto = false;

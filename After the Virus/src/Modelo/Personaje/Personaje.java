@@ -27,13 +27,14 @@ import Modelo.Cartas.TrampaPermetral;
 import Modelo.Cartas.Tunel;
 import Modelo.Cartas.VIP;
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Jose
  */
-public abstract class Personaje {
+public abstract class Personaje implements Serializable{
 
     Escenario escenario;
     String nombre = null;

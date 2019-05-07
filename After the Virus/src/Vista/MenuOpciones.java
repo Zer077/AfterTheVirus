@@ -8,6 +8,7 @@ package Vista;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ import java.util.Scanner;
  *
  * @author Juan
  */
-public class MenuOpciones {
+public class MenuOpciones implements Serializable{
 
 //me permite elegir las cartas que quiero usar y la opcion para estas
     Mano mano;

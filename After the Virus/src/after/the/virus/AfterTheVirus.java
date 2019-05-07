@@ -6,15 +6,17 @@
 package after.the.virus;
 
 import Vista.MenuPrincipal;
+import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class AfterTheVirus {
+public class AfterTheVirus implements Serializable{
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.Throwable
      */
     public static void main(String[] args) throws Throwable {
         // TODO code application logic here

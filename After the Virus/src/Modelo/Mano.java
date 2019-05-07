@@ -11,13 +11,14 @@ import Modelo.Cartas.Zombie1;
 import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Jose
  */
-public class Mano {
+public class Mano implements Serializable{
 
     private ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;

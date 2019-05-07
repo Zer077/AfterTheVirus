@@ -16,12 +16,13 @@ import Modelo.Cartas.Escopeta;
 import Modelo.Cartas.Superviviente;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public class Ruth extends Personaje {
+public class Ruth extends Personaje implements Serializable{
 
     public Ruth(Escenario escenario) {
         super(escenario);

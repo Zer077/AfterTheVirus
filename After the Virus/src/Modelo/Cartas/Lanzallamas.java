@@ -1,13 +1,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Maria
  */
-public class Lanzallamas extends CartaArma {
+public class Lanzallamas extends CartaArma implements Serializable{
 
     public Lanzallamas(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
 

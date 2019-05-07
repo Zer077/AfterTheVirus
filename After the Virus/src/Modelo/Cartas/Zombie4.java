@@ -6,13 +6,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Jose
  */
-public class Zombie4 extends Zombie {
+public class Zombie4 extends Zombie implements Serializable{
 
     public Zombie4(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(0, "Z4", Escenario, 0, 0);

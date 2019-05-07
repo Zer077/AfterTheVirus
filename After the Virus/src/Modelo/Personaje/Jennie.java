@@ -16,12 +16,13 @@ import Modelo.Cartas.Superviviente;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Cartas.Trinchera;
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public class Jennie extends Personaje {
+public class Jennie extends Personaje implements Serializable{
 
     public Jennie(Escenario escenario) {
         super(escenario);

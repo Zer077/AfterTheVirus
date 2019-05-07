@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
+import java.io.Serializable;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ import java.util.Scanner;
  *
  * @author Cristian y Miguel
  */
-public class CompraCartas {
+public class CompraCartas implements Serializable{
 
     //Es una clase que va a necesitar mazoEscenario y el array de escenario ademas de arrayJugador, va a encargarse de explorar las cartas ademas de poder comprarlas, al comprar las lleva a juego
     Escenario escenario;

@@ -6,6 +6,7 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
+import java.io.Serializable;
 import java.util.ArrayList;
 import static java.util.Collections.shuffle;
 
@@ -13,7 +14,7 @@ import static java.util.Collections.shuffle;
  *
  * @author Zero
  */
-public abstract class Mazo {
+public abstract class Mazo implements Serializable{
 
     Escenario escenario;
     private ArrayList<Carta> mazo = new ArrayList();

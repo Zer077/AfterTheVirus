@@ -6,13 +6,14 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Miguel
  */
-public class Machete extends Carta {
+public class Machete extends Carta implements Serializable{
 
     ArrayList<Integer> ronda;
 

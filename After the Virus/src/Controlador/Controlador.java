@@ -10,6 +10,7 @@ import Modelo.Personaje.Personaje;
 import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
 import Vista.VistaEscenario;
+import java.io.Serializable;
 import java.util.Scanner;
 import static javafx.application.Platform.exit;
 
@@ -17,7 +18,7 @@ import static javafx.application.Platform.exit;
  *
  * @author Juan y Cristian
  */
-public class Controlador extends Escenario {
+public class Controlador extends Escenario implements Serializable{
 
     int contador;
 

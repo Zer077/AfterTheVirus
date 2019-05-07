@@ -11,6 +11,7 @@ import Modelo.Cartas.Zombie1;
 import Modelo.Cartas.Zombie2;
 import Modelo.Cartas.Zombie3;
 import Modelo.Cartas.Zombie4;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import java.util.Scanner;
@@ -19,7 +20,7 @@ import java.util.Scanner;
  *
  * @author Miguel
  */
-public class MazoZombies extends Mazo {
+public class MazoZombies extends Mazo implements Serializable{
 
     ArrayList<Carta> MazoZombie;
     ArrayList<Zombie> descarteZombies;

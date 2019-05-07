@@ -6,12 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Abraham
  */
-public class BombaDeDemolición extends Carta {
+public class BombaDeDemolición extends Carta implements Serializable{
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
         super(2, "Bomba de demolición", Escenario, 10, 0);

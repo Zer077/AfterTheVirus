@@ -6,12 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Zero
  */
-public class ChaquetaDeCuero extends Carta {
+public class ChaquetaDeCuero extends Carta implements Serializable{
 
     public ChaquetaDeCuero(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "ChaquetaDeCuero", Escenario, 7, 0);

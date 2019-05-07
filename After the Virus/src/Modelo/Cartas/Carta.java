@@ -6,12 +6,13 @@
 package Modelo.Cartas;
 
 import Modelo.Escenario;
+import java.io.Serializable;
 
 /**
  *
  * @author Jose
  */
-public abstract class Carta {
+public abstract class Carta implements Serializable{
 
     private int precio = 0;
     private int activacion = 0;

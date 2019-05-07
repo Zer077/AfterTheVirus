@@ -6,13 +6,14 @@
 package Modelo;
 
 import Modelo.Cartas.Carta;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Abraham
  */
-public class MazoDescartes extends Mazo {
+public class MazoDescartes extends Mazo implements Serializable{
 
     public MazoDescartes(Escenario escenario) {
         super(escenario);

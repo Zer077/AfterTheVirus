@@ -6,13 +6,14 @@
 package Modelo;
 
 import Modelo.Cartas.Zombie;
+import java.io.Serializable;
 import java.util.Collections;
 
 /**
  *
  * @author Maria Perez
  */
-public class MazoJugador extends Mazo {
+public class MazoJugador extends Mazo implements Serializable{
 
     public MazoJugador(Escenario escenario) {
         super(escenario);

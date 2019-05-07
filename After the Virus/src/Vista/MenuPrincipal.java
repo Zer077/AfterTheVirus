@@ -13,13 +13,14 @@ import Modelo.Personaje.Personaje;
 import Modelo.Personaje.Robert;
 import Modelo.Personaje.Ruth;
 import after.the.virus.DebugMode;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Miguel
  */
-public class MenuPrincipal {
+public class MenuPrincipal implements Serializable{
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {

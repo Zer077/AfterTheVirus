@@ -7,13 +7,14 @@ package Vista;
 
 import Modelo.Escenario;
 import Modelo.Cartas.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Maria
  */
-public class VistaEscenario {
+public class VistaEscenario implements Serializable{
 
     Escenario escenario;
 
