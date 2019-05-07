@@ -93,6 +93,11 @@ public class AreaJugable {
                 }
 
             }
+            
+            if(HabilidadConTrampa!=null){
+            
+            
+            
             if (HabilidadConTrampa.isActiva()) {
 
                 if (TrampSkillCard(cartas) == true) {
@@ -100,16 +105,17 @@ public class AreaJugable {
                 }
 
                 //Si WeaponSkill no está activa solo te deja activar una carta
-            }
+            }}
 
             //Si WeaponSkill está activa y selecciona una carta que jugar tipo arma matas a un zombie y activa la carta
+            if (WeaponSkillAuxiliar!=null){
             if (WeaponSkillAuxiliar.isActiva()) {
                 if (WeaponSkillCard(cartas) == true) {
                     return true;
                 }
 
                 //Si WeaponSkill no está activa solo te deja activar una carta
-            }
+            }}
             escenario.vista.verAreaJugador();
 
             Scanner sc = new Scanner(System.in);
