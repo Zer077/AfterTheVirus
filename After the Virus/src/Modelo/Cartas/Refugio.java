@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Refugio extends Carta implements Serializable{
+public class Refugio extends Carta implements Serializable {
 
     public Refugio(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Refugio", Escenario, 5, 0);
@@ -36,7 +36,7 @@ public class Refugio extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Rescata 1 o más de tus supervivientes preparados");
+        return ("Rescata 1 o más de tus supervivientes preparados");
     }
 
 }

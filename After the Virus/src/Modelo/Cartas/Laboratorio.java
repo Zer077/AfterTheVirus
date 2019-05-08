@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Laboratorio extends Carta implements Serializable{
+public class Laboratorio extends Carta implements Serializable {
 
     public Laboratorio(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Laboratorio", Escenario, 8, 12);
@@ -36,7 +36,7 @@ public class Laboratorio extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("(Se prepara con safe house) Las medicinas destruidas pueden ponerse en el descarte en cualquier momento.");
+        return ("(Se prepara con safe house) Las medicinas destruidas pueden ponerse en el descarte en cualquier momento.");
     }
 
     @Override

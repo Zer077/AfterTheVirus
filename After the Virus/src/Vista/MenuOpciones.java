@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author Juan
  */
-public class MenuOpciones implements Serializable{
+public class MenuOpciones implements Serializable {
 
 //me permite elegir las cartas que quiero usar y la opcion para estas
     Mano mano;

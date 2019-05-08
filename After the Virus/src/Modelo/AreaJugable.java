@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * @author Jose
  */
-public class AreaJugable implements Serializable{
+public class AreaJugable implements Serializable {
 
     private ArrayList<Carta> ArrayJugables = new ArrayList();
     Escenario escenario;
@@ -94,35 +94,35 @@ public class AreaJugable implements Serializable{
                 }
 
             }
-            
-            if(HabilidadConTrampa!=null){
-            
-            
-            
-            if (HabilidadConTrampa.isActiva()) {
 
-                if (TrampSkillCard(cartas) == true) {
-                    return true;
+            if (HabilidadConTrampa != null) {
+
+                if (HabilidadConTrampa.isActiva()) {
+
+                    if (TrampSkillCard(cartas) == true) {
+                        return true;
+                    }
+
+                    //Si WeaponSkill no está activa solo te deja activar una carta
                 }
-
-                //Si WeaponSkill no está activa solo te deja activar una carta
-            }}
+            }
 
             //Si WeaponSkill está activa y selecciona una carta que jugar tipo arma matas a un zombie y activa la carta
-            if (WeaponSkillAuxiliar!=null){
-            if (WeaponSkillAuxiliar.isActiva()) {
-                if (WeaponSkillCard(cartas) == true) {
-                    return true;
-                }
+            if (WeaponSkillAuxiliar != null) {
+                if (WeaponSkillAuxiliar.isActiva()) {
+                    if (WeaponSkillCard(cartas) == true) {
+                        return true;
+                    }
 
-                //Si WeaponSkill no está activa solo te deja activar una carta
-            }}
+                    //Si WeaponSkill no está activa solo te deja activar una carta
+                }
+            }
             escenario.vista.verAreaJugador();
 
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
-            Carta aux = ArrayJugables.get(numero-1);
+            Carta aux = ArrayJugables.get(numero - 1);
 
             //REVISION
             if (aux.getActivacion() == cartas.size()) {

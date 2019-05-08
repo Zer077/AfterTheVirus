@@ -13,7 +13,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Superviviente extends Carta implements Serializable{
+public class Superviviente extends Carta implements Serializable {
 
     public Superviviente(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Superviviente", Escenario, 12, 1);
@@ -27,7 +27,7 @@ public class Superviviente extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("-");
+        return ("-");
     }
 
 }

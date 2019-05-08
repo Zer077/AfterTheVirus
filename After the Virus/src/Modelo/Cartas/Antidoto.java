@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Antidoto extends Carta implements Serializable{
+public class Antidoto extends Carta implements Serializable {
 
     public Antidoto(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Antidoto", Escenario, 7, 0);
@@ -26,7 +26,7 @@ public class Antidoto extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-return("Se destruye para prevenir el siguiente daño en ese turno.");
+        return ("Se destruye para prevenir el siguiente daño en ese turno.");
     }
 
 }

@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class TrampaPermetral extends Carta implements Serializable{
+public class TrampaPermetral extends Carta implements Serializable {
 
     public TrampaPermetral(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Trampa perimetral", Escenario, 10, 0);
@@ -40,7 +40,7 @@ public class TrampaPermetral extends Carta implements Serializable{
     @Override
     public String descripcion() {
 
-        return("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
+        return ("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
     }
 
 }

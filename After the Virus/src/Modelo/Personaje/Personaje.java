@@ -34,7 +34,7 @@ import java.util.Scanner;
  *
  * @author Jose
  */
-public abstract class Personaje implements Serializable{
+public abstract class Personaje implements Serializable {
 
     Escenario escenario;
     String nombre = null;
@@ -52,7 +52,7 @@ public abstract class Personaje implements Serializable{
         escenario.mazoEscenario.IntroducirCarta(new Coche(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Motosierra(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Cura(0, nombre, escenario, 0, 0));
-       escenario.mazoEscenario.IntroducirCarta(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
+        escenario.mazoEscenario.IntroducirCarta(new Lanzallamas(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Gasolina(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Laboratorio(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new ChaquetaDeCuero(0, nombre, escenario, 0, 0));

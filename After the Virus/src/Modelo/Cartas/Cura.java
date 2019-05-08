@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Cristian
  */
-public class Cura extends Carta implements Serializable{
+public class Cura extends Carta implements Serializable {
 
     public Cura(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Cura", Escenario, 7, 1);
@@ -35,7 +35,7 @@ public class Cura extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-       return("Se destruye para convertir una carta de 1 zombi en un sobreviviente preparado, cuando sea salvado, se regresa a la pila de zombis. ");
+        return ("Se destruye para convertir una carta de 1 zombi en un sobreviviente preparado, cuando sea salvado, se regresa a la pila de zombis. ");
 
     }
 

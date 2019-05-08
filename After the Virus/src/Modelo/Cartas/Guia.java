@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Guia extends Carta implements Serializable{
+public class Guia extends Carta implements Serializable {
 
     public Guia(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Guía", Escenario, 12, 0);
@@ -35,7 +35,7 @@ public class Guia extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Se descarta para remover 2 zombis de una pila de descarte.");
+        return ("Se descarta para remover 2 zombis de una pila de descarte.");
     }
 
 }

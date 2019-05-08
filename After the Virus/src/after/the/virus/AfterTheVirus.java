@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class AfterTheVirus implements Serializable{
+public class AfterTheVirus implements Serializable {
 
     /**
      * @param args the command line arguments
@@ -20,7 +20,6 @@ public class AfterTheVirus implements Serializable{
      */
     public static void main(String[] args) throws Throwable {
         // TODO code application logic here
-
 
         MenuPrincipal menu = new MenuPrincipal();
         menu.Iniciar();

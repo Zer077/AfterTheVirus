@@ -18,7 +18,7 @@ import javazoom.jl.player.Player;
  *
  * @author Jose y Juan
  */
-public class MiHilo extends Thread implements Serializable{
+public class MiHilo extends Thread implements Serializable {
 
     Controlador c;
     boolean muerto = false;

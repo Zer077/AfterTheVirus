@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Rifle extends CartaArma implements Serializable{
+public class Rifle extends CartaArma implements Serializable {
 
     public Rifle(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
         super(2, "Rifle", Escenario, 3, 1, 0);
@@ -44,7 +44,7 @@ public class Rifle extends CartaArma implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Puedes añadir cartas de tu mano como munición.\nUna vez por turno:\nDescarta munición para matar 1 zombi en juego o en la pila de descartes.");
+        return ("Puedes añadir cartas de tu mano como munición.\nUna vez por turno:\nDescarta munición para matar 1 zombi en juego o en la pila de descartes.");
     }
 
 }

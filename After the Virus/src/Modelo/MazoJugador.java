@@ -13,7 +13,7 @@ import java.util.Collections;
  *
  * @author Maria Perez
  */
-public class MazoJugador extends Mazo implements Serializable{
+public class MazoJugador extends Mazo implements Serializable {
 
     public MazoJugador(Escenario escenario) {
         super(escenario);

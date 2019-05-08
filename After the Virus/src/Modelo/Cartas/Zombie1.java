@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author Jose
  */
-public class Zombie1 extends Zombie implements Serializable{
+public class Zombie1 extends Zombie implements Serializable {
 
     public Zombie1(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(0, "Z1", Escenario, 0, 0);
@@ -41,7 +41,7 @@ public class Zombie1 extends Zombie implements Serializable{
     //NO HACER
     @Override
     public String descripcion() {
-        return("zombi, un zombie mas... un zombie menos, este juego es demasiado dificil y posiblemente no se pueda ganar nunca");
+        return ("zombi, un zombie mas... un zombie menos, este juego es demasiado dificil y posiblemente no se pueda ganar nunca");
     }
 
     @Override

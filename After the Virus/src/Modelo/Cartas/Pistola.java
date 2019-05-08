@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Maria
  */
-public class Pistola extends CartaArma implements Serializable{
+public class Pistola extends CartaArma implements Serializable {
 
     public Pistola(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
 
@@ -39,7 +39,7 @@ public class Pistola extends CartaArma implements Serializable{
     @Override
     public String descripcion() {
 
-       return("Una vez por turno:\nDescarta 1M o la pistola para matar 1 zombi.");
+        return ("Una vez por turno:\nDescarta 1M o la pistola para matar 1 zombi.");
     }
 
 }

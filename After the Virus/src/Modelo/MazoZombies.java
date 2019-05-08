@@ -20,7 +20,7 @@ import java.util.Scanner;
  *
  * @author Miguel
  */
-public final class MazoZombies extends Mazo implements Serializable{
+public final class MazoZombies extends Mazo implements Serializable {
 
     ArrayList<Carta> MazoZombie;
     ArrayList<Zombie> descarteZombies;

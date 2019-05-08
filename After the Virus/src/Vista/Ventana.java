@@ -12,7 +12,6 @@ package Vista;
 
 import java.io.Serializable;
 
-
 /**
  *
  * @author enrique
@@ -23,12 +22,12 @@ public class Ventana extends javax.swing.JFrame {
 
     /**
      * Creates new form Ventana
+     *
      * @param v
      */
     public Ventana(VistaEscenario v) {
         initComponents();
         this.vista = v;
-        
 
     }
 
@@ -189,39 +188,37 @@ public class Ventana extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
 
-vista.verEscenarioGeneral();
-
+        vista.verEscenarioGeneral();
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void DatoExploracion(String a) {
-        jTextArea2.append(a+"\n");
+        jTextArea2.append(a + "\n");
     }
 
     public void DatoZombie(String a) {
-        jTextArea3.append(a+"\n");
+        jTextArea3.append(a + "\n");
     }
 
     public void DatoJugador(String a) {
-        jTextArea1.append(a+"\n");
+        jTextArea1.append(a + "\n");
     }
 
     public void DatoMano(String a) {
-        jTextArea5.append(a+"\n");
+        jTextArea5.append(a + "\n");
     }
 
     public void DatoInfo(String a) {
-        jTextArea6.append(a+"\n");
+        jTextArea6.append(a + "\n");
     }
 
     public void DatoJugadas(String a) {
-        jTextArea4.append(a+"\n");
+        jTextArea4.append(a + "\n");
     }
 
     /**
      * @param args the command line arguments
      */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

@@ -14,7 +14,7 @@ import static java.util.Collections.shuffle;
  *
  * @author Zero
  */
-public abstract class Mazo implements Serializable{
+public abstract class Mazo implements Serializable {
 
     Escenario escenario;
     private ArrayList<Carta> mazo = new ArrayList();

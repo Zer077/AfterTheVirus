@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class KitMedico extends Carta implements Serializable{
+public class KitMedico extends Carta implements Serializable {
 
     public KitMedico(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "KitMedico", Escenario, 7, 0);
@@ -33,6 +33,6 @@ public class KitMedico extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Si no hay zombis en juego, se destruye para curar 2 daños.");
+        return ("Si no hay zombis en juego, se destruye para curar 2 daños.");
     }
 }

@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Comida extends Carta implements Serializable{
+public class Comida extends Carta implements Serializable {
 
     public Comida(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Comida", Escenario, 4, 0);
@@ -35,7 +35,7 @@ public class Comida extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
+        return ("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
 
     }
 

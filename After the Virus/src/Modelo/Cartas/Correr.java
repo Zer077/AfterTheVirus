@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Correr extends Carta implements Serializable{
+public class Correr extends Carta implements Serializable {
 
     public Correr(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Corre", Escenario, 5, 0);
@@ -43,7 +43,7 @@ public class Correr extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Descarta 1 carta de Zombie");
+        return ("Descarta 1 carta de Zombie");
     }
 
 }

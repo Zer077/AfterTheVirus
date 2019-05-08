@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Ametralladora extends CartaArma implements Serializable{
+public class Ametralladora extends CartaArma implements Serializable {
 
     public Ametralladora(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Ametralladora", Escenario, 3, 0, 0);
@@ -32,7 +32,7 @@ public class Ametralladora extends CartaArma implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Descarta municion para matar 2 zombies");
+        return ("Descarta municion para matar 2 zombies");
     }
 
 }

@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class VIP extends Carta implements Serializable{
+public class VIP extends Carta implements Serializable {
 
     public VIP(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(3, "VIP", Escenario, 12, 1);
@@ -26,7 +26,7 @@ public class VIP extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Equivale a 3 supervivientes si se juega Refugio. Entonces se destruye.");
+        return ("Equivale a 3 supervivientes si se juega Refugio. Entonces se destruye.");
     }
 
 }

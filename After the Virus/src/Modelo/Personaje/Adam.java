@@ -22,7 +22,7 @@ import java.io.Serializable;
  *
  * @author Jose
  */
-public class Adam extends Personaje implements Serializable{
+public class Adam extends Personaje implements Serializable {
 
     public Adam(Escenario escenario) {
         super(escenario);

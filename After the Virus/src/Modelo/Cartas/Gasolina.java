@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Zero
  */
-public class Gasolina extends Carta implements Serializable{
+public class Gasolina extends Carta implements Serializable {
 
     public Gasolina(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Gasolina", Escenario, 4, 1);
@@ -35,7 +35,7 @@ public class Gasolina extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return(" Se destruye para preparar cualquier número de trampas, vehículos y armas");
+        return (" Se destruye para preparar cualquier número de trampas, vehículos y armas");
     }
 
 }

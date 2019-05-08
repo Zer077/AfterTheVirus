@@ -18,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author Jose
  */
-public class Mano implements Serializable{
+public class Mano implements Serializable {
 
     private ArrayList<Carta> Mano = new ArrayList();
     Escenario escenario;

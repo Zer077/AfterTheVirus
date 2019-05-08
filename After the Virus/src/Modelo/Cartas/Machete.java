@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Miguel
  */
-public class Machete extends Carta implements Serializable{
+public class Machete extends Carta implements Serializable {
 
     ArrayList<Integer> ronda;
 
@@ -51,7 +51,7 @@ public class Machete extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Una vez por turo: Se descarta 1 carta de la mano para matar 1 zombi");
+        return ("Una vez por turo: Se descarta 1 carta de la mano para matar 1 zombi");
     }
 
 }

@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Coche extends Carta implements Serializable{
+public class Coche extends Carta implements Serializable {
 
     public Coche(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Coche", Escenario, 14, 2);
@@ -37,7 +37,7 @@ public class Coche extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Se descarta para matar 1 carta de zombi y descartar el resto.");
+        return ("Se descarta para matar 1 carta de zombi y descartar el resto.");
     }
 
 }

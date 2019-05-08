@@ -14,15 +14,14 @@ import java.util.ArrayList;
  *
  * @author Maria
  */
-public class VistaEscenario implements Serializable{
+public class VistaEscenario implements Serializable {
 
     Escenario escenario;
- 
 
     public VistaEscenario(Escenario escenario) {
-       
+
         this.escenario = escenario;
-       
+
     }
 
     public void verEscenarioGeneral() {
@@ -35,7 +34,7 @@ public class VistaEscenario implements Serializable{
     }
 
     public void verMano() {
-    
+
 //        int posicion = 1;
 //        v.DatoMano("----------Tu mano de cartas----------");
 //        //bucle para ver todas las cartas de la mano.
@@ -50,10 +49,6 @@ public class VistaEscenario implements Serializable{
 //            posicion++;
 //        }
 //        
-        
-        
-        
-        
         int posicion = 1;
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.

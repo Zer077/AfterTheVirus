@@ -26,7 +26,7 @@ import java.io.Serializable;
  *
  * @author Jose
  */
-public class Robert extends Personaje implements Serializable{
+public class Robert extends Personaje implements Serializable {
 
     public Robert(Escenario escenario) {
         super(escenario);

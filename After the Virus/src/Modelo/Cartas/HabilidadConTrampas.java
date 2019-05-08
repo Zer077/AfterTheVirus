@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Jose
  */
-public class HabilidadConTrampas extends Carta implements Serializable{
+public class HabilidadConTrampas extends Carta implements Serializable {
 
     public HabilidadConTrampas(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Habilidad Con Trampas", Escenario, 9, 1);
@@ -26,7 +26,7 @@ public class HabilidadConTrampas extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Cada vez que se prepara una trampa, se mata 1 zombie.");
+        return ("Cada vez que se prepara una trampa, se mata 1 zombie.");
     }
 
 }

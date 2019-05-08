@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author Abraham
  */
-public class BombaDeDemolición extends Carta implements Serializable{
+public class BombaDeDemolición extends Carta implements Serializable {
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
         super(2, "Bomba de demolición", Escenario, 10, 0);
@@ -53,7 +53,7 @@ public class BombaDeDemolición extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila de descarte de algún jugador.");
+        return ("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila de descarte de algún jugador.");
     }
 
 }

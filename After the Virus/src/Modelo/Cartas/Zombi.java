@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author Jose
  */
-public class Zombi implements Serializable{
+public class Zombi implements Serializable {
 
     private boolean vivo = true;
 

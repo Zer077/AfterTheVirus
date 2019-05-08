@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Bar extends Carta implements Serializable{
+public class Bar extends Carta implements Serializable {
 
     public Bar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Bar", Escenario, 8, 12);
@@ -61,7 +61,7 @@ public class Bar extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("(Se prepara con 1 survivor) Cuando se juega safehouse, se cura 1 daño.");
+        return ("(Se prepara con 1 survivor) Cuando se juega safehouse, se cura 1 daño.");
     }
 
 }

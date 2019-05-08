@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * @author Jose
  */
-public class GuardarYCargarPartida implements Serializable{
+public class GuardarYCargarPartida implements Serializable {
 
     public void Guardar(Object o) {
         String ruta = "sav.txt";
@@ -58,11 +58,11 @@ public class GuardarYCargarPartida implements Serializable{
             System.out.println(e);
             return null;
 
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e);
             return null;
         }
-        
+
     }
 
 }

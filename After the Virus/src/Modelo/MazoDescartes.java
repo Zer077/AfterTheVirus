@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Abraham
  */
-public class MazoDescartes extends Mazo implements Serializable{
+public class MazoDescartes extends Mazo implements Serializable {
 
     public MazoDescartes(Escenario escenario) {
         super(escenario);

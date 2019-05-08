@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Jose
  */
-public abstract class Zombie extends Carta implements Serializable{
+public abstract class Zombie extends Carta implements Serializable {
 
     public ArrayList<Zombi> zombie;
     private int numeroZombie;
@@ -35,11 +35,8 @@ public abstract class Zombie extends Carta implements Serializable{
         escenario.mazoZombies.eliminarZombieArray(this);
     }
 
-    
-    
-    
     //lleva al zombie a la pila de descartes del mazo del jugador
-     public void descartaZombie() {
+    public void descartaZombie() {
 
         for (int i = 0; i < zombie.size(); i++) {
             zombie.get(i).setVivo(true);

@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Maria
  */
-public class Lanzallamas extends CartaArma implements Serializable{
+public class Lanzallamas extends CartaArma implements Serializable {
 
     public Lanzallamas(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {
 
@@ -31,7 +31,7 @@ public class Lanzallamas extends CartaArma implements Serializable{
     @Override
     public String descripcion() {
 
-        return("Descarta para matar a 3 zombis.");
+        return ("Descarta para matar a 3 zombis.");
     }
 
 }

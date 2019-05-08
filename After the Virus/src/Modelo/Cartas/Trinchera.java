@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Trinchera extends Carta implements Serializable{
+public class Trinchera extends Carta implements Serializable {
 
     public Trinchera(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Trinchera", Escenario, 10, 0);
@@ -35,7 +35,7 @@ public class Trinchera extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Trinchera : Descarta esta carta para matar 2 zombies.");
+        return ("Trinchera : Descarta esta carta para matar 2 zombies.");
     }
 
 }

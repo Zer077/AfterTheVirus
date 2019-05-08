@@ -59,7 +59,7 @@ public class Controlador extends Escenario implements Serializable {
             salir = false;
             System.out.println("-------------termina usar tus cartas--------------");
             //zombies restantes atacan
-            
+
             int tamanioZombies = arrayZombies.size();
             for (int i = 0; i < tamanioZombies; i++) {
                 arrayZombies.get(0).atacaHumano();
@@ -69,7 +69,7 @@ public class Controlador extends Escenario implements Serializable {
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
             mazoZombies.Restaurar();
-            
+
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
                     contador++;

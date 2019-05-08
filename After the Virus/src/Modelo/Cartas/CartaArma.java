@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Jose
  */
-public abstract class CartaArma extends Carta implements Serializable{
+public abstract class CartaArma extends Carta implements Serializable {
 
     ArrayList<Carta> cartas;
     int municion;
@@ -30,8 +30,6 @@ public abstract class CartaArma extends Carta implements Serializable{
 
     }
 
-    
-    
     public void GastarMunicion() {
 
         escenario.mazoDescartes.IntroducirCarta(cartas.get(0));

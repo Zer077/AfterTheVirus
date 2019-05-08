@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author Jose
  */
-public class Zombie4 extends Zombie implements Serializable{
+public class Zombie4 extends Zombie implements Serializable {
 
     public Zombie4(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(0, "Z4", Escenario, 0, 0);
@@ -46,7 +46,7 @@ public class Zombie4 extends Zombie implements Serializable{
 
     @Override
     public String descripcion() {
-   return null;
+        return null;
     }
 
 }

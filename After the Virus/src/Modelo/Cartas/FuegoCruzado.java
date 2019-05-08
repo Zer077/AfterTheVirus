@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Abraham
  */
-public class FuegoCruzado extends Carta implements Serializable{
+public class FuegoCruzado extends Carta implements Serializable {
 
     public FuegoCruzado(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Fuego cruzado", Escenario, 10, 0);
@@ -37,7 +37,7 @@ public class FuegoCruzado extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Fuego cruzado: Descarta esta carta para matar 1 zombi por cada persona preparada propia.");
+        return ("Fuego cruzado: Descarta esta carta para matar 1 zombi por cada persona preparada propia.");
     }
 
 }

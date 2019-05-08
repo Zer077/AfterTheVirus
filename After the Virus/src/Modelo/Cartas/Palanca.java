@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author Zero
  */
-public class Palanca extends Carta implements Serializable{
+public class Palanca extends Carta implements Serializable {
 
     public Palanca(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(1, "Palanca", Escenario, 2, 0);
@@ -44,7 +44,7 @@ public class Palanca extends Carta implements Serializable{
 
     @Override
     public String descripcion() {
-        return("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
+        return ("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
 
     }
 

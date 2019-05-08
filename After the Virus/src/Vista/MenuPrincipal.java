@@ -21,7 +21,7 @@ import java.util.Scanner;
  *
  * @author Miguel
  */
-public class MenuPrincipal implements Serializable{
+public class MenuPrincipal implements Serializable {
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
     public MenuPrincipal() {
@@ -33,106 +33,106 @@ public class MenuPrincipal implements Serializable{
         Controlador control = new Controlador();
         MiHilo m = new MiHilo(control);
         m.start();
-        
-        GuardarYCargarPartida GYC=new GuardarYCargarPartida();
-        
-      System.out.println("Deseas cargar partida?");
-                System.out.println("Si o No...");
-                Scanner sc1 = new Scanner(System.in);
-                String SN = sc1.next();
-                if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
-                    control=(Controlador) GYC.Cargar();
-                    System.out.println("Partida cargada correctamente");
-                    
-                } else {
-                    System.out.println("No se ha Cargado la partida");
 
-                }
-        
-        
-     if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)){
-     
-     System.out.println("Elige Controlador 1 2 o 3");
-        int n = sc1.nextInt();
-        switch (n) {
-            case 1:
-                control.controlador1a();
-                break;
-            case 2:
-                control.controlador1b();
-                break;
-            case 3:
-                control.controlador1c();
-                break;
-            case 4:
-                DebugMode();
-                break;
-            case 5:
-                control.controladorBeta();
-                break;
-            default:
-                System.out.println("error");
-                Iniciar();
-                break;
-        }
-     
-     }else{
-        
-        Personaje p = null;
-        System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
-        Scanner sc = new Scanner(System.in);
-        int c = sc.nextInt();
+        GuardarYCargarPartida GYC = new GuardarYCargarPartida();
 
-        switch (c) {
-            case 1:
-                p = new Adam(control);
-                control.AniadirPersonaje(p);
-                break;
-            case 2:
-                p = new Jennie(control);
-                control.AniadirPersonaje(p);
-                break;
-            case 3:
-                p = new Robert(control);
-                control.AniadirPersonaje(p);
-                break;
-            case 4:
-                p = new Ruth(control);
-                control.AniadirPersonaje(p);
-                break;
-            default:
-                System.out.println("error");
-                Iniciar();
+        System.out.println("Deseas cargar partida?");
+        System.out.println("Si o No...");
+        Scanner sc1 = new Scanner(System.in);
+        String SN = sc1.next();
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+            control = (Controlador) GYC.Cargar();
+            System.out.println("Partida cargada correctamente");
 
-                break;
+        } else {
+            System.out.println("No se ha Cargado la partida");
 
         }
-        System.out.println("Elige Controlador 1 2 o 3");
-        int n = sc.nextInt();
-        switch (n) {
-            case 1:
-                control.controlador1a();
-                break;
-            case 2:
-                control.controlador1b();
-                break;
-            case 3:
-                control.controlador1c();
-                break;
-            case 4:
-                DebugMode();
-                break;
-            case 5:
-                control.controladorBeta();
-                break;
-            default:
-                System.out.println("error");
-                Iniciar();
-                break;
 
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+
+            System.out.println("Elige Controlador 1 2 o 3");
+            int n = sc1.nextInt();
+            switch (n) {
+                case 1:
+                    control.controlador1a();
+                    break;
+                case 2:
+                    control.controlador1b();
+                    break;
+                case 3:
+                    control.controlador1c();
+                    break;
+                case 4:
+                    DebugMode();
+                    break;
+                case 5:
+                    control.controladorBeta();
+                    break;
+                default:
+                    System.out.println("error");
+                    Iniciar();
+                    break;
+            }
+
+        } else {
+
+            Personaje p = null;
+            System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
+            Scanner sc = new Scanner(System.in);
+            int c = sc.nextInt();
+
+            switch (c) {
+                case 1:
+                    p = new Adam(control);
+                    control.AniadirPersonaje(p);
+                    break;
+                case 2:
+                    p = new Jennie(control);
+                    control.AniadirPersonaje(p);
+                    break;
+                case 3:
+                    p = new Robert(control);
+                    control.AniadirPersonaje(p);
+                    break;
+                case 4:
+                    p = new Ruth(control);
+                    control.AniadirPersonaje(p);
+                    break;
+                default:
+                    System.out.println("error");
+                    Iniciar();
+
+                    break;
+
+            }
+            System.out.println("Elige Controlador 1 2 o 3");
+            int n = sc.nextInt();
+            switch (n) {
+                case 1:
+                    control.controlador1a();
+                    break;
+                case 2:
+                    control.controlador1b();
+                    break;
+                case 3:
+                    control.controlador1c();
+                    break;
+                case 4:
+                    DebugMode();
+                    break;
+                case 5:
+                    control.controladorBeta();
+                    break;
+                default:
+                    System.out.println("error");
+                    Iniciar();
+                    break;
+
+            }
+            //DebugMode();
         }
-        //DebugMode();
-    }}
+    }
 
     public void DebugMode() throws Throwable {
 

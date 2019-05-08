@@ -19,7 +19,7 @@ import java.util.Scanner;
  *
  * @author jose
  */
-public class DebugMode implements Serializable{
+public class DebugMode implements Serializable {
 
     Controlador controlador = new Controlador();
 
