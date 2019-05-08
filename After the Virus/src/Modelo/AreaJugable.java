@@ -122,7 +122,7 @@ public class AreaJugable implements Serializable{
             Scanner sc = new Scanner(System.in);
             System.out.println("Seleccione carta que jugar");
             int numero = sc.nextInt();
-            Carta aux = ArrayJugables.get(numero);
+            Carta aux = ArrayJugables.get(numero-1);
 
             //REVISION
             if (aux.getActivacion() == cartas.size()) {
