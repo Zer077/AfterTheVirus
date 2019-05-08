@@ -25,8 +25,8 @@ public class ObjetivoSeguro extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Cada vez que se usa un arma de disparar, se mata 1 zombie adicional.");
+    public String descripcion() {
+        return("Cada vez que se usa un arma de disparar, se mata 1 zombie adicional.");
     }
 
 }

@@ -31,8 +31,8 @@ public class Tunel extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Preparar personas es gratis.");
+    public String descripcion() {
+        return("Preparar personas es gratis.");
     }
 
 }

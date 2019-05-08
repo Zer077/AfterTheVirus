@@ -41,8 +41,8 @@ public class Saquear extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Recupera 1 carta");
+    public String descripcion() {
+        return("Recupera 1 carta");
     }
 
 }

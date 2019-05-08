@@ -43,8 +43,8 @@ public class Palanca extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
+    public String descripcion() {
+        return("Al prepararse se descarta 1 zombi, se descarta para descartar 1 zombi.");
 
     }
 

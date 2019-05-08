@@ -34,8 +34,8 @@ public class Trinchera extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Trinchera : Descarta esta carta para matar 2 zombies.");
+    public String descripcion() {
+        return("Trinchera : Descarta esta carta para matar 2 zombies.");
     }
 
 }

@@ -40,8 +40,8 @@ public class Zombie1 extends Zombie implements Serializable{
 
     //NO HACER
     @Override
-    public void descripcion() {
-        System.out.println("zombi, un zombie mas... un zombie menos, este juego es demasiado dificil y posiblemente no se pueda ganar nunca");
+    public String descripcion() {
+        return("zombi, un zombie mas... un zombie menos, este juego es demasiado dificil y posiblemente no se pueda ganar nunca");
     }
 
     @Override

@@ -35,8 +35,8 @@ public class Laboratorio extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("(Se prepara con safe house) Las medicinas destruidas pueden ponerse en el descarte en cualquier momento.");
+    public String descripcion() {
+        return("(Se prepara con safe house) Las medicinas destruidas pueden ponerse en el descarte en cualquier momento.");
     }
 
     @Override

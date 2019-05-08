@@ -34,8 +34,8 @@ public class Guia extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para remover 2 zombis de una pila de descarte.");
+    public String descripcion() {
+        return("Se descarta para remover 2 zombis de una pila de descarte.");
     }
 
 }

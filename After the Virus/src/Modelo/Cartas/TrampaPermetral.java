@@ -38,9 +38,9 @@ public class TrampaPermetral extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
+    public String descripcion() {
 
-        System.out.println("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
+        return("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
     }
 
 }

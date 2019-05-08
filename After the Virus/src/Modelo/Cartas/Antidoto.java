@@ -25,8 +25,8 @@ public class Antidoto extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se destruye para prevenir el siguiente daño en ese turno.");
+    public String descripcion() {
+return("Se destruye para prevenir el siguiente daño en ese turno.");
     }
 
 }

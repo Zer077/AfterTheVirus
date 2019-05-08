@@ -28,8 +28,8 @@ public class Motosierra extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para matar 6 zombis");
+    public String descripcion() {
+        return("Se descarta para matar 6 zombis");
     }
 
 }

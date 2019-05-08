@@ -36,8 +36,8 @@ public class Coche extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para matar 1 carta de zombi y descartar el resto.");
+    public String descripcion() {
+        return("Se descarta para matar 1 carta de zombi y descartar el resto.");
     }
 
 }

@@ -35,8 +35,8 @@ public class Refugio extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Rescata 1 o más de tus supervivientes preparados");
+    public String descripcion() {
+        return("Rescata 1 o más de tus supervivientes preparados");
     }
 
 }

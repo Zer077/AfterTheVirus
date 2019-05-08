@@ -26,8 +26,8 @@ public class HabilidadConArmas extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Cada vez que se prepare un arma, se mata 1 zombie. ");
+    public String descripcion() {
+        return("Cada vez que se prepare un arma, se mata 1 zombie. ");
     }
 
 }

@@ -30,7 +30,7 @@ public abstract class CartaArma extends Carta implements Serializable{
 
     }
 
-    ;
+    
     
     public void GastarMunicion() {
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package after.the.virus;
+package Controlador;
 
 import Controlador.Controlador;
 import Modelo.Cartas.Zombie;

@@ -34,8 +34,8 @@ public class Gasolina extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println(" Se destruye para preparar cualquier número de trampas, vehículos y armas");
+    public String descripcion() {
+        return(" Se destruye para preparar cualquier número de trampas, vehículos y armas");
     }
 
 }

@@ -17,11 +17,12 @@ import java.util.ArrayList;
 public class VistaEscenario implements Serializable{
 
     Escenario escenario;
+ 
 
     public VistaEscenario(Escenario escenario) {
-
+       
         this.escenario = escenario;
-        // verEscenarioGeneral();
+       
     }
 
     public void verEscenarioGeneral() {
@@ -34,6 +35,25 @@ public class VistaEscenario implements Serializable{
     }
 
     public void verMano() {
+    
+//        int posicion = 1;
+//        v.DatoMano("----------Tu mano de cartas----------");
+//        //bucle para ver todas las cartas de la mano.
+//        ArrayList<Carta> mano = escenario.mano.getMano();
+//        for (Carta x : mano) {
+//            v.DatoMano("CARTA Nº: " + posicion);
+//            v.DatoMano("Nombre de la carta: " + x.getNombre());
+//            v.DatoMano("Descripción: ");
+//            v.DatoMano(x.descripcion());
+//            v.DatoMano("Coste preparar: " + x.getActivacion());
+//            v.DatoMano("---------------");
+//            posicion++;
+//        }
+//        
+        
+        
+        
+        
         int posicion = 1;
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.
@@ -42,7 +62,7 @@ public class VistaEscenario implements Serializable{
             System.out.println("CARTA Nº: " + posicion);
             System.out.println("Nombre de la carta: " + x.getNombre());
             System.out.println("Descripción: ");
-            x.descripcion();
+            System.out.println(x.descripcion());
             System.out.println("Coste preparar: " + x.getActivacion());
             System.out.println("---------------");
             posicion++;

@@ -27,8 +27,8 @@ public class Revista extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Municion para tu arma");
+    public String descripcion() {
+        return("Municion para tu arma");
     }
 
 }

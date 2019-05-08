@@ -28,8 +28,8 @@ public class Explorar extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para scoutear 2 cartas.");
+    public String descripcion() {
+        return("Se descarta para scoutear 2 cartas.");
     }
 
 }

@@ -7,12 +7,13 @@ package Vista;
 
 import Controlador.MiHilo;
 import Controlador.Controlador;
+import Controlador.GuardarYCargarPartida;
 import Modelo.Personaje.Adam;
 import Modelo.Personaje.Jennie;
 import Modelo.Personaje.Personaje;
 import Modelo.Personaje.Robert;
 import Modelo.Personaje.Ruth;
-import after.the.virus.DebugMode;
+import Controlador.DebugMode;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -31,8 +32,52 @@ public class MenuPrincipal implements Serializable{
 
         Controlador control = new Controlador();
         MiHilo m = new MiHilo(control);
-
         m.start();
+        
+        GuardarYCargarPartida GYC=new GuardarYCargarPartida();
+        
+      System.out.println("Deseas cargar partida?");
+                System.out.println("Si o No...");
+                Scanner sc1 = new Scanner(System.in);
+                String SN = sc1.next();
+                if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+                    control=(Controlador) GYC.Cargar();
+                    System.out.println("Partida cargada correctamente");
+                    
+                } else {
+                    System.out.println("No se ha Cargado la partida");
+
+                }
+        
+        
+     if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)){
+     
+     System.out.println("Elige Controlador 1 2 o 3");
+        int n = sc1.nextInt();
+        switch (n) {
+            case 1:
+                control.controlador1a();
+                break;
+            case 2:
+                control.controlador1b();
+                break;
+            case 3:
+                control.controlador1c();
+                break;
+            case 4:
+                DebugMode();
+                break;
+            case 5:
+                control.controladorBeta();
+                break;
+            default:
+                System.out.println("error");
+                Iniciar();
+                break;
+        }
+     
+     }else{
+        
         Personaje p = null;
         System.out.println("Seleccione personaje 1. ADAM 2.JENNIE 3.ROBERT 4.RUTH");
         Scanner sc = new Scanner(System.in);
@@ -87,7 +132,7 @@ public class MenuPrincipal implements Serializable{
 
         }
         //DebugMode();
-    }
+    }}
 
     public void DebugMode() throws Throwable {
 

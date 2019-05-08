@@ -31,8 +31,8 @@ public class Ametralladora extends CartaArma implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Descarta municion para matar 2 zombies");
+    public String descripcion() {
+        return("Descarta municion para matar 2 zombies");
     }
 
 }

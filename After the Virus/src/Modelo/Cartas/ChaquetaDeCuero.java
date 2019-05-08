@@ -25,8 +25,8 @@ public class ChaquetaDeCuero extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se destruye para prevenir los siguientes 2 daños en ese turno.");
+    public String descripcion() {
+        return("Se destruye para prevenir los siguientes 2 daños en ese turno.");
     }
 
 }

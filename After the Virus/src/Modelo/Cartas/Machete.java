@@ -50,8 +50,8 @@ public class Machete extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Una vez por turo: Se descarta 1 carta de la mano para matar 1 zombi");
+    public String descripcion() {
+        return("Una vez por turo: Se descarta 1 carta de la mano para matar 1 zombi");
     }
 
 }

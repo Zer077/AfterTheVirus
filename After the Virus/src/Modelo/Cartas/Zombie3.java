@@ -40,12 +40,10 @@ public class Zombie3 extends Zombie implements Serializable{
     //NO HACER
     @Override
     public void action() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void descripcion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public String descripcion() {
+  return null;    }
 
 }

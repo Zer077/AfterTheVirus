@@ -21,8 +21,6 @@ public class AfterTheVirus implements Serializable{
     public static void main(String[] args) throws Throwable {
         // TODO code application logic here
 
-        DebugMode d = new DebugMode();
-//        d.iniciar();
 
         MenuPrincipal menu = new MenuPrincipal();
         menu.Iniciar();

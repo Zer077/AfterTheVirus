@@ -38,9 +38,9 @@ public class Escopeta extends CartaArma implements Serializable{
     }
 
     @Override
-    public void descripcion() {
+    public String descripcion() {
 
-        System.out.println("Se descarta 1M o se destruye la escopeta para matar 1 zombi.");
+        return("Se descarta 1M o se destruye la escopeta para matar 1 zombi.");
     }
 
 }

@@ -32,7 +32,7 @@ public class KitMedico extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Si no hay zombis en juego, se destruye para curar 2 daños.");
+    public String descripcion() {
+        return("Si no hay zombis en juego, se destruye para curar 2 daños.");
     }
 }

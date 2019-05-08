@@ -32,8 +32,8 @@ public class Perro extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para matar 1 zombi.");
+    public String descripcion() {
+        return("Se descarta para matar 1 zombi.");
     }
 
 }

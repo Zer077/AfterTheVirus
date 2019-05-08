@@ -10,13 +10,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Jose
  */
-public class GestorArchivoBinario {
+public class GuardarYCargarPartida implements Serializable{
 
     public void Guardar(Object o) {
         String ruta = "sav.txt";

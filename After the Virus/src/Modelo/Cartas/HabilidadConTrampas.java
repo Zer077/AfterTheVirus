@@ -25,8 +25,8 @@ public class HabilidadConTrampas extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Cada vez que se prepara una trampa, se mata 1 zombie.");
+    public String descripcion() {
+        return("Cada vez que se prepara una trampa, se mata 1 zombie.");
     }
 
 }

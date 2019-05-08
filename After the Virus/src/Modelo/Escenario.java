@@ -6,12 +6,14 @@
 package Modelo;
 
 import Controlador.CompraCartas;
+import Controlador.GuardarYCargarPartida;
 import Controlador.MiHilo;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Personaje.*;
 import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
+import Vista.Ventana;
 import Vista.VistaEscenario;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ import java.util.ArrayList;
  *
  * @author Jose
  */
-public abstract class Escenario implements Serializable{
+public abstract class Escenario implements Serializable {
 
 //contiene todo el escenario principal
     public CompraCartas compraCartas;
@@ -35,7 +37,6 @@ public abstract class Escenario implements Serializable{
     public VistaEscenario vista;
     public AreaJugable areaJugable;
     public ArrayList<Zombie> arrayZombies = new ArrayList<>();
-    // public ArrayList<Carta> arrayMano = new ArrayList<>();
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
@@ -45,5 +46,6 @@ public abstract class Escenario implements Serializable{
     public int Ronda;
     public int PersonasSalvadas;
     public boolean salir = false;
-
+    public Ventana v;
+    public GuardarYCargarPartida GYC;
 }

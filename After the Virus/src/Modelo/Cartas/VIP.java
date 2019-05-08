@@ -25,8 +25,8 @@ public class VIP extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Equivale a 3 supervivientes si se juega Refugio. Entonces se destruye.");
+    public String descripcion() {
+        return("Equivale a 3 supervivientes si se juega Refugio. Entonces se destruye.");
     }
 
 }

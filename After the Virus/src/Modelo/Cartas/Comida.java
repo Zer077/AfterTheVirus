@@ -34,8 +34,8 @@ public class Comida extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
+    public String descripcion() {
+        return("Si no hay zombis en el área de juego, se pone la carta sobre o bajo el deck de área para sanar 1 daño.");
 
     }
 

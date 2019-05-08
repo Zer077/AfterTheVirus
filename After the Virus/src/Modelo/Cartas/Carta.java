@@ -36,7 +36,7 @@ public abstract class Carta implements Serializable{
     abstract public void action();
 
     ///La descripcion de la carta para verla por pantalla.
-    abstract public void descripcion();
+    abstract public String descripcion();
 
     /**
      * @return the activa

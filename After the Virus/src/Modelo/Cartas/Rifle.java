@@ -43,8 +43,8 @@ public class Rifle extends CartaArma implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Puedes añadir cartas de tu mano como munición.\nUna vez por turno:\nDescarta munición para matar 1 zombi en juego o en la pila de descartes.");
+    public String descripcion() {
+        return("Puedes añadir cartas de tu mano como munición.\nUna vez por turno:\nDescarta munición para matar 1 zombi en juego o en la pila de descartes.");
     }
 
 }

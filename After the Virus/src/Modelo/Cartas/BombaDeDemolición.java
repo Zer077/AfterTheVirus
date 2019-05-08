@@ -52,8 +52,8 @@ public class BombaDeDemolición extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila de descarte de algún jugador.");
+    public String descripcion() {
+        return("Bomba de demolición: Destruye esta carta para matar todos los zombis en el área de juego y en la pila de descarte de algún jugador.");
     }
 
 }

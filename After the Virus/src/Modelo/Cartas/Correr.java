@@ -42,8 +42,8 @@ public class Correr extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Descarta 1 carta de Zombie");
+    public String descripcion() {
+        return("Descarta 1 carta de Zombie");
     }
 
 }

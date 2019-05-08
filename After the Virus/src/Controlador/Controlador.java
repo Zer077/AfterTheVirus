@@ -9,6 +9,7 @@ import Modelo.*;
 import Modelo.Personaje.Personaje;
 import Vista.MenuOpciones;
 import Vista.MenuPrincipal;
+import Vista.Ventana;
 import Vista.VistaEscenario;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -18,7 +19,7 @@ import static javafx.application.Platform.exit;
  *
  * @author Juan y Cristian
  */
-public class Controlador extends Escenario implements Serializable{
+public class Controlador extends Escenario implements Serializable {
 
     int contador;
 
@@ -40,10 +41,12 @@ public class Controlador extends Escenario implements Serializable{
         areaJugable = new AreaJugable(this);
         Ronda = 1;
         PersonasSalvadas = 0;
-
+        //v = new Ventana(vista);
+        GYC = new GuardarYCargarPartida();
     }
 
     public void controlador1a() throws Throwable {
+        //v.setVisible(true);
         //preparacion: comienza con 1 oleada (añadir 1-3 cartas zombi random)
 
         int coge = (int) (Math.random() * 3 + 1);
@@ -64,7 +67,7 @@ public class Controlador extends Escenario implements Serializable{
             //5-Se sacan cartas Zombie y meten en el mazo de jugador
             mazoZombies.introducir();
             mazoZombies.Restaurar();
-int tamanioZombies=areaJugable.getArrayJugables().size();
+            int tamanioZombies = areaJugable.getArrayJugables().size();
             for (int i = 0; i < tamanioZombies; i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
                     contador++;
@@ -85,6 +88,17 @@ int tamanioZombies=areaJugable.getArrayJugables().size();
             Ronda++;
             contador = 0;
             System.out.println("------------final de la ronda " + Ronda + "-------------");
+
+            System.out.println("Quieres guardar partida hasta el punto actual?");
+            Scanner sc = new Scanner(System.in);
+            String SN = sc.next();
+            if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+                GYC.Guardar(this);
+            } else {
+                System.out.println("No se ha Guardado partida");
+
+            }
+
         } while (personaje.isCabeza() == false);
     }
 

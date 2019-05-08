@@ -29,8 +29,8 @@ public class Granada extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("Se descarta para descartar 5 zombies");
+    public String descripcion() {
+        return("Se descarta para descartar 5 zombies");
     }
 
 }

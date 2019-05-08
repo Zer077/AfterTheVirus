@@ -37,9 +37,9 @@ public class Pistola extends CartaArma implements Serializable{
     }
 
     @Override
-    public void descripcion() {
+    public String descripcion() {
 
-        System.out.println("Una vez por turno:\nDescarta 1M o la pistola para matar 1 zombi.");
+       return("Una vez por turno:\nDescarta 1M o la pistola para matar 1 zombi.");
     }
 
 }

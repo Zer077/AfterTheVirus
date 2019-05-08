@@ -29,9 +29,9 @@ public class Lanzallamas extends CartaArma implements Serializable{
     }
 
     @Override
-    public void descripcion() {
+    public String descripcion() {
 
-        System.out.println("Descarta para matar a 3 zombis.");
+        return("Descarta para matar a 3 zombis.");
     }
 
 }

@@ -26,8 +26,8 @@ public class Superviviente extends Carta implements Serializable{
     }
 
     @Override
-    public void descripcion() {
-        System.out.println("-");
+    public String descripcion() {
+        return("-");
     }
 
 }
