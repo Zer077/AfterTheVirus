@@ -56,20 +56,6 @@ public class Controlador extends Escenario implements Serializable {
 
             Principal();
 
-            salir = false;
-            System.out.println("-------------termina usar tus cartas--------------");
-            //zombies restantes atacan
-
-            int tamanioZombies = arrayZombies.size();
-            for (int i = 0; i < tamanioZombies; i++) {
-                arrayZombies.get(0).atacaHumano();
-            }
-            System.out.println("-------------termina ataque de los zombies----------------------");
-            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
-            //5-Se sacan cartas Zombie y meten en el mazo de jugador
-            mazoZombies.introducir();
-            mazoZombies.Restaurar();
-
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).isActiva() == true) {
                     contador++;
@@ -87,19 +73,8 @@ public class Controlador extends Escenario implements Serializable {
                 exit();
             }
 
-            Ronda++;
             contador = 0;
-            System.out.println("------------final de la ronda " + Ronda + "-------------");
-
-            System.out.println("Quieres guardar partida hasta el punto actual?");
-            Scanner sc = new Scanner(System.in);
-            String SN = sc.next();
-            if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
-                GYC.Guardar(this);
-            } else {
-                System.out.println("No se ha Guardado partida");
-
-            }
+            Final();
 
         } while (personaje.isCabeza() == false);
     }
@@ -114,14 +89,6 @@ public class Controlador extends Escenario implements Serializable {
         do {
             Principal();
 
-            //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size(); i++) {
-                arrayZombies.get(i).atacaHumano();
-            }
-            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
-            //5-Se sacan cartas Zombie y meten en el mazo de jugador
-            mazoZombies.introducir();
-
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
             } else if (personaje.isCabeza() == false && PersonasSalvadas == 4) {
@@ -129,7 +96,7 @@ public class Controlador extends Escenario implements Serializable {
             }
 
             Ronda++;
-
+            Final();
         } while (personaje.isCabeza() == false);
     }
 
@@ -139,15 +106,8 @@ public class Controlador extends Escenario implements Serializable {
 
         boolean x = false;
         do {
-            Principal();
 
-            //zombies restantes atacan
-            for (int i = 0; i < arrayZombies.size(); i++) {
-                arrayZombies.get(i).atacaHumano();
-            }
-            //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
-            //5-Se sacan cartas Zombie y meten en el mazo de jugador
-            mazoZombies.introducir();
+            Principal();
 
             for (int i = 0; i < areaJugable.getArrayJugables().size(); i++) {
                 if (areaJugable.getArrayJugables().get(i).getTipo() == 8
@@ -163,7 +123,7 @@ public class Controlador extends Escenario implements Serializable {
             }
 
             Ronda++;
-
+            Final();
         } while (personaje.isCabeza() == false);
     }
 
@@ -181,6 +141,7 @@ public class Controlador extends Escenario implements Serializable {
             } while (salir == true && mano.numeroCartas() > 0);
         }
     }
+//Otros métodos
 
     public void AniadirPersonaje(Personaje p) {
 
@@ -258,6 +219,38 @@ public class Controlador extends Escenario implements Serializable {
         //muestra menu opciones acciones carta
 
         Menu();
+
+        salir = false;
+        System.out.println("-------------termina usar tus cartas--------------");
+        //zombies restantes atacan
+
+        int tamanioZombies = arrayZombies.size();
+        for (int i = 0; i < tamanioZombies; i++) {
+            arrayZombies.get(0).atacaHumano();
+        }
+        System.out.println("-------------termina ataque de los zombies----------------------");
+        //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
+        //5-Se sacan cartas Zombie y meten en el mazo de jugador
+        mazoZombies.Restaurar();
+        mazoZombies.introducir();
+
+    }
+
+    public void Final() {
+        Ronda++;
+        System.out.println("------------final de la ronda " + Ronda + "-------------");
+
+        System.out.println("Quieres guardar partida hasta el punto actual?");
+        Scanner sc = new Scanner(System.in);
+        String SN = sc.next();
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+            GYC.Guardar(this);
+            System.out.println("Partida Guardada con éxito");
+            Enter();
+        } else {
+            System.out.println("No se ha Guardado partida");
+            Enter();
+        }
 
     }
 }
