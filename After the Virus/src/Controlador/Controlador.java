@@ -239,6 +239,7 @@ public class Controlador extends Escenario implements Serializable {
         mazoJugador.barajar();
         //4- La mano del jugador coje 5 cartas
         mazoJugador.sacarCincoCartas();
+        mazoEscenario.barajar();
         // Comprueba si Machete esta activo. Si lo está, descarta una carta y mata 1 zombie.
         Machete();
         //y elimina las de Zombie de la mano y las pone en juego
