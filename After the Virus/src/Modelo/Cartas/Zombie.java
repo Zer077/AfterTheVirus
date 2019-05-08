@@ -35,7 +35,7 @@ public abstract class Zombie extends Carta implements Serializable{
         escenario.mazoZombies.eliminarZombieArray(this);
     }
 
-    ;
+    
     
     
     //lleva al zombie a la pila de descartes del mazo del jugador
