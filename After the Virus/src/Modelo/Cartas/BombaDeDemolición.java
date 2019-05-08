@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class BombaDeDemolición extends Carta implements Serializable {
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
-        super(2, "Bomba de demolición", Escenario, 10, 0);
+        super(2, "Bomba de demolición", Escenario, 1, 0);
     }
 
     @Override
@@ -27,8 +27,8 @@ public class BombaDeDemolición extends Carta implements Serializable {
 
             if (zom instanceof Zombie) {
 
-                escenario.mazoZombies.getDescarteZombies().add((Zombie) zom);
-                escenario.arrayZombies.remove(x);
+                escenario.mazoZombies.getDescarteZombies().remove((Zombie) zom);
+           
 
             }
 
@@ -40,8 +40,8 @@ public class BombaDeDemolición extends Carta implements Serializable {
 
             if (zomb instanceof Zombie) {
 
-                escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
-                escenario.mazoDescartes.getMazo().remove(y);
+                escenario.mazoZombies.getDescarteZombies().remove((Zombie) zomb);
+               
 
             }
 

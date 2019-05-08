@@ -23,7 +23,7 @@ public class Correr extends Carta implements Serializable {
     @Override
     public void action() {
         if (escenario.personaje.isPierna() == false) {
-            if (escenario.arrayZombies.size() == 0) {
+            if (escenario.arrayZombies.isEmpty()) {
                 escenario.mano.getMano().add(this);
                 escenario.menuOpciones.Menu();
             } else {
@@ -31,7 +31,7 @@ public class Correr extends Carta implements Serializable {
                 System.out.println("Elige al zombie que quieres descartar: ");
                 Scanner sc = new Scanner(System.in);
                 int opcionZombie = sc.nextInt();
-                escenario.arrayZombies.remove(opcionZombie - 1).descartaZombie();
+                escenario.arrayZombies.remove(opcionZombie - 1).descartaCartaZombie();
                 escenario.areaJugable.DescartarCarta(this);
             }
         } else {
