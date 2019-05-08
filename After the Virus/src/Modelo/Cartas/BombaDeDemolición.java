@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class BombaDeDemolición extends Carta implements Serializable {
 
     public BombaDeDemolición(int precio, String nombre, Escenario Escenario, int activacion, int tipo) {
-        super(2, "Bomba de demolición", Escenario, 1, 0);
+        super(2, "Bomba de demolición", Escenario, 10, 0);
     }
 
     @Override
