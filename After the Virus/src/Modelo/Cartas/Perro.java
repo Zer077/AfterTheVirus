@@ -23,12 +23,23 @@ public class Perro extends Carta implements Serializable {
 
     @Override
     public void action() {
+        
+        
+        if(escenario.arrayZombies.isEmpty()){
+            System.out.println("No hay ningun zombie. No puedes usar la carta.");
+            escenario.vista.verMano();
+            escenario.menuOpciones.ElegirOpcion();
+        }
+        
+        else{
         Scanner sc = new Scanner(System.in);
         escenario.vista.verAreaZombies();
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
         escenario.arrayZombies.get(a - 1).muereZombie();
         escenario.areaJugable.DescartarCarta(this);
+        
+        }
     }
 
     @Override
