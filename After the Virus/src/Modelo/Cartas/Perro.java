@@ -8,6 +8,8 @@ package Modelo.Cartas;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -23,22 +25,24 @@ public class Perro extends Carta implements Serializable {
 
     @Override
     public void action() {
-        
-        
-        if(escenario.arrayZombies.isEmpty()){
+
+        if (escenario.arrayZombies.isEmpty()) {
             System.out.println("No hay ningun zombie. No puedes usar la carta.");
-            escenario.vista.verMano();
-            escenario.menuOpciones.ElegirOpcion();
-        }
-        
-        else{
-        Scanner sc = new Scanner(System.in);
-        escenario.vista.verAreaZombies();
-        System.out.println("Selecciona el zombie: ");
-        int a = sc.nextInt();
-        escenario.arrayZombies.get(a - 1).muereZombie();
-        escenario.areaJugable.DescartarCarta(this);
-        
+            escenario.mano.getMano().add(this);
+            try {
+                escenario.menuOpciones.Menu();
+            } catch (Throwable ex) {
+                Logger.getLogger(Perro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } else {
+            Scanner sc = new Scanner(System.in);
+            escenario.vista.verAreaZombies();
+            System.out.println("Selecciona el zombie: ");
+            int a = sc.nextInt();
+            escenario.arrayZombies.get(a - 1).muereZombie();
+            escenario.areaJugable.DescartarCarta(this);
+
         }
     }
 
