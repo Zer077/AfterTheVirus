@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Tunel extends Carta implements Serializable {
 
     public Tunel(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Tunel", Escenario, 8, 8);
+        super(2, "Tunel", Escenario, 8, 0);
     }
 
     @Override
@@ -32,7 +32,18 @@ public class Tunel extends Carta implements Serializable {
 
     @Override
     public String descripcion() {
-        return ("Preparar personas es gratis.");
+        return ("Preparar personas es gratis. Se activa con refugio");
+    }
+
+    @Override
+    public void setActiva(boolean activa) {
+
+        if (escenario.mano.sacarCarta("Refugio") != null) {
+            escenario.mazoDescartes.IntroducirCarta(escenario.mano.sacarCarta("Refugio"));
+            super.setActiva(activa);
+        } else {
+            System.out.println("No se puede activar la carta, no tienes la carta refugio en la mano");
+        }
     }
 
 }

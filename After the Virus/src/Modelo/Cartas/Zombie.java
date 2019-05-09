@@ -38,18 +38,16 @@ public abstract class Zombie extends Carta implements Serializable {
             escenario.mazoZombies.eliminarZombieArray(this);
         }
     }
-    
-     public void muereCartaZombie() {
 
-        
+    public void muereCartaZombie() {
 
-            for (int i = 0; i < zombie.size(); i++) {
-                zombie.get(i).setVivo(true);
+        for (int i = 0; i < zombie.size(); i++) {
+            zombie.get(i).setVivo(true);
 
-            }
-            escenario.mazoZombies.getDescarteZombies().add(this);
-            escenario.mazoZombies.eliminarZombieArray(this);
-        
+        }
+        escenario.mazoZombies.getDescarteZombies().add(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+
     }
 
     //lleva al zombie a la pila de descartes del mazo del jugador
@@ -65,20 +63,17 @@ public abstract class Zombie extends Carta implements Serializable {
 
         }
     }
-    
-     public void descartaCartaZombie() {
 
-        
-            for (int i = 0; i < zombie.size(); i++) {
-                zombie.get(i).setVivo(true);
+    public void descartaCartaZombie() {
 
-            }
-            escenario.mazoDescartes.IntroducirCarta(this);
-            escenario.mazoZombies.eliminarZombieArray(this);
+        for (int i = 0; i < zombie.size(); i++) {
+            zombie.get(i).setVivo(true);
 
-        
+        }
+        escenario.mazoDescartes.IntroducirCarta(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+
     }
-    
 
     public int Contador() {
 

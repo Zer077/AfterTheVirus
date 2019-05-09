@@ -63,7 +63,7 @@ public class AreaJugable implements Serializable {
         } else if (ArrayJugables.get(numero - 1).isActiva() == true) {
 
             ArrayJugables.get(numero - 1).action();
-        }else{
+        } else {
             System.out.println("La carta no está activa");
         }
 
@@ -76,70 +76,45 @@ public class AreaJugable implements Serializable {
     //Pregunta que carta deseas activar, llamas al menú para que te devuelva las cartas que quieres dar a cambio de la activacion y las eliminas    
     public boolean ActivarCarta(ArrayList<Carta> cartas) {
 
-        Carta WeaponSkillAuxiliar = null;
-        Carta HabilidadConTrampa = null;
-
-        //Va a buscar la carta habilidad con trampa
+        //Va a buscar la carta habilidad con trampa //Va a buscar la carta WeaponSkill tambien
         for (int l = 0; l < ArrayJugables.size(); l++) {
 
-            if (ArrayJugables.get(l) instanceof HabilidadConTrampas) {
-                HabilidadConTrampa = ArrayJugables.get(l);
+            if (ArrayJugables.get(l) instanceof HabilidadConTrampas && ArrayJugables.get(l).isActiva()) {
 
-            }
-
-            //Va a buscar la carta WeaponSkill
-            for (int i = 0; i < ArrayJugables.size(); i++) {
-
-                if (ArrayJugables.get(i) instanceof HabilidadConArmas) {
-                    WeaponSkillAuxiliar = ArrayJugables.get(i);
-
+                if (TrampSkillCard(cartas) == true) {
+                    return true;
                 }
 
-            }
-
-            if (HabilidadConTrampa != null) {
-
-                if (HabilidadConTrampa.isActiva()) {
-
-                    if (TrampSkillCard(cartas) == true) {
-                        return true;
-                    }
-
-                    //Si WeaponSkill no está activa solo te deja activar una carta
-                }
+                //Si WeaponSkill no está activa solo te deja activar una carta
             }
 
             //Si WeaponSkill está activa y selecciona una carta que jugar tipo arma matas a un zombie y activa la carta
-            if (WeaponSkillAuxiliar != null) {
-                if (WeaponSkillAuxiliar.isActiva()) {
-                    if (WeaponSkillCard(cartas) == true) {
-                        return true;
-                    }
-
-                    //Si WeaponSkill no está activa solo te deja activar una carta
+            if (ArrayJugables.get(l) instanceof HabilidadConArmas && ArrayJugables.get(l).isActiva()) {
+                if (WeaponSkillCard(cartas) == true) {
+                    return true;
                 }
-            }
-            escenario.vista.verAreaJugador();
 
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Seleccione carta que jugar");
-            int numero = sc.nextInt();
-            Carta aux = ArrayJugables.get(numero - 1);
-
-            //REVISION
-            if (aux.getActivacion() == cartas.size()) {
-
-                ArrayJugables.get(numero - 1).setActiva(true);
-                return true;
-            } else {
-                System.out.println("Vuelve a intentarlo");
-
-                escenario.menuOpciones.Menu();
-                return false;
+                //Si WeaponSkill no está activa solo te deja activar una carta
             }
 
         }
-        return false;
+        escenario.vista.verAreaJugador();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Seleccione carta que activar");
+        int numero = sc.nextInt();
+
+        //REVISION
+        if (ArrayJugables.get(numero - 1).getActivacion() == cartas.size()) {
+
+            ArrayJugables.get(numero - 1).setActiva(true);
+            return true;
+        } else {
+            System.out.println("Vuelve a intentarlo");
+
+            return false;
+        }
+
     }
 
     public Carta BuscarCartaNombre(String n) {
@@ -203,13 +178,7 @@ public class AreaJugable implements Serializable {
                 contador++;
             }
         }
-        if (contador >= 2 || contador >= 1 && escenario.personaje.isBrazo() == true) {
-
-            return false;
-
-        } else {
-            return true;
-        }
+        return !((contador >= 1 && escenario.personaje.isBrazo() == true) || contador >= 2);
 
     }
 

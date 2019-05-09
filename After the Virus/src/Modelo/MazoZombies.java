@@ -94,7 +94,7 @@ public final class MazoZombies extends Mazo implements Serializable {
 
 
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
-    public void introducir() {
+    public void introducirPorRonda() {
         for (int i = 0; i < escenario.Ronda; i++) {
             escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
             MazoZombie.remove(0);

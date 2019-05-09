@@ -28,7 +28,7 @@ public class Controlador extends Escenario implements Serializable {
     //CREAR 3 CONTROLADORES  PARA LOS 3 MODOS DE JUEGO
     public Controlador() {
 
-        compraCartas = new CompraCartas(this);
+        compraCartas = new Exploracion(this);
         mazoEscenario = new MazoEscenario(this);
         mazoDescartes = new MazoDescartes(this);
         mazoEliminadas = new MazoEliminadas(this);
@@ -65,28 +65,28 @@ public class Controlador extends Escenario implements Serializable {
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
-                
+
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
                 personaje.setCabeza(true);
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
-                
+
             }
 
             contador = 0;
@@ -108,22 +108,22 @@ public class Controlador extends Escenario implements Serializable {
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
             } else if (personaje.isCabeza() == false && PersonasSalvadas == 4) {
                 System.out.println("HAS GANADO");
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
@@ -153,22 +153,22 @@ public class Controlador extends Escenario implements Serializable {
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
             } else if (personaje.isCabeza() && x == true) {
                 System.out.println("HAS GANADO");
                 System.out.println("¿Deseas empezar una partida nueva?");
-                Scanner sc=new Scanner(System.in);
-                String reinicia=sc.next();
-                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                Scanner sc = new Scanner(System.in);
+                String reinicia = sc.next();
+                if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
                     menuPrincipal.Iniciar();
-                }else{
+                } else {
                     Enter();
                     exit();
                 }
@@ -237,7 +237,7 @@ public class Controlador extends Escenario implements Serializable {
         do {
             salir = false;
             menuOpciones.Menu();
-            if (salir == true && mano.numeroCartas() > 0) {
+            if (salir == true && mano.numeroCartas() != 0) {
                 //usa la carta con la accion indicada en el menu
                 mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
                 vista.verMano();
@@ -284,7 +284,7 @@ public class Controlador extends Escenario implements Serializable {
         //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…
         //5-Se sacan cartas Zombie y meten en el mazo de jugador
         mazoZombies.Restaurar();
-        mazoZombies.introducir();
+        mazoZombies.introducirPorRonda();
 
     }
 

@@ -37,7 +37,7 @@ public class FuegoCruzado extends Carta implements Serializable {
 
     @Override
     public String descripcion() {
-        return ("Fuego cruzado: Descarta esta carta para matar 1 zombi por cada persona preparada propia.");
+        return ("Fuego cruzado: Descarta esta carta para matar 1 zombi por cada persona preparada que tengas.");
     }
 
 }

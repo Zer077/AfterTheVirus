@@ -43,12 +43,7 @@ public class MenuOpciones implements Serializable {
                 mano.usarCartas(ElegirCartas(), ElegirOpcion());
                 break;
             case 2:
-                escenario.vista.verAreaExploracion();
-                escenario.vista.verJugador();
-                escenario.vista.verAreaJugador();
-                escenario.vista.verAreaExploracion();
-                escenario.vista.verAreaZombies();
-                escenario.vista.verMano();
+                escenario.vista.verEscenarioGeneral();
                 break;
             case 3:
                 escenario.vista.verAreaJugador();
@@ -77,9 +72,6 @@ public class MenuOpciones implements Serializable {
         System.out.println("3)Usarlas para activar otras cartas del area");
         System.out.println("4)Usarlas para explorar");
         System.out.println("5)Usarlas para recuperar cartas del area explorada");
-        //    System.out.println("6)Usar cartas del area");
-        //   System.out.println("7)Ver Escenario");
-        // System.out.println("8)Salir");
 
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();

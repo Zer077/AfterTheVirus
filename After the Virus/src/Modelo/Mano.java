@@ -58,33 +58,41 @@ public class Mano implements Serializable {
             //Usa estas cartas para activar otras
             case 3:
                 int conteo = 0;
+
+                //Mira si hay cartas para activar
                 for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
                     if (escenario.areaJugable.getArrayJugables().get(i).isActiva() == false) {
                         conteo++;
                     }
 
                 }
+                //si hay cartas  y cartas para activar funciona
                 if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
-
+                    //si activar cartas devulve true, las cartas de llevan al mazo de descartes
                     if (escenario.areaJugable.ActivarCarta(cartas) == true) {
-                        for (int i = 0; i < cartas.size(); i++) {
+                        int tamanio = cartas.size();
+                        for (int i = 0; i < tamanio; i++) {
 
                             escenario.mazoDescartes.IntroducirCarta(cartas.remove(0));
                         }
+
+                        //Si no da un error y te las devuelve
                     } else {
-                        System.out.println("error");
-                        for (int i = 0; i <= cartas.size() - 1; i++) {
-                            aniadirCartaMano(cartas.get(0));
+                        System.out.println("error no eran las cartas adecuadas para activar");
+                        int tamanio = cartas.size();
+                        for (int i = 0; i < tamanio; i++) {
+                            AniadirCarta(cartas.remove(0));
 
                         }
+                        escenario.menuOpciones.Menu();
 
                     }
-
+//Si no  hay cartas para activar te las devuelve
                 } else {
                     System.out.println("No hay cartas para activar");
                     for (int i = 0; i <= cartas.size() - 1; i++) {
-                        aniadirCartaMano(cartas.get(0));
-
+                        AniadirCarta(cartas.get(0));
+                        escenario.menuOpciones.Menu();
                     }
 
                 }
@@ -110,7 +118,7 @@ public class Mano implements Serializable {
 
                     carta2.add(cartas.get(i));
                 }
-                if (escenario.compraCartas.compra(carta2) == true) {
+                if (escenario.compraCartas.recuperar(carta2) == true) {
                     for (int i = 0; i < cartas.size(); i++) {
 
                         getMano().remove(cartas.get(i));
@@ -175,7 +183,6 @@ public class Mano implements Serializable {
 
     public void comprobarZombie() {
 
-        //ERROR
         for (int i = 0; i < Mano.size(); i++) {
             if (Mano.get(i) instanceof Zombie) {
                 escenario.arrayZombies.add((Zombie) Mano.remove(i));
@@ -195,10 +202,6 @@ public class Mano implements Serializable {
     public int numeroCartas() {
         return getMano().size();
 
-    }
-
-    public void aniadirCartaMano(Carta e) {
-        getMano().add(e);
     }
 
     /**

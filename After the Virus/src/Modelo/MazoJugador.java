@@ -41,7 +41,7 @@ public class MazoJugador extends Mazo implements Serializable {
             } else {
                 System.out.println("No quedan suficientes cartas, restaurando mazo del jugador");
 
-                Collections.shuffle(escenario.mazoDescartes.getMazo());
+                escenario.mazoDescartes.barajar();
 
                 System.out.println("Mazo de descartes barajado correctamente");
 

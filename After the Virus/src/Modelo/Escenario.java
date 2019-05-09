@@ -5,7 +5,7 @@
  */
 package Modelo;
 
-import Controlador.CompraCartas;
+import Controlador.Exploracion;
 import Controlador.GuardarYCargarPartida;
 import Controlador.MiHilo;
 import Modelo.Cartas.Carta;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public abstract class Escenario implements Serializable {
 
 //contiene todo el escenario principal
-    public CompraCartas compraCartas;
+    public Exploracion compraCartas;
     public MazoEscenario mazoEscenario;
     public MazoDescartes mazoDescartes;
     public MazoEliminadas mazoEliminadas;

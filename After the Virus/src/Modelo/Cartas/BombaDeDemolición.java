@@ -28,7 +28,6 @@ public class BombaDeDemolición extends Carta implements Serializable {
             if (zom instanceof Zombie) {
 
                 escenario.mazoZombies.getDescarteZombies().remove((Zombie) zom);
-           
 
             }
 
@@ -41,7 +40,6 @@ public class BombaDeDemolición extends Carta implements Serializable {
             if (zomb instanceof Zombie) {
 
                 escenario.mazoZombies.getDescarteZombies().remove((Zombie) zomb);
-               
 
             }
 

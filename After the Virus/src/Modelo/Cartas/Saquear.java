@@ -21,13 +21,14 @@ public class Saquear extends Carta implements Serializable {
 
     @Override
     public void action() {
-        escenario.vista.verAreaExploracion();
-        System.out.println("Elige la carta que quieres recuperar: ");
-        Scanner sc = new Scanner(System.in);
-        int opcionZombie = sc.nextInt();
+
         if (escenario.arrayEscenario.size() > 0) {
+            escenario.vista.verAreaExploracion();
+            System.out.println("Elige la carta que quieres recuperar: ");
+            Scanner sc = new Scanner(System.in);
+            int cartaElegir = sc.nextInt();
             try {
-                escenario.mano.aniadirCartaMano(escenario.arrayEscenario.get(opcionZombie - 1));
+                escenario.mano.AniadirCarta(escenario.arrayEscenario.remove(cartaElegir - 1));
                 escenario.areaJugable.DescartarCarta(this);
 
             } catch (Exception e) {
@@ -36,6 +37,8 @@ public class Saquear extends Carta implements Serializable {
 
                 escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
             }
+        } else {
+            escenario.mano.AniadirCarta(this);
         }
 
     }

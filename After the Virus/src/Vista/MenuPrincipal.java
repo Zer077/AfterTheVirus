@@ -24,13 +24,15 @@ import java.util.Scanner;
 public class MenuPrincipal implements Serializable {
 
 //Me muestra reglas, me muestra las campañas y el personaje que quiero seleccionar, tu debes crear el personaje y crear el controlador antes de empezar la campaña
+    Controlador control;
+
     public MenuPrincipal() {
 
     }
 
     public void Iniciar() throws Throwable {
 
-        Controlador control = new Controlador();
+        control = new Controlador();
         MiHilo m = new MiHilo(control);
         m.start();
 
@@ -50,30 +52,7 @@ public class MenuPrincipal implements Serializable {
         }
 
         if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
-
-            System.out.println("Elige Controlador 1 2 o 3");
-            int n = sc1.nextInt();
-            switch (n) {
-                case 1:
-                    control.controlador1a();
-                    break;
-                case 2:
-                    control.controlador1b();
-                    break;
-                case 3:
-                    control.controlador1c();
-                    break;
-                case 4:
-                    DebugMode();
-                    break;
-                case 5:
-                    control.controladorBeta();
-                    break;
-                default:
-                    System.out.println("error");
-                    Iniciar();
-                    break;
-            }
+            Controlador();
 
         } else {
 
@@ -106,32 +85,38 @@ public class MenuPrincipal implements Serializable {
                     break;
 
             }
-            System.out.println("Elige Controlador 1 2 o 3");
-            int n = sc.nextInt();
-            switch (n) {
-                case 1:
-                    control.controlador1a();
-                    break;
-                case 2:
-                    control.controlador1b();
-                    break;
-                case 3:
-                    control.controlador1c();
-                    break;
-                case 4:
-                    DebugMode();
-                    break;
-                case 5:
-                    control.controladorBeta();
-                    break;
-                default:
-                    System.out.println("error");
-                    Iniciar();
-                    break;
+            Controlador();
 
-            }
-            //DebugMode();
         }
+    }
+
+    public void Controlador() throws Throwable {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Elige Controlador 1 2 o 3");
+        int n = sc.nextInt();
+        switch (n) {
+            case 1:
+                control.controlador1a();
+                break;
+            case 2:
+                control.controlador1b();
+                break;
+            case 3:
+                control.controlador1c();
+                break;
+            case 4:
+                DebugMode();
+                break;
+            case 5:
+                control.controladorBeta();
+                break;
+            default:
+                System.out.println("error");
+                Iniciar();
+                break;
+
+        }
+
     }
 
     public void DebugMode() throws Throwable {
