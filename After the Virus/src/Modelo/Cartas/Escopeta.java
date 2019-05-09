@@ -17,7 +17,7 @@ public class Escopeta extends CartaArma implements Serializable {
 
     @Override
     public void action() {
-
+ if (!escenario.arrayDescartadas.isEmpty())
         if (this.municion == 0) {
             Scanner sc = new Scanner(System.in);
             escenario.vista.verAreaZombies();

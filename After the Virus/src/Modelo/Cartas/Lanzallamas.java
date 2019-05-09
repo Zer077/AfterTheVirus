@@ -17,8 +17,8 @@ public class Lanzallamas extends CartaArma implements Serializable {
 
     @Override
     public void action() {
-
-        Scanner sc = new Scanner(System.in);
+ 
+        Scanner sc = new Scanner(System.in);if (!escenario.arrayDescartadas.isEmpty())
         escenario.vista.verAreaZombies();
         for (int i = 0; i < 3; i++) {
             System.out.println("Selecciona el zombie: ");

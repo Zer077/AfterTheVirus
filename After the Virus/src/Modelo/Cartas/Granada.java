@@ -20,6 +20,7 @@ public class Granada extends Carta implements Serializable {
 
     @Override
     public void action() {
+         if (!escenario.arrayDescartadas.isEmpty())
         System.out.println("Usas la granada");
         for (int i = 0; i < 5; i++) {
             escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(0));

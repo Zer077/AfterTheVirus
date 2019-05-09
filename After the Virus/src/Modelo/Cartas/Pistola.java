@@ -17,7 +17,8 @@ public class Pistola extends CartaArma implements Serializable {
 
     @Override
     public void action() {
-
+        
+if (!escenario.arrayZombies.isEmpty())
         if (this.municion == 1) {
             Scanner sc = new Scanner(System.in);
             this.GastarMunicion();

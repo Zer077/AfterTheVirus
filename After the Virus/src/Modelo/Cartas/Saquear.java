@@ -26,7 +26,7 @@ public class Saquear extends Carta implements Serializable {
     @Override
     public void action() {
 
-        if (escenario.arrayEscenario.size() > 0) {
+        if (!escenario.arrayEscenario.isEmpty()) {
             escenario.vista.verAreaExploracion();
             System.out.println("Elige la carta que quieres recuperar: ");
             Scanner sc = new Scanner(System.in);

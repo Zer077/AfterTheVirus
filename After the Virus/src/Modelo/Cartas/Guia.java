@@ -28,6 +28,7 @@ public class Guia extends Carta implements Serializable {
             escenario.mazoZombies.getDescarteZombies().remove(0);
         } else {
             System.out.println("No hay zombies para descartar.");
+            escenario.mano.AniadirCarta(this);
         }
 
         escenario.areaJugable.DescartarCarta(this);

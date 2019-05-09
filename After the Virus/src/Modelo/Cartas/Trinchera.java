@@ -8,6 +8,8 @@ package Modelo.Cartas;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,6 +23,9 @@ public class Trinchera extends Carta implements Serializable {
 
     @Override
     public void action() {
+        
+        
+        if(!escenario.arrayZombies.isEmpty()){
         Scanner sq = new Scanner(System.in);
 
         for (int cont = 0; cont < 2; cont++) {
@@ -31,6 +36,14 @@ public class Trinchera extends Carta implements Serializable {
         }
 
         escenario.areaJugable.EliminarCarta(this);
+        
+        }else escenario.mano.AniadirCarta(this); System.out.println("No hay zombies"); try {
+    escenario.menuOpciones.Menu();
+        } catch (Throwable ex) {
+            Logger.getLogger(Perro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }
 
     @Override

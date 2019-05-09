@@ -23,6 +23,7 @@ public class FuegoCruzado extends Carta implements Serializable {
     public void action() {
 
         Scanner sq = new Scanner(System.in);
+         if (!escenario.arrayDescartadas.isEmpty())
         for (int z = 0; z < escenario.PersonasSalvadas; z++) {
 
             escenario.vista.verAreaZombies();
