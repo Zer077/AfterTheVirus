@@ -20,8 +20,8 @@ import javazoom.jl.player.Player;
  */
 public class EfectoDeSonido extends Thread implements Serializable {
 
-    String url;
-    Player apl = null;
+     public  transient String url;
+    public  transient Player apl = null;
 
     public EfectoDeSonido(String a) {
 

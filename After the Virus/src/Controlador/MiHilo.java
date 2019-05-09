@@ -22,9 +22,9 @@ import javazoom.jl.player.Player;
  */
 public class MiHilo extends Thread implements Serializable {
 
-    Escenario c;
-    boolean muerto = false;
-    Player apl = null;
+     public  transient Escenario c;
+     public  transient boolean muerto = false;
+     public  transient Player apl = null;
 
     public MiHilo(Escenario c) {
         this.c = c;

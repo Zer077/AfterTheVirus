@@ -21,9 +21,9 @@ import javazoom.jl.player.Player;
  */
 public class SeleccionMusica extends Thread implements Serializable {
 
-    Escenario c;
-    String url;
-    Player apl = null;
+     public  transient Escenario c;
+     public  transient String url;
+     public  transient Player apl = null;
 
     public SeleccionMusica(String a, Escenario c) {
         this.c = c;
