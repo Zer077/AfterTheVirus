@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Cristian
  */
 public class Perro extends Carta implements Serializable {
 

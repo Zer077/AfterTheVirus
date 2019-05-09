@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author jose
  */
 public class AfterTheVirus implements Serializable {
 

@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Cristan
  */
 public class MC extends Carta implements Serializable {
 

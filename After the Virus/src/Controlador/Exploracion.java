@@ -15,6 +15,7 @@ import java.util.Scanner;
 /**
  *
  * @author Cristian y Miguel
+ * Solventacion de errores Miguel y José
  */
 public class Exploracion implements Serializable {
 

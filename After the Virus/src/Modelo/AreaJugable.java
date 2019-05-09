@@ -16,6 +16,7 @@ import java.util.Scanner;
 /**
  *
  * @author Jose
+ * Solventacion de errores Miguel  y José
  */
 public class AreaJugable implements Serializable {
 

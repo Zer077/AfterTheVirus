@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author abraham
  */
 public class Trinchera extends Carta implements Serializable {
 

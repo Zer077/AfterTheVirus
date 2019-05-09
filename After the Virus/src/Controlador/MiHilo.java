@@ -18,6 +18,7 @@ import javazoom.jl.player.Player;
 /**
  *
  * @author Jose y Juan
+ * Solventacion de errores José
  */
 public class MiHilo extends Thread implements Serializable {
 

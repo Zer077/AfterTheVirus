@@ -19,6 +19,7 @@ import java.util.Scanner;
 /**
  *
  * @author Miguel
+ * Solventacion de errores Miguel y José
  */
 public final class MazoZombies extends Mazo implements Serializable {
 

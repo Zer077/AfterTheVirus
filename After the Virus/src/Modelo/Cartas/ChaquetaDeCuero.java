@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author maria perez
  */
 public class ChaquetaDeCuero extends Carta implements Serializable {
 

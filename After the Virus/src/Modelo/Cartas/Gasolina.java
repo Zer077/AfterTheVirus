@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author Maria Perez
  */
 public class Gasolina extends Carta implements Serializable {
 

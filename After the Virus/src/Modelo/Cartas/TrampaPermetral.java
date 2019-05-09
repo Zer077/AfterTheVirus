@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author Abraham
  */
 public class TrampaPermetral extends Carta implements Serializable {
 

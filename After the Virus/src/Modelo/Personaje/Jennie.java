@@ -21,6 +21,8 @@ import java.io.Serializable;
 /**
  *
  * @author Jose
+ * 
+ *  Solventacion de errores  José
  */
 public class Jennie extends Personaje implements Serializable {
 

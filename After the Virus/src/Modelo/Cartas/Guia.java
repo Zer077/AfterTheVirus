@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author Cristan
  */
 public class Guia extends Carta implements Serializable {
 

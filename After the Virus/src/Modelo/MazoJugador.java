@@ -12,6 +12,8 @@ import java.util.Collections;
 /**
  *
  * @author Maria Perez
+ * 
+ * Solventacion de errores Miguel  y José
  */
 public class MazoJugador extends Mazo implements Serializable {
 

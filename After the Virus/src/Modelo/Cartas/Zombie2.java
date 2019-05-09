@@ -12,6 +12,8 @@ import java.util.ArrayList;
 /**
  *
  * @author Jose
+ * 
+ *  Solventacion de errores  José
  */
 public class Zombie2 extends Zombie implements Serializable {
 

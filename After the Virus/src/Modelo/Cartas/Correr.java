@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Zero
+ * @author juan
  */
 public class Correr extends Carta implements Serializable {
 

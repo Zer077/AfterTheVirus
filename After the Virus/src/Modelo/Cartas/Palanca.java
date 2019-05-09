@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Miguel
  */
 public class Palanca extends Carta implements Serializable {
 

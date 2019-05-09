@@ -10,6 +10,7 @@ import java.io.Serializable;
 /**
  *
  * @author Abraham
+ * 
  */
 public class MazoDescartes extends Mazo implements Serializable {
 

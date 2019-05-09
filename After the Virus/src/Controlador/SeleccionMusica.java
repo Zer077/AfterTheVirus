@@ -17,6 +17,7 @@ import javazoom.jl.player.Player;
 /**
  *
  * @author jose
+ * Solventacion de errores   José
  */
 public class SeleccionMusica extends Thread implements Serializable {
 

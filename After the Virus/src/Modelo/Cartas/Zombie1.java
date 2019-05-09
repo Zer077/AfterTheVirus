@@ -13,6 +13,8 @@ import java.util.Scanner;
 /**
  *
  * @author Jose
+ * 
+ *  Solventacion de errores  José
  */
 public class Zombie1 extends Zombie implements Serializable {
 

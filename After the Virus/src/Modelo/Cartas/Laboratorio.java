@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author Maria perez
  */
 public class Laboratorio extends Carta implements Serializable {
 

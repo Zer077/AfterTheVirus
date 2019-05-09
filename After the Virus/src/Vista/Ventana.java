@@ -14,7 +14,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author enrique
+ * @author jose y abraham
  */
 public class Ventana extends javax.swing.JFrame {
 

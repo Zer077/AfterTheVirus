@@ -13,7 +13,9 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Zero
+ * @author Juan
+ * Solventacion de errores  Juan y José
+ * 
  */
 public class Saquear extends Carta implements Serializable {
 

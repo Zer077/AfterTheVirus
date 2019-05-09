@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author Miguel
  */
 public class Motosierra extends Carta implements Serializable {
 

@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author maria perez
  */
 public class Tunel extends Carta implements Serializable {
 

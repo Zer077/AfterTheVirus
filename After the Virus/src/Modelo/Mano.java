@@ -17,6 +17,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Jose
+ * Solventacion de errores Miguel, Juan y José
  */
 public class Mano implements Serializable {
 

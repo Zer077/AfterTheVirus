@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zero
+ * @author cristian
  */
 public class Coche extends Carta implements Serializable {
 

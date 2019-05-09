@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Zero
+ * @author Cristian
  */
 public class VIP extends Carta implements Serializable {
 

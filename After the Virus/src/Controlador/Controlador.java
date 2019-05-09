@@ -18,6 +18,8 @@ import static javafx.application.Platform.exit;
 /**
  *
  * @author Juan y Cristian
+ * 
+ * Solventacion de errores Miguel, Juan y José
  */
 public class Controlador extends Escenario implements Serializable {
 

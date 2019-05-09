@@ -12,7 +12,9 @@ import static java.util.Collections.shuffle;
 
 /**
  *
- * @author Zero
+ * @author Jose
+ * 
+ * Solventacion de errores Miguel  y José
  */
 public abstract class Mazo implements Serializable {
 
