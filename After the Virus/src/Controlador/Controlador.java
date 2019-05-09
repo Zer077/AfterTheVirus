@@ -64,13 +64,29 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
-
-                Enter();
-                exit();
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
+                
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
                 personaje.setCabeza(true);
-                exit();
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
+                
             }
 
             contador = 0;
@@ -79,7 +95,7 @@ public class Controlador extends Escenario implements Serializable {
         } while (personaje.isCabeza() == false);
     }
 
-    public void controlador1b() {
+    public void controlador1b() throws Throwable {
         //objetivo: acaba el turno con 4 supervivientes rescatados
         //Preparacion:Comienza con 1 oleada. comienza con 5 cartas de zombi a cada mazo
 
@@ -91,8 +107,26 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
             } else if (personaje.isCabeza() == false && PersonasSalvadas == 4) {
                 System.out.println("HAS GANADO");
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
             }
 
             Ronda++;
@@ -100,7 +134,7 @@ public class Controlador extends Escenario implements Serializable {
         } while (personaje.isCabeza() == false);
     }
 
-    public void controlador1c() {
+    public void controlador1c() throws Throwable {
         //objetivo: acaba el turno con 6 supervivientes rescatados y una instalacion preparada
         //preparacion: comienza con 1 oleada.
 
@@ -118,8 +152,26 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
             } else if (personaje.isCabeza() && x == true) {
                 System.out.println("HAS GANADO");
+                System.out.println("¿Deseas empezar una partida nueva?");
+                Scanner sc=new Scanner(System.in);
+                String reinicia=sc.next();
+                if(reinicia.equals("si")||reinicia.equals("Si")||reinicia.equals("SI")||reinicia.equals("sI")||reinicia.equals("sí")||reinicia.equals("Sí")||reinicia.equals("SÍ")||reinicia.equals("sÍ")){
+                    menuPrincipal.Iniciar();
+                }else{
+                    Enter();
+                    exit();
+                }
             }
 
             Ronda++;

@@ -53,6 +53,7 @@ public class MenuOpciones implements Serializable {
             case 3:
                 escenario.vista.verAreaJugador();
                 System.out.println("Que carta quieres usar.");
+                escenario.areaJugable.jugarCarta();
                 break;
             case 4:
                 System.out.println("Salimos de la mano");
@@ -93,7 +94,7 @@ public class MenuOpciones implements Serializable {
         escenario.vista.verMano();
         try {
             System.out.println("Introduce las cartas a usar separadas por espacios");
-            String carta = sc.next();
+            String carta = sc.nextLine();
             String[] cards = carta.split(" ");
             for (int j = cards.length - 1; j >= 0; j--) {
                 conjuntoCartas.add(mano.getMano().remove(Integer.parseInt(cards[j]) - 1));

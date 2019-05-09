@@ -46,7 +46,7 @@ public class AreaJugable implements Serializable {
         System.out.println("Que carta quieres jugar?");
         int numero = sc.nextInt();
 
-        if (ArrayJugables.get(numero - 1).getTipo() == 3) {
+        if (ArrayJugables.get(numero - 1).getTipo() <= 3) {
 
             for (int i = 0; i < ArrayJugables.size(); i++) {
 
@@ -63,6 +63,8 @@ public class AreaJugable implements Serializable {
         } else if (ArrayJugables.get(numero - 1).isActiva() == true) {
 
             ArrayJugables.get(numero - 1).action();
+        }else{
+            System.out.println("La carta no está activa");
         }
 
     }

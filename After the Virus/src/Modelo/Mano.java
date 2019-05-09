@@ -66,7 +66,6 @@ public class Mano implements Serializable {
                 }
                 if (escenario.areaJugable.getArrayJugables().size() > 0 && conteo > 0) {
 
-                    escenario.vista.verAreaJugador();
                     if (escenario.areaJugable.ActivarCarta(cartas) == true) {
                         for (int i = 0; i < cartas.size(); i++) {
 
