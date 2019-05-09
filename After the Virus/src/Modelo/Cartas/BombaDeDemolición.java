@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 
@@ -44,6 +45,10 @@ public class BombaDeDemolición extends Carta implements Serializable {
             }
 
         }
+          EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
+        efect.start();
+        
+        
 
         escenario.areaJugable.EliminarCarta(this);
 

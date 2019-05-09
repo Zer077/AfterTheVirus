@@ -21,6 +21,7 @@ public class ObjetivoSeguro extends Carta implements Serializable {
     @Override
     public void action() {
         escenario.areaJugable.AniadirCarta(this);
+        System.out.println("añadida al area de juego");
         escenario.mano.getMano().remove(this);
     }
 

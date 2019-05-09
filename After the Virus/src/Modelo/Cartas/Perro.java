@@ -5,11 +5,11 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -30,6 +30,10 @@ public class Perro extends Carta implements Serializable {
             escenario.vista.verAreaZombies();
             System.out.println("Selecciona el zombie: ");
             int a = sc.nextInt();
+            
+            EfectoDeSonido efect=new EfectoDeSonido("perro.mp3");
+            efect.start();
+            System.out.println("El Zombie ha huido del miedo");
             escenario.arrayZombies.get(a - 1).muereZombie();
             escenario.areaJugable.DescartarCarta(this);
 

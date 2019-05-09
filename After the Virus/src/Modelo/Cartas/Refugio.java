@@ -31,6 +31,7 @@ public class Refugio extends Carta implements Serializable {
                 escenario.areaJugable.DescartarCarta(carta);
             }
         }
+        System.out.println("HAS RESCATADO A SUPERVIVIENTES, ENHORABUENA");
         escenario.areaJugable.DescartarCarta(this);
 
     }

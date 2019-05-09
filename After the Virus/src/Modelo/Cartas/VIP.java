@@ -21,6 +21,7 @@ public class VIP extends Carta implements Serializable {
     @Override
     public void action() {
         escenario.areaJugable.AniadirCarta(this);
+        System.out.println("Añadido al area de juego");
         escenario.mano.getMano().remove(this);
     }
 

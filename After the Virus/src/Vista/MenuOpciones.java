@@ -59,6 +59,9 @@ public class MenuOpciones implements Serializable {
                 Area51();
 
                 break;
+            case 14000605:
+                Vengadores();
+                break;
             default:
                 System.out.println("error");
                 Menu();
@@ -115,6 +118,27 @@ public class MenuOpciones implements Serializable {
 
         for (int i = 0; i < 10; i++) {
             escenario.mano.getMano().add(escenario.mazoZombies.getMazoZombie().remove(0));
+        }
+
+    }
+
+    public void Vengadores() throws Throwable {
+        SeleccionMusica s = new SeleccionMusica("vengadores.mp3", escenario);
+        if (escenario.SM != null) {
+            escenario.SM.matar(escenario.SM);
+        }
+        escenario.m.matar(escenario.m);
+        s.start();
+
+        for (int i = escenario.mazoZombies.getMazoZombie().size() / 2; i < escenario.mazoZombies.getMazoZombie().size(); i++) {
+            escenario.mazoZombies.getMazoZombie().remove(0);
+        }
+
+        for (int i = escenario.mazoZombies.getMazoZombie().size() / 2; i < escenario.mazoZombies.getDescarteZombies().size(); i++) {
+            escenario.mazoZombies.getDescarteZombies().remove(0);
+        }
+        for (int i = escenario.arrayZombies.size() / 2; i < escenario.arrayZombies.size(); i++) {
+            escenario.arrayZombies.remove(0);
         }
 
     }

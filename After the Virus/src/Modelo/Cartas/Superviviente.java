@@ -11,8 +11,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Cristian
- * Solventacion de errores  José
+ * @author Cristian Solventacion de errores José
  */
 public class Superviviente extends Carta implements Serializable {
 
@@ -23,6 +22,7 @@ public class Superviviente extends Carta implements Serializable {
     @Override
     public void action() {
         escenario.areaJugable.AniadirCarta(this);
+        System.out.println("Añadido al area de juego");
         escenario.mano.getMano().remove(this);
     }
 

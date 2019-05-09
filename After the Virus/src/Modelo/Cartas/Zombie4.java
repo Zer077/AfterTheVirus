@@ -48,7 +48,7 @@ public class Zombie4 extends Zombie implements Serializable {
 
     @Override
     public String descripcion() {
-        return null;
+        return "-";
     }
 
 }

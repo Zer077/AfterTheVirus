@@ -11,6 +11,8 @@ import java.io.Serializable;
 /**
  *
  * @author Abraham
+ *
+ * Solucionado errores por Jose
  */
 public class TrampaPermetral extends Carta implements Serializable {
 
@@ -20,15 +22,12 @@ public class TrampaPermetral extends Carta implements Serializable {
 
     @Override
     public void action() {
+        int cont = 0;
+        for (int y = escenario.mazoDescartes.getMazo().size()-1; y > 0; y--) {
 
-        for (int y = 0; y < 6; y++) {
-
-            Carta zomb = escenario.mazoDescartes.getMazo().get(y);
-
-            if (zomb instanceof Zombie) {
-
-                escenario.mazoZombies.getDescarteZombies().add((Zombie) zomb);
-                escenario.mazoDescartes.getMazo().remove(y);
+            if (escenario.mazoDescartes.getMazo().get(y) instanceof Zombie && cont<6) {
+                cont++;
+                escenario.mazoZombies.getDescarteZombies().add((Zombie) escenario.mazoDescartes.getMazo().remove(y));
 
             }
 
@@ -40,7 +39,7 @@ public class TrampaPermetral extends Carta implements Serializable {
     @Override
     public String descripcion() {
 
-        return ("Trampa perimetral: Descarta esta carta para descartar 6 zombies de la pila de descartes.");
+        return ("Trampa perimetral: Descarta esta carta para llevar 6 zombies de la pila de descartes.");
     }
 
 }

@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -27,7 +28,8 @@ public class MC extends Carta implements Serializable {
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
         escenario.arrayZombies.get(a).descartaZombie();
-
+        EfectoDeSonido efect = new EfectoDeSonido("moto.mp3");
+        efect.start();
         escenario.areaJugable.DescartarCarta(this);
     }
 
