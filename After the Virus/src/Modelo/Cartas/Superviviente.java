@@ -11,7 +11,9 @@ import java.io.Serializable;
 
 /**
  *
- * @author Cristian Solventacion de errores José
+ * @author Cristian 
+ * 
+ * Solventacion de errores José
  */
 public class Superviviente extends Carta implements Serializable {
 

@@ -39,26 +39,24 @@ public final class MazoZombies extends Mazo implements Serializable {
             switch (i) {
                 case 1:
                     for (int z1 = 0; z1 < 5; z1++) {
-                        Zombie zombie1 = new Zombie1(0, "Z1", escenario, 1, 0);
-                        MazoZombie.add(zombie1);
+                        
+                        MazoZombie.add(new Zombie1(0, "Z1", escenario, 1, 0));
                     }
                     break;
                 case 2:
                     for (int z1 = 0; z1 < 4; z1++) {
-                        Zombie zombie2 = new Zombie2(0, "Z2", escenario, 2, 0);
-                        MazoZombie.add(zombie2);
+                        MazoZombie.add(new Zombie2(0, "Z2", escenario, 2, 0));
                     }
                     break;
                 case 3:
                     for (int z1 = 0; z1 < 3; z1++) {
-                        Zombie zombie3 = new Zombie3(0, "Z3", escenario, 3, 0);
-                        MazoZombie.add(zombie3);
+                        MazoZombie.add(new Zombie3(0, "Z3", escenario, 3, 0));
                     }
                     break;
                 case 4:
                     for (int z1 = 0; z1 < 2; z1++) {
-                        Zombie zombie4 = new Zombie4(0, "Z4", escenario, 4, 0);
-                        MazoZombie.add(zombie4);
+
+                        MazoZombie.add(new Zombie4(0, "Z4", escenario, 4, 0));
                     }
                     break;
             }
@@ -96,8 +94,8 @@ public final class MazoZombies extends Mazo implements Serializable {
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducirPorRonda() {
         for (int i = 0; i < escenario.Ronda; i++) {
-            escenario.mazoJugador.getMazo().add(MazoZombie.get(0));
-            MazoZombie.remove(0);
+            escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
+            
         }
     }
 

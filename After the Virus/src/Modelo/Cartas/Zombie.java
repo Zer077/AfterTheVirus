@@ -25,7 +25,18 @@ public abstract class Zombie extends Carta implements Serializable {
         super(precio, nombre, Escenario, tipo, activacion);
     }
 
-    abstract public void atacaHumano();
+     public void atacaHumano(){
+     for (int i = 0; i < zombie.size(); i++) {
+            if (zombie.get(i).isVivo() == true) {
+                escenario.personaje.parteCuerpoAtacar();
+
+            }
+        }
+        escenario.mazoZombies.getDescarteZombies().add(this);
+        escenario.mazoZombies.eliminarZombieArray(this);
+    
+    
+    };
 
     //lleva al zombie a la pila de descartes de los zombies
     public void muereZombie() {

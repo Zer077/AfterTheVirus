@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Modelo.Escenario;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.Serializable;

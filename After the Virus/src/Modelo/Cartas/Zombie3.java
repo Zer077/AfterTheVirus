@@ -26,18 +26,7 @@ public class Zombie3 extends Zombie implements Serializable {
         super.setNumeroZombie(3);
     }
 
-    @Override
-    public void atacaHumano() {
-        for (int i = 0; i < zombie.size(); i++) {
-            if (zombie.get(i).isVivo() == true) {
-                escenario.personaje.parteCuerpoAtacar();
-
-            }
-        }
-        escenario.mazoZombies.getDescarteZombies().add(this);
-        escenario.mazoZombies.eliminarZombieArray(this);
-
-    }
+   
 
     //NO HACER
     @Override
