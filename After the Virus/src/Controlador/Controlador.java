@@ -295,7 +295,7 @@ public class Controlador extends Escenario implements Serializable {
         System.out.println("Quieres guardar partida hasta el punto actual?");
         Scanner sc = new Scanner(System.in);
         String SN = sc.next();
-        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)) {
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)|| "si".equals(SN) ) {
             GYC.Guardar(this);
             System.out.println("Partida Guardada con éxito");
             Enter();
