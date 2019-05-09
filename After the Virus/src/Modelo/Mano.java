@@ -16,8 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jose
- * Solventacion de errores Miguel, Juan y José
+ * @author Jose Solventacion de errores Miguel, Juan y José
  */
 public class Mano implements Serializable {
 
@@ -130,21 +129,8 @@ public class Mano implements Serializable {
                 break;
 
             case 6:
-                escenario.vista.verAreaJugador();
-                System.out.println("Que carta quieres usar.");
-                break;
+                escenario.areaJugable.CargarArma(cartas);
 
-            case 7:
-                escenario.vista.verAreaExploracion();
-                escenario.vista.verJugador();
-                escenario.vista.verAreaJugador();
-                escenario.vista.verAreaExploracion();
-                escenario.vista.verAreaZombies();
-                escenario.vista.verMano();
-                break;
-
-            case 8:
-                System.out.println("Salimos de la mano");
                 break;
 
             default:

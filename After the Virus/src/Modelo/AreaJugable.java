@@ -5,18 +5,22 @@
  */
 package Modelo;
 
+import Modelo.Cartas.Ametralladora;
 import Modelo.Cartas.Carta;
+import Modelo.Cartas.CartaArma;
+import Modelo.Cartas.Escopeta;
 import Modelo.Cartas.ObjetivoSeguro;
 import Modelo.Cartas.HabilidadConArmas;
 import Modelo.Cartas.HabilidadConTrampas;
+import Modelo.Cartas.Pistola;
+import Modelo.Cartas.Rifle;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
- * @author Jose
- * Solventacion de errores Miguel  y José
+ * @author Jose Solventacion de errores Miguel y José
  */
 public class AreaJugable implements Serializable {
 
@@ -118,6 +122,24 @@ public class AreaJugable implements Serializable {
 
     }
 
+    public void CargarArma(ArrayList<Carta> cartas) {
+        escenario.vista.verAreaJugador();
+        System.out.println("Que carta quieres cargar?");
+        Scanner sc = new Scanner(System.in);
+
+        int cartaCargar = sc.nextInt();
+
+        if (ArrayJugables.get(cartaCargar) instanceof Ametralladora || ArrayJugables.get(cartaCargar) instanceof Pistola || ArrayJugables.get(cartaCargar) instanceof Escopeta || ArrayJugables.get(cartaCargar) instanceof Rifle) {
+
+            CartaArma card = (CartaArma) ArrayJugables.get(cartaCargar);
+            for (int i = 0; i < cartas.size(); i++) {
+                card.AniadirMunicion(cartas.remove(0));
+            }
+
+        }
+
+    }
+
     public Carta BuscarCartaNombre(String n) {
         for (int i = 0; i < ArrayJugables.size(); i++) {
 
@@ -175,7 +197,7 @@ public class AreaJugable implements Serializable {
         //si tienes 2 o mas armas activas o 1 arma y te falta un brazo devuelve false
         int contador = 0;
         for (int i = 0; i < ArrayJugables.size(); i++) {
-            if (ArrayJugables.get(i).getTipo() == 8 && ArrayJugables.get(i).isActiva()) {
+            if (ArrayJugables.get(i).getTipo() > 3 && ArrayJugables.get(i).isActiva()) {
                 contador++;
             }
         }

@@ -5,16 +5,24 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
+import Controlador.MiHilo;
 import Modelo.Escenario;
+import Vista.MenuPrincipal;
+import after.the.virus.AfterTheVirus;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Jose
- * 
- *  Solventacion de errores  José
+ *
+ * Solventacion de errores José
  */
 public class Zombie1 extends Zombie implements Serializable {
 
@@ -58,11 +66,32 @@ public class Zombie1 extends Zombie implements Serializable {
 
                 System.out.println("Hola, servicio técnico, se ha encontrado con un Zombie perdido, no se preocupe lo solucionaremos en un momento");
                 Enter();
-                System.out.println("Musica de tele-operadora...");
+                escenario.SM.matar(escenario.SM);
+                EfectoDeSonido efects = new EfectoDeSonido("musica-de-ascensor.mp3");
+                System.currentTimeMillis();
+                efects.start();
+
+                new Timer().schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            efects.matar(efects);
+                            MiHilo m = new MiHilo(escenario);
+                            m.start();
+                            
+                        } catch (Throwable ex) {
+                            
+                            Logger.getLogger(AfterTheVirus.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+
+                    }
+                }, 15000);
                 Enter();
                 System.out.println("Gracias por la espera devolveremos al Zombie al lugar que le corresponde");
                 Enter();
                 escenario.arrayZombies.add(this);
+
                 escenario.mano.getMano().remove(this);
             } else {
 
@@ -73,6 +102,8 @@ public class Zombie1 extends Zombie implements Serializable {
 
         } catch (Exception e) {
             action();
+        } catch (Throwable ex) {
+            Logger.getLogger(Zombie1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

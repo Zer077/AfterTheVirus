@@ -78,6 +78,7 @@ public class MenuOpciones implements Serializable {
         System.out.println("3)Usarlas para activar otras cartas del area");
         System.out.println("4)Usarlas para explorar");
         System.out.println("5)Usarlas para recuperar cartas del area explorada");
+        System.out.println("6)Usarlas para Cargar un arma");
 
         Scanner sc = new Scanner(System.in);
         int opcionElegida = sc.nextInt();

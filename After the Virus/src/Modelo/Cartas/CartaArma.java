@@ -32,7 +32,7 @@ public abstract class CartaArma extends Carta implements Serializable {
 
     public void GastarMunicion() {
 
-        escenario.mazoDescartes.IntroducirCarta(cartas.get(0));
+        escenario.mazoDescartes.IntroducirCarta(cartas.remove(0));
     }
 
 }
