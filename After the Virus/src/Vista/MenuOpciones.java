@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Controlador.MiHilo;
+import Controlador.SeleccionMusica;
 import Modelo.Cartas.Carta;
 import Modelo.Escenario;
 import Modelo.Mano;
@@ -27,7 +29,7 @@ public class MenuOpciones implements Serializable {
         this.escenario = Escenario;
     }
 
-    public void Menu() {
+    public void Menu() throws Throwable {
         System.out.println("MENU OPCIONES");
         System.out.println("1- Usar Carta de la mano");
         System.out.println("2- Ver Escenario");
@@ -52,6 +54,10 @@ public class MenuOpciones implements Serializable {
                 break;
             case 4:
                 System.out.println("Salimos de la mano");
+                break;
+            case 51:
+                Area51();
+
                 break;
             default:
                 System.out.println("error");
@@ -80,7 +86,7 @@ public class MenuOpciones implements Serializable {
     }
 
     //muestra las cartas y permite Elegir todas las cartas que deseas y devuelves el numero de estas 
-    public ArrayList<Carta> ElegirCartas() {
+    public ArrayList<Carta> ElegirCartas() throws Throwable {
         ArrayList<Carta> conjuntoCartas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         escenario.vista.verMano();
@@ -99,6 +105,17 @@ public class MenuOpciones implements Serializable {
         }
 
         return conjuntoCartas;
+    }
+
+    public void Area51() throws Throwable {
+        SeleccionMusica s = new SeleccionMusica("stranger-things.mp3", escenario);
+        escenario.m.matar(escenario.m);
+        s.start();
+
+        for (int i = 0; i < 10; i++) {
+            escenario.mano.getMano().add(escenario.mazoZombies.getMazoZombie().remove(0));
+        }
+
     }
 
 }

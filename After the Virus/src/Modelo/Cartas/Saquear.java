@@ -8,6 +8,8 @@ package Modelo.Cartas;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -35,7 +37,11 @@ public class Saquear extends Carta implements Serializable {
                 System.out.println("No existen elementos");
                 escenario.mano.getMano().add(this);
 
-                escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
+                try {
+                    escenario.menuOpciones.Menu();
+                } catch (Throwable ex) {
+                    Logger.getLogger(Saquear.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         } else {
             escenario.mano.AniadirCarta(this);

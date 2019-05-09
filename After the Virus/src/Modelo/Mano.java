@@ -30,7 +30,7 @@ public class Mano implements Serializable {
     }
     //al usar la carta es la que pondrá la carta en descartes, este metodo ejecutará el action de la carta tambien
 
-    public void usarCartas(ArrayList<Carta> cartas, int opcion) {
+    public void usarCartas(ArrayList<Carta> cartas, int opcion) throws Throwable {
 
         switch (opcion) {
 

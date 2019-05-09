@@ -42,7 +42,7 @@ public class MenuPrincipal implements Serializable {
         System.out.println("Si o No...");
         Scanner sc1 = new Scanner(System.in);
         String SN = sc1.next();
-        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)|| "si".equals(SN)) {
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN) || "si".equals(SN)) {
             control = (Controlador) GYC.Cargar();
             System.out.println("Partida cargada correctamente");
 
@@ -51,7 +51,7 @@ public class MenuPrincipal implements Serializable {
 
         }
 
-        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)|| "si".equals(SN)) {
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN) || "si".equals(SN)) {
             Controlador();
 
         } else {

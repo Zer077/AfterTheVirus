@@ -9,6 +9,8 @@ import Modelo.Escenario;
 import java.io.Serializable;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -25,7 +27,11 @@ public class Correr extends Carta implements Serializable {
         if (escenario.personaje.isPierna() == false) {
             if (escenario.arrayZombies.isEmpty()) {
                 escenario.mano.getMano().add(this);
-                escenario.menuOpciones.Menu();
+                try {
+                    escenario.menuOpciones.Menu();
+                } catch (Throwable ex) {
+                    Logger.getLogger(Correr.class.getName()).log(Level.SEVERE, null, ex);
+                }
             } else {
                 escenario.vista.verAreaZombies();
                 System.out.println("Elige al zombie que quieres descartar: ");
@@ -37,7 +43,11 @@ public class Correr extends Carta implements Serializable {
         } else {
             System.out.println("Tu pierna está rota, no puedes correr");
             escenario.mano.getMano().add(this);
-            escenario.menuOpciones.Menu();
+            try {
+                escenario.menuOpciones.Menu();
+            } catch (Throwable ex) {
+                Logger.getLogger(Correr.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 

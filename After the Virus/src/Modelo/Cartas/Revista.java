@@ -7,6 +7,8 @@ package Modelo.Cartas;
 
 import Modelo.Escenario;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -23,7 +25,11 @@ public class Revista extends Carta implements Serializable {
         System.out.println("No puedes hacer esto, pero leer esta Revista te llena de determinación");
         escenario.mano.getMano().add(this);
 
-        escenario.mano.usarCartas(escenario.menuOpciones.ElegirCartas(), escenario.menuOpciones.ElegirOpcion());
+        try {
+            escenario.menuOpciones.Menu();
+        } catch (Throwable ex) {
+            Logger.getLogger(Revista.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

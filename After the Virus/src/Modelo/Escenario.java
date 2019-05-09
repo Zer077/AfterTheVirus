@@ -8,6 +8,7 @@ package Modelo;
 import Controlador.Exploracion;
 import Controlador.GuardarYCargarPartida;
 import Controlador.MiHilo;
+import Controlador.SeleccionMusica;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Personaje.*;
@@ -40,7 +41,8 @@ public abstract class Escenario implements Serializable {
     public ArrayList<Carta> arrayEliminadas = new ArrayList<>();
     public ArrayList<Carta> arrayDescartadas = new ArrayList<>();
     public ArrayList<Carta> arrayEscenario = new ArrayList<>();
-    public ArrayList<MiHilo> musicas = new ArrayList<>();
+    public MiHilo m;
+    public SeleccionMusica SM;
     public Escenario escenario = this;
     public Personaje personaje;
     public int Ronda;
@@ -48,4 +50,5 @@ public abstract class Escenario implements Serializable {
     public boolean salir = false;
     public Ventana v;
     public GuardarYCargarPartida GYC;
+
 }

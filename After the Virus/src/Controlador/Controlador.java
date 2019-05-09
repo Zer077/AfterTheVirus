@@ -64,6 +64,11 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+
+                SeleccionMusica s = new SeleccionMusica("rick.mp3", escenario);
+                escenario.m.matar(escenario.m);
+                s.start();
+                Enter();
                 System.out.println("¿Deseas empezar una partida nueva?");
                 Scanner sc = new Scanner(System.in);
                 String reinicia = sc.next();
@@ -77,6 +82,7 @@ public class Controlador extends Escenario implements Serializable {
             } else if (personaje.isCabeza() == false && contador >= 6) {
                 System.out.println("HAS GANADO");
                 personaje.setCabeza(true);
+                Enter();
                 System.out.println("¿Deseas empezar una partida nueva?");
                 Scanner sc = new Scanner(System.in);
                 String reinicia = sc.next();
@@ -107,6 +113,11 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+
+                SeleccionMusica s = new SeleccionMusica("rick.mp3", escenario);
+                escenario.m.matar(escenario.m);
+                s.start();
+                Enter();
                 System.out.println("¿Deseas empezar una partida nueva?");
                 Scanner sc = new Scanner(System.in);
                 String reinicia = sc.next();
@@ -152,6 +163,11 @@ public class Controlador extends Escenario implements Serializable {
 
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
+
+                SeleccionMusica s = new SeleccionMusica("rick.mp3", escenario);
+                escenario.m.matar(escenario.m);
+                s.start();
+                Enter();
                 System.out.println("¿Deseas empezar una partida nueva?");
                 Scanner sc = new Scanner(System.in);
                 String reinicia = sc.next();
@@ -179,7 +195,7 @@ public class Controlador extends Escenario implements Serializable {
         } while (personaje.isCabeza() == false);
     }
 
-    public void controladorBeta() {
+    public void controladorBeta() throws Throwable {
         for (int i = 0; i < 20; i++) {
             mazoJugador.barajar();
             mazoJugador.sacarCincoCartas();
@@ -233,7 +249,7 @@ public class Controlador extends Escenario implements Serializable {
 
     }
 
-    public void Menu() {
+    public void Menu() throws Throwable {
         do {
             salir = false;
             menuOpciones.Menu();
@@ -249,7 +265,7 @@ public class Controlador extends Escenario implements Serializable {
 
     }
 
-    public void Principal() {
+    public void Principal() throws Throwable {
         //3-Se baraja las cartas del jugador
         mazoJugador.barajar();
         //4- La mano del jugador coje 5 cartas
@@ -295,7 +311,7 @@ public class Controlador extends Escenario implements Serializable {
         System.out.println("Quieres guardar partida hasta el punto actual?");
         Scanner sc = new Scanner(System.in);
         String SN = sc.next();
-        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN)|| "si".equals(SN) ) {
+        if ("Si".equals(SN) || "s".equals(SN) || "S".equals(SN) || "SI".equals(SN) || "si".equals(SN)) {
             GYC.Guardar(this);
             System.out.println("Partida Guardada con éxito");
             Enter();

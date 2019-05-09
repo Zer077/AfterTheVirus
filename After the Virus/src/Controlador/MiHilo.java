@@ -5,6 +5,7 @@ package Controlador;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import Modelo.Escenario;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,17 +21,17 @@ import javazoom.jl.player.Player;
  */
 public class MiHilo extends Thread implements Serializable {
 
-    Controlador c;
+    Escenario c;
     boolean muerto = false;
+    Player apl = null;
 
-    public MiHilo(Controlador c) {
+    public MiHilo(Escenario c) {
         this.c = c;
 
     }
 
     public void matar(MiHilo m) throws Throwable {
-
-        c.musicas.remove(m);
+        apl.close();
         m.finalize();
 
     }
@@ -38,46 +39,38 @@ public class MiHilo extends Thread implements Serializable {
     @Override
     public void run() {
 
-        Player apl = null;
-        c.musicas.add(this);
+        c.m = this;
 
         try {
-            if (muerto == true) {
-                apl = new Player(new FileInputStream(
-                        "the night king.mp3"));
-                apl.play();
 
-            } else {
+            int num = (int) (Math.random() * 4 + 1);
+            switch (num) {
 
-                int num = (int) (Math.random() * 4 + 1);
-                switch (num) {
+                case 1:
+                    apl = new Player(new FileInputStream(
+                            "a lions legacy.mp3"));
+                    apl.play();
 
-                    case 1:
-                        apl = new Player(new FileInputStream(
-                                "a lions legacy.mp3"));
-                        apl.play();
+                    break;
+                case 2:
+                    apl = new Player(new FileInputStream(
+                            "light of the seven.mp3"));
+                    apl.play();
 
-                        break;
-                    case 2:
-                        apl = new Player(new FileInputStream(
-                                "light of the seven.mp3"));
-                        apl.play();
+                    break;
+                case 3:
+                    apl = new Player(new FileInputStream(
+                            "no one walks away from me .mp3"));
+                    apl.play();
 
-                        break;
-                    case 3:
-                        apl = new Player(new FileInputStream(
-                                "no one walks away from me .mp3"));
-                        apl.play();
+                    break;
+                case 4:
+                    apl = new Player(new FileInputStream(
+                            "the night king.mp3"));
+                    apl.play();
 
-                        break;
-                    case 4:
-                        apl = new Player(new FileInputStream(
-                                "the night king.mp3"));
-                        apl.play();
+                    break;
 
-                        break;
-
-                }
             }
 
             if (apl.isComplete()) {
@@ -95,5 +88,4 @@ public class MiHilo extends Thread implements Serializable {
         }
 
     }
-
 }

@@ -24,9 +24,8 @@ public final class MazoZombies extends Mazo implements Serializable {
 
     ArrayList<Carta> MazoZombie;
     ArrayList<Zombie> descarteZombies;
-    Zombie zombie;
-    //Se encarga de administrar los monstruos, debe poner Zombies en su array de escenario y en cada turno restaurar el mazo en el orden correcto
 
+    //Se encarga de administrar los monstruos, debe poner Zombies en su array de escenario y en cada turno restaurar el mazo en el orden correcto
     public MazoZombies(Escenario escenario) {
         super(escenario);
         MazoZombie = new ArrayList<>();
@@ -149,14 +148,6 @@ public final class MazoZombies extends Mazo implements Serializable {
 
     public void setDescarteZombies(ArrayList<Zombie> descarteZombies) {
         this.descarteZombies = descarteZombies;
-    }
-
-    public Zombie getZombie() {
-        return zombie;
-    }
-
-    public void setZombie(Zombie zombie) {
-        this.zombie = zombie;
     }
 
 }
