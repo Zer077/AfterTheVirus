@@ -5,8 +5,13 @@
  */
 package after.the.virus;
 
+import Controlador.EfectoDeSonido;
 import Vista.MenuPrincipal;
 import java.io.Serializable;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,9 +25,25 @@ public class AfterTheVirus implements Serializable {
      */
     public static void main(String[] args) throws Throwable {
         // TODO code application logic here
+        EfectoDeSonido efects = new EfectoDeSonido("pacman.mp3");
+        System.currentTimeMillis();
+        efects.start();
+        System.out.println("Cargando partida...");
+        System.out.println("Esto podría tardar unos segundos...");
+        System.out.println("Preparando Zombies...");
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
 
-        MenuPrincipal menu = new MenuPrincipal();
-        menu.Iniciar();
+                MenuPrincipal menu = new MenuPrincipal();
+                try {
+                    menu.Iniciar();
+                } catch (Throwable ex) {
+                    Logger.getLogger(AfterTheVirus.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+        }, 4000);
 
     }
 
