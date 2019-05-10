@@ -29,7 +29,9 @@ public class Comida extends Carta implements Serializable {
             }
             escenario.areaJugable.EliminarCarta(this);
 
-        }else escenario.mano.AniadirCarta(this);
+        } else {
+            escenario.mano.AniadirCarta(this);
+        }
 
     }
 

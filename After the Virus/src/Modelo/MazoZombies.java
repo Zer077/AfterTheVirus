@@ -18,8 +18,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Miguel
- * Solventacion de errores Miguel y José
+ * @author Miguel Solventacion de errores Miguel y José
  */
 public final class MazoZombies extends Mazo implements Serializable {
 
@@ -39,7 +38,7 @@ public final class MazoZombies extends Mazo implements Serializable {
             switch (i) {
                 case 1:
                     for (int z1 = 0; z1 < 5; z1++) {
-                        
+
                         MazoZombie.add(new Zombie1(0, "Z1", escenario, 1, 0));
                     }
                     break;
@@ -95,7 +94,7 @@ public final class MazoZombies extends Mazo implements Serializable {
     public void introducirPorRonda() {
         for (int i = 0; i < escenario.Ronda; i++) {
             escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
-            
+
         }
     }
 

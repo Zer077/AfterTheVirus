@@ -23,27 +23,29 @@ public class Trinchera extends Carta implements Serializable {
 
     @Override
     public void action() {
-        
-        
-        if(!escenario.arrayZombies.isEmpty()){
-        Scanner sq = new Scanner(System.in);
 
-        for (int cont = 0; cont < 2; cont++) {
-            escenario.vista.verAreaZombies();
-            System.out.println("¿Qué zombies quieres matar?");
-            int x = sq.nextInt();
-            escenario.arrayZombies.get(x).muereZombie();
+        if (!escenario.arrayZombies.isEmpty()) {
+            Scanner sq = new Scanner(System.in);
+
+            for (int cont = 0; cont < 2; cont++) {
+                escenario.vista.verAreaZombies();
+                System.out.println("¿Qué zombies quieres matar?");
+                int x = sq.nextInt();
+                escenario.arrayZombies.get(x).muereZombie();
+            }
+
+            escenario.areaJugable.EliminarCarta(this);
+
+        } else {
+            escenario.mano.AniadirCarta(this);
         }
-
-        escenario.areaJugable.EliminarCarta(this);
-        
-        }else escenario.mano.AniadirCarta(this); System.out.println("No hay zombies"); try {
-    escenario.menuOpciones.Menu();
+        System.out.println("No hay zombies");
+        try {
+            escenario.menuOpciones.Menu();
         } catch (Throwable ex) {
             Logger.getLogger(Perro.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
     }
 
     @Override

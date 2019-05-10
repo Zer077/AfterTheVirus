@@ -33,8 +33,8 @@ import java.util.Scanner;
 /**
  *
  * @author Jose
- * 
- *  Solventacion de errores  José
+ *
+ * Solventacion de errores José
  */
 public abstract class Personaje implements Serializable {
 

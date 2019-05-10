@@ -5,13 +5,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 /**
  *
  * @author Maria
  */
-
 public class Rifle extends CartaArma implements Serializable {
 
     public Rifle(int precio, String nombre, Escenario Escenario, int tipo, int activacion, int municion) {

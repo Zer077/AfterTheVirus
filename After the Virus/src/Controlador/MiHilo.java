@@ -17,14 +17,13 @@ import javazoom.jl.player.Player;
 
 /**
  *
- * @author Jose y Juan
- * Solventacion de errores José
+ * @author Jose y Juan Solventacion de errores José
  */
 public class MiHilo extends Thread implements Serializable {
 
-     public  transient Escenario c;
-     public  transient boolean muerto = false;
-     public  transient Player apl = null;
+    public transient Escenario c;
+    public transient boolean muerto = false;
+    public transient Player apl = null;
 
     public MiHilo(Escenario c) {
         this.c = c;
@@ -32,10 +31,11 @@ public class MiHilo extends Thread implements Serializable {
     }
 
     public void matar(MiHilo m) throws Throwable {
-        
-        if (apl!=null){
-        
-        apl.close();}
+
+        if (apl != null) {
+
+            apl.close();
+        }
         m.finalize();
 
     }

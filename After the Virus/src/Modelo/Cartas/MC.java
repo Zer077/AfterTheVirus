@@ -22,10 +22,12 @@ public class MC extends Carta implements Serializable {
 
     @Override
     public void action() {
-        
+
         // Añade a descartadas el zombie elegido.
-        Scanner sc = new Scanner(System.in); if (!escenario.arrayDescartadas.isEmpty())
-        escenario.vista.verAreaZombies();
+        Scanner sc = new Scanner(System.in);
+        if (!escenario.arrayDescartadas.isEmpty()) {
+            escenario.vista.verAreaZombies();
+        }
         System.out.println("Selecciona el zombie: ");
         int a = sc.nextInt();
         escenario.arrayZombies.get(a).descartaZombie();

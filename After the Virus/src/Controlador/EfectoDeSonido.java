@@ -5,7 +5,6 @@
  */
 package Controlador;
 
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.Serializable;
@@ -20,8 +19,8 @@ import javazoom.jl.player.Player;
  */
 public class EfectoDeSonido extends Thread implements Serializable {
 
-     public  transient String url;
-    public  transient Player apl = null;
+    public transient String url;
+    public transient Player apl = null;
 
     public EfectoDeSonido(String a) {
 

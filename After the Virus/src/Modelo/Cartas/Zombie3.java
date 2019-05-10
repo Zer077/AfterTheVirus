@@ -12,8 +12,8 @@ import java.util.ArrayList;
 /**
  *
  * @author Jose
- * 
- *  Solventacion de errores  José
+ *
+ * Solventacion de errores José
  */
 public class Zombie3 extends Zombie implements Serializable {
 
@@ -25,8 +25,6 @@ public class Zombie3 extends Zombie implements Serializable {
         zombie.add(new Zombi());
         super.setNumeroZombie(3);
     }
-
-   
 
     //NO HACER
     @Override

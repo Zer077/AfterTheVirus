@@ -15,8 +15,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Jose
- * Solventacion de errores Miguel y José
+ * @author Jose Solventacion de errores Miguel y José
  */
 public class GuardarYCargarPartida implements Serializable {
 

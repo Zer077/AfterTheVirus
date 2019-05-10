@@ -34,8 +34,6 @@ public class Zombie1 extends Zombie implements Serializable {
 
     }
 
-
-
     //NO HACER
     @Override
     public String descripcion() {
@@ -67,9 +65,9 @@ public class Zombie1 extends Zombie implements Serializable {
                             efects.matar(efects);
                             MiHilo m = new MiHilo(escenario);
                             m.start();
-                            
+
                         } catch (Throwable ex) {
-                            
+
                             Logger.getLogger(AfterTheVirus.class.getName()).log(Level.SEVERE, null, ex);
                         }
 

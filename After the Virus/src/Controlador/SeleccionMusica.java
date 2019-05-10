@@ -16,14 +16,13 @@ import javazoom.jl.player.Player;
 
 /**
  *
- * @author jose
- * Solventacion de errores   José
+ * @author jose Solventacion de errores José
  */
 public class SeleccionMusica extends Thread implements Serializable {
 
-     public  transient Escenario c;
-     public  transient String url;
-     public  transient Player apl = null;
+    public transient Escenario c;
+    public transient String url;
+    public transient Player apl = null;
 
     public SeleccionMusica(String a, Escenario c) {
         this.c = c;

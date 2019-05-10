@@ -45,10 +45,8 @@ public class BombaDeDemolición extends Carta implements Serializable {
             }
 
         }
-          EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
+        EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
         efect.start();
-        
-        
 
         escenario.areaJugable.EliminarCarta(this);
 

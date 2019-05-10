@@ -10,8 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Juan
- * Solventacion de errores  Juan y José
+ * @author Juan Solventacion de errores Juan y José
  */
 public class Refugio extends Carta implements Serializable {
 

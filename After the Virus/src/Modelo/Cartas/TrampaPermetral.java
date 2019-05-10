@@ -23,9 +23,9 @@ public class TrampaPermetral extends Carta implements Serializable {
     @Override
     public void action() {
         int cont = 0;
-        for (int y = escenario.mazoDescartes.getMazo().size()-1; y > 0; y--) {
+        for (int y = escenario.mazoDescartes.getMazo().size() - 1; y > 0; y--) {
 
-            if (escenario.mazoDescartes.getMazo().get(y) instanceof Zombie && cont<6) {
+            if (escenario.mazoDescartes.getMazo().get(y) instanceof Zombie && cont < 6) {
                 cont++;
                 escenario.mazoZombies.getDescarteZombies().add((Zombie) escenario.mazoDescartes.getMazo().remove(y));
 

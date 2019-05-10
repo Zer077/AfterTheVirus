@@ -32,7 +32,7 @@ public class Coche extends Carta implements Serializable {
         for (int i = 0; i < escenario.arrayZombies.size(); i++) {
             escenario.arrayZombies.get(i).descartaZombie();
         }
-         EfectoDeSonido efect = new EfectoDeSonido("coche.mp3");
+        EfectoDeSonido efect = new EfectoDeSonido("coche.mp3");
         efect.start();
 
         escenario.areaJugable.DescartarCarta(this);

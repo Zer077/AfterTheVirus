@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  *
  * @author Cristian
- * 
+ *
  * Solventacion de errores José
  */
 public class Explorar extends Carta implements Serializable {

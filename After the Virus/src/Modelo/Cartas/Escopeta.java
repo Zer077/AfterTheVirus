@@ -17,22 +17,23 @@ public class Escopeta extends CartaArma implements Serializable {
 
     @Override
     public void action() {
- if (!escenario.arrayDescartadas.isEmpty())
-        if (this.municion == 0) {
-            Scanner sc = new Scanner(System.in);
-            escenario.vista.verAreaZombies();
-            System.out.println("Selecciona el zombie: ");
-            int a = sc.nextInt();
-            escenario.arrayZombies.get(a).muereZombie();
-            escenario.mazoEliminadas.IntroducirCarta(this);
-        } else {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Hay que descartar una munición para atacar");
-            this.GastarMunicion();
-            escenario.vista.verAreaZombies();
-            System.out.println("Selecciona el zombie: ");
-            int a = sc.nextInt();
-            escenario.arrayZombies.get(a).muereZombie();
+        if (!escenario.arrayDescartadas.isEmpty()) {
+            if (this.municion == 0) {
+                Scanner sc = new Scanner(System.in);
+                escenario.vista.verAreaZombies();
+                System.out.println("Selecciona el zombie: ");
+                int a = sc.nextInt();
+                escenario.arrayZombies.get(a).muereZombie();
+                escenario.mazoEliminadas.IntroducirCarta(this);
+            } else {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Hay que descartar una munición para atacar");
+                this.GastarMunicion();
+                escenario.vista.verAreaZombies();
+                System.out.println("Selecciona el zombie: ");
+                int a = sc.nextInt();
+                escenario.arrayZombies.get(a).muereZombie();
+            }
         }
 
     }

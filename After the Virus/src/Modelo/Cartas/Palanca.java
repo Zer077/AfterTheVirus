@@ -33,7 +33,7 @@ public class Palanca extends Carta implements Serializable {
                 int elige = sc.nextInt();
                 escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
                 escenario.arrayZombies.remove(elige);
-                escenario.areaJugable.DescartarCarta(this); 
+                escenario.areaJugable.DescartarCarta(this);
                 break;
             case 2:
                 System.out.println("Has decidido no descartar esta carta");

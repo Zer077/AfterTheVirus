@@ -145,7 +145,7 @@ public class Controlador extends Escenario implements Serializable {
             if (personaje.isCabeza() == true) {
                 System.out.println("HAS MUERTO");
 
-               Morir();
+                Morir();
             } else if (personaje.isCabeza() && x == true) {
                 System.out.println("HAS GANADO");
                 System.out.println("¿Deseas empezar una partida nueva?");
@@ -294,32 +294,32 @@ public class Controlador extends Escenario implements Serializable {
     public void Morir() throws Throwable {
         System.out.println("HAS MUERTO");
         m.matar(m);
-                EfectoDeSonido efects = new EfectoDeSonido("Mario.mp3");
-                System.currentTimeMillis();
-                efects.start();
+        EfectoDeSonido efects = new EfectoDeSonido("Mario.mp3");
+        System.currentTimeMillis();
+        efects.start();
 
-                new Timer().schedule(new TimerTask() {
-                    @Override
-                    public void run() {
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
 
-                        try {
-                            SeleccionMusica s = new SeleccionMusica("rick.mp3", escenario);
-                            s.start();
-                            Enter();
-                            System.out.println("¿Deseas empezar una partida nueva?");
-                            Scanner sc = new Scanner(System.in);
-                            String reinicia = sc.next();
-                            if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
-                                menuPrincipal.Iniciar();
-                            } else {
-                                Enter();
-                                exit();
-                            }
-                        } catch (Throwable ex) {
-                            Logger.getLogger(AfterTheVirus.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-
+                try {
+                    SeleccionMusica s = new SeleccionMusica("rick.mp3", escenario);
+                    s.start();
+                    Enter();
+                    System.out.println("¿Deseas empezar una partida nueva?");
+                    Scanner sc = new Scanner(System.in);
+                    String reinicia = sc.next();
+                    if (reinicia.equals("si") || reinicia.equals("Si") || reinicia.equals("SI") || reinicia.equals("sI") || reinicia.equals("sí") || reinicia.equals("Sí") || reinicia.equals("SÍ") || reinicia.equals("sÍ")) {
+                        menuPrincipal.Iniciar();
+                    } else {
+                        Enter();
+                        exit();
                     }
-                }, 3000);
+                } catch (Throwable ex) {
+                    Logger.getLogger(AfterTheVirus.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+        }, 3000);
     }
 }

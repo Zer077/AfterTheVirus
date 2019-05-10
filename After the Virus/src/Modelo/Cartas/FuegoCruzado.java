@@ -23,14 +23,15 @@ public class FuegoCruzado extends Carta implements Serializable {
     public void action() {
 
         Scanner sq = new Scanner(System.in);
-         if (!escenario.arrayDescartadas.isEmpty())
-        for (int z = 0; z < escenario.PersonasSalvadas; z++) {
+        if (!escenario.arrayDescartadas.isEmpty()) {
+            for (int z = 0; z < escenario.PersonasSalvadas; z++) {
 
-            escenario.vista.verAreaZombies();
-            System.out.println("¿Qué zombies quieres matar?");
-            int x = sq.nextInt();
-            escenario.arrayZombies.get(x).muereZombie();
+                escenario.vista.verAreaZombies();
+                System.out.println("¿Qué zombies quieres matar?");
+                int x = sq.nextInt();
+                escenario.arrayZombies.get(x).muereZombie();
 
+            }
         }
 
         escenario.areaJugable.EliminarCarta(this);
