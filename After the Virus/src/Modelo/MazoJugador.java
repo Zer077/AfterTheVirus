@@ -50,6 +50,7 @@ public class MazoJugador extends Mazo implements Serializable {
                     super.getMazo().add(escenario.mazoDescartes.getMazo().remove(0));
                 }
                 System.out.println("Mazo de jugador restaurado correctamente");
+                sacarCincoCartas();
             }
         } catch (Exception e) {
             System.err.println(e);
