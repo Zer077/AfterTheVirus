@@ -47,7 +47,7 @@ public class MiHilo extends Thread implements Serializable {
 
         try {
 
-            int num = (int) (Math.random() * 4 + 1);
+            int num = (int) (Math.random() * 10 + 1);
             switch (num) {
 
                 case 1:
@@ -74,6 +74,44 @@ public class MiHilo extends Thread implements Serializable {
                     apl.play();
 
                     break;
+                     case 5:
+                    apl = new Player(new FileInputStream(
+                            "ff71.mp3"));
+                    apl.play();
+
+                    break;
+                     case 6:
+                    apl = new Player(new FileInputStream(
+                            "ff72.mp3"));
+                    apl.play();
+
+                    break;
+                     case 7:
+                    apl = new Player(new FileInputStream(
+                            "xb1.mp3"));
+                    apl.play();
+
+                    break;
+                     case 8:
+                    apl = new Player(new FileInputStream(
+                            "xb2.mp3"));
+                    apl.play();
+
+                    break;
+                     case 9:
+                    apl = new Player(new FileInputStream(
+                            "zelda.mp3"));
+                    apl.play();
+
+                    break;
+                     case 10:
+                    apl = new Player(new FileInputStream(
+                            "ridley.mp3"));
+                    apl.play();
+
+                    break;
+                     
+                    
 
             }
 

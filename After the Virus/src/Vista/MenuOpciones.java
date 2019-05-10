@@ -140,7 +140,9 @@ public class MenuOpciones implements Serializable {
         for (int i = escenario.arrayZombies.size() / 2; i < escenario.arrayZombies.size(); i++) {
             escenario.arrayZombies.remove(0);
         }
-
+        System.out.println("-----------------------------------------------");
+        System.out.println("La mitad de los Zombies han sido eliminados");
+        System.out.println("-----------------------------------------------");
     }
 
 }
