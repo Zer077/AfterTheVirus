@@ -32,7 +32,10 @@ public class MiHilo extends Thread implements Serializable {
     }
 
     public void matar(MiHilo m) throws Throwable {
-        apl.close();
+        
+        if (apl!=null){
+        
+        apl.close();}
         m.finalize();
 
     }

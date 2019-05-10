@@ -7,13 +7,12 @@ package Modelo;
 
 import Modelo.Cartas.Zombie;
 import java.io.Serializable;
-import java.util.Collections;
 
 /**
  *
  * @author Maria Perez
- * 
- * Solventacion de errores Miguel  y José
+ *
+ * Solventacion de errores Miguel y José
  */
 public class MazoJugador extends Mazo implements Serializable {
 
@@ -46,8 +45,8 @@ public class MazoJugador extends Mazo implements Serializable {
                 escenario.mazoDescartes.barajar();
 
                 System.out.println("Mazo de descartes barajado correctamente");
-
-                for (int d = 0; d < escenario.mazoDescartes.getMazo().size(); d++) {
+                int tamanio = escenario.mazoDescartes.getMazo().size();
+                for (int d = 0; d < tamanio; d++) {
                     super.getMazo().add(escenario.mazoDescartes.getMazo().remove(0));
                 }
                 System.out.println("Mazo de jugador restaurado correctamente");
