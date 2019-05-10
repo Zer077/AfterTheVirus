@@ -38,8 +38,8 @@ public class Tunel extends Carta implements Serializable {
     @Override
     public void setActiva(boolean activa) {
 
-        if (escenario.mano.sacarCarta("Refugio") != null) {
-            escenario.mazoDescartes.IntroducirCarta(escenario.mano.sacarCarta("Refugio"));
+        if (escenario.mano.sacarCartaPorNombre("Refugio") != null) {
+            escenario.mazoDescartes.IntroducirCarta(escenario.mano.sacarCartaPorNombre("Refugio"));
             super.setActiva(activa);
         } else {
             System.out.println("No se puede activar la carta, no tienes la carta refugio en la mano");

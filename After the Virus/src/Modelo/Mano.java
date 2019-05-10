@@ -87,7 +87,7 @@ public class Mano implements Serializable {
                         escenario.menuOpciones.Menu();
 
                     }
-//Si no  hay cartas para activar te las devuelve
+                //Si no  hay cartas para activar te las devuelve
                 } else {
                     System.out.println("No hay cartas para activar");
                     for (int i = 0; i <= cartas.size() - 1; i++) {
@@ -100,10 +100,10 @@ public class Mano implements Serializable {
                 break;
             //Usa estas cartas para explorar
             case 4:
-                Carta carta1 = null;
+                
                 for (int i = 0; i < cartas.size(); i++) {
 
-                    carta1 = cartas.get(i);
+                    Carta carta1 = cartas.get(i);
 
                     escenario.compraCartas.explora(carta1);
 
@@ -142,7 +142,7 @@ public class Mano implements Serializable {
     }
 
     //busca una carta para sacarla, el action la usará para poderse activar, si no no hará nada y volverá al menú de eleccion
-    public Carta sacarCarta(String nombreCarta) {
+    public Carta sacarCartaPorNombre(String nombreCarta) {
         for (int i = 0; i < getMano().size(); i++) {
             if (getMano().get(i).getNombre().equals(nombreCarta)) {
                 return getMano().get(i);
@@ -176,14 +176,7 @@ public class Mano implements Serializable {
 
             }
 
-        }
-
-//        for(Carta carta: Mano){
-//            if (carta instanceof Zombie ) {
-//                escenario.arrayZombies.add((Zombie) carta);
-//                getMano().remove(carta);
-//            }  
-//        }
+        }    
     }
 
     public int numeroCartas() {
