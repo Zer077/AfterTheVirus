@@ -24,11 +24,11 @@ public class Lanzallamas extends CartaArma implements Serializable {
                 System.out.println("Selecciona el zombie: ");
                 int a = sc.nextInt();
 
-                escenario.arrayZombies.get(a-1).muereZombie();
+                escenario.arrayZombies.get(a - 1).muereZombie();
 
             }
         }
-        escenario.mazoDescartes.IntroducirCarta(this);
+        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

@@ -31,7 +31,7 @@ public class Trinchera extends Carta implements Serializable {
                 escenario.vista.verAreaZombies();
                 System.out.println("¿Qué zombies quieres matar?");
                 int x = sq.nextInt();
-                escenario.arrayZombies.get(x-1).muereZombie();
+                escenario.arrayZombies.get(x - 1).muereZombie();
             }
 
             escenario.areaJugable.EliminarCarta(this);

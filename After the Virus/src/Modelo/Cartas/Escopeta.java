@@ -1,5 +1,6 @@
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -32,7 +33,10 @@ public class Escopeta extends CartaArma implements Serializable {
                 escenario.vista.verAreaZombies();
                 System.out.println("Selecciona el zombie: ");
                 int a = sc.nextInt();
-                escenario.arrayZombies.get(a).muereZombie();
+                escenario.arrayZombies.get(a - 1).muereZombie();
+                EfectoDeSonido efect = new EfectoDeSonido("bang.mp3");
+                efect.start();
+
             }
         }
 

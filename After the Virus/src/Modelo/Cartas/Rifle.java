@@ -1,5 +1,6 @@
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,8 +31,10 @@ public class Rifle extends CartaArma implements Serializable {
                     System.out.println("Elige al zombi que quieres matar:");
                     int a = sc.nextInt();
                     if (!escenario.arrayZombies.isEmpty()) {
-                    escenario.arrayZombies.get(a-1).muereZombie();
-                    }else{
+                        escenario.arrayZombies.get(a - 1).muereZombie();
+                        EfectoDeSonido efect = new EfectoDeSonido("bang.mp3");
+                        efect.start();
+                    } else {
                         System.out.println("no quedan mas zombis");
                     }
                     break;
@@ -43,6 +46,8 @@ public class Rifle extends CartaArma implements Serializable {
                             escenario.arrayDescartadas.remove(c);
                             escenario.mazoZombies.getDescarteZombies().add((Zombie) c);
                             contador++;
+                            EfectoDeSonido efect = new EfectoDeSonido("bang.mp3");
+                            efect.start();
                         } else {
                             System.out.println("¡No hay zombies para matar!");
                         }

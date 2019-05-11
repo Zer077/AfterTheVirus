@@ -125,28 +125,28 @@ public class AreaJugable implements Serializable {
     public void CargarArma(ArrayList<Carta> cartas) {
         escenario.vista.verAreaJugador();
         System.out.println("Que carta quieres cargar?");
-       
+
         Scanner sc = new Scanner(System.in);
-        if (ArrayJugables.size() > 0){
-        int cartaCargar = sc.nextInt();
+        if (ArrayJugables.size() > 0) {
+            int cartaCargar = sc.nextInt();
 
-        if (ArrayJugables.get(cartaCargar) instanceof Ametralladora || ArrayJugables.get(cartaCargar) instanceof Pistola || ArrayJugables.get(cartaCargar) instanceof Escopeta || ArrayJugables.get(cartaCargar) instanceof Rifle) {
+            if (ArrayJugables.get(cartaCargar) instanceof Ametralladora || ArrayJugables.get(cartaCargar) instanceof Pistola || ArrayJugables.get(cartaCargar) instanceof Escopeta || ArrayJugables.get(cartaCargar) instanceof Rifle) {
 
-            CartaArma card = (CartaArma) ArrayJugables.get(cartaCargar);
-            for (int i = 0; i < cartas.size(); i++) {
-                card.AniadirMunicion(cartas.remove(0));
+                CartaArma card = (CartaArma) ArrayJugables.get(cartaCargar);
+                for (int i = 0; i < cartas.size(); i++) {
+                    card.AniadirMunicion(cartas.remove(0));
+                }
+
+            } else {
+
+                for (Carta carta : cartas) {
+                    escenario.mano.AniadirCarta(cartas.remove(0));
+                }
+
             }
 
-        }else {
-        
-            for (Carta carta : cartas) {
-                escenario.mano.AniadirCarta(cartas.remove(0));
-            }
-        
-        
         }
-
-    }}
+    }
 
     public Carta BuscarCartaNombre(String n) {
         for (int i = 0; i < ArrayJugables.size(); i++) {

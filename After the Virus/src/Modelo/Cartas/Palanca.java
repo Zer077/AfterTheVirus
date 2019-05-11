@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -31,7 +32,9 @@ public class Palanca extends Carta implements Serializable {
                 System.out.println("Selecciona un zombie a descartar:");
                 escenario.vista.verAreaZombies();
                 int elige = sc.nextInt();
-                escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige));
+                escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(elige - 1));
+                EfectoDeSonido efect = new EfectoDeSonido("golpe.mp3");
+                efect.start();
                 escenario.arrayZombies.remove(elige);
                 escenario.areaJugable.DescartarCarta(this);
                 break;

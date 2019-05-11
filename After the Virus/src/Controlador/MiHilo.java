@@ -74,44 +74,42 @@ public class MiHilo extends Thread implements Serializable {
                     apl.play();
 
                     break;
-                     case 5:
+                case 5:
                     apl = new Player(new FileInputStream(
                             "ff71.mp3"));
                     apl.play();
 
                     break;
-                     case 6:
+                case 6:
                     apl = new Player(new FileInputStream(
                             "ff72.mp3"));
                     apl.play();
 
                     break;
-                     case 7:
+                case 7:
                     apl = new Player(new FileInputStream(
                             "xb1.mp3"));
                     apl.play();
 
                     break;
-                     case 8:
+                case 8:
                     apl = new Player(new FileInputStream(
                             "xb2.mp3"));
                     apl.play();
 
                     break;
-                     case 9:
+                case 9:
                     apl = new Player(new FileInputStream(
                             "zelda.mp3"));
                     apl.play();
 
                     break;
-                     case 10:
+                case 10:
                     apl = new Player(new FileInputStream(
                             "ridley.mp3"));
                     apl.play();
 
                     break;
-                     
-                    
 
             }
 

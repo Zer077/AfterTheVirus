@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 
@@ -38,6 +39,8 @@ public class Correr extends Carta implements Serializable {
                 Scanner sc = new Scanner(System.in);
                 int opcionZombie = sc.nextInt();
                 escenario.arrayZombies.remove(opcionZombie - 1).descartaCartaZombie();
+                EfectoDeSonido efect = new EfectoDeSonido("correr.mp3");
+                efect.start();
                 escenario.areaJugable.DescartarCarta(this);
             }
         } else {

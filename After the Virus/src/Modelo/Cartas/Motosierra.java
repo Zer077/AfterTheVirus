@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 
@@ -20,14 +21,19 @@ public class Motosierra extends Carta implements Serializable {
 
     @Override
     public void action() {
-        
+
         for (int i = 0; i <= 5; i++) {
             if (!escenario.arrayZombies.isEmpty()) {
                 escenario.arrayZombies.get(0).muereZombie();
-            }else{
+                if (i == 0) {
+                    EfectoDeSonido efect = new EfectoDeSonido("motosierra.mp3");
+                    efect.start();
+
+                }
+            } else {
                 System.out.println("no quedan mas zombis");
             }
-            
+
         }
         escenario.areaJugable.DescartarCarta(this);
     }

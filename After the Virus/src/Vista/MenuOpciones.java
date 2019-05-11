@@ -30,47 +30,53 @@ public class MenuOpciones implements Serializable {
     }
 
     public void Menu() throws Throwable {
-        System.out.println("MENU OPCIONES");
-        System.out.println("1- Usar Carta de la mano");
-        System.out.println("2- Ver Escenario");
-        System.out.println("3- Usar Cartas del area");
-        System.out.println("4- Salir");
+        try {
+            System.out.println("MENU OPCIONES");
+            System.out.println("1- Usar Carta de la mano");
+            System.out.println("2- Ver Escenario");
+            System.out.println("3- Usar Cartas del area");
+            System.out.println("4- Salir");
 
-        System.out.println("Elige una opción: ");
+            System.out.println("Elige una opción: ");
 
-        Scanner sc = new Scanner(System.in);
-        int opcionElegida = sc.nextInt();
-        switch (opcionElegida) {
-            case 1:
-                mano.usarCartas(ElegirCartas(), ElegirOpcion());
-                break;
-            case 2:
-                escenario.vista.verEscenarioGeneral();
-                break;
-            case 3:
-                escenario.vista.verAreaJugador();
-                System.out.println("Que carta quieres usar.");
-                escenario.areaJugable.jugarCarta();
-                break;
-            case 4:
-                System.out.println("Salimos de la mano");
-                break;
-            case 51:
-                Area51();
+            Scanner sc = new Scanner(System.in);
+            int opcionElegida = sc.nextInt();
+            switch (opcionElegida) {
+                case 1:
+                    mano.usarCartas(ElegirCartas(), ElegirOpcion());
+                    break;
+                case 2:
+                    escenario.vista.verEscenarioGeneral();
+                    break;
+                case 3:
+                    escenario.vista.verAreaJugador();
+                    System.out.println("Que carta quieres usar.");
+                    escenario.areaJugable.jugarCarta();
+                    break;
+                case 4:
+                    System.out.println("Salimos de la mano");
+                    break;
+                case 51:
+                    Area51();
 
-                break;
-            case 14000605:
-                Vengadores();
-                break;
-            default:
-                System.out.println("error");
-                Menu();
-                break;
+                    break;
+                case 14000605:
+                    Vengadores();
+                    break;
+                default:
+                    System.out.println("error");
+                    Menu();
+                    break;
 
+            }
+            if (opcionElegida == 4) {
+                escenario.salir = true;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Selecciona un numero");
         }
-        if (opcionElegida == 4) {
-            escenario.salir = true;
-        }
+
     }
 
     //Elige una de las diversas opciones del juego

@@ -63,6 +63,7 @@ public class Bar extends Carta implements Serializable {
     public String descripcion() {
         return ("(Se prepara con 1 survivor) Cuando se juega safehouse, se cura 1 daño.");
     }
+
     @Override
     public void setActiva(boolean activa) {
 

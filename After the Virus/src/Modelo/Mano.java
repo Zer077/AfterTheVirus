@@ -87,7 +87,7 @@ public class Mano implements Serializable {
                         escenario.menuOpciones.Menu();
 
                     }
-                //Si no  hay cartas para activar te las devuelve
+                    //Si no  hay cartas para activar te las devuelve
                 } else {
                     System.out.println("No hay cartas para activar");
                     for (int i = 0; i <= cartas.size() - 1; i++) {
@@ -100,7 +100,7 @@ public class Mano implements Serializable {
                 break;
             //Usa estas cartas para explorar
             case 4:
-                
+
                 for (int i = 0; i < cartas.size(); i++) {
 
                     Carta carta1 = cartas.get(i);
@@ -176,7 +176,7 @@ public class Mano implements Serializable {
 
             }
 
-        }    
+        }
     }
 
     public int numeroCartas() {

@@ -28,7 +28,7 @@ public class BombaDeDemolición extends Carta implements Serializable {
 
                 escenario.arrayZombies.get(x).muereCartaZombie();
 
-            }else{
+            } else {
                 System.out.println("no quedan zombis");
             }
 

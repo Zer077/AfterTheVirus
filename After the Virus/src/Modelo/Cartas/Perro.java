@@ -38,9 +38,10 @@ public class Perro extends Carta implements Serializable {
             escenario.arrayZombies.get(a - 1).muereZombie();
             escenario.areaJugable.DescartarCarta(this);
         } else {
+            System.out.println("No hay zombies");
             escenario.mano.AniadirCarta(this);
         }
-        System.out.println("No hay zombies");
+
         try {
             escenario.menuOpciones.Menu();
         } catch (Throwable ex) {

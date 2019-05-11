@@ -1,5 +1,6 @@
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -26,8 +27,8 @@ public class Pistola extends CartaArma implements Serializable {
                 System.out.println("Selecciona el zombie: ");
                 int a = sc.nextInt();
                 if (!escenario.arrayZombies.isEmpty()) {
-                    escenario.arrayZombies.get(a-1).muereZombie();
-                }else{
+                    escenario.arrayZombies.get(a - 1).muereZombie();
+                } else {
                     System.out.println("no quedan mas zombis");
                 }
             } else if (this.municion == 0 && this.isActiva()) {
@@ -37,7 +38,9 @@ public class Pistola extends CartaArma implements Serializable {
                 escenario.vista.verAreaZombies();
                 System.out.println("Selecciona el zombie: ");
                 int a = sc.nextInt();
-                escenario.arrayZombies.get(a).muereZombie();
+                escenario.arrayZombies.get(a - 1).muereZombie();
+                EfectoDeSonido efect = new EfectoDeSonido("bang.mp3");
+                efect.start();
             }
         }
     }
