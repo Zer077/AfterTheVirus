@@ -31,7 +31,9 @@ public class SeleccionMusica extends Thread implements Serializable {
     }
 
     public void matar(SeleccionMusica m) throws Throwable {
-        apl.close();
+        if (apl != null) {
+            apl.close();
+        }
         m.finalize();
 
     }

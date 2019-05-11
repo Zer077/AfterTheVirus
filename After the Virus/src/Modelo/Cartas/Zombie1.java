@@ -8,7 +8,6 @@ package Modelo.Cartas;
 import Controlador.EfectoDeSonido;
 import Controlador.MiHilo;
 import Modelo.Escenario;
-import Vista.MenuPrincipal;
 import after.the.virus.AfterTheVirus;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -73,11 +72,9 @@ public class Zombie1 extends Zombie implements Serializable {
 
                     }
                 }, 15000);
-                Enter();
                 System.out.println("Gracias por la espera devolveremos al Zombie al lugar que le corresponde");
                 Enter();
                 escenario.arrayZombies.add(this);
-
                 escenario.mano.getMano().remove(this);
             } else {
 
