@@ -23,33 +23,32 @@ public class BombaDeDemolición extends Carta implements Serializable {
     public void action() {
 
         for (int x = 0; x < escenario.arrayZombies.size(); x++) {
+            if (!escenario.arrayZombies.isEmpty()) {
+                Carta zom = escenario.arrayZombies.get(x);
 
-            Carta zom = escenario.arrayZombies.get(x);
+                escenario.arrayZombies.get(x).muereCartaZombie();
 
-            if (zom instanceof Zombie) {
-
-                escenario.mazoZombies.getDescarteZombies().remove((Zombie) zom);
-
+            }else{
+                System.out.println("no quedan zombis");
             }
 
-        }
+            for (int y = 0; y < escenario.mazoDescartes.getMazo().size(); y++) {
 
-        for (int y = 0; y < escenario.mazoDescartes.getMazo().size(); y++) {
+                Carta zomb = escenario.mazoDescartes.getMazo().get(y);
 
-            Carta zomb = escenario.mazoDescartes.getMazo().get(y);
+                if (zomb instanceof Zombie) {
 
-            if (zomb instanceof Zombie) {
+                    escenario.mazoZombies.getDescarteZombies().remove((Zombie) zomb);
 
-                escenario.mazoZombies.getDescarteZombies().remove((Zombie) zomb);
+                }
 
             }
+            EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
+            efect.start();
+
+            escenario.areaJugable.EliminarCarta(this);
 
         }
-        EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
-        efect.start();
-
-        escenario.areaJugable.EliminarCarta(this);
-
     }
 
     @Override

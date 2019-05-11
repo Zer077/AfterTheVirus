@@ -114,12 +114,13 @@ public class VistaEscenario implements Serializable {
     }
 
     public void verAreaJugador() {
-
+        int posicion = 1;
         System.out.println("----------Tu área de juego----------");
         //bucle para ver todas las cartas.
         ArrayList<Carta> areajugador = escenario.areaJugable.getArrayJugables();
         for (Carta x : areajugador) {
             System.out.println("**********");
+            System.out.println("CARTA Nº: " + posicion);
             System.out.println("Nombre de la carta: " + x.getNombre());
             System.out.println("Descripción: ");
             x.descripcion();
@@ -130,6 +131,7 @@ public class VistaEscenario implements Serializable {
                 System.out.println("Coste preparar: " + x.getActivacion());
             }
             System.out.println("**********");
+            posicion++;
         }
         System.out.println("----------------------------------------");
     }

@@ -29,7 +29,12 @@ public class Rifle extends CartaArma implements Serializable {
                     escenario.vista.verAreaZombies();
                     System.out.println("Elige al zombi que quieres matar:");
                     int a = sc.nextInt();
-                    escenario.arrayZombies.get(a).muereZombie();
+                    if (!escenario.arrayZombies.isEmpty()) {
+                    escenario.arrayZombies.get(a-1).muereZombie();
+                    }else{
+                        System.out.println("no quedan mas zombis");
+                    }
+                    break;
                 case 2:
                     ArrayList<Carta> descartes = escenario.arrayDescartadas;
                     int contador = 0;
@@ -42,6 +47,7 @@ public class Rifle extends CartaArma implements Serializable {
                             System.out.println("¡No hay zombies para matar!");
                         }
                     }
+                    break;
             }
         }
     }

@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Bar extends Carta implements Serializable {
 
     public Bar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "Bar", Escenario, 8, 12);
+        super(2, "Bar", Escenario, 8, 1);
     }
 
     @Override
@@ -63,5 +63,14 @@ public class Bar extends Carta implements Serializable {
     public String descripcion() {
         return ("(Se prepara con 1 survivor) Cuando se juega safehouse, se cura 1 daño.");
     }
+    @Override
+    public void setActiva(boolean activa) {
 
+        if (escenario.mano.sacarCartaPorNombre("Superviviente") != null) {
+            escenario.mazoDescartes.IntroducirCarta(escenario.mano.sacarCartaPorNombre("Superviviente"));
+            super.setActiva(activa);
+        } else {
+            System.out.println("No se puede activar la carta, no tienes la carta refugio en la mano");
+        }
+    }
 }

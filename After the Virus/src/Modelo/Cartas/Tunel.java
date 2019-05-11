@@ -20,9 +20,9 @@ public class Tunel extends Carta implements Serializable {
 
     @Override
     public void action() {
-
+        //revision, da null pointer exception
         for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-
+            //en esta linea
             escenario.areaJugable.BuscarCartaTipo(12).setActiva(true);
 
             escenario.areaJugable.DescartarCarta(this);

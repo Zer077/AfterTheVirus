@@ -25,7 +25,11 @@ public class Pistola extends CartaArma implements Serializable {
                 escenario.vista.verAreaZombies();
                 System.out.println("Selecciona el zombie: ");
                 int a = sc.nextInt();
-                escenario.arrayZombies.get(a).muereZombie();
+                if (!escenario.arrayZombies.isEmpty()) {
+                    escenario.arrayZombies.get(a-1).muereZombie();
+                }else{
+                    System.out.println("no quedan mas zombis");
+                }
             } else if (this.municion == 0 && this.isActiva()) {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Descarta la pistola para atacar");

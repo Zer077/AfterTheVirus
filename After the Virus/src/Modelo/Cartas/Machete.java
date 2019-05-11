@@ -24,7 +24,7 @@ public class Machete extends Carta implements Serializable {
 
     @Override
     public void action() {
-        escenario.areaJugable.AniadirCarta(this);
+        System.out.println("");
         escenario.mano.getMano().remove(this);
         /*Scanner sc = new Scanner(System.in);
         if (ronda.contains(escenario.Ronda)) {

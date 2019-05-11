@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 
@@ -20,14 +21,19 @@ public class Granada extends Carta implements Serializable {
 
     @Override
     public void action() {
-        if (!escenario.arrayDescartadas.isEmpty()) {
-            System.out.println("Usas la granada");
-        }
+        //revision
         for (int i = 0; i < 5; i++) {
-            escenario.mazoZombies.getDescarteZombies().add(escenario.arrayZombies.get(0));
-            escenario.arrayZombies.remove(0);
+            if (!escenario.arrayZombies.isEmpty()) {
+                Carta zom = escenario.arrayZombies.get(i);
+
+                escenario.arrayZombies.get(i).descartaZombie();
+            } else {
+                System.out.println("No hay zombis");
+            }
+            EfectoDeSonido efect = new EfectoDeSonido("granada.mp3");
+            efect.start();
+            escenario.areaJugable.DescartarCarta(this);
         }
-        escenario.areaJugable.DescartarCarta(this);
     }
 
     @Override

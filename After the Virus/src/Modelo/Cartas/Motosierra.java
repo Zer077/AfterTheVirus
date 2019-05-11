@@ -20,12 +20,14 @@ public class Motosierra extends Carta implements Serializable {
 
     @Override
     public void action() {
-
-        if (!escenario.arrayDescartadas.isEmpty()) {
-            System.out.println("Usas la motosierra");
-        }
+        
         for (int i = 0; i <= 5; i++) {
-            escenario.arrayZombies.get(0).muereZombie();
+            if (!escenario.arrayZombies.isEmpty()) {
+                escenario.arrayZombies.get(0).muereZombie();
+            }else{
+                System.out.println("no quedan mas zombis");
+            }
+            
         }
         escenario.areaJugable.DescartarCarta(this);
     }
