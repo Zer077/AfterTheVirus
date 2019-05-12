@@ -164,20 +164,6 @@ public class Controlador extends Escenario implements Serializable {
         } while (personaje.isCabeza() == false);
     }
 
-    public void controladorBeta() throws Throwable {
-        for (int i = 0; i < 20; i++) {
-            mazoJugador.barajar();
-            mazoJugador.sacarCincoCartas();
-
-            do {
-                menuOpciones.ElegirOpcion();
-                //usa la carta con la accion indicada en el menu
-                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
-                vista.verMano();
-                //menu uso de cartas
-            } while (salir == true && mano.numeroCartas() > 0);
-        }
-    }
 //Otros métodos
 
     public void AniadirPersonaje(Personaje p) {

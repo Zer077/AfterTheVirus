@@ -104,12 +104,9 @@ public class MenuPrincipal implements Serializable {
             case 3:
                 control.controlador1c();
                 break;
-            case 4:
+            case 1985:
                 DebugMode();
-                break;
-            case 5:
-                control.controladorBeta();
-                break;
+                break;         
             default:
                 System.out.println("error");
                 Iniciar();
