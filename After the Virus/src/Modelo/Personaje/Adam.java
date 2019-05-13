@@ -5,36 +5,16 @@
  */
 package Modelo.Personaje;
 
-import Modelo.Cartas.Ametralladora;
-import Modelo.Cartas.Antidoto;
 import Modelo.Cartas.Perro;
 import Modelo.Cartas.Pistola;
 import Modelo.Cartas.Bar;
-import Modelo.Cartas.BombaDeDemolición;
-import Modelo.Cartas.ChaquetaDeCuero;
-import Modelo.Cartas.Coche;
 import Modelo.Cartas.Saquear;
 import Modelo.Cartas.Correr;
-import Modelo.Cartas.Cura;
 import Modelo.Cartas.Escopeta;
-import Modelo.Cartas.Explorar;
-import Modelo.Cartas.Gasolina;
 import Modelo.Cartas.Granada;
 import Modelo.Cartas.Superviviente;
 import Modelo.Cartas.HabilidadConArmas;
-import Modelo.Cartas.HabilidadConTrampas;
-import Modelo.Cartas.KitMedico;
-import Modelo.Cartas.Laboratorio;
-import Modelo.Cartas.Lanzallamas;
-import Modelo.Cartas.MC;
-import Modelo.Cartas.Machete;
-import Modelo.Cartas.Motosierra;
-import Modelo.Cartas.ObjetivoSeguro;
-import Modelo.Cartas.Revista;
-import Modelo.Cartas.TrampaPermetral;
 import Modelo.Cartas.Trinchera;
-import Modelo.Cartas.Tunel;
-import Modelo.Cartas.VIP;
 import Modelo.Escenario;
 import java.io.Serializable;
 

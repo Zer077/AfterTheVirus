@@ -30,7 +30,10 @@ public class Ruth extends Personaje implements Serializable {
     public Ruth(Escenario escenario) {
         super(escenario);
         for (int i = 0; i < 3; i++) {
-            escenario.mazoJugador.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0));
+            escenario.mazoJugador.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0)); 
+            
+            
+            escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
         }
         escenario.mazoJugador.IntroducirCarta(new Escopeta(0, nombre, escenario, 0, 0, 0));
         escenario.mazoJugador.IntroducirCarta(new Granada(0, nombre, escenario, 0, 0));
@@ -38,9 +41,7 @@ public class Ruth extends Personaje implements Serializable {
         escenario.mazoJugador.IntroducirCarta(new HabilidadConArmas(0, nombre, escenario, 0, 0));
         escenario.mazoJugador.IntroducirCarta(new Bar(0, nombre, escenario, 0, 0));
 
-        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
-        escenario.mazoEscenario.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
+        
         escenario.mazoEscenario.IntroducirCarta(new Pistola(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Perro(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Saquear(0, nombre, escenario, 0, 0));
