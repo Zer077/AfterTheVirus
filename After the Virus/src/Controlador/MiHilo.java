@@ -29,6 +29,9 @@ public class MiHilo extends Thread implements Serializable {
         this.c = c;
 
     }
+    
+    
+    
 
     public void matar(MiHilo m) throws Throwable {
 

@@ -272,8 +272,12 @@ public class Controlador extends Escenario implements Serializable {
     public void Morir() throws Throwable {
         System.out.println("HAS MUERTO");
         m.matar(m);
+        m.matar(m);
+        if (SM != null) {
+            SM.matar(SM);
+        }
         EfectoDeSonido efects = new EfectoDeSonido("Mario.mp3");
-        System.currentTimeMillis();
+//        System.currentTimeMillis();
         efects.start();
 
         new Timer().schedule(new TimerTask() {
