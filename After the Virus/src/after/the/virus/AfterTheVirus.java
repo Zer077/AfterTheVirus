@@ -28,9 +28,30 @@ public class AfterTheVirus implements Serializable {
         EfectoDeSonido efects = new EfectoDeSonido("pacman.mp3");
         System.currentTimeMillis();
         efects.start();
-        System.out.println("Cargando partida...");
+        try {
+       
+        System.out.print("C");
+            System.out.print("a");Thread.sleep(5*50);
+            System.out.print("r");Thread.sleep(5*50);
+            System.out.print("g");Thread.sleep(5*50);
+            System.out.print("a");Thread.sleep(5*50);
+            System.out.print("n");Thread.sleep(5*50);
+            System.out.print("d");Thread.sleep(5*50);
+            System.out.print("o");Thread.sleep(5*50);
+            System.out.print(" ");Thread.sleep(5*50);
+            System.out.print("p");Thread.sleep(5*50);
+            System.out.print("a");Thread.sleep(5*50);
+            System.out.print("r");Thread.sleep(5*50);
+            System.out.print("t");Thread.sleep(5*50);
+            System.out.print("i");Thread.sleep(5*50);
+            System.out.print("d");Thread.sleep(5*50);
+            System.out.println("a");Thread.sleep(5*50);
         System.out.println("Esto podría tardar unos segundos...");
         System.out.println("Preparando Zombies...");
+              
+        } catch (Exception e) {
+        }
+       
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
@@ -43,7 +64,7 @@ public class AfterTheVirus implements Serializable {
                 }
 
             }
-        }, 4000);
+        }, 1500);
 
     }
 
