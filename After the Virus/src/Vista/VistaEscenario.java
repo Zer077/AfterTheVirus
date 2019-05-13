@@ -34,7 +34,7 @@ public class VistaEscenario implements Serializable {
     }
 
     public void verMano() {
-    
+
         int posicion = 1;
         System.out.println("----------Tu mano de cartas----------");
         //bucle para ver todas las cartas de la mano.

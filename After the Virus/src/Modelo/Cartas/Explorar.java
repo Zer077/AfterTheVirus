@@ -15,23 +15,25 @@ import java.io.Serializable;
  * Solventacion de errores José
  */
 public class Explorar extends Carta implements Serializable {
-
+    
     public Explorar(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
         super(2, "Explorar", Escenario, 12, 0);
     }
-
+    
     @Override
     public void action() {
-
-        escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
-        escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
-
-        escenario.areaJugable.DescartarCarta(this);
+        if (!escenario.mazoEscenario.getMazo().isEmpty()) {
+            
+            escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
+            escenario.compraCartas.explora(escenario.mazoEscenario.getMazo().get(0));
+            
+            escenario.areaJugable.DescartarCarta(this);
+        }
     }
-
+    
     @Override
     public String descripcion() {
         return ("Se descarta para scoutear 2 cartas.");
     }
-
+    
 }

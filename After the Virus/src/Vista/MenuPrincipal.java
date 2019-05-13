@@ -106,7 +106,7 @@ public class MenuPrincipal implements Serializable {
                 break;
             case 1985:
                 DebugMode();
-                break;         
+                break;
             default:
                 System.out.println("error");
                 Iniciar();

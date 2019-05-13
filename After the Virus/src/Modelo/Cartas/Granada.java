@@ -27,11 +27,12 @@ public class Granada extends Carta implements Serializable {
                 escenario.arrayZombies.get(0).descartaCartaZombie();
             } else {
                 System.out.println("No hay mas zombis");
-            }}
-            EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
-            efect.start();
-            escenario.areaJugable.DescartarCarta(this);
-        
+            }
+        }
+        EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
+        efect.start();
+        escenario.areaJugable.DescartarCarta(this);
+
     }
 
     @Override

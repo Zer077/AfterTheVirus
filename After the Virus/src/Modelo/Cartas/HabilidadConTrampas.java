@@ -20,8 +20,10 @@ public class HabilidadConTrampas extends Carta implements Serializable {
 
     @Override
     public void action() {
-        escenario.areaJugable.AniadirCarta(this);
-        escenario.mano.getMano().remove(this);
+        if (this != escenario.areaJugable.BuscarCartaNombre("Habilidad Con Trampas")) {
+            escenario.areaJugable.AniadirCarta(this);
+            escenario.mano.getMano().remove(this);
+        }
     }
 
     @Override

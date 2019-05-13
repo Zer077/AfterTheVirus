@@ -23,9 +23,11 @@ public class Superviviente extends Carta implements Serializable {
 
     @Override
     public void action() {
-        escenario.areaJugable.AniadirCarta(this);
-        System.out.println("Añadido al area de juego");
-        escenario.mano.getMano().remove(this);
+        if (this != escenario.areaJugable.BuscarCartaNombre("Superviviente")) {
+            escenario.areaJugable.AniadirCarta(this);
+            System.out.println("Añadido al area de juego");
+            escenario.mano.getMano().remove(this);
+        }
     }
 
     @Override

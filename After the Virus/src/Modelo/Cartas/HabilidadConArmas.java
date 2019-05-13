@@ -20,8 +20,9 @@ public class HabilidadConArmas extends Carta implements Serializable {
 
     @Override
     public void action() {
+         if (this != escenario.areaJugable.BuscarCartaNombre("Habilidad Con Armas")) {
         escenario.areaJugable.AniadirCarta(this);
-        escenario.mano.getMano().remove(this);
+        escenario.mano.getMano().remove(this);}
 
     }
 

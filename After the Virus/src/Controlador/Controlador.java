@@ -165,7 +165,6 @@ public class Controlador extends Escenario implements Serializable {
     }
 
 //Otros métodos
-
     public void AniadirPersonaje(Personaje p) {
 
         personaje = p;
