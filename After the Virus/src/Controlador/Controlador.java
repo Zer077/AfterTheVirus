@@ -241,6 +241,7 @@ public class Controlador extends Escenario implements Serializable {
         int tamanioZombies = arrayZombies.size();
         for (int i = 0; i < tamanioZombies; i++) {
             arrayZombies.get(0).atacaHumano();
+            
         }
         System.out.println("-------------termina ataque de los zombies----------------------");
         //Al acabar las ronda comienzan los zombies, ronda 1 es 1 carta Zombie, ronda 2, 2 cartas Zombie…

@@ -29,7 +29,7 @@ public class Granada extends Carta implements Serializable {
                 System.out.println("No hay mas zombis");
             }
         }
-        EfectoDeSonido efect = new EfectoDeSonido("bomba.mp3");
+        EfectoDeSonido efect = new EfectoDeSonido("granada.mp3");
         efect.start();
         escenario.areaJugable.DescartarCarta(this);
 

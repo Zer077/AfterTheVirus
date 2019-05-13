@@ -5,6 +5,7 @@
  */
 package Modelo;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Cartas.Zombie1;
@@ -169,11 +170,12 @@ public class Mano implements Serializable {
     }
 
     public void comprobarZombie() {
-
+        EfectoDeSonido efect = new EfectoDeSonido("zombi1.mp3");
         for (int i = 0; i < Mano.size(); i++) {
             if (Mano.get(i) instanceof Zombie) {
                 escenario.arrayZombies.add((Zombie) Mano.remove(i));
-
+                
+                efect.start();
             }
 
         }

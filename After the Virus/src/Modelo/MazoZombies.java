@@ -5,6 +5,7 @@
  */
 package Modelo;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.Zombie;
 import Modelo.Cartas.Zombie1;
@@ -92,10 +93,14 @@ public final class MazoZombies extends Mazo implements Serializable {
 
     /*introduce en el mazo de jugador tantas cartas zombie como numero de la ronda es*/
     public void introducirPorRonda() {
+        EfectoDeSonido efect = new EfectoDeSonido("zombieappear.mp3");
         for (int i = 0; i < escenario.Ronda; i++) {
+            
             escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
-
+            
+            
         }
+        efect.start();
     }
 
     /*introduce en el mazo de jugador tantas cartas zombie como numero de parametro*/
@@ -104,6 +109,7 @@ public final class MazoZombies extends Mazo implements Serializable {
             escenario.mazoJugador.getMazo().add(MazoZombie.remove(0));
 
         }
+        
     }
 
     public void ZombieAMatar() {

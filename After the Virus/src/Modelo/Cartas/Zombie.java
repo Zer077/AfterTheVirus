@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Escenario;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -29,7 +30,8 @@ public abstract class Zombie extends Carta implements Serializable {
         for (int i = 0; i < zombie.size(); i++) {
             if (zombie.get(i).isVivo() == true) {
                 escenario.personaje.parteCuerpoAtacar();
-
+            EfectoDeSonido efect = new EfectoDeSonido("zombi1.mp3");
+            efect.start();
             }
         }
         escenario.mazoZombies.getDescarteZombies().add(this);
@@ -41,7 +43,7 @@ public abstract class Zombie extends Carta implements Serializable {
 
     //lleva al zombie a la pila de descartes de los zombies
     public void muereZombie() {
-
+        EfectoDeSonido efect = new EfectoDeSonido("zombiekill.mp3");
         if (Contador() == numeroZombie) {
 
             for (int i = 0; i < zombie.size(); i++) {
@@ -50,14 +52,16 @@ public abstract class Zombie extends Carta implements Serializable {
             }
             escenario.mazoZombies.getDescarteZombies().add(this);
             escenario.mazoZombies.eliminarZombieArray(this);
+            efect.start();
         }
     }
 
     public void muereCartaZombie() {
-
+        EfectoDeSonido efect = new EfectoDeSonido("zombiekill.mp3");
         for (int i = 0; i < zombie.size(); i++) {
             zombie.get(i).setVivo(true);
-
+            
+            efect.start();
         }
         escenario.mazoZombies.getDescarteZombies().add(this);
         escenario.mazoZombies.eliminarZombieArray(this);
@@ -66,7 +70,8 @@ public abstract class Zombie extends Carta implements Serializable {
 
     //lleva al zombie a la pila de descartes del mazo del jugador
     public void descartaZombie() {
-
+            EfectoDeSonido efect = new EfectoDeSonido("zombiediscard.mp3");
+            
         if (Contador() == numeroZombie) {
             for (int i = 0; i < zombie.size(); i++) {
                 zombie.get(i).setVivo(true);
@@ -74,14 +79,15 @@ public abstract class Zombie extends Carta implements Serializable {
             }
             escenario.mazoDescartes.IntroducirCarta(this);
             escenario.mazoZombies.eliminarZombieArray(this);
-
+            efect.start();
         }
     }
 
     public void descartaCartaZombie() {
-
+    EfectoDeSonido efect = new EfectoDeSonido("zombiediscard.mp3");
         for (int i = 0; i < zombie.size(); i++) {
             zombie.get(i).setVivo(true);
+            efect.start();
 
         }
         escenario.mazoDescartes.IntroducirCarta(this);

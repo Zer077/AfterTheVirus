@@ -5,6 +5,7 @@
  */
 package Modelo;
 
+import Controlador.EfectoDeSonido;
 import Modelo.Cartas.Ametralladora;
 import Modelo.Cartas.Carta;
 import Modelo.Cartas.CartaArma;
@@ -62,7 +63,7 @@ public class AreaJugable implements Serializable {
 
                     int numero2 = sc.nextInt();
                     escenario.arrayZombies.get(numero2 - 1).muereZombie();
-
+                    
                 } else if (ArrayJugables.get(numero - 1).isActiva() == true) {
                     ArrayJugables.get(numero - 1).action();
 
