@@ -63,6 +63,9 @@ public class AreaJugable implements Serializable {
                     int numero2 = sc.nextInt();
                     escenario.arrayZombies.get(numero2 - 1).muereZombie();
 
+                }else if(ArrayJugables.get(numero - 1).isActiva() == true) {
+                ArrayJugables.get(numero - 1).action();
+                
                 }
             }
         } else if (ArrayJugables.get(numero - 1).isActiva() == true) {

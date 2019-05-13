@@ -34,7 +34,7 @@ public class Adam extends Personaje implements Serializable {
             escenario.mazoJugador.IntroducirCarta(new Superviviente(0, nombre, escenario, 0, 0));
             escenario.mazoJugador.IntroducirCarta(new Correr(0, nombre, escenario, 0, 0));
         }
-
+     
         escenario.mazoEscenario.IntroducirCarta(new Pistola(0, nombre, escenario, 0, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Granada(0, nombre, escenario, 0, 0));
         escenario.mazoEscenario.IntroducirCarta(new Escopeta(0, nombre, escenario, 0, 0, 0));
