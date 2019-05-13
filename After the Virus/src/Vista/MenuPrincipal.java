@@ -91,8 +91,37 @@ public class MenuPrincipal implements Serializable {
     }
 
     public void Controlador() throws Throwable {
+        
+        System.out.println("1) CAOS (corto)\n" +
+"El virus zombie está aquí y la sociedad se está desmoronando, rápido.\n" +
+"Necesitas crear un orden y juntar las cosas, o moriras\n" +
+"Objetivo: terminar el turno con 6 cartas preparadas en juego.");
+        
+        System.out.println("------------------------");
+
+        System.out.println("2) Multitud de muertos (corto)\n" +
+"Al estar paralizado por el terrible brote, te has mantenido escondido durante días.\n" +
+"Mientras tanto, muchos zombies se han reunido en tu vecindario. Debes ahora " +
+"¡Escápate entre la multitud de Zombies y encontrar a otros sobrevivientes!\n" +
+"Objetivo: terminar el turno con 4 sobrevivientes salvados.");
+        
+        System.out.println("------------------------");
+        
+        System.out.println("3) Mantente Seguro (largo)\n" +
+"Al controlar la situación, te das cuenta de que necesitas organizar " +
+"una resistencia de algún tipo. Primero necesitas reunir algunas personas " +
+"y prepara un lugar seguro.\n" +
+"Objetivo: terminar el turno con 6 sobrevivientes salvados y una instalación preparada.");
+        
+        System.out.println("------------------------");
+        
+        
+        
+        
+        
+        
         Scanner sc = new Scanner(System.in);
-        System.out.println("Elige Controlador 1 2 o 3");
+        System.out.println("Elige Modo de Juego 1 2 o 3");
         int n = sc.nextInt();
         switch (n) {
             case 1:
