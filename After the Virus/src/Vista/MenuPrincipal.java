@@ -31,7 +31,9 @@ public class MenuPrincipal implements Serializable {
     }
 
     public void Iniciar() throws Throwable {
-
+        try {
+            
+        
         control = new Controlador();
         MiHilo m = new MiHilo(control);
         m.start();
@@ -87,11 +89,16 @@ public class MenuPrincipal implements Serializable {
             }
             Controlador();
 
+        }} catch (Exception e) {
+            System.out.println(e);
         }
     }
 
     public void Controlador() throws Throwable {
         
+        
+        
+        try {
         System.out.println("1) CAOS (corto)\n" +
 "El virus zombie está aquí y la sociedad se está desmoronando, rápido.\n" +
 "Necesitas crear un orden y juntar las cosas, o moriras\n" +
@@ -115,12 +122,7 @@ public class MenuPrincipal implements Serializable {
         
         System.out.println("------------------------");
         
-        
-        
-        
-        
-        
-        Scanner sc = new Scanner(System.in);
+             Scanner sc = new Scanner(System.in);
         System.out.println("Elige Modo de Juego 1 2 o 3");
         int n = sc.nextInt();
         switch (n) {
@@ -140,8 +142,13 @@ public class MenuPrincipal implements Serializable {
                 System.out.println("error");
                 Iniciar();
                 break;
-
+        }} catch (Exception e) {
         }
+        
+        
+       
+
+        
 
     }
 

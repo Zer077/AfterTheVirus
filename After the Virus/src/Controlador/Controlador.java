@@ -206,15 +206,7 @@ public class Controlador extends Escenario implements Serializable {
     public void Menu() throws Throwable {
         do {
             salir = false;
-            menuOpciones.Menu();
-            if (salir == true && mano.numeroCartas() != 0) {
-                //usa la carta con la accion indicada en el menu
-                mano.usarCartas(menuOpciones.ElegirCartas(), menuOpciones.ElegirOpcion());
-                vista.verMano();
-                //menu uso de cartas
-
-            } else {
-            }
+            menuOpciones.Menu();  
         } while (salir == false || mano.numeroCartas() > 0);
 
     }
