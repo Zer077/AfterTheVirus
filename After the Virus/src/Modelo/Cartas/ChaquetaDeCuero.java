@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class ChaquetaDeCuero extends Carta implements Serializable {
 
     public ChaquetaDeCuero(int precio, String nombre, Escenario Escenario, int tipo, int activacion) {
-        super(2, "ChaquetaDeCuero", Escenario, 7, 0);
+        super(2, "Chaqueta De Cuero", Escenario, 7, 0);
     }
 
     @Override

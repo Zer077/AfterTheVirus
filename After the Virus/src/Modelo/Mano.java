@@ -114,18 +114,11 @@ public class Mano implements Serializable {
 
             //Usa estas cartas para comprar
             case 5:
-                ArrayList<Carta> carta2 = new ArrayList<>();
-                for (int i = 0; i < cartas.size(); i++) {
-
-                    carta2.add(cartas.get(i));
-                }
-                if (escenario.compraCartas.recuperar(carta2) == true) {
-                    for (int i = 0; i < cartas.size(); i++) {
-
-                        getMano().remove(cartas.get(i));
-
-                    }
-                }
+               
+               
+                escenario.compraCartas.recuperar(cartas);
+                    
+                
 
                 break;
 

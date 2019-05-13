@@ -60,7 +60,7 @@ public class VistaEscenario implements Serializable {
             System.out.println("CARTA Nº: " + posicion);
             System.out.println("Nombre de la carta: " + x.getNombre());
             System.out.println("Descripción: ");
-            x.descripcion();
+            System.out.println(x.descripcion());
             System.out.println("Precio: " + x.getPrecio());
             System.out.println("Coste preparar: " + x.getActivacion());
             posicion++;

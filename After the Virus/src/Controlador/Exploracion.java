@@ -35,12 +35,23 @@ public class Exploracion implements Serializable {
 
     //En este metodo le paso un array de cartas que es el costo de comprar X carta, esa X carta a comprar es el propio método el que contea cuanto vale y cual quiere comprar, si la cantidad de cartas pasadas es mayor las devuelve a la mano
     //En este caso es este método el encargado de eliminar las cartas de la mano
-    public boolean recuperar(ArrayList<Carta> carta) {
+    public void recuperar(ArrayList<Carta> carta) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Elige la carta a comprar");
         escenario.vista.verAreaExploracion();
         int numero = sc.nextInt();
-        return carta.size() == escenario.arrayEscenario.get(numero - 1).getPrecio();
+        if (carta.size() == escenario.arrayEscenario.get(numero - 1).getPrecio()) {
+
+            escenario.mano.AniadirCarta(escenario.arrayEscenario.remove(numero - 1));
+            carta.clear();
+
+        } else {
+            for (int i = 0; i < carta.size(); i++) {
+
+                escenario.mano.AniadirCarta(carta.remove(0));
+            }
+
+        }
 
     }
 
