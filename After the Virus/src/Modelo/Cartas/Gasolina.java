@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Maria Perez
+ * @author Maria Perez Solucion de errores Jose
  */
 public class Gasolina extends Carta implements Serializable {
 
@@ -22,12 +22,21 @@ public class Gasolina extends Carta implements Serializable {
     public void action() {
 
         for (int i = 0; i < escenario.areaJugable.getArrayJugables().size(); i++) {
-
-            escenario.areaJugable.BuscarCartaTipo(10).setActiva(true);
-            escenario.areaJugable.BuscarCartaTipo(14).setActiva(true);
-            escenario.areaJugable.BuscarCartaTipo(1).setActiva(true);
-            escenario.areaJugable.BuscarCartaTipo(2).setActiva(true);
-            escenario.areaJugable.BuscarCartaTipo(3).setActiva(true);
+            if (escenario.areaJugable.BuscarCartaTipo(10) != null) {
+                escenario.areaJugable.BuscarCartaTipo(10).setActiva(true);
+            }
+            if (escenario.areaJugable.BuscarCartaTipo(14) != null) {
+                escenario.areaJugable.BuscarCartaTipo(14).setActiva(true);
+            }
+            if (escenario.areaJugable.BuscarCartaTipo(1) != null) {
+                escenario.areaJugable.BuscarCartaTipo(1).setActiva(true);
+            }
+            if (escenario.areaJugable.BuscarCartaTipo(2) != null) {
+                escenario.areaJugable.BuscarCartaTipo(2).setActiva(true);
+            }
+            if (escenario.areaJugable.BuscarCartaTipo(3) != null) {
+                escenario.areaJugable.BuscarCartaTipo(3).setActiva(true);
+            }
 
             escenario.areaJugable.EliminarCarta(this);
         }
